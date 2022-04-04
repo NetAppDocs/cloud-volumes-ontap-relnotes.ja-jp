@@ -1,0 +1,15 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: These release notes describe new features, limitations, and known issues for Cloud Volumes ONTAP 9.10.1. 
+summary: このリリースノートでは、 Cloud Volumes ONTAP 9.10.1 の新機能、制限事項、および既知の問題について説明します。 
+---
+= Cloud Volumes ONTAP 9.10.1 リリースノート
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
