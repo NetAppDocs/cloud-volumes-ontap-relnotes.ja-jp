@@ -481,7 +481,6 @@
   <block id="d302a39827e370146d2861389e98e60c" category="section-title">中国地域でのサポート</block>
   <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">Cloud Volumes ONTAP は中国で次のようにサポートされています。</block>
   <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">Cloud Volumes ONTAP 9.6 は、 AWS 中国のリージョンでサポートされます。</block>
-  <block id="a24849df7617212f16203f6f4b4bf5e2" category="list-text">Cloud Volumes ONTAP 9.9 は、 Azure 中国地域でサポートされます。</block>
   <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">シングルノードシステムがサポートされます。</block>
   <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">ネットアップから直接購入したライセンスはサポートされます。</block>
   <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">その他の場所、バージョン、構成、ライセンスはすべてサポートされていません。</block>
@@ -701,7 +700,6 @@
   <block id="25827e83a178b9b140976a356e0ea48a" category="section-title">充電に関するメモ</block>
   <block id="c1092325501599c6dcc90500081a2184" category="list-text">BYOL の容量を超えた場合やライセンスの有効期限が切れた場合は、マーケットプレイスのサブスクリプションに基づいて 1 時間あたりの料金が高すぎることを意味します。</block>
   <block id="caa54273e5fb3b700fad994050e4dde4" category="list-text">パッケージごとに 4TiB 以上の容量を追加容量が 4TiB 未満の Cloud Volumes ONTAP インスタンスは、 4TiB の割合で請求されます。</block>
-  <block id="c44f1d716d7612886617d980c0523196" category="list-text">Storage VM （ SVM ）を提供するための追加のライセンスコストは発生しませんが、 SVM あたりの容量は 4TiB になります。</block>
   <block id="55675f6a5328a3c661aa2daa971f7c76" category="list-text">HA ペアの場合、ノードのプロビジョニング済み容量に対してのみ料金が発生します。パートナーノードに同期ミラーリングされるデータには料金は発生しません。</block>
   <block id="e61eacf9a2b260a46a8935478c8a063d" category="list-text">FlexClone ボリュームで使用される容量に対する料金は発生しません。</block>
   <block id="529bcec2b9675b3cb0a81186e626a92b" category="list-text">ソースおよびデスティネーションの FlexCache ボリュームはプライマリデータとみなされ、プロビジョニング済みスペースに基づいて料金が発生します。</block>
@@ -767,4 +765,6 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP クラウド</block>
+  <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">データ提供用の Storage VM （ SVM ）を追加する場合、追加のライセンスコストは発生しませんが、データ提供用 SVM ごとの容量は 4TiB になります。</block>
+  <block id="cc331a0f761602982769cdbb99e71272" category="list-text">ディザスタリカバリ用 SVM は、プロビジョニングされた容量に基づいて料金が発生します。</block>
 </blocks>
