@@ -720,7 +720,6 @@
   <block id="63573dab314c98e4e22e47653c15cf64" category="list-text">まだサブスクリプションをお持ちでない場合は、<block ref="49d6686f1a400348bbcff579d9d978a6" category="inline-link-rx"></block>。</block>
   <block id="697cc5090bb98ee57c1e28438084378b" category="list-text">mailto ： ng-keystone-success@netapp.com [ ネットアップにお問い合わせください ] 1 つ以上の Keystone Flex Subscriptions で Cloud Manager のユーザアカウントを承認します。</block>
   <block id="72aa254218c757aad3e3703bdaf90694" category="inline-link">Cloud Volumes ONTAP で使用するサブスクリプションをリンクします</block>
-  <block id="f96e5580f13646b320535609852aaf80" category="list-text">ネットアップがお客様のアカウントを許可したあと、<block ref="b8a2932fb185e14a928f847d974c3942" category="inline-link-rx"></block>。</block>
   <block id="de4b56542275c5f0b46bea6fcc27b034" category="list-text">Cloud Volumes ONTAP システムを作成するときに、 Keystone Flex サブスクリプションの課金方法を選択します。</block>
   <block id="a2f6a3e98ea1849ed1ab07d821bf6a18" category="section-title">ノードベースのライセンス</block>
   <block id="361abfc2eaabdb045de49dafd20dbdf1" category="paragraph">ノードベースのライセンスは、 Cloud Volumes ONTAP のライセンスをノード単位で付与することが可能になった旧世代のライセンスモデルです。このライセンスモデルは、新規のお客様にはご利用いただけません。また、無償トライアルもご利用いただけません。ノード単位の充電は、前述のキャパシティ単位の充電方法に置き換えられました。</block>
@@ -767,4 +766,5 @@
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP クラウド</block>
   <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">データ提供用の Storage VM （ SVM ）を追加する場合、追加のライセンスコストは発生しませんが、データ提供用 SVM ごとの容量は 4TiB になります。</block>
   <block id="cc331a0f761602982769cdbb99e71272" category="list-text">ディザスタリカバリ用 SVM は、プロビジョニングされた容量に基づいて料金が発生します。</block>
+  <block id="48f0974a79de83d6884f04d71ab3a90a" category="list-text">ネットアップがお客様のアカウントを許可したあと、<block ref="691060edb0108ad45359b1773c59fa65" category="inline-link-rx"></block></block>
 </blocks>

@@ -96,7 +96,7 @@ homepage:
     - title: ストレージの制限
       url: reference-limits-aws.html
     - title: 制限
-      url: reference-limitations-gcp.html
+      url: reference-limitations-aws.html
   - title: Google Cloud
     links:
     - title: サポートされている構成

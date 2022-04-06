@@ -205,7 +205,7 @@ Keystone Flex Subscriptions は、 HA ペアでサポートされます。現時
 
 . まだサブスクリプションをお持ちでない場合は、 https://www.netapp.com/forms/keystone-sales-contact/["ネットアップにお問い合わせください"^]。
 . mailto ： ng-keystone-success@netapp.com [ ネットアップにお問い合わせください ] 1 つ以上の Keystone Flex Subscriptions で Cloud Manager のユーザアカウントを承認します。
-. ネットアップがお客様のアカウントを許可したあと、 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-keystone.html#link-a-subscription["Cloud Volumes ONTAP で使用するサブスクリプションをリンクします"]。
+. ネットアップがお客様のアカウントを許可したあと、 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-keystone.html#link-a-subscription["Cloud Volumes ONTAP で使用するサブスクリプションをリンクします"^]
 . Cloud Volumes ONTAP システムを作成するときに、 Keystone Flex サブスクリプションの課金方法を選択します。
 +
 ** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS での Cloud Volumes ONTAP の起動"^]
