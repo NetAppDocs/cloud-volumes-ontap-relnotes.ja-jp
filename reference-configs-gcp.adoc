@@ -6,6 +6,7 @@ summary: Google Cloud では、いくつかの Cloud Volumes ONTAP 構成がサ�
 ---
 = Google Cloud でサポートされている構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP には、いくつかのライセンスオプショ
 ---
 = Cloud Volumes ONTAP のライセンス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

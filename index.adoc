@@ -7,6 +7,7 @@ summary: このリリースノートでは、 Cloud Volumes ONTAP 9.10.1 の新�
 ---
 = Cloud Volumes ONTAP 9.10.1 リリースノート
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

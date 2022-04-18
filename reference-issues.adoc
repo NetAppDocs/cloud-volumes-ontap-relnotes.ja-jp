@@ -6,6 +6,7 @@ summary: 既知の問題は、このリリースの製品を正常に使用で�
 ---
 = 既知の問題
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

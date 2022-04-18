@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP には、信頼性の高い運用を実現するた
 ---
 = Google Cloud のストレージ制限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

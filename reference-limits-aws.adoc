@@ -6,6 +6,7 @@ summary: 信頼性の高い運用を実現するために、 Cloud Volumes ONTAP
 ---
 = AWS のストレージの制限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: これらの既知の制限は、 Amazon Web Services の Cloud Volumes
 ---
 = AWS の既知の制限事項は以下のとおりです
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

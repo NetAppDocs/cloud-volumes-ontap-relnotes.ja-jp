@@ -6,6 +6,7 @@ summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONT
 ---
 = Azure の既知の制限事項
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 ---
 = すべてのクラウドプロバイダで制約があります
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -19,9 +20,21 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 
 
 
-== 最大同時レプリケーション処理数
+== から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール
 
-Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。
+クラウドプロバイダのコンソールから Cloud Volumes ONTAP システムの構成を変更すると、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。
+
+
+
+== ディスクとアグリゲートは Cloud Manager で管理する必要があります
+
+すべてのディスクとアグリゲートは、 Cloud Manager から直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。
+
+
+
+== ソフトウェアの更新を Cloud Manager で完了しておく必要があります
+
+Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
 
 
 
@@ -33,6 +46,12 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-clo
 
 
 NOTE: データの整合性は、 WAFL ファイルシステムの ONTAP 整合ポイントによって決まります。WAFL ファイルシステムを休止して crash-consistent バックアップを実行できるのは、 ONTAP のみです。
+
+
+
+== アプリケーションリソースの自動管理ソリューション
+
+アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。
 
 
 
@@ -55,27 +74,9 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 
-== 自動アプリケーションリソース管理ソリューションは使用しないでください
+== 最大同時レプリケーション処理数
 
-アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。
-
-
-
-== ソフトウェアの更新を Cloud Manager で完了しておく必要があります
-
-Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
-
-
-
-== から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール
-
-クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。
-
-
-
-== ディスクとアグリゲートは Cloud Manager で管理する必要があります
-
-すべてのディスクとアグリゲートは、 Cloud Manager から直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。
+Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。
 
 
 

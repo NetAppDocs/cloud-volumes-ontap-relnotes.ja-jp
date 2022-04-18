@@ -6,6 +6,7 @@ summary: Cloud Volumes ONTAP には、安定した運用を実現するために
 ---
 = Azure のストレージ制限
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
