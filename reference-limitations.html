@@ -663,7 +663,7 @@
         </li>
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/ja-jp/cloud/">Cloud Docs</a>
+          <a href="https://docs.netapp.com/us-en/cloud/">Cloud Docs</a>
         </li>
         
 
@@ -701,7 +701,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-05 02:14:30 +0000">04/05/2022</time>
+    <time datetime="2022-04-18 19:03:14 +0000">04/18/2022</time>
     
   
 
@@ -719,10 +719,26 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="最大同時レプリケーション処理数">最大同時レプリケーション処理数</h2>
+<h2 id="から-cloud-volumes-ontap-環境を変更することはできません-クラウドプロバイダのコンソール">から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。</p>
+<p>クラウドプロバイダのコンソールから Cloud Volumes ONTAP システムの構成を変更すると、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ディスクとアグリゲートは-cloud-manager-で管理する必要があります">ディスクとアグリゲートは Cloud Manager で管理する必要があります</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>すべてのディスクとアグリゲートは、 Cloud Manager から直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ソフトウェアの更新を-cloud-manager-で完了しておく必要があります">ソフトウェアの更新を Cloud Manager で完了しておく必要があります</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性</p>
 </div>
 </div>
 </div>
@@ -746,6 +762,14 @@
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="アプリケーションリソースの自動管理ソリューション">アプリケーションリソースの自動管理ソリューション</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。</p>
 </div>
 </div>
 </div>
@@ -782,34 +806,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="自動アプリケーションリソース管理ソリューションは使用しないでください">自動アプリケーションリソース管理ソリューションは使用しないでください</h2>
+<h2 id="最大同時レプリケーション処理数">最大同時レプリケーション処理数</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ソフトウェアの更新を-cloud-manager-で完了しておく必要があります">ソフトウェアの更新を Cloud Manager で完了しておく必要があります</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="から-cloud-volumes-ontap-環境を変更することはできません-クラウドプロバイダのコンソール">から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="ディスクとアグリゲートは-cloud-manager-で管理する必要があります">ディスクとアグリゲートは Cloud Manager で管理する必要があります</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>すべてのディスクとアグリゲートは、 Cloud Manager から直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。</p>
+<p>Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。</p>
 </div>
 </div>
 </div>
