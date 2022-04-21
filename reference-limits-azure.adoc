@@ -381,25 +381,25 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | ライセンスタイプ | Storage VM の最大数 
 
 
-| * PAYGO *  a| 
-* データ提供用の Storage VM × 1
-* ディザスタリカバリ用の Storage VM × 1
-
-
-
-
 | * Freemium *  a| 
 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
 
 
 
-| * 容量ベースのライセンス * ^3^  a| 
+| * 容量ベースの PAYGO または BYOL * ^3^  a| 
 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
 
 
 
 | * ノードベースの BYOL * ^4^  a| 
 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
+
+
+
+| * ノードベースの PAYGO *  a| 
+* データ提供用の Storage VM × 1
+* ディザスタリカバリ用の Storage VM × 1
+
 
 |===
 . これらの 24 個の Storage VM からデータを提供することも、ディザスタリカバリ（ DR ）用に設定することもできます。

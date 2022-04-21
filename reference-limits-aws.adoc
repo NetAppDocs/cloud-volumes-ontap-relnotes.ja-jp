@@ -239,7 +239,19 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | ライセンスタイプ | インスタンスファミリー | Storage VM の最大数 
 
 
-.2+| * PAYGO * | C4 、 M4 、および R4  a| 
+| * Freemium * | C5 、 m5 、および r5  a| 
+* 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
+
+
+
+
+| * 容量ベースの PAYGO または BYOL * ^3^ | C5 、 m5 、および r5  a| 
+* 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
+
+
+
+
+.2+| * ノードベースの PAYGO * | C4 、 M4 、および R4  a| 
 * データ提供用の Storage VM × 1
 * ディザスタリカバリ用の Storage VM × 1
 
@@ -249,18 +261,6 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | C5 、 m5 、および r5  a| 
 * データ提供用の Storage VM × 1
 * ディザスタリカバリ用の Storage VM × 1
-
-
-
-
-| * Freemium * | C5 、 m5 、および r5  a| 
-* 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
-
-
-
-
-| * 容量ベースのライセンス * ^3^ | C5 、 m5 、および r5  a| 
-* 合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^
 
 
 

@@ -117,14 +117,12 @@
   <block id="82060d81b7ce43c57280e879899f9a2c" category="cell">ライセンスタイプ</block>
   <block id="4037b2b5756ae2a7b370c7b6e783aa25" category="cell">インスタンスファミリー</block>
   <block id="2b32b0b2d0f29c87c701d113a9b7814c" category="cell">Storage VM の最大数</block>
-  <block id="e1b07c013b611d07bfb9af53a3dbe920" category="cell">* PAYGO *</block>
   <block id="39361436d2ec06b159fff2a0853d8f11" category="cell">C4 、 M4 、および R4</block>
   <block id="b44aff299926ff48d9c9937caf2bcc7c" category="list-text">データ提供用の Storage VM × 1</block>
   <block id="0d8a30d82cccb71952d16b4403bf498c" category="list-text">ディザスタリカバリ用の Storage VM × 1</block>
   <block id="db2a5609d325e7b486ff21c338843d70" category="cell">C5 、 m5 、および r5</block>
   <block id="c420a49390d2a1dcf064814a1b9bce50" category="cell">* Freemium *</block>
   <block id="bff1ed10eaa2848422c2177b3404da96" category="list-text">合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</block>
-  <block id="4c18f3e05dae8de865bfd4823b76b7c5" category="cell">* 容量ベースのライセンス * ^3^</block>
   <block id="91910075fafd14e95deb889d8997ae86" category="cell">* ノードベースの BYOL * ^4^</block>
   <block id="4a17a3c856fd1f9d634bfd17f1c2f886" category="list-text">使用する EC2 インスタンスタイプによっては、上限値がそれよりも低くなる可能性があります。インスタンスあたりの制限は、以下のセクションに記載されています。</block>
   <block id="5fa8fd0741d7b90ffde672d2beaf9223" category="list-text">これらの 24 個の Storage VM からデータを提供することも、ディザスタリカバリ（ DR ）用に設定することもできます。</block>
@@ -767,4 +765,6 @@
   <block id="48f0974a79de83d6884f04d71ab3a90a" category="list-text">ネットアップがお客様のアカウントを許可したあと、<block ref="691060edb0108ad45359b1773c59fa65" category="inline-link-rx"></block></block>
   <block id="9baac3e3e045ecc1a8ffecb16253a5d1" category="paragraph">クラウドプロバイダのコンソールから Cloud Volumes ONTAP システムの構成を変更すると、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。</block>
   <block id="448cc0188a2bcc18119c0abf6d253d7a" category="section-title">アプリケーションリソースの自動管理ソリューション</block>
+  <block id="84c132b976f487cccd3001ed2c7557f2" category="cell">* 容量ベースの PAYGO または BYOL * ^3^</block>
+  <block id="15e276b5f20d3f04c4dde66ecf8a249c" category="cell">* ノードベースの PAYGO *</block>
 </blocks>
