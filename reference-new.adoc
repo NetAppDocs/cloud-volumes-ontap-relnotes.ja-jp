@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.10.1 には、いくつかの新機能と機能拡張が含まれています。 
+summary: Cloud Volumes ONTAP 9.11.0には、新しい拡張機能が追加されています。 
 ---
-= Cloud Volumes ONTAP 9.10.1 の新機能
+= Cloud Volumes ONTAP 9.11.0の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,126 +14,63 @@ summary: Cloud Volumes ONTAP 9.10.1 には、いくつかの新機能と機能�
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.10.1 には、いくつかの新機能と機能拡張が含まれています。
+Cloud Volumes ONTAP 9.11.0には、新しい拡張機能が追加されています。
 
 その他の機能と機能拡張は、 Cloud Manager の最新バージョンで導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager リリースノート"^] を参照してください。
 
 
 
-== ライセンスに関する更新情報（ 2022 年 2 月 9 日）
+== 9.11.0 P1（2022年5月2日）
 
-市場における Cloud Volumes ONTAP の変更点を次に示します。
-
-* Essentials パッケージと Professional パッケージが AWS と Google Cloud Marketplace で利用できるようになりました。
-+
-容量単位の課金方法では、時間単位での支払いや、年間契約の購入をクラウドプロバイダから直接行うことができます。容量単位のライセンスは、ネットアップから直接購入することもできます。
-
-+
-クラウドマーケットプレイスで既存のサブスクリプションがある場合は、それらの新しいサービスにも自動的にサブスクライブされます。新しい Cloud Volumes ONTAP 作業環境の導入時に、容量単位の課金を選択できます。
-
-+
-新規のお客様の場合、 Cloud Manager は新しい作業環境の作成時に登録を求めるプロンプトを表示します。
-
-* AWS と Google Cloud Marketplace を使用したノード単位のライセンスは廃止され、新しいユーザには提供されなくなりました。これには、年間契約と時間単位のサブスクリプション（ Explore 、 Standard 、 Premium ）が含まれます。
-+
-この充電方法は、有効なサブスクリプションをお持ちの既存のお客様には引き続きご利用いただけます。
+Cloud Volumes ONTAP 9.11.0 P1リリースがAWS、Azure、Google Cloudで利用できるようになりました。このリリースには、次の機能拡張が含まれています
 
 
 
-link:concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションの詳細については、こちらをご覧ください"]。
+=== AWSでのONTAP S3のサポート
 
-
-
-== 9.10.1 GA （ 2022 年 1 月 31 日）
-
-Cloud Volumes ONTAP 9.10.1 の General Availability （ GA ）リリースがリリースされました。GA リリースにはバグの修正が含まれています。
-
-Cloud Manager から、 9.10.1 RC1 、 9.10.0 、または 9.9.1.1 を実行している既存のシステムのアップグレードを求められます。
-
-
-
-== その他の VM タイプ（ 2021 年 1 月 2 日）のサポート
-
-Cloud Volumes ONTAP は、 Cloud Manager 3.9.14 リリースの一部として、 9.10.1 リリース以降、 Microsoft Azure の次の VM タイプでサポートされるようになりました。
-
-* E4ds_v4
-* E8ds_v4
-* E32ds_v4
-* E48ds_v4
-
-
-にアクセスします link:reference-configs-azure.html["[ サポートされている構成 ] ページ"^] 詳細：
-
-
-
-== 9.10.1 RC1 （ 2021 年 11 月 28 日）
-
-Cloud Volumes ONTAP 9.10.1 Release Candidate 1 が AWS 、 Azure 、 Google Cloud で提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
-
-
-
-=== Microsoft Azure の HA 機能が強化されました
-
-* Microsoft Azure で実行される Cloud Volumes ONTAP HA ペアの計画外フェイルオーバー時間を短縮しました。
-* NFSv4 がサポートされるようになりました。
-
-
-これらの機能拡張を Cloud Volumes ONTAP で利用できるようにするには、 Azure サブスクリプションで機能を有効にする必要があります。「 Owner 」権限のある Azure ユーザは、 Azure CLI からこの機能を有効にできます。
-
-[source, azurecli]
-----
-az account set -s AZURE_SUBSCRIPTION_NAME_OR_ID
-az feature register --name EnableHighAvailabilityMode --namespace Microsoft.Network
-az provider register -n Microsoft.Network
-----
-Cloud Volumes ONTAP 9.10.1 システムでは、 Cloud Manager からこれらの詳細が「 Action Required 」メッセージに表示され、 Azure サブスクリプションでこの機能を有効にする必要があります。
+AWSのCloud Volumes ONTAP からS3オブジェクトストレージを提供できるようになりました（Microsoft Azureはすでにサポートされています）。Cloud Volumes ONTAP は、NFSやSMBなどの従来型のファイルベースプロトコルに加え、スケールアウトストレージ用のオプションとしてS3をサポートしています。
 
 次の点に注意してください。
 
-* Cloud Volumes ONTAP HA ペアの高可用性に問題はありません。この Azure 機能は、 ONTAP と連携して動作し、計画外のフェイルオーバーによって発生する NFS プロトコルのアプリケーション停止時間を短縮します。
-* この機能を有効にしても、 Cloud Volumes ONTAP HA ペアの処理は中断されません。
-* Azure サブスクリプションでこの機能を有効にしても、他の VM で原因の問題は発生しません。
+* Cloud Volumes ONTAP S3 と ONTAP の主なユースケースは、汎用のオブジェクトストアです。
+* 現時点では、Google CloudのCloud Volumes ONTAP ではS3プロトコルはサポートされていません。
+* Cloud Manager には、 ONTAP S3 機能に対する管理機能はありません。
+
+
+https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["ONTAP で S3 オブジェクトストレージサービスを設定および管理する方法について説明します"^]。
 
 
 
+== アップグレードに関する注意事項
 
-=== セキュリティの機能拡張
-
-ONTAP イメージ作成のセキュリティを強化し、 Cloud Volumes ONTAP ブートディスクのセキュリティを強化しました。
-
-
-
-=== Keystone Flex Subscriptions をサポート
-
-Cloud Manager 3.9.13 リリースでは、 Cloud Volumes ONTAP HA ペアで Keystone Flex サブスクリプションを使用できるようになりました。Keystone Flex サブスクリプションは、成長に合わせて購入できるサブスクリプションベースのサービスです。 OPEX 消費モデルを希望するお客様に、設備投資やリースを先に行うお客様にシームレスなハイブリッドクラウドエクスペリエンスを提供します。
-
-Keystone Flex サブスクリプションは、 Cloud Manager から導入可能なすべての新しいバージョンの Cloud Volumes ONTAP でサポートされます。
+このリリースへのアップグレードの詳細については、以下のメモをお読みください。
 
 
 
-=== 暗号化キー管理
+=== アップグレード方法
 
-ONTAP 9.10.1 リリースには、 Azure Key Vault （ AKV ）または Google Cloud Key Management Service を使用した ONTAP 暗号化キーの保護を可能にする機能拡張が含まれています。
+Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-security.html["Cloud Volumes ONTAP の暗号化のサポートについては、こちらをご覧ください"^]。
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Cloud Manager から通知された場合のアップグレード方法について説明します"^]。
 
 
 
-== 必要な Cloud Manager Connector のバージョン
+=== サポートされているアップグレードパス
 
-新しい Cloud Volumes ONTAP 9.10.1 システムを導入し、既存のシステムを 9.10.1 にアップグレードするには、 Cloud Manager Connector でバージョン 3.9.13 以降が実行されている必要があります。
+9.10.1リリースからCloud Volumes ONTAP 9.11.0にアップグレードできます。対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするよう求めるプロンプトがCloud Managerに表示されます。
+
+
+
+=== 必要なコネクタのバージョン
+
+既存のシステムを9.11.0にアップグレードするには、Cloud Manager Connectorでバージョン3.9.18以降が実行されている必要があります。
 
 
 TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。
 
 
 
-== アップグレードに関する注意事項
-
-* Cloud Volumes ONTAP のアップグレードが Cloud Manager から完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
-* 9.10.0 リリースから Cloud Volumes ONTAP 9.10.1 にアップグレードしたり、 9.9.1 リリースからアップグレードしたりできます。対象となる Cloud Volumes ONTAP システムを 9.10.1 リリースにアップグレードするよう求めるプロンプトが Cloud Manager に表示されます。
-+
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Cloud Manager から通知された場合のアップグレード方法について説明します"^]。
+=== ダウンタイム
 
 * シングルノードシステムのアップグレードでは、 I/O が中断されるまで最大 25 分間システムがオフラインになります。
 * HA ペアのアップグレードは無停止で、 I/O が中断されません。無停止アップグレードでは、各ノードが連携してアップグレードされ、クライアントへの I/O の提供が継続されます。
@@ -146,9 +83,3 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 9.8 リリース以降では、新しい Cloud Volumes ONTAP システムで C4 、 M4 、および R4 インスタンスタイプはサポートされません。C4 、 M4 、または R4 インスタンスタイプで実行されている既存の Cloud Volumes ONTAP システムがある場合も、このリリースにアップグレードできます。
 
 C5 、 m5 、または r5 インスタンスファミリーのインスタンスタイプに変更することをお勧めします。
-
-
-
-=== DS3_v2 の場合
-
-9.9.1 リリース以降では、 DS3_v2 VM タイプは新規および既存の Cloud Volumes ONTAP システムでサポートされなくなりました。この VM タイプで既存のシステムを実行している場合は、 9.10.1 にアップグレードする前に VM タイプを変更する必要があります。
