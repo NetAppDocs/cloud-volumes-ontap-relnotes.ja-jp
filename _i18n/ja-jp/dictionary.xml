@@ -632,11 +632,6 @@
   <block id="49fc376ed35249f3841846ede4dab884" category="inline-link">NetApp Cloud Central</block>
   <block id="48ad756d03abbc6e0fe01e9831a6e964" category="paragraph">価格設定の詳細については、を参照してください<block ref="073c3927129b02897890200010eee524" category="inline-link-rx"></block>。</block>
   <block id="25b035aed2fdd6599b8102a76363fdec" category="section-title">無償トライアルを利用できます</block>
-  <block id="33d5706170e3b14a39e3a949fb3d1ea4" category="paragraph">30 日間の無償トライアルをクラウドプロバイダのマーケットプレイスで従量課金制サブスクリプションで利用できます。無償トライアルには、 Cloud Volumes ONTAP とクラウドバックアップが含まれており、マーケットプレイスのリストに登録した時点から利用が開始されます。</block>
-  <block id="2f6de72cbf1a20ae28f0ecb7f67442cc" category="paragraph">たとえば、時間単位のソフトウェアライセンス料は発生しませんが、クラウドプロバイダからインフラ料金が請求されます。</block>
-  <block id="b699152a7dc0147566cf5d4a54e7af89" category="paragraph">無料トライアルは、有効期限が切れると、自動的に 1 時間単位の有料サブスクリプションに変換されます。時間制限内にインスタンスを終了した場合、展開した次のインスタンスは無料トライアルの一部ではありません（ 30 日以内に展開された場合でも）。</block>
-  <block id="fce1a93d81ea8b79481e4dea03cf7dee" category="paragraph">Cloud Volumes ONTAP の 30 日間の無償トライアルを Cloud Manager から開始するには、支払い担当者のアカウントで最初の Cloud Volumes ONTAP システムを作成します。</block>
-  <block id="cd48c2333fa4df56febc08e8e277024b" category="paragraph">従量課金制の試用版はクラウドプロバイダから提供され、いかなる手段によっても拡張することはできません。</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">サポートされている構成</block>
   <block id="4e4c431843fe55f93c074808800bf7d0" category="paragraph">容量ベースのライセンスパッケージは Cloud Volumes ONTAP 9.7 以降で利用できます。</block>
   <block id="37040d43404231d8205705e4353af733" category="section-title">容量制限</block>
@@ -748,4 +743,7 @@
   <block id="402e8d971886b1604e4de74c0058dc71" category="section-title">必要なコネクタのバージョン</block>
   <block id="089931e7f88b7a409ed7ad2ba44d8100" category="paragraph">既存のシステムを9.11.0にアップグレードするには、Cloud Manager Connectorでバージョン3.9.18以降が実行されている必要があります。</block>
   <block id="75026846c1403e202a52bdb027762fbb" category="section-title">ダウンタイム</block>
+  <block id="656d282ec4da3b613132f8e29d6cb90e" category="paragraph">30 日間の無償トライアルをクラウドプロバイダのマーケットプレイスで従量課金制サブスクリプションで利用できます。無償トライアルには、Cloud Volumes ONTAP とクラウドバックアップが含まれています。トライアルは、市場で提供サービスに登録すると開始されます。</block>
+  <block id="2986f3edb85e34a7556b412028be57fb" category="paragraph">インスタンスや容量の制限はありません。Cloud Volumes ONTAP システムは必要な数だけ導入でき、必要な容量を30日間無償で割り当てることができます。無料トライアルは、30日後に1時間ごとの有料サブスクリプションに自動的に変換されます。</block>
+  <block id="631556a144b10d5d5f19603b18176e32" category="paragraph">Cloud Volumes ONTAP のソフトウェアライセンス料金は1時間ごとに発生しませんが、クラウドプロバイダからインフラ料金が請求されます。</block>
 </blocks>
