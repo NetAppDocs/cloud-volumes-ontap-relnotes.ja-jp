@@ -37,6 +37,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N1-standard-32
 * N2 - 標準 -4
 * N2-standard-8
+* N2-standard-16
 * N2-standard-32
 
  a| 
@@ -48,6 +49,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
  a| 
 * N1-standard-32
+* N2-standard-16
 * N2-standard-32
 
  a| 
@@ -55,6 +57,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N1-standard-32
 * N2 - 標準 -4
 * N2-standard-8
+* N2-standard-16
 * N2-standard-32
 
  a| 
@@ -62,6 +65,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N1-standard-32
 * N2 - 標準 -4
 * N2-standard-8
+* N2-standard-16
 * N2-standard-32
 
 
