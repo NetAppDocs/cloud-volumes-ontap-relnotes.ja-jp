@@ -677,6 +677,10 @@
         
 
         
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-family/">Cloud Manager</a>
+        </li>
+        
 
         <li class="n-breadcrumb__list-item">
           <a href="/ja-jp/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.11.0&nbsp;release&nbsp;notes</a>
@@ -710,7 +714,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-09 15:34:03 +0000">05/09/2022</time>
+    <time datetime="2022-05-16 18:32:53 +0000">05/16/2022</time>
     
   
 
@@ -787,18 +791,18 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Freemium 製品の使用を開始するには、新しい Cloud Volumes ONTAP 作業環境を作成し、充電方法の選択を求めるプロンプトが表示されたら「 * Freemium * 」を選択します。</p>
+<p>Freemium製品の導入方法をご確認ください。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html" target="_blank" rel="noopener">"AWS での Cloud Volumes ONTAP の起動"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html" target="_blank" rel="noopener">"AWSでCloud Volumes ONTAP のライセンスを設定"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html" target="_blank" rel="noopener">"Azure で Cloud Volumes ONTAP を起動します"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html" target="_blank" rel="noopener">"AzureでCloud Volumes ONTAP のライセンスをセットアップする"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html" target="_blank" rel="noopener">"Google Cloud で Cloud Volumes ONTAP を起動しています"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html" target="_blank" rel="noopener">"Google CloudでCloud Volumes ONTAP のライセンスを設定します"</a></p>
 </li>
 </ul>
 </div>
@@ -951,6 +955,18 @@
 <div class="paragraph">
 <p>Cloud Volumes ONTAP のソフトウェアライセンス料金は1時間ごとに発生しませんが、クラウドプロバイダからインフラ料金が請求されます。</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-volumes-ontap-relnotes/images/tip.svg" alt="ヒント">
+</td>
+<td class="content">
+Cloud Managerには、無償トライアルが開始されたとき、7日が残ったとき、および1日が残っているときに通知が送信されます。例：<span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-free-trial-notification.png" alt="Cloud Managerインターフェイスの通知のスクリーンショット。無償トライアルの残りの日数は7日です。"></span>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="サポートされている構成">サポートされている構成</h3>
@@ -997,31 +1013,21 @@
 </div>
 <div class="sect2">
 <h3 id="開始方法">開始方法</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="https://cloud.netapp.com/contact-cds" target="_blank" rel="noopener">"ライセンスの取得については、ネットアップの営業部門にお問い合わせください"</a>。</p>
-</li>
-<li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html" target="_blank" rel="noopener">"Cloud Manager にライセンスを追加します"</a>。</p>
-</li>
-<li>
-<p>Cloud Volumes ONTAP システムの作成時に、容量ベースの BYOL 課金方式を選択します。</p>
+<div class="paragraph">
+<p>容量単位のライセンスの取得方法については、以下をご覧ください。</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html" target="_blank" rel="noopener">"AWS での Cloud Volumes ONTAP の起動"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html" target="_blank" rel="noopener">"AWSでCloud Volumes ONTAP のライセンスを設定"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html" target="_blank" rel="noopener">"Azure で Cloud Volumes ONTAP を起動します"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html" target="_blank" rel="noopener">"AzureでCloud Volumes ONTAP のライセンスをセットアップする"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html" target="_blank" rel="noopener">"Google Cloud で Cloud Volumes ONTAP を起動しています"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html" target="_blank" rel="noopener">"Google CloudでCloud Volumes ONTAP のライセンスを設定します"</a></p>
 </li>
 </ul>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -1055,34 +1061,21 @@
 </div>
 <div class="sect2">
 <h3 id="開始方法-2">開始方法</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>まだサブスクリプションをお持ちでない場合は、 <a href="https://www.netapp.com/forms/keystone-sales-contact/" target="_blank" rel="noopener">"ネットアップにお問い合わせください"</a>。</p>
-</li>
-<li>
-<p>mailto ： <a href="mailto:ng-keystone-success@netapp.com">ng-keystone-success@netapp.com</a> [ ネットアップにお問い合わせください ] 1 つ以上の Keystone Flex Subscriptions で Cloud Manager のユーザアカウントを承認します。</p>
-</li>
-<li>
-<p>ネットアップがお客様のアカウントを許可したあと、 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-keystone.html#link-a-subscription" target="_blank" rel="noopener">"Cloud Volumes ONTAP で使用するサブスクリプションをリンクします"</a></p>
-</li>
-<li>
-<p>Cloud Volumes ONTAP システムを作成するときに、 Keystone Flex サブスクリプションの課金方法を選択します。</p>
+<div class="paragraph">
+<p>Keystone Flexサブスクリプションの概要については、以下をご覧ください。</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html" target="_blank" rel="noopener">"AWS での Cloud Volumes ONTAP の起動"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html" target="_blank" rel="noopener">"AWSでCloud Volumes ONTAP のライセンスを設定"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html" target="_blank" rel="noopener">"Azure で Cloud Volumes ONTAP を起動します"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html" target="_blank" rel="noopener">"AzureでCloud Volumes ONTAP のライセンスをセットアップする"</a></p>
 </li>
 <li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html" target="_blank" rel="noopener">"Google Cloud で Cloud Volumes ONTAP を起動しています"</a></p>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html" target="_blank" rel="noopener">"Google CloudでCloud Volumes ONTAP のライセンスを設定します"</a></p>
 </li>
 </ul>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </div>
