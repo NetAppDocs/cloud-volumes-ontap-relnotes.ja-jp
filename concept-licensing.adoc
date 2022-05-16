@@ -48,11 +48,11 @@ Cloud Volumes ONTAP のすべての機能をネットアップから無償で提
 
 
 
-Freemium 製品の使用を開始するには、新しい Cloud Volumes ONTAP 作業環境を作成し、充電方法の選択を求めるプロンプトが表示されたら「 * Freemium * 」を選択します。
+Freemium製品の導入方法をご確認ください。
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS での Cloud Volumes ONTAP の起動"^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure で Cloud Volumes ONTAP を起動します"^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud で Cloud Volumes ONTAP を起動しています"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html["AWSでCloud Volumes ONTAP のライセンスを設定"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html["AzureでCloud Volumes ONTAP のライセンスをセットアップする"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html["Google CloudでCloud Volumes ONTAP のライセンスを設定します"^]
 
 
 
@@ -146,6 +146,9 @@ Essentials パッケージと Professional パッケージには、次の消費�
 Cloud Volumes ONTAP のソフトウェアライセンス料金は1時間ごとに発生しませんが、クラウドプロバイダからインフラ料金が請求されます。
 
 
+TIP: Cloud Managerには、無償トライアルが開始されたとき、7日が残ったとき、および1日が残っているときに通知が送信されます。例：image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-free-trial-notification.png["Cloud Managerインターフェイスの通知のスクリーンショット。無償トライアルの残りの日数は7日です。"]
+
+
 
 === サポートされている構成
 
@@ -176,15 +179,11 @@ Cloud Volumes ONTAP のソフトウェアライセンス料金は1時間ごと�
 
 === 開始方法
 
-. https://cloud.netapp.com/contact-cds["ライセンスの取得については、ネットアップの営業部門にお問い合わせください"^]。
-. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html["Cloud Manager にライセンスを追加します"^]。
-. Cloud Volumes ONTAP システムの作成時に、容量ベースの BYOL 課金方式を選択します。
-+
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS での Cloud Volumes ONTAP の起動"^]
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure で Cloud Volumes ONTAP を起動します"^]
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud で Cloud Volumes ONTAP を起動しています"^]
+容量単位のライセンスの取得方法については、以下をご覧ください。
 
-
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html["AWSでCloud Volumes ONTAP のライセンスを設定"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html["AzureでCloud Volumes ONTAP のライセンスをセットアップする"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html["Google CloudでCloud Volumes ONTAP のライセンスを設定します"^]
 
 
 
@@ -215,16 +214,11 @@ Keystone Flex Subscriptions は、 HA ペアでサポートされます。現時
 
 === 開始方法
 
-. まだサブスクリプションをお持ちでない場合は、 https://www.netapp.com/forms/keystone-sales-contact/["ネットアップにお問い合わせください"^]。
-. mailto ： ng-keystone-success@netapp.com [ ネットアップにお問い合わせください ] 1 つ以上の Keystone Flex Subscriptions で Cloud Manager のユーザアカウントを承認します。
-. ネットアップがお客様のアカウントを許可したあと、 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-keystone.html#link-a-subscription["Cloud Volumes ONTAP で使用するサブスクリプションをリンクします"^]
-. Cloud Volumes ONTAP システムを作成するときに、 Keystone Flex サブスクリプションの課金方法を選択します。
-+
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS での Cloud Volumes ONTAP の起動"^]
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure で Cloud Volumes ONTAP を起動します"^]
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud で Cloud Volumes ONTAP を起動しています"^]
+Keystone Flexサブスクリプションの概要については、以下をご覧ください。
 
-
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html["AWSでCloud Volumes ONTAP のライセンスを設定"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html["AzureでCloud Volumes ONTAP のライセンスをセットアップする"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html["Google CloudでCloud Volumes ONTAP のライセンスを設定します"^]
 
 
 
