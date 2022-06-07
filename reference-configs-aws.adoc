@@ -38,7 +38,7 @@ Cloud Volumes ONTAP では、データ階層化用に複数のタイプの EBS �
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースのライセンス | 容量単位のライセンスです 
+|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） ^1 ^ | 500 GiB | 2TiB | 10TiB | 368TiB ^2^ | ライセンスあたり 368 TiB ^2^ | 2 PiB ^2^ 
@@ -64,7 +64,7 @@ Cloud Volumes ONTAP では、データ階層化用に複数のタイプの EBS �
 
 === サポートされるディスクサイズ
 
-AWS では、アグリゲートに同じタイプおよびサイズのディスクを最大 6 本含めることができます。
+AWS では、アグリゲートに同じサイズのディスクを最大 6 本含めることができます。ただし、Amazon EBS Elastic Volumes機能をサポートする構成では、アグリゲートに最大8本のディスクを含めることができます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Elastic Volumesのサポートに関する詳細情報"^]
 
 [cols="3*"]
 |===

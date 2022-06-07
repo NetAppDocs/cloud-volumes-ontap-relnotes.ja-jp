@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.11.0には、新しい拡張機能が追加されています。 
+summary: Cloud Volumes ONTAP 9.11.1では、新しい機能強化が追加されています。 
 ---
-= Cloud Volumes ONTAP 9.11.0の新機能
+= Cloud Volumes ONTAP 9.11.1の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,30 +14,91 @@ summary: Cloud Volumes ONTAP 9.11.0には、新しい拡張機能が追加され
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.11.0には、新しい拡張機能が追加されています。
+Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
 
 その他の機能と機能拡張は、 Cloud Manager の最新バージョンで導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager リリースノート"^] を参照してください。
 
 
 
-== 9.11.0 P1（2022年5月2日）
+== 9.11.1 RC1（2022年6月8日）
 
-Cloud Volumes ONTAP 9.11.0 P1リリースがAWS、Azure、Google Cloudで利用できるようになりました。このリリースには、次の機能拡張が含まれています
-
-
-
-=== AWSでのONTAP S3のサポート
-
-AWSのCloud Volumes ONTAP からS3オブジェクトストレージを提供できるようになりました（Microsoft Azureはすでにサポートされています）。Cloud Volumes ONTAP は、NFSやSMBなどの従来型のファイルベースプロトコルに加え、スケールアウトストレージ用のオプションとしてS3をサポートしています。
-
-次の点に注意してください。
-
-* Cloud Volumes ONTAP S3 と ONTAP の主なユースケースは、汎用のオブジェクトストアです。
-* 現時点では、Google CloudのCloud Volumes ONTAP ではS3プロトコルはサポートされていません。
-* Cloud Manager には、 ONTAP S3 機能に対する管理機能はありません。
+Cloud Volumes ONTAP 9.11.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
 
 
-https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["ONTAP で S3 オブジェクトストレージサービスを設定および管理する方法について説明します"^]。
+
+=== パフォーマンスの強化
+
+9.11.1以降で作成された新しいアグリゲートの読み取りパフォーマンスが向上しています。
+
+
+
+=== ストレージ効率の向上
+
+9.11.1以降のリリースでは、Storage Efficiencyが有効になったすべての新しいボリュームに、温度影響を受けやすいストレージ効率という新しい圧縮機能が追加されました。旧世代の圧縮機能は使用されなくなりました。
+
+温度に敏感なストレージ効率は、データの温度または使用頻度に基づいてデータを圧縮します。コールドデータ、またはあまり使用されないデータは、圧縮率が高い方に再圧縮されるため、ストレージ効率が向上します。
+
+
+
+=== AWSでのvPC共有
+
+VPCを共有するAWSでCloud Volumes ONTAP HAペアがサポートされるようになりました。VPC共有を使用すると、他のAWSアカウントとサブネットを共有できます。ネットワーク（VPC、サブネット、およびルーティングテーブル）はVPC所有者アカウントに存在し、HA構成のEC2インスタンスは共有サブネットを使用する参加者アカウントに存在します。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html["共有サブネットにHAペアを導入する方法について説明します"^]
+
+
+
+=== AWS リージョンが新たにサポートされるようになり
+
+Cloud Volumes ONTAP は、AWSジャカルタリージョン（AP-Southee-3）でサポートされるようになりました。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
+
+
+
+=== 新たにサポートされるAzureリージョン
+
+Cloud Volumes ONTAP は、Azureブラジル南東部の地域でサポートされるようになりました。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
+
+
+
+=== Google Cloudでは24個のStorage VMがサポートされています
+
+ほとんどの構成で、24個のStorage VMがGoogle CloudのCloud Volumes ONTAP でサポートされるようになりました。
+
+* link:reference-limits-gcp.html#storage-vm-limits["Google CloudのStorage VMの制限に関する詳細を確認できます"]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["Google CloudでCloud Volumes ONTAP 向けのデータ提供用Storage VMを作成する方法をご確認ください"^]
+
+
+
+
+=== 新しいGoogle Cloudリージョンサポート
+
+Cloud Volumes ONTAP HAペアがミラノ（ヨーロッパ-西ヨーロッパ8）リージョンでサポートされるようになりました。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
+
+
+
+=== 新しいStorage VMのLIFサービスを変更しています
+
+このリリース以降、AWSまたはAzureのCloud Volumes ONTAP HAペアに新しいStorage VMを作成する場合は、Storage VMのネットワークサービスポリシーを変更する必要があります。サービスの変更が必要となるのは、Cloud Volumes ONTAP がiSCSI LIFをアウトバウンド管理接続に使用できるようにするためです。
+
+Google CloudのCloud Volumes ONTAP では、作成時にCloud Manager APIによってLIFサービスが設定されるため、LIFサービスを変更する必要はありません。
+
+実行する必要があるコマンドは、次のページで指定します。
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["AWSで追加のStorage VMを作成する方法について説明します"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Azureで追加のStorage VMを作成する方法について説明します"^]
+
+
+
+
+== サポートされない新しいONTAP 機能
+
+ONTAP 9.11.1で導入された新しいマルチ管理検証機能は、Cloud Volumes ONTAP ではサポートされていません。Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
 
 
 
@@ -57,13 +118,13 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 
 === サポートされているアップグレードパス
 
-9.10.1リリースからCloud Volumes ONTAP 9.11.0にアップグレードできます。対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするよう求めるプロンプトがCloud Managerに表示されます。
+9.11.0リリースおよび9.10.1リリースからCloud Volumes ONTAP 9.11.1にアップグレードできます。対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするよう求めるプロンプトがCloud Managerに表示されます。
 
 
 
 === 必要なコネクタのバージョン
 
-既存のシステムを9.11.0にアップグレードするには、Cloud Manager Connectorでバージョン3.9.18以降が実行されている必要があります。
+新しいCloud Volumes ONTAP 9.11.1システムを導入し、既存のシステムを9.11.1にアップグレードするには、Cloud Manager Connectorでバージョン3.9.19以降が実行されている必要があります。
 
 
 TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。

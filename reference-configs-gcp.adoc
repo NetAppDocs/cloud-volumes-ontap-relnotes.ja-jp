@@ -26,7 +26,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースのライセンス | 容量単位のライセンスです 
+|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） ^1 ^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 1 ライセンスあたり 368 TB | 2 PiB 

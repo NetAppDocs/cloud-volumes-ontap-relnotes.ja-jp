@@ -101,6 +101,10 @@ Cloud Volumes ONTAP では、次の機能はサポートされていません。
 * インターフェイスグループ
 * ノード内の LIF のフェイルオーバー
 * MetroCluster
+* 管理者による検証が複数必要です
++
+Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
+
 * Google CloudのONTAP S3（S3プロトコルはAzureとAWSでサポート）
 * RAID 4 、 RAID-DP 、 RAID-TEC （ RAID 0 のサポート）
 * サービスプロセッサ

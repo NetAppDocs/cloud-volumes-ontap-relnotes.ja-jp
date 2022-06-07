@@ -426,7 +426,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 | ボリュームあたりの最大数 | ボリュームサイズは最大 20 億個です 
 
 
-| * FlexClone ボリューム * | クローン階層の深さ ^2^ | 499 
+| * FlexClone ボリューム * | クローン階層の深さ ^1^ | 499 
 
 
 .3+| * FlexVol ボリューム * | ノードあたりの最大数 | 500 
@@ -443,14 +443,6 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-sv
 
 | * Snapshot コピー * | FlexVol あたりの最大数 | 1,023 
 |===
-注：
-
-. Cloud Manager では、 SVM ディザスタリカバリのセットアップやオーケストレーションはサポートされません。また、追加の SVM でストレージ関連のタスクをサポートしていません。SVM ディザスタリカバリには、 System Manager または CLI を使用する必要があります。
-+
-** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["SVM ディザスタリカバリ設定エクスプレスガイド"^]
-** https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["『 SVM ディザスタリカバリエクスプレスガイド』"^]
-
-
 . クローン階層の深さは、 1 つの FlexVol から作成できる、ネストされた FlexClone ボリュームの最大階層です。
 
 

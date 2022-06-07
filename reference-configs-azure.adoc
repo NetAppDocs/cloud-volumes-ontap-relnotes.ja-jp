@@ -32,7 +32,7 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースのライセンス | 容量単位のライセンスです 
+|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2TiB ^1 | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB | 2 PiB 
@@ -142,7 +142,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 [cols="h,d,d,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Standard の略 | PAYGO Premium | ノードベースのライセンス | 容量単位のライセンスです 
+|  | フリーミアム | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB | 2 PiB 
