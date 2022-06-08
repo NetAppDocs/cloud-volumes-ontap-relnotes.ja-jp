@@ -129,6 +129,7 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
+. シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
 . SSD の使用時には書き込みパフォーマンスの向上が実現します。
 . Azure リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
 . Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
@@ -159,7 +160,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E8ds_v4^1^
 * E32ds_v4^1^
 * E48ds_v4^1^
-* E80ids_v4^2^
+* E80ids_v4^1,2^
 
  a| 
 * DS4_v2
@@ -174,7 +175,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E48s_v3^1^
 * E32ds_v4^1^
 * E48ds_v4^1^
-* E80ids_v4^2^
+* E80ids_v4^1,2^
 
  a| 
 * DS4_v2
@@ -187,7 +188,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E8ds_v4^1^
 * E32ds_v4^1^
 * E48ds_v4^1^
-* E80ids_v4^2^
+* E80ids_v4^1,2^
 
  a| 
 * DS4_v2
@@ -200,7 +201,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E8ds_v4^1^
 * E32ds_v4^1^
 * E48ds_v4^1^
-* E80ids_v4^2^
+* E80ids_v4^1,2^
 
 
 
@@ -209,7 +210,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 |===
 注：
 
-. Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
+. Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
 . この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . PAYGO Explore は Azure の HA ペアではサポートされていません。
 . Azure リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。

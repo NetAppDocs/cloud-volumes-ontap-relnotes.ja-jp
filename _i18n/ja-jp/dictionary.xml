@@ -439,9 +439,7 @@
   <block id="8e54c9dd2c325f6430e1789d91c327ee" category="list-text">E8ds_v4^1^</block>
   <block id="5d47d15bb6c95cde595a22f670bc8cdf" category="list-text">E32ds_v4^1^</block>
   <block id="a9161f4d77d799baa3a3dc4cfeaefca3" category="list-text">E48ds_v4^1^</block>
-  <block id="195512f323b29b79f5b71cceb3a49a7d" category="list-text">E80ids_v4^2^</block>
   <block id="8dbeeeefc901c0dbb39a9c1332aaeeb9" category="cell">プレミアムページブロブ</block>
-  <block id="937cb82fad9af153ff18d3ee14caebd5" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。</block>
   <block id="d642bc6852e213242f2c21d17b6d3e43" category="list-text">PAYGO Explore は Azure の HA ペアではサポートされていません。</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">Azure では、アグリゲートに同じタイプおよびサイズのディスクを 12 本まで含めることができます。</block>
@@ -720,7 +718,6 @@
   <block id="caad2a7dc9cfca100a8a4cd9178c5c3c" category="summary">Cloud Volumes ONTAP 9.11.1では、新しい機能強化が追加されています。</block>
   <block id="a7eac8b4a926da262039a402441599c8" category="doc">Cloud Volumes ONTAP 9.11.1の新機能</block>
   <block id="749d592703da3a848a73787c63c1b7b3" category="paragraph">Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい</block>
-  <block id="b86e6dd31ab5551fadfa63d0a04883ae" category="section-title">9.11.1 RC1（2022年6月8日）</block>
   <block id="39034d90f9ffc3ae3d6bfac5d80a47b0" category="paragraph">Cloud Volumes ONTAP 9.11.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。</block>
   <block id="0d14c546aac1d41bf632c7d7c3b6bb3d" category="section-title">パフォーマンスの強化</block>
   <block id="a98457b4d59ceca5e3d55d0aa4fc5df9" category="paragraph">9.11.1以降で作成された新しいアグリゲートの読み取りパフォーマンスが向上しています。</block>
@@ -773,4 +770,8 @@
   <block id="b50289e78d6a423be932389cf178a958" category="inline-link-macro">Google CloudのCloud Volumes ONTAP 9.11.1メディエーターに関する通知</block>
   <block id="c35639ede069036a5d63bb08043fd4f9" category="list-text"><block ref="c35639ede069036a5d63bb08043fd4f9" category="inline-link-macro-rx"></block></block>
   <block id="3fb5fad778ff400a49097ca0bf0b9754" category="paragraph">AWS では、アグリゲートに同じサイズのディスクを最大 6 本含めることができます。ただし、Amazon EBS Elastic Volumes機能をサポートする構成では、アグリゲートに最大8本のディスクを含めることができます。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
+  <block id="4dda8e10e8f790376507dc79063b6dcf" category="section-title">9.11.1 RC1（2022年6月7日）</block>
+  <block id="0d8238cb20fb41ede1eb68d45d598c4f" category="list-text">シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
+  <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4^1,2^</block>
+  <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
 </blocks>
