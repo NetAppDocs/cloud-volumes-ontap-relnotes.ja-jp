@@ -772,6 +772,6 @@
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.mcip</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn. 12xlarge</block>
   <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">このリリースの新しいCloud Volumes ONTAP システムでは、c4、m4、およびR4インスタンスタイプはサポートされません。ただし、これらのインスタンスタイプのいずれかで実行している場合は、このリリースにシステムをアップグレードできるため、これらのインスタンスタイプのディスク制限は引き続き表示されます。</block>
-  <block id="fe133d1f6db8d046e4b328c0d9a967a1" category="paragraph">Cloud Volumes ONTAP システムの最大数は、使用しているライセンスモデルに関係なく、ネットアップアカウントあたり50に制限されます。</block>
-  <block id="ae5034ae6657395ba1fc2a16d2c55db3" category="paragraph">a_system_に は、 HA ペアまたはシングルノードシステムを指定します。たとえば、8つのCloud Volumes ONTAP HAペアと4つのシングルノードシステムがある場合、合計で12個のシステムがあり、アカウントに38個のシステムを追加で割り当てることができます。</block>
+  <block id="3ac6338087c4180b5cbb359584abab3a" category="paragraph">Cloud Volumes ONTAP システムの最大数は、使用しているライセンスモデルに関係なく、ネットアップアカウントあたり 20 に制限されます。</block>
+  <block id="b730a5e05a41eebeb51f5aee7c746386" category="paragraph">a_system_に は、 HA ペアまたはシングルノードシステムを指定します。たとえば、2つのCloud Volumes ONTAP HAペアと2つのシングルノードシステムがある場合、合計4つのシステムがあり、アカウントに16のシステムを追加することができます。</block>
 </blocks>
