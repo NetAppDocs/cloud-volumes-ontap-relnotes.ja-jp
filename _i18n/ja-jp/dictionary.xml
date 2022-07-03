@@ -565,78 +565,15 @@
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">各 Storage VM に最大 3 つの LIF を設定できます。 2 つはデータ LIF 、 1 つは SVM 管理 LIF です。</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションを使用することで、ニーズに合わせた構成を選択できます。</block>
   <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Cloud Volumes ONTAP のライセンス</block>
-  <block id="6b32e99bddf60938239aabe092cb4c16" category="paragraph">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションで、ニーズに合った消費モデルを選択できます。</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="section-title">ライセンスの概要</block>
   <block id="f008ecd5469e24eee31eb4e2e4a1e23f" category="paragraph">新規のお客様は、次のライセンスオプションを利用できます。</block>
-  <block id="474eb171216a34faad8105c0ca4b47bd" category="list-text">フリーミアムのサービス</block>
-  <block id="d6140227f443f533f2d169225f41c434" category="list-text">ライセンスや契約を購入することなく、プロビジョニングされた容量を最大 500GiB まで無料で利用できます。限定的なサポートが含まれます。</block>
-  <block id="27d0a1d0fc95280fbaf78c65ff6b37fb" category="list-text">Essentials パッケージ</block>
-  <block id="57050f826fe75d25457ab448568ae53d" category="list-text">さまざまな構成で Cloud Volumes ONTAP の容量に基づいて料金が発生します。</block>
-  <block id="f2213b04acf4d3b9fcad6cdbc77cd671" category="list-text">プロフェッショナルパッケージ</block>
-  <block id="765b9232138388e3de34831ab3adb1e0" category="list-text">Cloud Volumes ONTAP 構成の種類に関係なく、容量ごとに料金が発生Cloud Backup でバックアップを無制限に実行できます。</block>
   <block id="a47bcecd4f4a1f89ad4e82bca88975ab" category="list-text">Keystone Flex サブスクリプション</block>
-  <block id="a7c9ae4b871102b7553565c7089cf839" category="list-text">ニーズに合わせて拡張できるサブスクリプションベースのサービス。 HA ペア向けのシームレスなハイブリッドクラウドエクスペリエンスを提供します。</block>
   <block id="0e1a6eb7eed81777ed9d0610be51df3b" category="paragraph">以前のノード単位のライセンスモデルは、ライセンスを購入済みの既存のお客様や、アクティブな Marketplace サブスクリプションを所有しているお客様には引き続き提供されます。</block>
-  <block id="08598187312665a33ac3ebb5fc060c00" category="paragraph">以降のセクションでは、これらの各オプションについて詳しく説明します。</block>
-  <block id="d7c357dcc3b8476a2eeba19c87ec383d" category="paragraph">Cloud Volumes ONTAP のすべての機能をネットアップから無償で提供（クラウドプロバイダの料金がまだ適用されます）。</block>
-  <block id="24996c045717f17c4e40ebb44791b2af" category="list-text">ライセンスや契約は必要ありません。</block>
-  <block id="cc3b16b51bb72e66b8f103fef83035d9" category="list-text">ネットアップによるサポートは含まれていません。</block>
-  <block id="895dacd81cbc05951744c0bce981546c" category="list-text">Cloud Volumes ONTAP システムあたりのプロビジョニング可能な容量は 500GiB に制限されています。</block>
-  <block id="78bd6ae14d58c0754e9678cbf2ebad05" category="list-text">ネットアップのアカウントごとに、最大 10 台の Cloud Volumes ONTAP システムを Freemium 製品で使用できます。</block>
-  <block id="922e54a2e69b279fbb6ab93d4f189181" category="list-text">Cloud Volumes ONTAP システム用にプロビジョニングされた容量が 500GiB を超えると、 Cloud Manager はシステムを Essentials パッケージ（容量ベースのライセンス）に変換します。</block>
-  <block id="2b5b1f6feb7719bc282a3518f33b1784" category="paragraph">プロビジョニングされた容量が 500GiB 未満の他のシステムは、 Freemium （ Freemium 製品を使用して導入されている場合）に残ります。</block>
   <block id="19bcaffbe8361f9d452beabc8065f223" category="section-title">容量ベースのライセンスパッケージ</block>
   <block id="e7cf94fb6f7d5441689859c52b410a98" category="paragraph">容量単位のライセンスでは、 TiB 単位の Cloud Volumes ONTAP に対して料金を支払うことができます。このライセンスはネットアップアカウントに関連付けられており、ライセンスで十分な容量が使用可能であれば、ライセンスに対して複数のシステムを充電することができます。</block>
-  <block id="68935a38790e91889cd56742a47079f3" category="paragraph">たとえば、 20TiB のライセンスを 1 つ購入して 4 つの Cloud Volumes ONTAP システムを導入し、各システムに 5TiB のボリュームを割り当てて合計 20TiB にするとします。そのアカウントに導入されている各 Cloud Volumes ONTAP システムのボリュームで容量を使用できます。</block>
-  <block id="c5a8696749d985ac6f5542bcf7ace1e2" category="paragraph">容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入するときは、 _Essentials_package または _Professional_package を選択できます。</block>
-  <block id="6cc9f034206d1e740ca9a065330721b4" category="list-text">Cloud Volumes ONTAP 構成を選択します。</block>
-  <block id="d7a4c9387784a4f0820a7a6500b673bc" category="list-text">シングルノードまたは HA システム</block>
-  <block id="5e9a61c426f74f04e7e194fc07bab16e" category="list-text">ディザスタリカバリ（ DR ）用のファイルストレージとブロックストレージまたはセカンダリデータ</block>
-  <block id="3c5e979087ecb3ead1e8ace0120e5cb6" category="list-text">ネットアップのクラウドデータサービスを追加コストで利用できます</block>
-  <block id="c741d4dfd63aec956160917346d489e5" category="list-text">すべての Cloud Volumes ONTAP 構成（シングルノードまたは任意のストレージタイプの HA ）にライセンスを提供</block>
-  <block id="71cce048f3aa67d534f433fdfc00f486" category="list-text">Cloud Backup を使用したボリュームのバックアップを含みます（このライセンスを使用するボリュームのみ）</block>
-  <block id="26e0cffca193fe47b1c5c8f73ea3c3e1" category="section-title">消費モデル</block>
-  <block id="3cc132ecf0523f86195d2baf263bfdba" category="paragraph">Essentials パッケージと Professional パッケージには、次の消費モデルがあります。</block>
-  <block id="743cd9f94465042cc1367604dce1ec22" category="list-text">ネットアップからライセンスを購入した場合（ BYOL ）は、クラウドプロバイダが提供する PAYGO のサブスクリプションも必要です。</block>
-  <block id="0956d25698d6ea6e452e1cd574ab1eea" category="paragraph">ライセンスは常に最初に請求されますが、次の場合は、マーケットプレイスで 1 時間ごとの料金が請求されます。</block>
-  <block id="6246af80c9ea9c857c70d2c643fcb249" category="list-text">ライセンス容量を超えた場合</block>
-  <block id="fdde7a7f3783aa0ce1e585f8be9c2def" category="list-text">ライセンスの期間が終了する場合</block>
-  <block id="36e4d5ff70cec517180ae18f1c34d2fd" category="list-text">市場から年間契約を結んでいる場合、導入する Cloud Volumes ONTAP システムにはその契約が適用されます。BYOL と年間市場契約を組み合わせることはできません。</block>
-  <block id="e22ac25b066b201473de7aa700ef5d92" category="section-title">価格設定</block>
-  <block id="49fc376ed35249f3841846ede4dab884" category="inline-link">NetApp Cloud Central</block>
-  <block id="48ad756d03abbc6e0fe01e9831a6e964" category="paragraph">価格設定の詳細については、を参照してください<block ref="073c3927129b02897890200010eee524" category="inline-link-rx"></block>。</block>
-  <block id="25b035aed2fdd6599b8102a76363fdec" category="section-title">無償トライアルを利用できます</block>
   <block id="1f0b82560627b660c6c6958a1df834b8" category="section-title">サポートされている構成</block>
-  <block id="4e4c431843fe55f93c074808800bf7d0" category="paragraph">容量ベースのライセンスパッケージは Cloud Volumes ONTAP 9.7 以降で利用できます。</block>
-  <block id="37040d43404231d8205705e4353af733" category="section-title">容量制限</block>
-  <block id="30603aec25d6436b9b4c18f5e88da521" category="paragraph">このライセンスモデルでは、個々の Cloud Volumes ONTAP システムでディスクとオブジェクトストレージへの階層化によって、最大 2 PiB の容量をサポートします。</block>
-  <block id="28d17a1ec8598824eb0c46f1ef2668af" category="paragraph">ライセンス自体にに関しては、最大容量制限はありません。</block>
-  <block id="25827e83a178b9b140976a356e0ea48a" category="section-title">充電に関するメモ</block>
-  <block id="c1092325501599c6dcc90500081a2184" category="list-text">BYOL の容量を超えた場合やライセンスの有効期限が切れた場合は、マーケットプレイスのサブスクリプションに基づいて 1 時間あたりの料金が高すぎることを意味します。</block>
-  <block id="caa54273e5fb3b700fad994050e4dde4" category="list-text">パッケージごとに 4TiB 以上の容量を追加容量が 4TiB 未満の Cloud Volumes ONTAP インスタンスは、 4TiB の割合で請求されます。</block>
-  <block id="55675f6a5328a3c661aa2daa971f7c76" category="list-text">HA ペアの場合、ノードのプロビジョニング済み容量に対してのみ料金が発生します。パートナーノードに同期ミラーリングされるデータには料金は発生しません。</block>
-  <block id="e61eacf9a2b260a46a8935478c8a063d" category="list-text">FlexClone ボリュームで使用される容量に対する料金は発生しません。</block>
-  <block id="529bcec2b9675b3cb0a81186e626a92b" category="list-text">ソースおよびデスティネーションの FlexCache ボリュームはプライマリデータとみなされ、プロビジョニング済みスペースに基づいて料金が発生します。</block>
-  <block id="07e1d66babe77070cc76a4e637c9f26d" category="section-title">開始方法</block>
   <block id="69c3857459c8cf827b42c61c1b02fdd2" category="paragraph">成長に合わせて拡張できるサブスクリプションベースのサービス。運用コストの消費モデルを希望するお客様に、設備投資やリースを先行するお客様にシームレスなハイブリッドクラウドエクスペリエンスを提供します。</block>
   <block id="c2d000408838a6b2031536d54c067fd9" category="paragraph">課金は、 Keystone Flex サブスクリプションでの 1 つ以上の Cloud Volumes ONTAP HA ペアのコミット済み容量に基づいています。</block>
-  <block id="892e0a2b50821daaef1eddd0b5cfa034" category="paragraph">各ボリュームのプロビジョニング済み容量は、 Keystone Flex サブスクリプションのコミット済み容量と定期的に集計されて比較され、超過した場合は Keystone Flex サブスクリプションのバーストとして課金されます。</block>
-  <block id="745ec22f0102008107fa053a9c453dc1" category="inline-link">Keystone Flex Subscriptions の詳細をご覧ください</block>
-  <block id="fc05a23e35af50e1b5d94bf324daab38" category="paragraph"><block ref="29cce53a470361b575f0254c84bcbedb" category="inline-link-rx"></block>。</block>
-  <block id="6f4c790c1d9416682af57e0872022ec6" category="paragraph">Keystone Flex Subscriptions は、 HA ペアでサポートされます。現時点では、このライセンスオプションはシングルノードシステムではサポートされていません。</block>
-  <block id="aad2b08c0103cffcbb5efae0a56ee747" category="paragraph">個々の Cloud Volumes ONTAP システムでは、ディスクとオブジェクトストレージへの階層化によって、最大 2 PiB の容量をサポートしています。</block>
-  <block id="a2f6a3e98ea1849ed1ab07d821bf6a18" category="section-title">ノードベースのライセンス</block>
-  <block id="361abfc2eaabdb045de49dafd20dbdf1" category="paragraph">ノードベースのライセンスは、 Cloud Volumes ONTAP のライセンスをノード単位で付与することが可能になった旧世代のライセンスモデルです。このライセンスモデルは、新規のお客様にはご利用いただけません。また、無償トライアルもご利用いただけません。ノード単位の充電は、前述のキャパシティ単位の充電方法に置き換えられました。</block>
-  <block id="749b4d71be76e8fee5fe7895ae5ff71d" category="paragraph">既存のお客様は、ノードベースのライセンスを引き続き利用できます。</block>
-  <block id="04c40151a6d53f981d0364aef6215bd0" category="list-text">アクティブなライセンスがある場合は、 BYOL をライセンスの更新のみに使用できます。</block>
-  <block id="358962d4cc759ccb4c98e87cc3396033" category="list-text">有効なマーケットプレイスサブスクリプションをお持ちの場合は、そのサブスクリプションを通じて引き続き課金をご利用いただけます。</block>
-  <block id="7a216ec4d6977719ed1b40a4322bfd8f" category="section-title">ライセンスの変換</block>
-  <block id="d81f72d124621f7fbe888b57a3b055c2" category="paragraph">既存の Cloud Volumes ONTAP システムを別のライセンス方式に変換することはできません。現在提供されている 3 つのライセンス方式は、容量ベースのライセンス、 Keystone Flex Subscriptions 、ノードベースのライセンスです。たとえば、システムをノードベースのライセンスから容量ベースのライセンスに変換することはできません（逆の場合も同様）。</block>
-  <block id="7bd090ccc30738cd79592e7431dee17b" category="paragraph">別のライセンス方式に移行する場合は、ライセンスを購入し、そのライセンスを使用して新しい Cloud Volumes ONTAP システムを導入してから、その新しいシステムにデータをレプリケートできます。</block>
-  <block id="170d227d215fb560bb4c8ad4e345183a" category="section-title">システムの最大数</block>
-  <block id="a259bb127cd2a1cd02edf6a3a2484f33" category="paragraph">ご質問がある場合は、アカウント担当者または営業チームにお問い合わせください。</block>
-  <block id="fc2be74c7bf9f46e12967c2298a899ba" category="inline-link">ネットアップアカウントの詳細については、こちらをご覧ください</block>
-  <block id="e821f27f6bd96fe3103abd85280bcc70" category="paragraph"><block ref="e0109745edea3dd07561e6ef24e031b3" category="inline-link-rx"></block>。</block>
   <block id="34515f1d88b10d0db0a78eba6c533394" category="summary">既知の問題は、このリリースの製品を正常に使用できない可能性のある問題を特定します。</block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">既知の問題</block>
   <block id="514c35ac615c3426962d39f27b71014b" category="paragraph">このリリースの Cloud Volumes ONTAP 固有の既知の問題はありません。</block>
@@ -663,42 +600,17 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
   <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP クラウド</block>
-  <block id="ee095a2fd0990ba785c303c6524d8145" category="list-text">データ提供用の Storage VM （ SVM ）を追加する場合、追加のライセンスコストは発生しませんが、データ提供用 SVM ごとの容量は 4TiB になります。</block>
-  <block id="cc331a0f761602982769cdbb99e71272" category="list-text">ディザスタリカバリ用 SVM は、プロビジョニングされた容量に基づいて料金が発生します。</block>
   <block id="84c132b976f487cccd3001ed2c7557f2" category="cell">* 容量ベースの PAYGO または BYOL * ^3^</block>
   <block id="15e276b5f20d3f04c4dde66ecf8a249c" category="cell">* ノードベースの PAYGO *</block>
   <block id="207289e471510410b8d11da3001f65d7" category="section-title">自動アプリケーションリソース管理ソリューションは使用しないでください</block>
   <block id="5f706f3e7b360cd0d02bd068f4ba9afa" category="paragraph">クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。Cloud Manager で作成および管理する Cloud Volumes ONTAP リソースに対する変更は、システムの安定性および Cloud Manager によるシステムの管理機能に影響を及ぼす可能性があります。</block>
   <block id="8e85765bc3ce726509dc354633dff4d1" category="list-text">Google CloudのONTAP S3（S3プロトコルはAzureとAWSでサポート）</block>
-  <block id="f0c74524bf1dcc2586975c7d2fab30aa" category="list-text">ネットアップから購入したライセンス（ BYOL ）。任意のクラウドプロバイダで Cloud Volumes ONTAP を導入する際に使用できます。</block>
-  <block id="c603e0cd8afdb5636238d7d652481a08" category="paragraph">1 つのクラウドプロバイダに制限されることはありません。</block>
-  <block id="f28f2c679b3208af9d5fe292ad6356b8" category="list-text">クラウドプロバイダの市場から 1 時間単位のサブスクリプション（ PAYGO ）が提供されます。</block>
-  <block id="612b1fa388e719e990cb953520986784" category="list-text">クラウドプロバイダの市場から年間契約を獲得できます。</block>
-  <block id="7012cf86c42fb3eec6343900832f1d08" category="list-text">AWSでは、年間契約はAWS Marketplaceで公開されています。Cloud Volumes ONTAP 作業環境を導入する際には、Cloud Managerから登録を求められます。</block>
-  <block id="1ce7e5f92b8c11b96a7b6fea0435803d" category="list-text">Azureでは、ネットアップの営業担当者と協力して年間契約を購入する必要があります。この契約は、Azure Marketplaceでのプライベートオファーとして提供されます。</block>
-  <block id="51606c7b614cdc7ab9e0489981838dfa" category="paragraph">ネットアップがお客様とプライベートオファーを共有したあとは、Azure Marketplaceでの作業環境の作成時にサブスクリプションするときに、年間プランを選択できます。</block>
-  <block id="d3ef010be2a71bc188b8cf2beb05ac32" category="list-text">Google Cloudでは、年間契約を購入するには、ネットアップの営業担当者と協力する必要があります。この契約は、Google Cloud Marketplaceでのプライベートオファーとして利用できます。</block>
-  <block id="f96723ecb29e40ca9b9fb042ab6ff4ef" category="paragraph">ネットアップがプライベートオファーを共有した後は、作業環境の作成中にGoogle Cloud Marketplaceから登録するときに、年間プランを選択できます。</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">このリリースへのアップグレードの詳細については、以下のメモをお読みください。</block>
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">アップグレード方法</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">サポートされているアップグレードパス</block>
   <block id="402e8d971886b1604e4de74c0058dc71" category="section-title">必要なコネクタのバージョン</block>
   <block id="75026846c1403e202a52bdb027762fbb" category="section-title">ダウンタイム</block>
-  <block id="656d282ec4da3b613132f8e29d6cb90e" category="paragraph">30 日間の無償トライアルをクラウドプロバイダのマーケットプレイスで従量課金制サブスクリプションで利用できます。無償トライアルには、Cloud Volumes ONTAP とクラウドバックアップが含まれています。トライアルは、市場で提供サービスに登録すると開始されます。</block>
-  <block id="2986f3edb85e34a7556b412028be57fb" category="paragraph">インスタンスや容量の制限はありません。Cloud Volumes ONTAP システムは必要な数だけ導入でき、必要な容量を30日間無償で割り当てることができます。無料トライアルは、30日後に1時間ごとの有料サブスクリプションに自動的に変換されます。</block>
-  <block id="631556a144b10d5d5f19603b18176e32" category="paragraph">Cloud Volumes ONTAP のソフトウェアライセンス料金は1時間ごとに発生しませんが、クラウドプロバイダからインフラ料金が請求されます。</block>
   <block id="79561dd1a4e00a3e05c0d892a01e77bf" category="list-text">N2-standard-16</block>
-  <block id="e83e6938f82d96149155f11617a3f4b6" category="paragraph">Freemium製品の導入方法をご確認ください。</block>
-  <block id="050c120c7155ccd2f0ee729008e2ff37" category="inline-link">AWSでCloud Volumes ONTAP のライセンスを設定</block>
-  <block id="c7d4e4151a6a2ec8774f6f1eaef692ca" category="list-text"><block ref="c7d4e4151a6a2ec8774f6f1eaef692ca" category="inline-link-rx"></block></block>
-  <block id="0cce9e09385c0d8e677ff5d9518dc514" category="inline-link">AzureでCloud Volumes ONTAP のライセンスをセットアップする</block>
-  <block id="9717c5625f2395e947c8a8c77b525384" category="list-text"><block ref="9717c5625f2395e947c8a8c77b525384" category="inline-link-rx"></block></block>
-  <block id="8f0a98314b48214c48339998c2fc4f5a" category="inline-link">Google CloudでCloud Volumes ONTAP のライセンスを設定します</block>
-  <block id="75a8cf4b193e2d19db02d027cadf7073" category="list-text"><block ref="75a8cf4b193e2d19db02d027cadf7073" category="inline-link-rx"></block></block>
-  <block id="a24ad69dba38b7a2ce7bc133c0c71859" category="inline-image-macro">Cloud Managerインターフェイスの通知のスクリーンショット。無償トライアルの残りの日数は7日です。</block>
-  <block id="fed5c8246ca485a22abc959eb3025a8c" category="admonition">Cloud Managerには、無償トライアルが開始されたとき、7日が残ったとき、および1日が残っているときに通知が送信されます。例：<block ref="4c1747a7ecb096dffecedae45404dae8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="451e7fc5df78c19113abdb3f6a0dc54e" category="paragraph">容量単位のライセンスの取得方法については、以下をご覧ください。</block>
-  <block id="fdb736034a6801c8a5010a511211a4a7" category="paragraph">Keystone Flexサブスクリプションの概要については、以下をご覧ください。</block>
   <block id="cb93ad4589e6e6834d2627d2ef8c8456" category="list-text">管理者による検証が複数必要です</block>
   <block id="88e362071d1f2ba61570f62aacd1c1c5" category="paragraph">Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。</block>
   <block id="8ba657a83ab71e004f50b135f305bacf" category="paragraph"><block ref="4e6a16574fcae9468a780b7adff941e3" category="inline-link-rx"></block>。</block>
@@ -767,11 +679,11 @@
   <block id="0d8238cb20fb41ede1eb68d45d598c4f" category="list-text">シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4^1,2^</block>
   <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
-  <block id="5505ffcb759fb1c9c3793b2dd386cd82" category="inline-link">PAYGOとBYOLの違いを解説します</block>
-  <block id="e1e947c069bd154f04aefec0a6619873" category="paragraph">システムをPAYGOからノード単位のライセンスからBYOLへ（逆も同様）に変換することはサポートされていません。新しいシステムを導入し、そのシステムにデータをレプリケートする必要があります。<block ref="c9d55d60961394f2cbacfb1050626915" category="inline-link-rx"></block></block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.mcip</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn. 12xlarge</block>
   <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">このリリースの新しいCloud Volumes ONTAP システムでは、c4、m4、およびR4インスタンスタイプはサポートされません。ただし、これらのインスタンスタイプのいずれかで実行している場合は、このリリースにシステムをアップグレードできるため、これらのインスタンスタイプのディスク制限は引き続き表示されます。</block>
-  <block id="3ac6338087c4180b5cbb359584abab3a" category="paragraph">Cloud Volumes ONTAP システムの最大数は、使用しているライセンスモデルに関係なく、ネットアップアカウントあたり 20 に制限されます。</block>
-  <block id="b730a5e05a41eebeb51f5aee7c746386" category="paragraph">a_system_に は、 HA ペアまたはシングルノードシステムを指定します。たとえば、2つのCloud Volumes ONTAP HAペアと2つのシングルノードシステムがある場合、合計4つのシステムがあり、アカウントに16のシステムを追加することができます。</block>
+  <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり、それぞれのニーズに合った消費モデルを選択できます。</block>
+  <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、ビジネスニーズに応じて、複数のライセンスパッケージから選択できます。</block>
+  <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">これらのライセンスオプションの詳細については、こちらをご覧ください</block>
+  <block id="f3b3e9858be5dbfaf6c39891db3263a2" category="paragraph"><block ref="f3b3e9858be5dbfaf6c39891db3263a2" category="inline-link-rx"></block></block>
 </blocks>
