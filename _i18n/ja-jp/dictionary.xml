@@ -545,8 +545,6 @@
   <block id="7d11aba6c40237104a266be93dc3a00f" category="cell">E64is_v3</block>
   <block id="6b9d51616a5f0637dd2fb237d868c037" category="cell">E80ids_v4</block>
   <block id="9a14c9013ea629276a361bd58d8e1f28" category="admonition">一部の VM タイプでは、次に示す最大システム容量に到達するために複数の BYOL ライセンスが必要です。たとえば、 DS5_v2 で 1.95 PiB に到達するには 6 つの BYOL ライセンスが必要です。</block>
-  <block id="7b5a749f9960a67a5125083fa7cf600b" category="cell">928TiB</block>
-  <block id="b08a88e26e7d3629b4e76b499b53a5be" category="cell">1.95 PiB</block>
   <block id="84581eec82fbf62be31e4721312910b0" category="cell">L8s_v2 の場合</block>
   <block id="c717534327e269958ec86746c88f88bf" category="cell">416TiB</block>
   <block id="82c5a657ae8662e2146ad882dc2b2d0b" category="cell">160TiB</block>
@@ -689,4 +687,5 @@
   <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">ランサムウェア対策</block>
   <block id="f7a595a5b716a220ebf66ec097a076b9" category="section-title">9.11.1 GA（2022年8月1日）</block>
   <block id="841cdf435f69aa307d11070ce78d7160" category="paragraph">Cloud Volumes ONTAP 9.11.1のGeneral Availability（GA）リリースがリリースされました。GA リリースにはバグの修正が含まれています。</block>
+  <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
 </blocks>
