@@ -48,12 +48,7 @@
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TiB の容量を確保できます。</block>
   <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">いいえ、できません。AWS HA ペアのデータは、障害発生時にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノード A で 8TiB ディスクを購入した場合、 Cloud Manager は、ミラーリングされたデータに使用する 8 TiB のディスクをノード B にも割り当てます。16TiB の容量がプロビジョニングされましたが、ライセンスの上限には 8TiB しかカウントされません。</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">ディスクおよび階層化の制限は EC2 インスタンスごとに適用されます</block>
-  <block id="5a9c94e941761c15ef227dfa8c3fc6d8" category="paragraph">Cloud Volumes ONTAP は EBS ボリュームをディスクとして使用し、最大ディスクサイズは 16TiB です。以下のセクションでは、 EC2 インスタンスファミリーごとにディスクと階層化の制限を示します。これは、多くの EC2 インスタンスタイプでディスクの制限が異なるためです。また、シングルノードシステムと HA ペアではディスク制限も異なります。</block>
-  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">次の点に注意してください。</block>
-  <block id="5eb6e090da55ad28bf2f9c1286619ef2" category="list-text">以下のディスク制限は、ユーザデータが格納されたディスクに固有です。この制限には、ブートディスクとルートディスクは含まれていません。</block>
   <block id="275e3ef1a302e67e93bcf0f30d566f74" category="inline-link">Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP</block>
-  <block id="bb1dfd389b14b44028041022a8d2899f" category="list-text">Cloud Volumes ONTAP BYOL システムに複数のノードベースライセンスを購入して、 368 TiB を超える容量を割り当てることができるようになりました。シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
-  <block id="129e3a061f7870067c1e133ba0a412f2" category="section-title">Premium ライセンスがあるシングルノード</block>
   <block id="d9a17c1c9e8ef6866e4dbeef41c741b2" category="cell">インスタンス</block>
   <block id="4f42986706a322f09678a2f25be54dd9" category="cell">ノードあたりの最大ディスク数</block>
   <block id="a9b87ab892cc3b768d5fb6b4d85fcdd5" category="cell">ディスクのみの場合の最大システム容量</block>
@@ -68,7 +63,6 @@
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
   <block id="64d21a165becbe18d275a66aac4f8e8e" category="list-text">Cloud Volumes ONTAP の _NET_Deployments には、 21 本のデータディスクが制限されています。バージョン 9.7 以前で作成されたシステムをアップグレードしても、 22 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</block>
   <block id="3d60f9d4f3945975bb1eca051c0bbef9" category="list-text">このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</block>
-  <block id="84dbd7aba83fa6e04c6f7c96a1be85f2" category="section-title">ノードベースのライセンスを使用するシングルノード</block>
   <block id="aaa9a5ed21c4e4c107aab47a353049bc" category="cell">最大システム容量（ 1 ライセンス</block>
   <block id="cabc996760a00c42a2b15b388054d050" category="cell">複数のライセンスを持つ最大システム容量</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="cell"></block>
@@ -76,19 +70,15 @@
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">* ディスク + データ階層化 *</block>
   <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">1 ライセンスあたり 368 TiB</block>
   <block id="6ebe799c380816a48bf991ae59543433" category="cell">544 TiB</block>
-  <block id="918660df9dabb216873a828f8dba357f" category="section-title">容量単位のライセンスがあるシングルノード</block>
   <block id="3c59dc048e8850243be8079a5c74d079" category="cell">21</block>
   <block id="a23ca456fec74dd76d95b20f2cf60dd0" category="cell">19^1 ^</block>
-  <block id="2fe12d2fbca1ad427f800563e85d7942" category="section-title">Premium ライセンスがある HA ペア</block>
   <block id="156b98ab4634edb024f99442726e3e8d" category="cell">18^1 ^ 1^</block>
   <block id="b7608c5d160ea75c5c58e10097dc4db7" category="cell">288TiB</block>
   <block id="dee0912fefbe003d7ae380d371a87fad" category="cell">16^2^</block>
   <block id="9f71cb3204a7c80e435b6337aed1e728" category="cell">256TiB です</block>
   <block id="c16a5320fa475530d9583c34fd356ef5" category="cell">31.</block>
   <block id="01d00547146974c6eeb34ecc38263cb0" category="list-text">18 本のデータディスクは、 Cloud Volumes ONTAP の _new_Deployments の制限です。バージョン 9.7 以前で作成されたシステムをアップグレードしても、システムでは 19 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</block>
-  <block id="5d0440e2b7983c0540ac561d3bd66201" category="section-title">ノードベースのライセンスが設定された HA ペア</block>
   <block id="35a779533962b549212e6b883b5793f7" category="cell">496TiB</block>
-  <block id="74c7b6190ee0e7fb8e5bb03dd438c3da" category="section-title">容量ベースのライセンスが設定された HA ペア</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
   <block id="d165ee52657df0e131ad67ed84783dfb" category="cell">16^1 ^</block>
   <block id="77da8ca35e02ab32c9b48e9f632913bf" category="section-title">アグリゲートの制限</block>
@@ -236,7 +226,6 @@
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TB の容量を確保できます。</block>
   <block id="1ddc84b3dc9fe6599d89fd9b7f5c6660" category="paragraph">いいえ、できません。HA ペアのデータは、 Google Cloud で障害が発生した場合にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノード A で 8TB ディスクを購入した場合、 Cloud Manager は、ミラーリングされたデータに使用する 8 TB のディスクをノード B にも割り当てます。16TB の容量がプロビジョニングされましたが、ライセンスの上限には 8TB しかカウントされません。</block>
   <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">ディスクと階層化の制限</block>
-  <block id="49e0d392d83f24aa1384f18b22975ef6" category="paragraph">次の表に、ディスクのみの場合の最大システム容量と、オブジェクトストレージへのディスクおよびコールドデータの階層化を示します。ディスク制限はユーザデータが格納されたディスクに固有です。この制限には、ブートディスクとルートディスクは含まれていません。</block>
   <block id="08fca9107919e2a3190d5edc75ce7c61" category="cell">最大データディスク数</block>
   <block id="73a5b4e1955745ba2e19b7f891caf5fd" category="list-text">シングルノードシステムの場合は 124</block>
   <block id="2b7385ac96adbf2201cf7b11333b798c" category="list-text">HA ペアの場合はノードあたり 123</block>
@@ -245,7 +234,6 @@
   <block id="92d6dc05cca759fe0b05fc952ab8d146" category="cell">ディスクのみでの最大システム容量</block>
   <block id="245cf9fb027a40ee8a30bfcbf5a0f859" category="cell">256 TB^1</block>
   <block id="fb477a816dd39a57a35e342288ae601b" category="cell">ディスクおよびコールドデータ階層化を使用した最大システム容量 Google Cloud Storage バケット</block>
-  <block id="1a731420bbc4adfcc3e3c640955180d2" category="cell">ライセンスによって異なります。上の表を参照してください。</block>
   <block id="f001a5c220f0213e63339dfe3e66fb03" category="paragraph">^1 この制限は、 Google Cloud Platform の仮想マシンの制限により定義されています。</block>
   <block id="c774172e35ab7294ce80989983a6d47e" category="paragraph">Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_. にグループ化します。アグリゲートは、ボリュームにストレージを提供します。</block>
   <block id="78c305f4cc241040025b8466926183c4" category="cell">最大データアグリゲート数 ^1 ^</block>
@@ -531,11 +519,6 @@
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP には、安定した運用を実現するために、 Azure にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Azure のストレージ制限</block>
   <block id="e6607992aca7a2cd8b89f152b0cf553d" category="section-title">ディスクおよび階層化の制限を VM のサイズごとに設定します</block>
-  <block id="a9b575c3ac8492900fd552582c6fecae" category="paragraph">以下のディスク制限は、ユーザデータが格納されたディスクに固有です。これらの制限には、ルートディスク、コアディスク、 VNVRAM は含まれません。</block>
-  <block id="295f33d6ece0cb2125433cf6ec678e7e" category="paragraph">次の表は、ディスクのみの場合の VM サイズ別の最大システム容量と、オブジェクトストレージへのディスクおよびコールドデータの階層化を示しています。</block>
-  <block id="f114a72e19307d64279cad76172579f0" category="list-text">シングルノードシステムでは、 Standard HDD Managed Disks 、 Standard SSD Managed Disks 、および Premium SSD Managed Disks を使用でき、ディスクあたり最大 32TiB を使用できます。サポートされるディスクの数は VM のサイズによって異なります。</block>
-  <block id="bb8cb4958d23b69d96d3891aa7ae598a" category="list-text">HA システムでは、 Premium ページ BLOB をディスクとして使用し、 1 ページ Blob に対して最大 8 TiB を使用します。サポートされるディスクの数は VM のサイズによって異なります。</block>
-  <block id="c40775108b323ba29757ee7d6526594a" category="admonition">Cloud Volumes ONTAP BYOL システムでは、複数のノードベースライセンスを購入して、 368 TiB を超える容量を割り当てることができます。シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
   <block id="50c51ed959c686d478aaf3f5e64ce255" category="cell">VM サイズ</block>
   <block id="1522e1d48d50a8b533ccfa8eeaad6405" category="cell">ノードあたりの MAX Data ディスク数</block>
   <block id="7f39f8317fbdb1988ef4c628eba02591" category="cell">61</block>
@@ -544,7 +527,6 @@
   <block id="0ea77c0c108fe11200832cf8df830512" category="cell">E48s_v3</block>
   <block id="7d11aba6c40237104a266be93dc3a00f" category="cell">E64is_v3</block>
   <block id="6b9d51616a5f0637dd2fb237d868c037" category="cell">E80ids_v4</block>
-  <block id="9a14c9013ea629276a361bd58d8e1f28" category="admonition">一部の VM タイプでは、次に示す最大システム容量に到達するために複数の BYOL ライセンスが必要です。たとえば、 DS5_v2 で 1.95 PiB に到達するには 6 つの BYOL ライセンスが必要です。</block>
   <block id="84581eec82fbf62be31e4721312910b0" category="cell">L8s_v2 の場合</block>
   <block id="c717534327e269958ec86746c88f88bf" category="cell">416TiB</block>
   <block id="82c5a657ae8662e2146ad882dc2b2d0b" category="cell">160TiB</block>
@@ -679,7 +661,6 @@
   <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。高速の書き込み速度は、導入時または導入後にいつでもCloud Managerから有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.mcip</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn. 12xlarge</block>
-  <block id="c50e8615eb65e21639a9b12f16b31280" category="list-text">このリリースの新しいCloud Volumes ONTAP システムでは、c4、m4、およびR4インスタンスタイプはサポートされません。ただし、これらのインスタンスタイプのいずれかで実行している場合は、このリリースにシステムをアップグレードできるため、これらのインスタンスタイプのディスク制限は引き続き表示されます。</block>
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり、それぞれのニーズに合った消費モデルを選択できます。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、ビジネスニーズに応じて、複数のライセンスパッケージから選択できます。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">これらのライセンスオプションの詳細については、こちらをご覧ください</block>
@@ -688,4 +669,32 @@
   <block id="f7a595a5b716a220ebf66ec097a076b9" category="section-title">9.11.1 GA（2022年8月1日）</block>
   <block id="841cdf435f69aa307d11070ce78d7160" category="paragraph">Cloud Volumes ONTAP 9.11.1のGeneral Availability（GA）リリースがリリースされました。GA リリースにはバグの修正が含まれています。</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
+  <block id="a4a5e7bfb7afd26ff6a225ef7681add9" category="paragraph">次の表に、ディスクのみの場合の最大システム容量と、オブジェクトストレージへのディスクおよびコールドデータの階層化を示します。ディスク制限はユーザデータが格納されたディスクに固有です。ブートディスク、ルートディスク、NVRAMは制限に含まれません。</block>
+  <block id="aa22c87da31d41edeac2ffbad9e7507d" category="cell">ライセンスによって異なります。上記の最大システム容量制限を参照してください。</block>
+  <block id="4309266475af7c71bb88f9be6f8c3940" category="paragraph">容量制限は、使用するEC2インスタンスタイプファミリーと、シングルノードシステムとHAペアのどちらを使用しているかによって異なります。</block>
+  <block id="b1fb395f7c47ced4c12fc74fad2320b5" category="paragraph">次のメモは、下の表に表示される数値の詳細を示しています。</block>
+  <block id="3ee4a294c58f9e6c4461dc10d825844c" category="list-text">ディスク制限はユーザデータが格納されたディスクに固有です。</block>
+  <block id="e7caa46d6e70a5b96752b4644b9f1527" category="paragraph">この制限には、ブートディスクとルートディスクは含まれていません。</block>
+  <block id="e8ea7579109541b8654ac77df6ec5b21" category="list-text">ディスクのみを使用する場合、およびディスクとオブジェクトストレージへのコールドデータ階層化を使用する場合は、最大システム容量が表示されます。</block>
+  <block id="dd81441aed81dac4d773ef1291a64e00" category="list-text">Cloud Volumes ONTAP は EBS ボリュームをディスクとして使用し、最大ディスクサイズは 16TiB です。</block>
+  <block id="6f55661d86c0b385d8b362ed90701d0d" category="section-title">容量ベースのライセンスの制限</block>
+  <block id="54fe37b73954e37cae21db9bbd66c952" category="inline-link">Cloud Volumes ONTAP のライセンスオプションについて説明します</block>
+  <block id="bdb02d545feb4269f91ba30bafe0b877" category="paragraph">容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。<block ref="f34dd0069e6a1810319c8488dea69f29" category="inline-link-rx"></block></block>
+  <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">シングルノード</block>
+  <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">ノードベースのライセンスには制限があります</block>
+  <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。</block>
+  <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">ノードベースのライセンスを使用する場合は、Cloud Volumes ONTAP BYOLシステム用に複数のノードベースのライセンスを購入して、368TiBを超える容量を割り当てることができます。</block>
+  <block id="f64d686366f69524d03c9279a078fb54" category="paragraph">シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。<block ref="cd9ff634efd9a4fe20f170cd618702b5" category="inline-link-rx"></block>。</block>
+  <block id="ab3e9017f469fcaf61a0f16670f627f1" category="list-text">このリリースの新しいCloud Volumes ONTAP システムでは、c4、m4、およびR4インスタンスタイプはサポートされません。</block>
+  <block id="adad2ef28b2450525f057d0f5e32ec33" category="paragraph">ただし、これらのインスタンスタイプのいずれかで実行している場合は、このリリースにシステムをアップグレードできるため、これらのインスタンスタイプのディスク制限は引き続き表示されます。</block>
+  <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">PAYGO Premiumでは1つのノード</block>
+  <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">BYOLによるシングルノード</block>
+  <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">PAYGO PremiumでHAペアを構成</block>
+  <block id="1bc398eeb632d3ea2f565d86881775d8" category="section-title">BYOLによるHAペア</block>
+  <block id="8839c374fd950d105b5836c5400c37e3" category="paragraph">容量制限は、使用するVMのサイズ、およびシングルノードシステムとHAペアのどちらを使用しているかによって異なります。</block>
+  <block id="10e6e33e8d7a64d70c731d40ea252ed8" category="paragraph">以下のメモは、以下の表に表示される番号の詳細を示しています。</block>
+  <block id="bbeef84c33f1676ea87c5c7f476795e6" category="paragraph">これらの制限には、ルートディスク、コアディスク、 VNVRAM は含まれません。</block>
+  <block id="70f278cadf665202f3ebb7a682519f5c" category="list-text">シングルノードシステムは管理対象ディスクを使用し、ディスクあたり最大32TiBを使用します。サポートされるディスクの数は VM のサイズによって異なります。</block>
+  <block id="c5fa07957eb90c414f1dadcad7da5df6" category="list-text">HAペアでは、PremiumページBLOBをディスクとして使用し、1ページBlobに対して最大8TiBを使用します。サポートされるディスクの数は VM のサイズによって異なります。</block>
+  <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">特定のVMサイズを使用するシングルノードシステムで表示される896TiBのディスクベースの制限は、_tested_limitです。</block>
 </blocks>
