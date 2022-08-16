@@ -20,6 +20,12 @@ Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
 
 
 
+== 9.11.1 GA（2022年8月1日）
+
+Cloud Volumes ONTAP 9.11.1のGeneral Availability（GA）リリースがリリースされました。GA リリースにはバグの修正が含まれています。
+
+
+
 == 9.11.1 RC1（2022年6月7日）
 
 Cloud Volumes ONTAP 9.11.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
@@ -93,18 +99,6 @@ Google CloudのCloud Volumes ONTAP では、作成時にCloud Manager APIによ�
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["AWSで追加のStorage VMを作成する方法について説明します"^]
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Azureで追加のStorage VMを作成する方法について説明します"^]
 
-
-
-
-=== ランサムウェア対策
-
-ONTAP ランサムウェア対策機能がCloud Volumes ONTAP でサポートされるようになりました。この機能では、NAS（NFSおよびSMB）環境のワークロード分析を使用して、ランサムウェア攻撃を示す可能性のある異常なアクティビティをプロアクティブに検出し、警告します。
-
-https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["ランサムウェア対策の詳細をご確認ください"^]
-
-Cloud Managerでは、この機能の管理は行われません。ランサムウェア対策による保護を有効にするには、System ManagerまたはCLIを使用する必要があります。
-
-ランサムウェア対策は、とは別のユースケースに対応します https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-protecting-ransomware.html["Cloud Managerで有効にできるランサムウェア攻撃からの保護"^]
 
 
 
