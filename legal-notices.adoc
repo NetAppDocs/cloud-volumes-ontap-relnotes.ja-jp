@@ -52,4 +52,5 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 * link:media/notice-aws.pdf["AWSのCloud Volumes ONTAP 9.11.1メディエーターで表示されます"^]
 * link:media/notice-google-cloud.pdf["Google CloudのCloud Volumes ONTAP 9.11.1メディエーターに関する通知"^]
+* https://docs.netapp.com/us-en/ontap/reference_legal_notices.html#open-source["ONTAP に関する注意"^]
 

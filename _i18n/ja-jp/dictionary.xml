@@ -697,4 +697,7 @@
   <block id="70f278cadf665202f3ebb7a682519f5c" category="list-text">シングルノードシステムは管理対象ディスクを使用し、ディスクあたり最大32TiBを使用します。サポートされるディスクの数は VM のサイズによって異なります。</block>
   <block id="c5fa07957eb90c414f1dadcad7da5df6" category="list-text">HAペアでは、PremiumページBLOBをディスクとして使用し、1ページBlobに対して最大8TiBを使用します。サポートされるディスクの数は VM のサイズによって異なります。</block>
   <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">特定のVMサイズを使用するシングルノードシステムで表示される896TiBのディスクベースの制限は、_tested_limitです。</block>
+  <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP に関する注意</block>
+  <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">Cloud Manager のすべてのドキュメント</block>
 </blocks>
