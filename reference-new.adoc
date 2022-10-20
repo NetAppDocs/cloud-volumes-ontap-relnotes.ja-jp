@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
 
 
 
+== 9.11.1 P3（2022年10月19日）
+
+バージョン3.9.22以降を実行しているコネクタがある場合、すべてのクラウドプロバイダで9.11.1 P3パッチをCloud Volumes ONTAP で使用できるようになりました。既存のシステムのこのパッチリリースへのアップグレードを求めるプロンプトが Cloud Manager に表示されます。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["P3 パッチで修正されたバグのリストを表示します"] （NetApp Support Siteへのログインが必要です）。
+
+
+
 == 9.11.1 GA（2022年8月1日）
 
 Cloud Volumes ONTAP 9.11.1のGeneral Availability（GA）リリースがリリースされました。GA リリースにはバグの修正が含まれています。
