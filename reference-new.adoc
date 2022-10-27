@@ -20,11 +20,21 @@ Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
 
 
 
+== C4、M4、およびR4のインスタンスはサポートされなくなりました（2022年10月28日）
+
+AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes ONTAP でサポートされなくなりました。C4、M4、またはR4インスタンスタイプで実行されている既存のシステムがある場合は、C5、m5、またはr5インスタンスファミリーでインスタンスタイプに変更する必要があります。
+
+link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
+
+を参照してください link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["ネットアップサポート"^] これらのインスタンスタイプの可用性とサポート終了の詳細については、を参照してください。
+
+
+
 == 9.11.1 P3（2022年10月19日）
 
 バージョン3.9.22以降を実行しているコネクタがある場合、すべてのクラウドプロバイダで9.11.1 P3パッチをCloud Volumes ONTAP で使用できるようになりました。既存のシステムのこのパッチリリースへのアップグレードを求めるプロンプトが Cloud Manager に表示されます。
 
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["P3 パッチで修正されたバグのリストを表示します"] （NetApp Support Siteへのログインが必要です）。
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["P3 パッチで修正されたバグのリストを表示します"^] （NetApp Support Siteへのログインが必要です）。
 
 
 
@@ -150,11 +160,3 @@ TIP: コネクタの自動アップグレードはデフォルトで有効にな
 * シングルノードシステムのアップグレードでは、 I/O が中断されるまで最大 25 分間システムがオフラインになります。
 * HA ペアのアップグレードは無停止で、 I/O が中断されません。無停止アップグレードでは、各ノードが連携してアップグレードされ、クライアントへの I/O の提供が継続されます。
 
-
-
-
-=== C4 、 M4 、および R4 インスタンスタイプ
-
-9.8 リリース以降では、新しい Cloud Volumes ONTAP システムで C4 、 M4 、および R4 インスタンスタイプはサポートされません。C4 、 M4 、または R4 インスタンスタイプで実行されている既存の Cloud Volumes ONTAP システムがある場合も、このリリースにアップグレードできます。
-
-C5 、 m5 、または r5 インスタンスファミリーのインスタンスタイプに変更することをお勧めします。
