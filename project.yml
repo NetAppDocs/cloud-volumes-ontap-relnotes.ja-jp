@@ -126,6 +126,6 @@ homepage:
     - title: クラウドに関する Web セミナー
       url: https://cloud.netapp.com/events
 product-family:
-  name: Cloud Manager
+  name: BlueXP
   repo: cloud-manager-family
-  sidebar_label: Cloud Manager のすべてのドキュメント
+  sidebar_label: BlueXPのすべてのマニュアル
