@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations-azure.html 
-keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, nfsv3 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache 
 summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。 
 ---
 = Azure の既知の制限事項
@@ -20,7 +20,7 @@ summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONT
 
 == Flash Cache の制限事項
 
-Standard_L8s_v2 VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP はこれらのストレージを _Flash Cache _ として使用します。Flash Cache に関する次の制限事項に注意してください。
+一部のVMタイプにはローカルのNVMeストレージが含まれており、Cloud Volumes ONTAP では_Flash Cache _として使用されます。Flash Cache に関する次の制限事項に注意してください。
 
 * Flash Cache のパフォーマンス向上を利用するには、すべてのボリュームで圧縮を無効にする必要があります。
 +

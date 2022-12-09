@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.11.1では、新しい機能強化が追加されています。 
+summary: Cloud Volumes ONTAP 9.12.1には、新しい機能強化が含まれています。 
 ---
-= Cloud Volumes ONTAP 9.11.1の新機能
+= Cloud Volumes ONTAP 9.12.1の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,66 @@ summary: Cloud Volumes ONTAP 9.11.1では、新しい機能強化が追加され
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.11.1では、新しい機能拡張が追加されてい
+Cloud Volumes ONTAP 9.12.1には、新しい拡張機能が含まれています
 
 その他の機能や拡張機能も、最新バージョンのBlueXP（旧Cloud Manager）で導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
+
+
+
+== 9.12.1 RC1（2022年12月8日）
+
+Cloud Volumes ONTAP 9.12.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
+
+
+
+=== サポートされているアップグレードパス
+
+9.12.0リリースおよび9.11.1リリースからCloud Volumes ONTAP 9.12.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
+
+
+
+=== 必要なコネクタのバージョン
+
+新しいCloud Volumes ONTAP 9.12.1システムを導入し、既存のシステムを9.12.1にアップグレードするには、BlueXPコネクタがバージョン3.9.23以降を実行している必要があります。
+
+
+TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。
+
+
+
+=== GCPのONTAP S3ライセンス
+
+ONTAP Cloud Platformでバージョン9.12.1以降を実行する新規および既存のCloud Volumes ONTAP システムに、S3ライセンスが含まれるようになりました。
+
+https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["ONTAP で S3 オブジェクトストレージサービスを設定および管理する方法について説明します"^]
+
+
+
+=== Cloud Volumes ONTAP でのNVMe-oF TCPのサポート
+
+Cloud Volumes ONTAP バージョン9.12.1以降を使用している場合、クラウドプロバイダではnvme-tcpがサポートされます。BlueXPには、NVMe-oF TCPの管理機能はありません。
+
+ONTAP を使用したNVMeの設定の詳細については、を参照してください link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html["NVMe用のStorage VMを設定する"^]。
+
+
+
+=== Azure HAは、管理対象ディスクを共有する単一のアベイラビリティゾーンで構成されます
+
+共有管理対象ディスク上で実行されるMicrosoft Azureローカル冗長ストレージ（LRS）を使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。ローカルで冗長化されたストレージにより、同じリージョン内の1つのデータセンター内で3回、データがレプリケートされます。
+
+HA構成のアーキテクチャとコンポーネントの詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure のハイアベイラビリティペア"^]。
+
+Azureで単一のアベイラビリティゾーンに新しいHAペアを導入する場合は、ストレージにページBLOBではなくLRS共有管理ディスクを使用するようになります。作業環境ウィザードに変更はありません。この新しい構成を使用するには、単一のアベイラビリティゾーンを選択するだけです。詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
+
+
+
+=== Azure HAは、共有管理対象ディスクを使用する複数のアベイラビリティゾーンで構成されます
+
+リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。
+
+HA構成のアーキテクチャとコンポーネントの詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure のハイアベイラビリティペア"^]。
+
+この新しい設定を使用するには、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
 
 
 
@@ -27,136 +84,3 @@ AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes
 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
 
 を参照してください link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["ネットアップサポート"^] これらのインスタンスタイプの可用性とサポート終了の詳細については、を参照してください。
-
-
-
-== 9.11.1 P3（2022年10月19日）
-
-バージョン3.9.22以降を実行しているコネクタがある場合、すべてのクラウドプロバイダで9.11.1 P3パッチをCloud Volumes ONTAP で使用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3["P3 パッチで修正されたバグのリストを表示します"^] （NetApp Support Siteへのログインが必要です）。
-
-
-
-== 9.11.1 GA（2022年8月1日）
-
-Cloud Volumes ONTAP 9.11.1のGeneral Availability（GA）リリースがリリースされました。GA リリースにはバグの修正が含まれています。
-
-
-
-== 9.11.1 RC1（2022年6月7日）
-
-Cloud Volumes ONTAP 9.11.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
-
-
-
-=== パフォーマンスの強化
-
-9.11.1以降で作成された新しいアグリゲートの読み取りパフォーマンスが向上しています。
-
-
-
-=== ストレージ効率の向上
-
-9.11.1以降のリリースでは、Storage Efficiencyが有効になったすべての新しいボリュームに、温度影響を受けやすいストレージ効率という新しい圧縮機能が追加されました。旧世代の圧縮機能は使用されなくなりました。
-
-温度に敏感なストレージ効率は、データの温度または使用頻度に基づいてデータを圧縮します。コールドデータ、またはあまり使用されないデータは、圧縮率が高い方に再圧縮されるため、ストレージ効率が向上します。
-
-
-
-=== AWSでのvPC共有
-
-VPCを共有するAWSでCloud Volumes ONTAP HAペアがサポートされるようになりました。VPC共有を使用すると、他のAWSアカウントとサブネットを共有できます。ネットワーク（VPC、サブネット、およびルーティングテーブル）はVPC所有者アカウントに存在し、HA構成のEC2インスタンスは共有サブネットを使用する参加者アカウントに存在します。
-
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html["共有サブネットにHAペアを導入する方法について説明します"^]
-
-
-
-=== AWS リージョンが新たにサポートされるようになり
-
-Cloud Volumes ONTAP は、AWSジャカルタリージョン（AP-Southee-3）でサポートされるようになりました。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
-
-
-
-=== 新たにサポートされるAzureリージョン
-
-Cloud Volumes ONTAP は、Azureブラジル南東部の地域でサポートされるようになりました。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
-
-
-
-=== Google Cloudでは24個のStorage VMがサポートされています
-
-ほとんどの構成で、24個のStorage VMがGoogle CloudのCloud Volumes ONTAP でサポートされるようになりました。
-
-* link:reference-limits-gcp.html#storage-vm-limits["Google CloudのStorage VMの制限に関する詳細を確認できます"]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["Google CloudでCloud Volumes ONTAP 向けのデータ提供用Storage VMを作成する方法をご確認ください"^]
-
-
-
-
-=== 新しいGoogle Cloudリージョンサポート
-
-Cloud Volumes ONTAP HAペアがミラノ（ヨーロッパ-西ヨーロッパ8）リージョンでサポートされるようになりました。
-
-https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes ONTAP でサポートされるリージョンの完全なリストを表示します"^]
-
-
-
-=== 新しいStorage VMのLIFサービスを変更しています
-
-このリリース以降、AWSまたはAzureのCloud Volumes ONTAP HAペアに新しいStorage VMを作成する場合は、Storage VMのネットワークサービスポリシーを変更する必要があります。サービスの変更が必要となるのは、Cloud Volumes ONTAP がiSCSI LIFをアウトバウンド管理接続に使用できるようにするためです。
-
-Google CloudのCloud Volumes ONTAP でLIFサービスを変更する必要はありません。BlueXP APIで作成時にLIFサービスが設定されるためです。
-
-実行する必要があるコマンドは、次のページで指定します。
-
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["AWSで追加のStorage VMを作成する方法について説明します"^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Azureで追加のStorage VMを作成する方法について説明します"^]
-
-
-
-
-== サポートされない新しいONTAP 機能
-
-ONTAP 9.11.1で導入された新しいマルチ管理検証機能は、Cloud Volumes ONTAP ではサポートされていません。Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
-
-
-
-== アップグレードに関する注意事項
-
-このリリースへのアップグレードの詳細については、以下のメモをお読みください。
-
-
-
-=== アップグレード方法
-
-Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
-
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["BlueXPから通知があった場合のアップグレード方法について説明します"^]。
-
-
-
-=== サポートされているアップグレードパス
-
-9.11.0リリースおよび9.10.1リリースからCloud Volumes ONTAP 9.11.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
-
-
-
-=== 必要なコネクタのバージョン
-
-新しいCloud Volumes ONTAP 9.11.1システムを導入し、既存のシステムを9.11.1にアップグレードするには、BlueXP Connectorがバージョン3.9.19以降を実行している必要があります。
-
-
-TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。
-
-
-
-=== ダウンタイム
-
-* シングルノードシステムのアップグレードでは、 I/O が中断されるまで最大 25 分間システムがオフラインになります。
-* HA ペアのアップグレードは無停止で、 I/O が中断されません。無停止アップグレードでは、各ノードが連携してアップグレードされ、クライアントへの I/O の提供が継続されます。
-
