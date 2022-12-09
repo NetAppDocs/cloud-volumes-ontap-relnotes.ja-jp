@@ -50,7 +50,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-* link:media/notice-aws.pdf["AWSのCloud Volumes ONTAP 9.11.1メディエーターで表示されます"^]
-* link:media/notice-google-cloud.pdf["Google CloudのCloud Volumes ONTAP 9.11.1メディエーターに関する通知"^]
+* link:media/notice-aws.pdf["AWSのCloud Volumes ONTAP 9.12.1メディエーターに関する注意事項"^]
+* link:media/notice-google-cloud.pdf["Google CloudのCloud Volumes ONTAP 9.12.1メディエーターに関する注意"^]
 * https://docs.netapp.com/us-en/ontap/reference_legal_notices.html#open-source["ONTAP に関する注意"^]
 

@@ -198,8 +198,6 @@
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">一部のリージョンでは HA ペアがサポートされません。</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">サポートされている Azure リージョンのリストを表示します</block>
   <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>。</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">従量課金制は、 CSP パートナーが利用できません</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">マイクロソフトクラウドソリューションプロバイダー (CSP) パートナーの場合、従量課金制のサブスクリプションは CSP パートナーに提供されないため、 Cloud Volumes ONTAP Explore 、 Standard 、または Premium を展開することはできません。ライセンスを購入し、 Cloud Volumes ONTAP BYOL を導入する必要があります。</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP には、信頼性の高い運用を実現するために、 Google Cloud にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Google Cloud のストレージ制限</block>
   <block id="b5110a96ee31f0d84f4df3d51e44588e" category="paragraph">一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。を使用して容量の制限に達することができます<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>。詳細については、以下のディスク制限を参照してください。</block>
@@ -554,7 +552,6 @@
   <block id="5bec2c66c2254fff818718bf2d9e8c44" category="cell">*容量ベースのPAYGOまたはBYOL *^2^</block>
   <block id="8e612b6b306f120390f4c3bd234f9ce8" category="cell">*ノードベースのBYOL *^3^</block>
   <block id="302f571fec3e23b2236f116e51e46721" category="cell">クローン階層の深さ^12^</block>
-  <block id="dd3a01ec5d4598a3233e196c00eb9493" category="summary">このリリースノートでは、Cloud Volumes ONTAP 9.11.1の新機能、制限事項、および既知の問題について説明します。</block>
   <block id="6fa21a90023c559c7fe8ff0b407c5128" category="paragraph">Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、アグリゲートにグループ化します。アグリゲートは、ボリュームにストレージを提供します。</block>
   <block id="440729c4473422c5af58047ed61f9c33" category="cell">最大アグリゲートサイズ^2^</block>
   <block id="a204f172aa7caebd3b3b2b9d2ec1e132" category="list-text">96TiB の物理容量</block>
@@ -566,10 +563,6 @@
   <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link">Elastic Volumesのサポートに関する詳細情報</block>
   <block id="952bf77691b64be6e1f8cbee69dd8112" category="list-text">Amazon EBS Elastic Volumes機能をサポートする構成の場合、アグリゲートには最大8本のディスクを格納でき、最大128TiBの容量を提供できます。Amazon EBS Elastic Cloud Volumes ONTAP 機能は、GP3またはio1ディスクを使用している場合、_new_GP9.11.0以降のシステムではデフォルトで有効になっています。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">ノードベースの BYOL</block>
-  <block id="33dae6103de96581cabc3ad35cefb829" category="inline-link-macro">AWSのCloud Volumes ONTAP 9.11.1メディエーターで表示されます</block>
-  <block id="e595c649a367744544e13f68f54580f9" category="list-text"><block ref="e595c649a367744544e13f68f54580f9" category="inline-link-macro-rx"></block></block>
-  <block id="b50289e78d6a423be932389cf178a958" category="inline-link-macro">Google CloudのCloud Volumes ONTAP 9.11.1メディエーターに関する通知</block>
-  <block id="c35639ede069036a5d63bb08043fd4f9" category="list-text"><block ref="c35639ede069036a5d63bb08043fd4f9" category="inline-link-macro-rx"></block></block>
   <block id="3fb5fad778ff400a49097ca0bf0b9754" category="paragraph">AWS では、アグリゲートに同じサイズのディスクを最大 6 本含めることができます。ただし、Amazon EBS Elastic Volumes機能をサポートする構成では、アグリゲートに最大8本のディスクを含めることができます。<block ref="eb2d37c537dc5a49383d4a1aea5db77f" category="inline-link-rx"></block></block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.mcip</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn. 12xlarge</block>
@@ -637,8 +630,6 @@
   <block id="f75e792bf7a4a205f202f29d2fc54c22" category="paragraph">Cloud Volumes ONTAP 9.12.1には、新しい拡張機能が含まれています</block>
   <block id="19eac37ffdb1098ffe690004efa5c07f" category="section-title">9.12.1 RC1（2022年12月8日）</block>
   <block id="081d2affd8ad79dfa3ae0457893e56ac" category="paragraph">Cloud Volumes ONTAP 9.12.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。</block>
-  <block id="6eaf244a3a1f0dbb7200277cba925418" category="paragraph">9.12.0リリースおよび9.11.1リリースからCloud Volumes ONTAP 9.12.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。</block>
-  <block id="85cd9c4dadede72a2eada15a80fba289" category="paragraph">新しいCloud Volumes ONTAP 9.12.1システムを導入し、既存のシステムを9.12.1にアップグレードするには、BlueXPコネクタがバージョン3.9.23以降を実行している必要があります。</block>
   <block id="cca494b1b1d22bc8b5c8a8ecd5367bf8" category="section-title">GCPのONTAP S3ライセンス</block>
   <block id="44f72ae2127b89a470e082ae9f772acf" category="paragraph">ONTAP Cloud Platformでバージョン9.12.1以降を実行する新規および既存のCloud Volumes ONTAP システムに、S3ライセンスが含まれるようになりました。</block>
   <block id="6958464059ef304c59d06fcb948ccafd" category="inline-link">ONTAP で S3 オブジェクトストレージサービスを設定および管理する方法について説明します</block>
@@ -694,4 +685,11 @@
   <block id="f27b112d1527e5f29f0e8f510d779a5e" category="doc">Cloud Volumes ONTAP 9.12.1リリースノート</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">AWS の HA システムでは、ミラーリングされたデータは容量制限にカウントされますか。</block>
   <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">一部のVMタイプにはローカルのNVMeストレージが含まれており、Cloud Volumes ONTAP では_Flash Cache _として使用されます。Flash Cache に関する次の制限事項に注意してください。</block>
+  <block id="e096a8fca5da32609fbb1d7798b0348e" category="paragraph">9.11.1リリースからCloud Volumes ONTAP 9.12.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。</block>
+  <block id="0612637a826e0e5aac35661a09778188" category="paragraph">新しいCloud Volumes ONTAP 9.12.1システムを導入し、既存のシステムを9.12.1にアップグレードするには、BlueXPコネクタがバージョン3.9.24以降を実行している必要があります。</block>
+  <block id="f5aba93322e5fd0767b7e9fa839610f1" category="inline-link-macro">AWSのCloud Volumes ONTAP 9.12.1メディエーターに関する注意事項</block>
+  <block id="a4a2a5bddea7236f27b0a01d377e37a6" category="list-text"><block ref="a4a2a5bddea7236f27b0a01d377e37a6" category="inline-link-macro-rx"></block></block>
+  <block id="278ce444bf386e0c416c2eb85c339022" category="inline-link-macro">Google CloudのCloud Volumes ONTAP 9.12.1メディエーターに関する注意</block>
+  <block id="653a50044a773ecda2e2e9ec6736699c" category="list-text"><block ref="653a50044a773ecda2e2e9ec6736699c" category="inline-link-macro-rx"></block></block>
+  <block id="16b3ee4e5301a5f3f5b55816b3906b83" category="summary">このリリースノートでは、Cloud Volumes ONTAP 9.12.1の新機能、制限事項、および既知の問題について説明します。</block>
 </blocks>

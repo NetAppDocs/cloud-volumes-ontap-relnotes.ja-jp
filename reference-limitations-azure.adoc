@@ -36,9 +36,3 @@ BlueXPからボリュームを作成するときにStorage Efficiencyを無効�
 一部のリージョンでは HA ペアがサポートされません。
 
 https://cloud.netapp.com/cloud-volumes-global-regions["サポートされている Azure リージョンのリストを表示します"^]。
-
-
-
-== 従量課金制は、 CSP パートナーが利用できません
-
-マイクロソフトクラウドソリューションプロバイダー (CSP) パートナーの場合、従量課金制のサブスクリプションは CSP パートナーに提供されないため、 Cloud Volumes ONTAP Explore 、 Standard 、または Premium を展開することはできません。ライセンスを購入し、 Cloud Volumes ONTAP BYOL を導入する必要があります。
