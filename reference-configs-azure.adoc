@@ -223,7 +223,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 . Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
 . この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
-. これらのVMタイプは、Cloud Volumes ONTAP 9.12.1以前の導入でのみサポートされます。
+. これらのVMタイプは、Cloud Volumes ONTAP 9.11.1以前の導入でのみサポートされます。
 
 
 
