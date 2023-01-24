@@ -54,11 +54,13 @@ Azureで単一のアベイラビリティゾーンに新しいHAペアを導入�
 
 === Azure HAは、共有管理対象ディスクを使用する複数のアベイラビリティゾーンで構成されます
 
-リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。
+リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。この機能は現在、米国西部2、西ヨーロッパ、北ヨーロッパ、フランス中部の地域でのみ利用できます。
 
 HA構成のアーキテクチャとコンポーネントの詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure のハイアベイラビリティペア"^]。
 
 この新しい設定を使用するには、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
+
+管理対象ディスクのゾーン冗長ストレージの詳細については、を参照してください link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Microsoft Azureのドキュメント"]
 
 
 

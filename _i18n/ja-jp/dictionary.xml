@@ -642,7 +642,6 @@
   <block id="68367d4408e943b9268a7a6d4314fb0a" category="inline-link-macro">AzureでのCloud Volumes ONTAP HAペアの起動</block>
   <block id="bb0d42e6fed6d85c4ddc5b2d8c94e08b" category="paragraph">Azureで単一のアベイラビリティゾーンに新しいHAペアを導入する場合は、ストレージにページBLOBではなくLRS共有管理ディスクを使用するようになります。作業環境ウィザードに変更はありません。この新しい構成を使用するには、単一のアベイラビリティゾーンを選択するだけです。詳細については、を参照してください <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>。</block>
   <block id="adacae0ffd14e727a49e7808c807ce42" category="section-title">Azure HAは、共有管理対象ディスクを使用する複数のアベイラビリティゾーンで構成されます</block>
-  <block id="bfcf5935583a46f9d5f7f5ad4fa31baf" category="paragraph">リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。</block>
   <block id="5f04b8451f48f03e36e44aea747e0a8b" category="paragraph">この新しい設定を使用するには、を参照してください <block ref="74ff11371741a9669ba3ff027e13cdfb" category="inline-link-macro-rx"></block>。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3^2^</block>
   <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3^2,4^</block>
@@ -706,4 +705,7 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">これらのVMタイプは、共有管理対象ディスクで実行されている単一のアベイラビリティゾーン構成のHAペアでのみサポートされます。</block>
   <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。</block>
   <block id="6c895f204de5d4dd4a02c2926e76c998" category="list-text">これらのVMタイプは、Cloud Volumes ONTAP 9.11.1以前の導入でのみサポートされます。</block>
+  <block id="901f48339d9d297cd3f32a0be361c057" category="paragraph">リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。この機能は現在、米国西部2、西ヨーロッパ、北ヨーロッパ、フランス中部の地域でのみ利用できます。</block>
+  <block id="967b9ba2107b00338e92f6eb93ca99d8" category="inline-link-macro">Microsoft Azureのドキュメント</block>
+  <block id="0d66ef11df7c9797df8b9cf7f638438a" category="paragraph">管理対象ディスクのゾーン冗長ストレージの詳細については、を参照してください <block ref="cc9f7b6977bd94adf51c6f83282634a2" category="inline-link-macro-rx"></block></block>
 </blocks>
