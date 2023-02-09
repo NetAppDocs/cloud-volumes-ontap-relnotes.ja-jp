@@ -708,4 +708,6 @@
   <block id="901f48339d9d297cd3f32a0be361c057" category="paragraph">リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。この機能は現在、米国西部2、西ヨーロッパ、北ヨーロッパ、フランス中部の地域でのみ利用できます。</block>
   <block id="967b9ba2107b00338e92f6eb93ca99d8" category="inline-link-macro">Microsoft Azureのドキュメント</block>
   <block id="0d66ef11df7c9797df8b9cf7f638438a" category="paragraph">管理対象ディスクのゾーン冗長ストレージの詳細については、を参照してください <block ref="cc9f7b6977bd94adf51c6f83282634a2" category="inline-link-macro-rx"></block></block>
+  <block id="b3d2b2f33046bc452ceeba660d878f97" category="section-title">9.12.1 GA（2023年2月9日）</block>
+  <block id="d7ad70132837e18b99685763f8db95f2" category="paragraph">Cloud Volumes ONTAP 9.12.1のGeneral Availability（GA）リリースが、AWS、Azure、Google Cloudで利用できるようになりました。GA リリースにはバグの修正が含まれています。</block>
 </blocks>

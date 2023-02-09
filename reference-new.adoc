@@ -20,6 +20,12 @@ Cloud Volumes ONTAP 9.12.1には、新しい拡張機能が含まれています
 
 
 
+== 9.12.1 GA（2023年2月9日）
+
+Cloud Volumes ONTAP 9.12.1のGeneral Availability（GA）リリースが、AWS、Azure、Google Cloudで利用できるようになりました。GA リリースにはバグの修正が含まれています。
+
+
+
 == 9.12.1 RC1（2022年12月8日）
 
 Cloud Volumes ONTAP 9.12.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
