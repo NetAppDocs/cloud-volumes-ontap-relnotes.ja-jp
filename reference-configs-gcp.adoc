@@ -39,6 +39,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N2-standard-8
 * N2-standard-16
 * N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
 
  a| 
 * N2 - 標準 -4
@@ -51,6 +53,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N1-standard-32
 * N2-standard-16
 * N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
 
  a| 
 * N1-standard-8
@@ -59,6 +63,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N2-standard-8
 * N2-standard-16
 * N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
 
  a| 
 * N1-standard-8
@@ -67,6 +73,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 * N2-standard-8
 * N2-standard-16
 * N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
 
 
 
@@ -88,6 +96,21 @@ link:reference-limits-gcp.html["Google Cloud のディスク制限について�
 . BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
 . Google Cloud Platform リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
 . Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
+. Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
++
+** N2-standard-16
+** N2-standard-32
+** N2-STANDARD-48
+** N2-STANDARD-64
++
+対象となるインスタンスタイプを導入する際に、_Flash Cache__、および高速の書き込み速度を有効にすることができます。より高い最大伝送単位（8、896バイト）をイネーブルにするには、導入環境でVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが大きいほど、ネットワークスループットが向上します。これらの配置のいずれかを起動する方法の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Google CloudでのHAペアの起動"]。
+
++
+
+NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。
+
+
+
 
 
 

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.12.1には、新しい機能強化が含まれています。 
+summary: Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれています。 
 ---
-= Cloud Volumes ONTAP 9.12.1の新機能
+= Cloud Volumes ONTAP 9.13.0の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,59 +14,43 @@ summary: Cloud Volumes ONTAP 9.12.1には、新しい機能強化が含まれて
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.12.1には、新しい拡張機能が含まれています
+Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれています。
 
 その他の機能や拡張機能も、最新バージョンのBlueXP（旧Cloud Manager）で導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
 
 
 
-== 9.12.1 GA（2023年2月9日）
+== 9.13.0 GA（2023年3月5日）
 
-Cloud Volumes ONTAP 9.12.1のGeneral Availability（GA）リリースが、AWS、Azure、Google Cloudで利用できるようになりました。GA リリースにはバグの修正が含まれています。
-
-
-
-== 9.12.1 RC1（2022年12月8日）
-
-Cloud Volumes ONTAP 9.12.1 Release Candidate 1は、AWS、Azure、Google Cloudで提供されるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
+Cloud Volumes ONTAP 9.13.0の一般提供（GA）リリースが、AWS、Azure、Google Cloudで利用できるようになりました。このリリースには、次の新機能と機能拡張が含まれています。
 
 
 
-=== GCPのONTAP S3ライセンス
+=== Google CloudでのFlash Cacheと高速書き込み
 
-ONTAP Cloud Platformでバージョン9.12.1以降を実行する新規および既存のCloud Volumes ONTAP システムに、S3ライセンスが含まれるようになりました。
+Cloud Volumes ONTAP 9.13.0リリースでは、Flash Cache、高速な書き込み速度、最大転送単位（MTU）8、896バイトがサポートされるようになりました。
 
-https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["ONTAP で S3 オブジェクトストレージサービスを設定および管理する方法について説明します"^]
-
-
-
-=== Cloud Volumes ONTAP でのNVMe-oF TCPのサポート
-
-Cloud Volumes ONTAP バージョン9.12.1以降を使用している場合、クラウドプロバイダではnvme-tcpがサポートされます。BlueXPには、NVMe-oF TCPの管理機能はありません。
-
-ONTAP を使用したNVMeの設定の詳細については、を参照してください link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html["NVMe用のStorage VMを設定する"^]。
+の詳細を確認してください link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Google Cloudのライセンスごとにサポートされる構成"^]。
 
 
 
-=== Azure HAは、管理対象ディスクを共有する単一のアベイラビリティゾーンで構成されます
+=== Google Cloudでの画像検証
 
-共有管理対象ディスク上で実行されるMicrosoft Azureローカル冗長ストレージ（LRS）を使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。ローカルで冗長化されたストレージにより、同じリージョン内の1つのデータセンター内で3回、データがレプリケートされます。
+Google Cloudを介してエクスポートされたCloud Volumes ONTAP 画像ファイルの署名を検証するための強化されたセキュリティ機能が利用可能になりました。
 
-HA構成のアーキテクチャとコンポーネントの詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure のハイアベイラビリティペア"^]。
-
-Azureで単一のアベイラビリティゾーンに新しいHAペアを導入する場合は、ストレージにページBLOBではなくLRS共有管理ディスクを使用するようになります。作業環境ウィザードに変更はありません。この新しい構成を使用するには、単一のアベイラビリティゾーンを選択するだけです。詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
+link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-gcp-image-verification.html["Google Cloudイメージ検証の詳細については、こちらをご覧ください"^]。
 
 
 
-=== Azure HAは、共有管理対象ディスクを使用する複数のアベイラビリティゾーンで構成されます
+=== Google Cloudで新しいインスタンスがサポートされます
 
-リージョン内の複数のアベイラビリティゾーンを使用して、Cloud Volumes ONTAP HA構成を導入できるようになりました。この新しい構成は、Azureゾーン冗長ストレージ（ZRS）共有管理対象ディスクを使用して、データセンターの障害から保護し、アプリケーションの可用性を維持します。この機能は現在、米国西部2、西ヨーロッパ、北ヨーロッパ、フランス中部の地域でのみ利用できます。
+Freemium、PAYGO Premium、ノードベースのBYOL、容量ベースのライセンスで、Cloud Volumes ONTAP シングルノード環境とGoogle Cloudの高可用性環境の2つの新しいインスタンスタイプがサポートされるようになりました。
 
-HA構成のアーキテクチャとコンポーネントの詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Azure のハイアベイラビリティペア"^]。
+* N2-STANDARD-48
+* N2-STANDARD-64
 
-この新しい設定を使用するには、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
 
-管理対象ディスクのゾーン冗長ストレージの詳細については、を参照してください link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Microsoft Azureのドキュメント"]
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Google Cloudでサポートされる構成の詳細については、こちらをご覧ください"^]。
 
 
 
@@ -80,19 +64,19 @@ HA構成のアーキテクチャとコンポーネントの詳細については
 
 Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
 
-http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["BlueXPから通知があった場合のアップグレード方法について説明します"^]。
+link:http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["BlueXPから通知があった場合のアップグレード方法について説明します"^]。
 
 
 
 === サポートされているアップグレードパス
 
-9.12.0および9.11.1リリースからCloud Volumes ONTAP 9.12.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
+Cloud Volumes ONTAP 9.12.1リリースから9.13.0にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
 
 
 
 === 必要なコネクタのバージョン
 
-新しいCloud Volumes ONTAP 9.12.1システムを導入し、既存のシステムを9.12.1にアップグレードするには、BlueXPコネクタがバージョン3.9.24以降を実行している必要があります。
+新しいCloud Volumes ONTAP 9.13.0システムを導入し、既存のシステムを9.13.0にアップグレードするには、BlueXP Connectorのバージョン3.9.26以降が実行されている必要があります。
 
 
 TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。
@@ -109,7 +93,7 @@ TIP: コネクタの自動アップグレードはデフォルトで有効にな
 
 === C4、M4、およびR4のインスタンスはサポートされなくなりました
 
-AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes ONTAP でサポートされなくなりました。C4、M4、またはR4インスタンスタイプで実行されている既存のシステムがある場合は、C5、m5、またはr5インスタンスファミリーでインスタンスタイプに変更する必要があります。
+AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes ONTAP でサポートされなくなりました。C4、M4、またはR4インスタンスタイプで実行されている既存のシステムがある場合は、C5、m5、またはr5インスタンスファミリーでインスタンスタイプに変更する必要があります。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。
 
 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
 

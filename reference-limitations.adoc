@@ -106,7 +106,6 @@ Cloud Volumes ONTAP では、次の機能はサポートされていません。
 +
 Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
 
-* Google CloudのONTAP S3（S3プロトコルはAzureとAWSでサポート）
 * RAID 4 、 RAID-DP 、 RAID-TEC （ RAID 0 のサポート）
 * サービスプロセッサ
 * SnapLock のコンプライアンスモードとエンタープライズモード（クラウドの WORM のみサポート）
