@@ -30,7 +30,7 @@ Cloud Volumes ONTAP 9.13.0の一般提供（GA）リリースが、AWS、Azure�
 
 Cloud Volumes ONTAP 9.13.0リリースでは、Flash Cache、高速な書き込み速度、最大転送単位（MTU）8、896バイトがサポートされるようになりました。
 
-の詳細を確認してください link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Google Cloudのライセンスごとにサポートされる構成"^]。
+の詳細を確認してください link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Google Cloudでライセンスごとにサポートされる構成"^]。
 
 
 
