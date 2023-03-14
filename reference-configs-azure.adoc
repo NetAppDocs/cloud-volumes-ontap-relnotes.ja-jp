@@ -128,7 +128,7 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 注：
 
 . 従量課金制では、 Azure Blob ストレージへのデータ階層化はサポートされません。
-. この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。Flash Cache のパフォーマンス向上を利用するには、すべてのボリュームで圧縮を無効にする必要があります。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
+. この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
 . これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
 +
 新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
@@ -243,8 +243,8 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^1,3^
-* L32s_v3^1,3^
+* L16s_v3^ 1、3、5^
+* L32s_v3^ 1、3、5^
 
  a| 
 * E8ds_v4^4^
@@ -253,24 +253,24 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^1,3^
-* L32s_v3^1,3^
+* L16s_v3^ 1、3、5^
+* L32s_v3^ 1、3、5^
 
  a| 
 * E8ds_v4^4^
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^1,3^
-* L32s_v3^1,3^
+* L16s_v3^ 1、3、5^
+* L32s_v3^ 1、3、5^
 
  a| 
 * E8ds_v4^4^
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^1,3^
-* L32s_v3^1,3^
+* L16s_v3^ 1、3、5^
+* L32s_v3^ 1、3、5^
 
 
 
@@ -283,6 +283,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 . この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . これらのVMタイプは、共有管理対象ディスクで実行されている単一のアベイラビリティゾーン構成のHAペアでのみサポートされます。
 . これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。
+. この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
 
 
 
