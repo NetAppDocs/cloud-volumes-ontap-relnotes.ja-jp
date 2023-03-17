@@ -16,6 +16,7 @@ summary: 最新バージョンのCloud Volumes ONTAP を実行していない場
 [role="lead"]
 最新バージョンのCloud Volumes ONTAP を実行していない場合は、他のリリースのドキュメントを参照できます。ページの右上隅にあるバージョンセレクタを使用するか、次のリンクを使用できます。
 
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Cloud Volumes ONTAP 9.13.0"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/index.html["Cloud Volumes ONTAP 9.12.1"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/index.html["Cloud Volumes ONTAP 9.12.0"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/index.html["Cloud Volumes ONTAP 9.11.1"^]
