@@ -60,6 +60,8 @@ sidebar:
     url: "/index.html"
   - title: 新機能
     url: "/reference-new.html"
+  - title: その他のバージョン
+    url: "/reference-other-versions.html"
   - title: ライセンスの概要
     url: "/concept-licensing.html"
   - title: サポートされている構成
