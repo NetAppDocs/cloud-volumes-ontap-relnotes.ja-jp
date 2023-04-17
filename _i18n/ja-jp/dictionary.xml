@@ -613,8 +613,6 @@
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">HA ペアの場合、ライセンスで許可されるノードあたりの容量制限はか、それとも HA ペア全体の容量制限ですか。</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">HA ペアの場合、ミラーリングされたデータはライセンスで許可されている容量の上限にカウントされますか。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3^2^</block>
-  <block id="6f487c8743b08c743167da3781c42f57" category="list-text">L16s_v3^2,4^</block>
-  <block id="2b5c34a51aff2e04df61ba2f74efb07e" category="list-text">L32s_v3^2、4^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">管理対象ディスク</block>
   <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">HAペアは管理対象ディスクを使用します。（ページブロブは、9.12.1リリースより前に導入されたHAペアでサポートされています）。</block>
   <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">次のディスクサイズがサポートされています。</block>
@@ -704,4 +702,6 @@
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Google Cloudで実行されるCloud Volumes ONTAP HAペアのストレージの仕組みを説明します</block>
   <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>。</block>
   <block id="1201140e917505446359a76c53a69515" category="paragraph">を活用する場合は<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Cloud Volumes ONTAP を導入する VPC 内で、必要なにトラフィックを転送する DNS レコードを実装する必要があります<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>。</block>
+  <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3^2^</block>
+  <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3^2^</block>
 </blocks>
