@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれて
 [role="lead"]
 Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれています。
 
-その他の機能や拡張機能も、最新バージョンのBlueXP（旧Cloud Manager）で導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
+その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://["BlueXPリリースノート"^] を参照してください。
 
 
 

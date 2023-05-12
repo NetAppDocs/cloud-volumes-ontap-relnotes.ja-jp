@@ -30,7 +30,7 @@ Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapV
 
 クラウドプロバイダのスナップショットは、 Cloud Volumes ONTAP データのバックアップとリカバリの計画には使用しないでください。Cloud Volumes ONTAP でホストされているデータのバックアップとリストアには、必ず ONTAP の Snapshot コピーや他社製のバックアップソリューションを使用してください。
 
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["Cloud Backup Service を使用して ONTAP データをバックアップおよびリストアする方法について説明します"^]。
+https://["BlueXPのバックアップとリカバリを使用してONTAP データをバックアップおよびリストアする方法をご紹介します"^]。
 
 
 NOTE: データの整合性は、 WAFL ファイルシステムの ONTAP 整合ポイントによって決まります。WAFL ファイルシステムを休止して crash-consistent バックアップを実行できるのは、 ONTAP のみです。

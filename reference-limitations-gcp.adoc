@@ -20,7 +20,7 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 
 == パケットミラーリングの制限
 
-https://cloud.google.com/vpc/docs/packet-mirroring["パケットミラーリング"^] Cloud Volumes ONTAP を導入する Google Cloud VPC で無効にする必要があります。
+https://["パケットミラーリング"^] Cloud Volumes ONTAP を導入する Google Cloud VPC で無効にする必要があります。
 
 パケットミラーリングがイネーブルの場合、 Cloud Volumes ONTAP は正常に動作しません。
 
@@ -28,6 +28,6 @@ https://cloud.google.com/vpc/docs/packet-mirroring["パケットミラーリン�
 
 == Google Private Service Connect の制限
 
-を活用する場合は https://cloud.google.com/vpc/docs/private-service-connect["Google Private Service Connect の略"^] Cloud Volumes ONTAP を導入する VPC 内で、必要なにトラフィックを転送する DNS レコードを実装する必要があります https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["BlueXP APIエンドポイント"^]。
+を活用する場合は https://["Google Private Service Connect の略"^] Cloud Volumes ONTAP を導入する VPC 内で、必要なにトラフィックを転送する DNS レコードを実装する必要があります https://["BlueXP APIエンドポイント"^]。
 
 Cloud Volumes ONTAP から Google Cloud Storage バケットへのデータの階層化は、現在プライベートサービス接続ではサポートされていません。
