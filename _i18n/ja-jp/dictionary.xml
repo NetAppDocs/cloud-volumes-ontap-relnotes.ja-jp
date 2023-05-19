@@ -306,7 +306,6 @@
   <block id="a59ad4f9735c6c90fea48ef6e88441ac" category="cell">c5n.9xlarge</block>
   <block id="26657d5ff9020d2abefe558796b99584" category="cell">96</block>
   <block id="2d3e51e89d3f05d2abe99df631cb0b4c" category="cell">C5a.12xlarge</block>
-  <block id="1688c903113006683515d0a4aabfc6d1" category="cell">48^4^</block>
   <block id="c5349a9d783e985390617543cf910af4" category="cell">c5.18 × ラージ</block>
   <block id="0a09c8844ba8f0936c20bd791130d6b6" category="cell">144</block>
   <block id="99a85ba98f759e2af5b37706147521a4" category="cell">19,000</block>
@@ -327,7 +326,6 @@
   <block id="18ca3c89ae9e8edbe217f2c9b7c6107d" category="inline-link">書き込み速度の選択方法の詳細については、こちらをご覧ください</block>
   <block id="ecaae8a00365bc31bac2a2e1afa5c71d" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、ほとんどのインスタンスタイプで高速な書き込みがサポートされます。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
   <block id="8e6a2ebba2f4ad1a560224744383ef97" category="list-text">r5.12xlarge インスタンスタイプには、サポート性に関する既知の制限があります。パニックが原因でノードが予期せずリブートした場合は、トラブルシューティングに使用されるコアファイルがシステムで収集されず、問題の原因となる可能性があります。お客様はリスクと限定的なサポート条件に同意し、この状況が発生した場合はすべてのサポート責任を負います。この制限は、新規に導入した HA ペアおよび 9.8 からアップグレードした HA ペアに適用されます。ただし、新しく導入するシングルノードシステムには影響しません。</block>
-  <block id="f18904153dfcf72e0d6ca5f227644b87" category="list-text">この EC2 インスタンスタイプでは 48 個以上の vCPU がサポートされますが、 Cloud Volumes ONTAP では最大 48 個の vCPU がサポートされます。</block>
   <block id="9de28fbf6817cd511eb799f9575b611d" category="list-text">EC2 インスタンスタイプを選択する場合は、そのインスタンスが共有インスタンスか専用インスタンスかを指定できます。</block>
   <block id="afea36f2c9999a231c58b7e9dcf3b16e" category="list-text">Cloud Volumes ONTAP は、予約済みまたはオンデマンドの EC2 インスタンスで実行できます。他のタイプのインスタンスを使用するソリューションはサポートされていません。</block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">サポートされている地域</block>
@@ -704,4 +702,6 @@
   <block id="468539119bbdc1adf73b917e2900aee4" category="inline-link">BlueXPのバックアップとリカバリを使用してONTAP データをバックアップおよびリストアする方法をご紹介します</block>
   <block id="97f2669f2be89519b70ab300a23d78bf" category="paragraph"><block ref="dd0e067e6a9ee59d9a054d0786a54cd0" category="inline-link-rx"></block>。</block>
   <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> を参照してください。</block>
+  <block id="f5d86d667fcde1b9fc5b1c45e55d135e" category="cell">64^4^</block>
+  <block id="5ce58b1e3bfddca3ae7d5a13676224ff" category="list-text">これらのEC2インスタンスタイプでは64個以上のvCPUがサポートされますが、Cloud Volumes ONTAP では最大64個のvCPUしかサポートされません。</block>
 </blocks>
