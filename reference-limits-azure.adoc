@@ -100,7 +100,7 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 === 容量ベースのライセンスの制限
 
-容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
+容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
 
 
 
@@ -259,7 +259,7 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 ノードベースのライセンスを使用する場合は、Cloud Volumes ONTAP BYOLシステム用に複数のノードベースのライセンスを購入して、368TiBを超える容量を割り当てることができます。
 
-シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。
+シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。
 
 
 
@@ -491,7 +491,7 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 
 これらはテスト済みの制限です。理論的には追加の Storage VM を設定できますが、サポート対象外です。
 
-https://["Storage VM を追加で作成する方法について説明します"^]。
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Storage VM を追加で作成する方法について説明します"^]。
 
 [cols="2*"]
 |===

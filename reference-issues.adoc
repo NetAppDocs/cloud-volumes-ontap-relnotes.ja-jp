@@ -18,4 +18,4 @@ summary: 既知の問題は、このリリースの製品を正常に使用で�
 
 このリリースの Cloud Volumes ONTAP 固有の既知の問題はありません。
 
-ONTAP ソフトウェアの既知の問題は、で確認できます https://["ONTAP リリースノート"^]。
+ONTAP ソフトウェアの既知の問題は、で確認できます https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["ONTAP リリースノート"^]。

@@ -53,7 +53,7 @@ settings:
   - name: ONTAP クラウド
     url: "/cloud-volumes-ontap-93-relnotes"
     version-number: '9.3'
-  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
   - title: リリースノートのホーム

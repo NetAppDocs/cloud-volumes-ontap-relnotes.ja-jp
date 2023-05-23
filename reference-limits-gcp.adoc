@@ -24,7 +24,7 @@ Cloud Volumes ONTAP システムの最大システム容量はライセンスで
 
 ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、「Action Required」メッセージが表示され、ディスクを追加できなくなります。
 
-一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。を使用して容量の制限に達することができます https://["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下のディスク制限を参照してください。
+一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。を使用して容量の制限に達することができます https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下のディスク制限を参照してください。
 
 [cols="25,75"]
 |===
@@ -123,7 +123,7 @@ Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_.
 
 これらはテスト済みの制限です。理論的には追加の Storage VM を設定できますが、サポート対象外です。
 
-https://["Storage VM を追加で作成する方法について説明します"^]。
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["Storage VM を追加で作成する方法について説明します"^]。
 
 [cols="2*"]
 |===
@@ -241,4 +241,4 @@ https://["Storage VM を追加で作成する方法について説明します"^
 
 ノードがリブートしたら、ストレージを戻す前に、パートナーがデータを同期する必要があります。データの再同期にかかる時間は、ノードが停止している間にクライアントが書き込んだデータの量、およびギブバックの実行中のデータの書き込み速度によって異なります。
 
-https://["Google Cloudで実行されるCloud Volumes ONTAP HAペアのストレージの仕組みを説明します"^]。
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html["Google Cloudで実行されるCloud Volumes ONTAP HAペアのストレージの仕組みを説明します"^]。
