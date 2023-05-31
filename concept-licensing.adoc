@@ -34,4 +34,4 @@ Keystone Flex サブスクリプション:: 成長に合わせて拡張できる
 
 以前のノード単位のライセンスモデルは、ライセンスを購入済みの既存のお客様や、アクティブな Marketplace サブスクリプションを所有しているお客様には引き続き提供されます。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["これらのライセンスオプションの詳細については、こちらをご覧ください"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["これらのライセンスオプションの詳細については、こちらをご覧ください"^]

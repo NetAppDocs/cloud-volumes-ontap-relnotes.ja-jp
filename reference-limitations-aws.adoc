@@ -54,4 +54,4 @@ Cloud Volumes ONTAP はアイドル時に CPU を解放しません https://aws.
 
 ノードがリブートしたら、ストレージを戻す前に、パートナーがデータを同期する必要があります。データの再同期にかかる時間は、ノードが停止している間にクライアントが書き込んだデータの量、およびギブバックの実行中のデータの書き込み速度によって異なります。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha.html["Cloud Volumes ONTAP HA でのストレージの仕組みをご確認ください AWS で実行されているペア"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Cloud Volumes ONTAP HA でのストレージの仕組みをご確認ください AWS で実行されているペア"^]。

@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれて
 [role="lead"]
 Cloud Volumes ONTAP 9.13.0には、新しい機能拡張が含まれています。
 
-その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
+その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
 
 
 
@@ -38,7 +38,7 @@ Cloud Volumes ONTAP 9.13.0リリースでは、Flash Cache、高速な書き込�
 
 Google Cloudを介してエクスポートされたCloud Volumes ONTAP 画像ファイルの署名を検証するための強化されたセキュリティ機能が利用可能になりました。
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-gcp-image-verification.html["Google Cloudイメージ検証の詳細については、こちらをご覧ください"^]。
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-gcp-image-verification.html["Google Cloudイメージ検証の詳細については、こちらをご覧ください"^]。
 
 
 
@@ -64,7 +64,7 @@ link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-config
 
 Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
 
-link:http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["BlueXPから通知があった場合のアップグレード方法について説明します"^]。
+link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["BlueXPから通知があった場合のアップグレード方法について説明します"^]。
 
 
 
@@ -95,6 +95,6 @@ TIP: コネクタの自動アップグレードはデフォルトで有効にな
 
 AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes ONTAP でサポートされなくなりました。C4、M4、またはR4インスタンスタイプで実行されている既存のシステムがある場合は、C5、m5、またはr5インスタンスファミリーでインスタンスタイプに変更する必要があります。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
 
 を参照してください link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["ネットアップサポート"^] これらのインスタンスタイプの可用性とサポート終了の詳細については、を参照してください。

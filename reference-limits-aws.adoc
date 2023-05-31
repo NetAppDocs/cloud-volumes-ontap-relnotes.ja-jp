@@ -24,7 +24,7 @@ Cloud Volumes ONTAP システムの最大システム容量はライセンスで
 
 ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、「Action Required」メッセージが表示され、ディスクを追加できなくなります。
 
-一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下の容量とディスクの制限を参照してください。
+一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下の容量とディスクの制限を参照してください。
 
 [cols="25,75"]
 |===
@@ -88,7 +88,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 . HA ペアの両方のノードに 18 個のアグリゲートを作成することはできません。これは、作成するとデータディスクの制限を超えてしまうためです。
 . 最大アグリゲートサイズは、アグリゲートを構成するディスクに基づいて決まります。データの階層化に使用されるオブジェクトストレージは制限に含まれません。
-. Amazon EBS Elastic Volumes機能をサポートする構成の場合、アグリゲートには最大8本のディスクを格納でき、最大128TiBの容量を提供できます。Amazon EBS Elastic Cloud Volumes ONTAP 機能は、GP3またはio1ディスクを使用している場合、_new_GP9.11.0以降のシステムではデフォルトで有効になっています。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Elastic Volumesのサポートに関する詳細情報"^]
+. Amazon EBS Elastic Volumes機能をサポートする構成の場合、アグリゲートには最大8本のディスクを格納でき、最大128TiBの容量を提供できます。Amazon EBS Elastic Cloud Volumes ONTAP 機能は、GP3またはio1ディスクを使用している場合、_new_GP9.11.0以降のシステムではデフォルトで有効になっています。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Elastic Volumesのサポートに関する詳細情報"^]
 . アグリゲート内のディスクはすべて同じサイズである必要があります。
 
 
@@ -112,7 +112,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 === 容量ベースのライセンスの制限
 
-容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
+容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
 
 
 
@@ -164,7 +164,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 * ノードベースのライセンスを使用する場合は、Cloud Volumes ONTAP BYOLシステム用に複数のノードベースのライセンスを購入して、368TiBを超える容量を割り当てることができます。
 +
-シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。
+シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。
 
 
 
@@ -268,7 +268,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["Storage VM を追加で作成する方法について説明します"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.html["Storage VM を追加で作成する方法について説明します"^]。
 
 [cols="40,60"]
 |===
