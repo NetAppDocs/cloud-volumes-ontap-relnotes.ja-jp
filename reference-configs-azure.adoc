@@ -57,6 +57,8 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
+* L48s_v3^2^
+* L64s_v3^2^
 
  a| 
 * E4s_v3
@@ -99,6 +101,8 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
+* L48s_v3^2^
+* L64s_v3^2^
 
  a| 
 * DS4_v2
@@ -119,6 +123,8 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
+* L48s_v3^2^
+* L64s_v3^2^
 
 
 
@@ -144,92 +150,10 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 
 
 
-=== HA ペア
+=== 共有管理対象ディスクがあるHAペア
 
 Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次の構成から選択できます。
 
-
-
-==== ページBLOBを使用したHAペア
-
-[cols="h,d,d,d,d,d"]
-|===
-|  | フリーミアム | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
-
-
-| 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB | 2 PiB 
-
-
-| サポートされる仮想マシンタイプ  a| 
-* DS4_v2
-* DS5_v2^1^
-* DS13_v2 の場合
-* DS14_v2^1 ^
-* DS15_v2 ^1
-* E8s_v3
-* E48s_v3^1^
-* E8ds_v4^3^
-* E32ds_v4^1,3^
-* E48ds_v4^1,3^
-* E80ids_v4^1、2、3^
-
- a| 
-* DS4_v2
-* DS13_v2 の場合
-* E8s_v3
-* E8ds_v4^3^
-
- a| 
-* DS5_v2^1^
-* DS14_v2^1 ^
-* DS15_v2 ^1
-* E48s_v3^1^
-* E32ds_v4^1,3^
-* E48ds_v4^1,3^
-* E80ids_v4^1、2、3^
-
- a| 
-* DS4_v2
-* DS5_v2^1^
-* DS13_v2 の場合
-* DS14_v2^1 ^
-* DS15_v2 ^1
-* E8s_v3
-* E48s_v3^1^
-* E8ds_v4^3^
-* E32ds_v4^1,3^
-* E48ds_v4^1,3^
-* E80ids_v4^1、2、3^
-
- a| 
-* DS4_v2
-* DS5_v2^1^
-* DS13_v2 の場合
-* DS14_v2^1 ^
-* DS15_v2 ^1
-* E8s_v3
-* E48s_v3^1^
-* E8ds_v4^3^
-* E32ds_v4^1,3^
-* E48ds_v4^1,3^
-* E80ids_v4^1、2、3^
-
-
-
-
-| サポートされているディスクタイプ 5+| ページblobs 
-|===
-注：
-
-. Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
-. この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
-. これらのVMは、Cloud Volumes ONTAP 9.11.1以前の環境でのみサポートされます。これらのVMタイプを使用すると、既存のページBLOB環境をCloud Volumes ONTAP 9.11.1から9.12.1にアップグレードできます。Cloud Volumes ONTAP 9.12.1以降では、新しいページBLOB配置を実行できません。
-
-
-
-
-==== 共有管理対象ディスクがあるHAペア
-
 [cols="h,d,d,d,d,d"]
 |===
 |  | フリーミアム | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
@@ -243,8 +167,8 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^ 1、3、5^
-* L32s_v3^ 1、3、5^
+* L16s_v3^ 1、4、5^
+* L32s_v3^ 1、4、5^
 
  a| 
 * E8ds_v4^4^
@@ -253,24 +177,24 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^ 1、3、5^
-* L32s_v3^ 1、3、5^
+* L16s_v3^ 1、4、5^
+* L32s_v3^ 1、4、5^
 
  a| 
 * E8ds_v4^4^
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^ 1、3、5^
-* L32s_v3^ 1、3、5^
+* L16s_v3^ 1、4、5^
+* L32s_v3^ 1、4、5^
 
  a| 
 * E8ds_v4^4^
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
-* L16s_v3^ 1、3、5^
-* L32s_v3^ 1、3、5^
+* L16s_v3^ 1、4、5^
+* L32s_v3^ 1、4、5^
 
 
 
