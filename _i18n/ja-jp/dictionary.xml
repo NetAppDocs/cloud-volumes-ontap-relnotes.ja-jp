@@ -539,7 +539,6 @@
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり、それぞれのニーズに合った消費モデルを選択できます。</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、ビジネスニーズに応じて、複数のライセンスパッケージから選択できます。</block>
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">これらのライセンスオプションの詳細については、こちらをご覧ください</block>
-  <block id="346f7f627d1a93bfbf315865554048c6" category="section-title">ランサムウェア対策</block>
   <block id="33f66f5b18b24875dca7a81c8f84c5b9" category="cell">896TiB</block>
   <block id="a4a5e7bfb7afd26ff6a225ef7681add9" category="paragraph">次の表に、ディスクのみの場合の最大システム容量と、オブジェクトストレージへのディスクおよびコールドデータの階層化を示します。ディスク制限はユーザデータが格納されたディスクに固有です。ブートディスク、ルートディスク、NVRAMは制限に含まれません。</block>
   <block id="aa22c87da31d41edeac2ffbad9e7507d" category="cell">ライセンスによって異なります。上記の最大システム容量制限を参照してください。</block>
@@ -675,7 +674,6 @@
   <block id="59d68d1abaff04001d7f138b569d66a1" category="doc">Cloud Volumes ONTAP 9.13.1の新機能</block>
   <block id="0775e0f9165c68236ce80a5eeaf622d2" category="paragraph">Cloud Volumes ONTAP 9.13.1には、新しい機能拡張が含まれています。</block>
   <block id="9c8c9e4dac5a2be78e81d66cbffd75af" category="section-title">9.13.1 RC1（2023年6月26日）</block>
-  <block id="73f86a5ebfc8edf0e36c8ad6bb22e282" category="paragraph">Cloud Volumes ONTAP 9.13.1のRelease Candidate 1が、AWS、Azure、Google Cloudで利用できるようになりました。このリリースには、次の機能が含まれています。</block>
   <block id="9a8603c7a44b001d1d10919fc28a94cc" category="paragraph">Cloud Volumes ONTAP 9.12.1および9.13.0リリースから9.13.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。</block>
   <block id="15a36f3b57148762c2209c3b7df4f648" category="paragraph">新しいCloud Volumes ONTAP 9.13.1システムを導入し、既存のシステムを9.13.1にアップグレードするには、BlueXP Connectorのバージョン3.9.26以降が実行されている必要があります。</block>
   <block id="b07f6144410a8635e8ae505b186322a5" category="summary">このリリースノートでは、Cloud Volumes ONTAP 9.13.1の新機能、制限事項、および既知の問題について説明します。</block>
@@ -684,4 +682,5 @@
   <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3^2^</block>
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3^ 1、4、5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3^ 1、4、5^</block>
+  <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">Cloud Volumes ONTAP 9.13.1のRelease Candidate 1が、AWS、Azure、Google Cloudで利用できるようになりました。</block>
 </blocks>
