@@ -684,4 +684,6 @@
   <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">Cloud Volumes ONTAP 9.13.1のRelease Candidate 1が、AWS、Azure、Google Cloudで利用できるようになりました。</block>
   <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">バランスの取れた永続ディスク^4^、パフォーマンス（SSD）永続ディスク^4^、および標準（HDD）永続ディスク。</block>
   <block id="3ef8b2478ab52b4e7c7dd18d32c5bf06" category="list-text">高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。</block>
+  <block id="3265c73fa992103b2a4f8d03470586ac" category="section-title">9.13.1 GA（2023年7月26日）</block>
+  <block id="b5d2ebb75a812f3d5c8fc5e62ce5a672" category="paragraph">Cloud Volumes ONTAP 9.13.1のGeneral Availabilityリリースが、AWS、Azure、Google Cloudで利用できるようになりました。</block>
 </blocks>
