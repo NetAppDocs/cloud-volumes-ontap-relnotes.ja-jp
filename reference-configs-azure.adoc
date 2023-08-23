@@ -146,7 +146,7 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 . SSD の使用時には書き込みパフォーマンスの向上が実現します。
 . Azure リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
 . Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
-. SNは、Standard SSD、HDD、Premium SSDのLRS管理対象ディスクのみをサポートします。
+. シングルノード環境では、Standard SSD、HDD、Premium SSDについて、ローカル冗長ストレージ（LRS）で管理されるディスクのみがサポートされます。
 
 
 
