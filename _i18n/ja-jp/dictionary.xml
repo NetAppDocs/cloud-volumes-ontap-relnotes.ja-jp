@@ -578,8 +578,6 @@
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">HA ペアの場合、ミラーリングされたデータはライセンスで許可されている容量の上限にカウントされますか。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3^2^</block>
   <block id="b869cbdadaa9844d32c24de3f4db3242" category="cell">管理対象ディスク</block>
-  <block id="bdebc137cea9fa36d51bbecef44687cc" category="paragraph">HAペアは管理対象ディスクを使用します。（ページブロブは、9.12.1リリースより前に導入されたHAペアでサポートされています）。</block>
-  <block id="2c5ad1776ac4cf950a5e0576f35bf111" category="paragraph">次のディスクサイズがサポートされています。</block>
   <block id="dbe94f36417009d827f76ccf107bd90c" category="section-title">自動アプリケーションリソース管理ソリューションは使用しないでください</block>
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">HA の場合、ライセンスの容量制限はノード単位か、 HA ペア全体に適用されるか</block>
   <block id="2d7789be6e6e477491f790d5a3ea60b3" category="cell">シングルノードの場合は38TiBの物理容量。^2^352TiB。PAYGOでは96TiBの物理容量をHAペア用に使用し、管理対象ディスクの場合は、ページblob 38TiBの物理容量を使用します</block>
@@ -694,4 +692,7 @@
   <block id="ade4280527084cf81b8c35333fab8226" category="list-text"><block ref="ade4280527084cf81b8c35333fab8226" category="inline-link-macro-rx"></block></block>
   <block id="373d3eec6a8460edd6d29008332349e5" category="summary">このリリースノートでは、Cloud Volumes ONTAP 9.14.0の新機能、制限事項、および既知の問題について説明します。</block>
   <block id="c3264a0692eaa18730a5ddad32b43884" category="doc">Cloud Volumes ONTAP 9.14.0リリースノート</block>
+  <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">HAペアはAzureマネージドディスクを使用します。次のディスクタイプとサイズがサポートされています。</block>
+  <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">（ページブロブは、9.12.1リリースより前に導入されたHAペアでサポートされています）。</block>
+  <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*プレミアムSSD *</block>
 </blocks>
