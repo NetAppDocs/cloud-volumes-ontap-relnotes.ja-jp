@@ -41,7 +41,7 @@ Cloud Volumes ONTAP システムの最大システム容量はライセンスで
 | PAYGO Premium | 368TiB 
 
 
-| ノードベースのライセンス | 1 ライセンスあたり 368 TiB 
+| ノードベースのライセンス | 2PiB（複数のライセンスが必要） 
 
 
 | 容量単位のライセンスです | 2 PiB 
@@ -275,9 +275,7 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。
 
-ノードベースのライセンスを使用する場合は、Cloud Volumes ONTAP BYOLシステム用に複数のノードベースのライセンスを購入して、368TiBを超える容量を割り当てることができます。
-
-シングルノードシステムまたは HA ペアに対して購入できるライセンスの数に制限はありません。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。
+Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に複数のノードベースライセンスを購入して、368TiBを超える容量を割り当てることができます（テストおよびサポートされるシステム容量の上限である2PiBまで）。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。Cloud Volumes ONTAPでは、テストおよびサポートされる最大システム容量2PiBまでサポートされますが、2PiBの制限を超えると、サポートされないシステム構成になります。
 
 
 
@@ -331,52 +329,52 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 2+|  | * ディスクのみ * | * ディスク + データ階層化 * | * ディスクのみ * | * ディスク + データ階層化 * 
 
 
-| DS4_v2 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| DS4_v2 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| DS5_v2 の場合 | 61 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| DS5_v2 の場合 | 61 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| DS13_v2 の場合 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| DS13_v2 の場合 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| DS14_v2 | 61 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| DS14_v2 | 61 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| DS15_v2 の場合 | 61 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| DS15_v2 の場合 | 61 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| L8s_v2 の場合 | 13 | 368TiB | 368TiB | 416TiB | 1 ライセンスあたり 368 TiB 
+| L8s_v2 の場合 | 13 | 368TiB | 368TiB | 416TiB | 2 PiB 
 
 
-| E4s_v3 | 5. | 160TiB | 368TiB | 160TiB | 1 ライセンスあたり 368 TiB 
+| E4s_v3 | 5. | 160TiB | 368TiB | 160TiB | 2 PiB 
 
 
-| E8s_v3 | 13 | 368TiB | 368TiB | 416TiB | 1 ライセンスあたり 368 TiB 
+| E8s_v3 | 13 | 368TiB | 368TiB | 416TiB | 2 PiB 
 
 
-| E32s_v3 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E32s_v3 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| E48s_v3 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E48s_v3 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| E64is_v3 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E64is_v3 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| E4ds_v4 | 5. | 160TiB | 368TiB | 160TiB | 1 ライセンスあたり 368 TiB 
+| E4ds_v4 | 5. | 160TiB | 368TiB | 160TiB | 2 PiB 
 
 
-| E8ds_v4 | 13 | 368TiB | 368TiB | 416TiB | 1 ライセンスあたり 368 TiB 
+| E8ds_v4 | 13 | 368TiB | 368TiB | 416TiB | 2 PiB 
 
 
-| E32ds_v4 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E32ds_v4 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| E48ds_v4 | 29 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E48ds_v4 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 
 
-| E80ids_v4 | 61 | 368TiB | 368TiB | 896TiB | 1 ライセンスあたり 368 TiB 
+| E80ids_v4 | 61 | 368TiB | 368TiB | 896TiB | 2 PiB 
 |===
 ====
 
@@ -445,37 +443,37 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 2+|  | * ディスクのみ * | * ディスク + データ階層化 * | * ディスクのみ * | * ディスク + データ階層化 * 
 
 
-| DS4_v2 | 29 | 232TiB | 368TiB | 232TiB | 1 ライセンスあたり 368 TiB 
+| DS4_v2 | 29 | 232TiB | 368TiB | 232TiB | 2 PiB 
 
 
-| DS5_v2 の場合 | 61 | 368TiB | 368TiB | 488 TiB | 1 ライセンスあたり 368 TiB 
+| DS5_v2 の場合 | 61 | 368TiB | 368TiB | 488 TiB | 2 PiB 
 
 
-| DS13_v2 の場合 | 29 | 232TiB | 368TiB | 232TiB | 1 ライセンスあたり 368 TiB 
+| DS13_v2 の場合 | 29 | 232TiB | 368TiB | 232TiB | 2 PiB 
 
 
-| DS14_v2 | 61 | 368TiB | 368TiB | 488 TiB | 1 ライセンスあたり 368 TiB 
+| DS14_v2 | 61 | 368TiB | 368TiB | 488 TiB | 2 PiB 
 
 
-| DS15_v2 の場合 | 61 | 368TiB | 368TiB | 488 TiB | 1 ライセンスあたり 368 TiB 
+| DS15_v2 の場合 | 61 | 368TiB | 368TiB | 488 TiB | 2 PiB 
 
 
-| E8s_v3 | 13 | 104TiB 未満 | 368TiB | 104TiB 未満 | 1 ライセンスあたり 368 TiB 
+| E8s_v3 | 13 | 104TiB 未満 | 368TiB | 104TiB 未満 | 2 PiB 
 
 
-| E48s_v3 | 29 | 232TiB | 368TiB | 232TiB | 1 ライセンスあたり 368 TiB 
+| E48s_v3 | 29 | 232TiB | 368TiB | 232TiB | 2 PiB 
 
 
-| E8ds_v4 | 13 | 104TiB 未満 | 368TiB | 104TiB 未満 | 1 ライセンスあたり 368 TiB 
+| E8ds_v4 | 13 | 104TiB 未満 | 368TiB | 104TiB 未満 | 2 PiB 
 
 
-| E32ds_v4 | 29 | 232TiB | 368TiB | 232TiB | 1 ライセンスあたり 368 TiB 
+| E32ds_v4 | 29 | 232TiB | 368TiB | 232TiB | 2 PiB 
 
 
-| E48ds_v4 | 29 | 232TiB | 368TiB | 232TiB | 1 ライセンスあたり 368 TiB 
+| E48ds_v4 | 29 | 232TiB | 368TiB | 232TiB | 2 PiB 
 
 
-| E80ids_v4 | 61 | 368TiB | 368TiB | 488 TiB | 1 ライセンスあたり 368 TiB 
+| E80ids_v4 | 61 | 368TiB | 368TiB | 488 TiB | 2 PiB 
 |===
 ====
 .BYOL：共有管理対象ディスクを使用する複数のアベイラビリティゾーン構成のHAペア
@@ -489,16 +487,16 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 2+|  | * ディスクのみ * | * ディスク + データ階層化 * | * ディスクのみ * | * ディスク + データ階層化 * 
 
 
-| E8ds_v4 | 12. | 368TiB | 368TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+| E8ds_v4 | 12. | 368TiB | 368TiB | 368TiB | 2 PiB 
 
 
-| E32ds_v4 | 28 | 368TiB | 368TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+| E32ds_v4 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
 
 
-| E48ds_v4 | 28 | 368TiB | 368TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+| E48ds_v4 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
 
 
-| E80ids_v4 | 28 | 368TiB | 368TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+| E80ids_v4 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
 |===
 ====
 
