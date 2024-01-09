@@ -264,6 +264,12 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 | E80ids_v4 | 28 | 896TiB | 2 PiB 
 
 
+| L16s_v3 | 28 | 896TiB | 2 PiB 
+
+
+| L32s_v3 | 28 | 896TiB | 2 PiB 
+
+
 | L48s_v3 | 28 | 896TiB | 2 PiB 
 
 
