@@ -85,46 +85,6 @@ sidebar:
     url: "/reference-provider-integrations.html"
   - title: 法的通知
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: はじめに
-    links:
-    - title: 新機能
-      url: reference-new.html
-    - title: ライセンスの概要
-      url: concept-licensing.html
-  - title: Amazon Web Services の
-    links:
-    - title: サポートされている構成
-      url: reference-configs-aws.html
-    - title: ストレージの制限
-      url: reference-limits-aws.html
-    - title: 制限
-      url: reference-limitations-aws.html
-  - title: Google Cloud
-    links:
-    - title: サポートされている構成
-      url: reference-configs-gcp.html
-    - title: ストレージの制限
-      url: reference-limits-gcp.html
-    - title: 制限
-      url: reference-limitations-gcp.html
-  - title: Microsoft Azure
-    links:
-    - title: サポートされている構成
-      url: reference-configs-azure.html
-    - title: ストレージの制限
-      url: reference-limits-azure.html
-    - title: 制限
-      url: reference-limitations-azure.html
-  - title: ブログコミュニティ
-    links:
-    - title: ネットアップコミュニティ
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: BlueXPブログ
-      url: https://cloud.netapp.com/blog
-    - title: クラウドに関する Web セミナー
-      url: https://cloud.netapp.com/events
 product-family:
   name: BlueXP
   repo: bluexp-family

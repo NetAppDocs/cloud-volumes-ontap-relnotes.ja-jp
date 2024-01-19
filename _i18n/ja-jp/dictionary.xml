@@ -152,7 +152,6 @@
   <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
   <block id="9dba50d3a2c2f26daddbf9d144c49772" category="cell">最小サイズ</block>
   <block id="e2fca4ed20d01d1eda8a934cf81cb194" category="cell">20 MB</block>
-  <block id="87338ad799bddd85c6298bb9270dc27f" category="cell">100TiB</block>
   <block id="f870c45bb6c4b8bad8f13c8dc3439f98" category="cell">* qtree *</block>
   <block id="8032f0290a7c4e00a6da3a195523a94e" category="cell">FlexVol あたりの最大数</block>
   <block id="38de34e4b49b8adfeb2c678818915204" category="cell">4,995</block>
@@ -219,7 +218,6 @@
   <block id="d5372d02fa2f8d09ddfa9be3500d8847" category="list-text">データアグリゲートの最大数にルートアグリゲートは含まれません。</block>
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">論理ストレージの制限</block>
   <block id="324f218b8144e744b54eb58e0bf14eea" category="cell">16 TB</block>
-  <block id="309524b9e1ef1d7d7d905c7cb1d358e9" category="cell">100 TB</block>
   <block id="fa082ab1a05e05550971e6e5f583dcfe" category="summary">AWS では、いくつかの Cloud Volumes ONTAP 構成がサポートされます。</block>
   <block id="8bb0da4c260f565e0c8162ea9c2b7caa" category="doc">AWS でサポートされる構成</block>
   <block id="7db0f9060b8b2def82346add7b8e89c0" category="section-title">サポートされるノード数</block>
@@ -498,13 +496,6 @@
   <block id="5313a9ac102424f63dd4d76f5280130e" category="sidebar">AWS の制限事項</block>
   <block id="1fff298355326f8c77bd77059a41c1a2" category="sidebar">Azure の制限事項</block>
   <block id="9a3a0c4b2afbb088e029484d4b34ba8b" category="sidebar">Google Cloud の制限事項</block>
-  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
-  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services の</block>
-  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="sidebar">制限</block>
-  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">Microsoft Azure</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログコミュニティ</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
   <block id="84c132b976f487cccd3001ed2c7557f2" category="cell">* 容量ベースの PAYGO または BYOL * ^3^</block>
   <block id="15e276b5f20d3f04c4dde66ecf8a249c" category="cell">* ノードベースの PAYGO *</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">サポートされているアップグレードパス</block>
@@ -571,7 +562,6 @@
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">BlueXPリリースノート</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP APIエンドポイント</block>
   <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">いいえ、できません。HA ペアのデータは、 Google Cloud で障害が発生した場合にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノードAで8 TBのディスクを購入した場合、BlueXPはノードBにも8 TBのディスクを割り当てます。このディスクはミラーリングされたデータに使用されます。16TB の容量がプロビジョニングされましたが、ライセンスの上限には 8TB しかカウントされません。</block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXPブログ</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">HA ペアの場合、ライセンスで許可されるノードあたりの容量制限はか、それとも HA ペア全体の容量制限ですか。</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">HA ペアの場合、ミラーリングされたデータはライセンスで許可されている容量の上限にカウントされますか。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3^2^</block>
@@ -702,4 +692,12 @@
   <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3^ 1、4、5^</block>
   <block id="c130660d20dd5cec8fbf6045fb61af08" category="list-text">L64s_v3^ 1、4、5^</block>
   <block id="885a1d815cf042f25bd0893361642b6e" category="list-text">これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。</block>
+  <block id="64063abe39aac990beb215f4e4df9f92" category="cell">最大サイズ^2^</block>
+  <block id="d0bb632fcdb31cf3c729c1c59f826d4f" category="cell">128 TB</block>
+  <block id="95f8ab07e6196c13df81b9123cb42b19" category="cell">最大サイズ^3^</block>
+  <block id="4dd4655034851cefb46869bef690cc22" category="cell">300TiB</block>
+  <block id="ae809759e1518d5c4c2019b9c03f15a1" category="list-text">ONTAP 9.12.1P2以降では、上限は128TBです。ONTAP 9.11.1以前のバージョンでは、最大16TBです。</block>
+  <block id="44693df7930e7e6d7bb4f466625bc372" category="list-text">次のツールと最小バージョンを使用して、最大サイズ300TiBまでのFlexVolボリュームを作成できます。</block>
+  <block id="5680c249ee040de9c43f982996ed2a24" category="list-text">System ManagerとONTAP CLI（Cloud Volumes ONTAP 9.12.1 P2および9.13.0 P2以降）</block>
+  <block id="68c68c70121e1d9364223bb9fded83b0" category="list-text">Cloud Volumes ONTAP 9.13.1以降のBlueXP</block>
 </blocks>

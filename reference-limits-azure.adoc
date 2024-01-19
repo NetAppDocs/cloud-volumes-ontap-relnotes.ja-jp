@@ -559,7 +559,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | 論理ストレージ | パラメータ | 制限（ Limit ） 
 
 
-.2+| * ファイル * | 最大サイズ | 16TiB 
+.2+| * ファイル * | 最大サイズ^2^ | 128 TB 
 
 
 | ボリュームあたりの最大数 | ボリュームサイズは最大 20 億個です 
@@ -574,7 +574,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | 最小サイズ | 20 MB 
 
 
-| 最大サイズ | 100TiB 
+| 最大サイズ^3^ | 300TiB 
 
 
 | * qtree * | FlexVol あたりの最大数 | 4,995 
@@ -583,6 +583,13 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 | * Snapshot コピー * | FlexVol あたりの最大数 | 1,023 
 |===
 . クローン階層の深さは、 1 つの FlexVol から作成できる、ネストされた FlexClone ボリュームの最大階層です。
+. ONTAP 9.12.1P2以降では、上限は128TBです。ONTAP 9.11.1以前のバージョンでは、最大16TBです。
+. 次のツールと最小バージョンを使用して、最大サイズ300TiBまでのFlexVolボリュームを作成できます。
++
+** System ManagerとONTAP CLI（Cloud Volumes ONTAP 9.12.1 P2および9.13.0 P2以降）
+** Cloud Volumes ONTAP 9.13.1以降のBlueXP
+
+
 
 
 
