@@ -24,6 +24,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
 シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。
 
+Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
+
 
 
 === シングルノードシステム
@@ -49,11 +51,17 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * E32s_v3^3^
 * E48s_v3^3^
 * E64is_v3^3^
-* E4ds_v4^3^
-* E8ds_v4^3^
+* E4ds_v4
+* E8ds_v4
 * E32ds_v4^3^
 * E48ds_v4^3^
 * E80ids_v4^3^
+* E4ds_V5
+* E8ds_V5
+* E20s_V5^3^
+* E32ds_V5^3^
+* E48ds_V5^3^
+* E64ds_V5^3^
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
@@ -85,12 +93,14 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
  a| 
 * E4s_v3
 * E4ds_v4^3^
+* E4ds_V5
 
  a| 
 * DS4_v2
 * DS13_v2 の場合
 * E8s_v3
 * E8ds_v4^3^
+* E8ds_V5
 * L8s_v3^2^
 
  a| 
@@ -103,6 +113,10 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * E32ds_v4^3^
 * E48ds_v4^3^
 * E80ids_v4^3^
+* E20ds_V5
+* E32ds_V5
+* E48ds_V5
+* E64ds_V5
 
  a| 
 * DS4_v2
@@ -120,6 +134,12 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * E32ds_v4^3^
 * E48ds_v4^3^
 * E80ids_v4^3^
+* E4ds_V5
+* E8ds_V5
+* E20ds_V5
+* E32ds_V5
+* E48ds_V5
+* E64ds_V5
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
@@ -137,16 +157,9 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 . この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
 . これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
 +
-新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
-
-+
-逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
+新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。
 
 . シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
-. SSD の使用時には書き込みパフォーマンスの向上が実現します。
-. Azure リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
-. Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
-. シングルノード環境では、Standard SSD、HDD、Premium SSDについて、ローカル冗長ストレージ（LRS）で管理されるディスクのみがサポートされます。
 
 
 
@@ -179,6 +192,11 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,3^
 * E48ds_v4^ 1、3^
 * E80ids_v4^1、2、3^
+* E8ds_V5
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 
  a| 
 * DS4_v2
@@ -192,12 +210,18 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,3^
 * E48ds_v4^ 1、3^
 * E80ids_v4^1、2、3^
+* E8ds_V5
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 
  a| 
 * DS4_v2
 * DS13_v2 の場合
 * E8s_v3
 * E8ds_v4^3^
+* E8ds_V5
 
  a| 
 * DS5_v2^1^
@@ -207,6 +231,10 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,3^
 * E48ds_v4^ 1、3^
 * E80ids_v4^1、2、3^
+* E20ds_V5
+* E32ds_V5
+* E48ds_V5
+* E64ds_V5
 
  a| 
 * DS4_v2
@@ -220,6 +248,12 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,3^
 * E48ds_v4^ 1、3^
 * E80ids_v4^1、2、3^
+* E4ds_V5
+* E8ds_V5
+* E20ds_V5
+* E32ds_V5
+* E48ds_V5
+* E64ds_V5
 
 
 
@@ -252,6 +286,11 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
+* E8ds_V5
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 * L16s_v3^ 1、4、5^
 * L32s_v3^ 1、4、5^
 * L48s_v3^ 1、4、5^
@@ -262,6 +301,11 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
+* E8ds_V5
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 * L16s_v3^ 1、4、5^
 * L32s_v3^ 1、4、5^
 * L48s_v3^ 1、4、5^
@@ -269,11 +313,16 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
  a| 
 * E8ds_v4^4^
+* E8ds_V5
 
  a| 
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 * L16s_v3^ 1、4、5^
 * L32s_v3^ 1、4、5^
 * L48s_v3^ 1、4、5^
@@ -284,6 +333,12 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,4^
 * E48ds_v4^1,4^
 * E80ids_v4^ 1、2、4^
+* E4ds_V5
+* E8ds_V5
+* E20s_v5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 * L16s_v3^ 1、4、5^
 * L32s_v3^ 1、4、5^
 * L48s_v3^ 1、4、5^
@@ -299,7 +354,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 . Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
 . この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . これらのVMタイプは、共有管理対象ディスクで実行されている単一のアベイラビリティゾーン構成のHAペアでのみサポートされます。
-. これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。
+. これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。EDS_V5 VMタイプの場合、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.14.1 RC1から開始されます。
 . この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
 
 
@@ -369,3 +424,9 @@ HAペアはAzureマネージドディスクを使用します。次のディス�
 * 16TiB（管理対象ディスクのみ）
 * 32TiB（管理対象ディスクのみ）
 
+
+
+
+== サポートされている地域
+
+Azure リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。

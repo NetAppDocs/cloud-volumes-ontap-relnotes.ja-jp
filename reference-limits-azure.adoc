@@ -156,6 +156,24 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 | E80ids_v4 | 61 | 896TiB | 2 PiB 
 
 
+| E4ds_V5 | 5. | 160TiB | 2 PiB 
+
+
+| E8ds_V5 | 13 | 416TiB | 2 PiB 
+
+
+| E20ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 29 | 896TiB | 2 PiB 
+
+
 | L8s_v3 | 12. | 384 TiB | 2 PiB 
 
 
@@ -232,6 +250,21 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 | E80ids_v4 | 28 | 896TiB | 2 PiB 
 
 
+| E8ds_V5 | 12. | 384 TiB | 2 PiB 
+
+
+| E20ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 28 | 896TiB | 2 PiB 
+
+
 | L16s_v3 | 28 | 896TiB | 2 PiB 
 
 
@@ -262,6 +295,21 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 
 | E80ids_v4 | 28 | 896TiB | 2 PiB 
+
+
+| E8ds_V5 | 12. | 384 TiB | 2 PiB 
+
+
+| E20ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 28 | 896TiB | 2 PiB 
 
 
 | L16s_v3 | 28 | 896TiB | 2 PiB 
@@ -322,6 +370,18 @@ Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に
 
 
 | E80ids_v4 | 61 | 368TiB | 368TiB 
+
+
+| E20ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 29 | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 29 | 896TiB | 2 PiB 
 |===
 ====
 .BYOLによるシングルノード
@@ -381,6 +441,24 @@ Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に
 
 
 | E80ids_v4 | 61 | 368TiB | 368TiB | 896TiB | 2 PiB 
+
+
+| E4ds_V5 | 5. | 160TiB | 368TiB | 160TiB | 2 PiB 
+
+
+| E8ds_V5 | 13 | 368TiB | 368TiB | 416TiB | 2 PiB 
+
+
+| E20ds_V5 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 29 | 368TiB | 368TiB | 896TiB | 2 PiB 
 |===
 ====
 
@@ -436,6 +514,18 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 
 
 | E80ids_v4 | 28 | 368TiB | 368TiB 
+
+
+| E20ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E32ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E48ds_V5 | 28 | 896TiB | 2 PiB 
+
+
+| E64ds_V5 | 28 | 896TiB | 2 PiB 
 |===
 ====
 .BYOL：単一のアベイラビリティゾーンにページBLOBがあるHAペア
@@ -503,6 +593,21 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 
 
 | E80ids_v4 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
+
+
+| E8ds_V5 | 12. | 368TiB | 368TiB | 368TiB | 2 PiB 
+
+
+| E20ds_V5 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
+
+
+| E32ds_V5 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
+
+
+| E48ds_V5 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
+
+
+| E64ds_V5 | 28 | 368TiB | 368TiB | 368TiB | 2 PiB 
 |===
 ====
 
