@@ -113,10 +113,10 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * E32ds_v4^3^
 * E48ds_v4^3^
 * E80ids_v4^3^
-* E20ds_V5
-* E32ds_V5
-* E48ds_V5
-* E64ds_V5
+* E20ds_V5^3^
+* E32ds_V5^3^
+* E48ds_V5^3^
+* E64ds_V5^3^
 
  a| 
 * DS4_v2
@@ -136,10 +136,10 @@ Cloud Volumes ONTAP をシングルノードシステムとして Azure に導�
 * E80ids_v4^3^
 * E4ds_V5
 * E8ds_V5
-* E20ds_V5
-* E32ds_V5
-* E48ds_V5
-* E64ds_V5
+* E20ds_V5^3^
+* E32ds_V5^3^
+* E48ds_V5^3^
+* E64ds_V5^3^
 * L8s_v3^2^
 * L16s_v3^2^
 * L32s_v3^2^
@@ -231,10 +231,10 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E32ds_v4^1,3^
 * E48ds_v4^ 1、3^
 * E80ids_v4^1、2、3^
-* E20ds_V5
-* E32ds_V5
-* E48ds_V5
-* E64ds_V5
+* E20ds_V5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 
  a| 
 * DS4_v2
@@ -250,10 +250,10 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * E80ids_v4^1、2、3^
 * E4ds_V5
 * E8ds_V5
-* E20ds_V5
-* E32ds_V5
-* E48ds_V5
-* E64ds_V5
+* E20ds_V5^1^
+* E32ds_v5^1^
+* E48ds_v5^1^
+* E64ds_v5^1^
 
 
 
