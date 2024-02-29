@@ -38,10 +38,10 @@ Cloud Volumes ONTAP では、データ階層化用に複数のタイプの EBS �
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
+|  | フリーミアム | 容量単位のライセンスです | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL 
 
 
-| 最大システム容量（ディスク + オブジェクトストレージ） ^1 ^ | 500 GiB | 2TiB | 10TiB | 368TiB ^2^ | ライセンスあたり 368 TiB ^2^ | 2 PiB ^2^ 
+| 最大システム容量（ディスク + オブジェクトストレージ） ^1 ^ | 500 GiB | 2 PiB ^2^ | 2TiB | 10TiB | 368TiB ^2^ | ライセンスあたり 368 TiB ^2^ 
 
 
 | サポートされているディスクタイプ  a| 

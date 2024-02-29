@@ -20,16 +20,22 @@ Google Cloud では、いくつかの Cloud Volumes ONTAP 構成がサポート�
 
 == ライセンスでサポートされている構成
 
-Cloud Volumes ONTAP は、フォールトトレランスとノンストップオペレーションを実現するために、 Google Cloud Platform ではシングルノードシステムとして、ハイアベイラビリティ（ HA ）ペアのノードとして利用できます。
+Cloud Volumes ONTAPは、シングルノードシステムとして、またフォールトトレランスとノンストップオペレーションを実現するハイアベイラビリティ（HA）ペアとしてGoogle Cloudで利用できます。
 
 シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。
 
-[cols="h,d,d,d,d,d,d"]
+Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
+
+[role="tabbed-block"]
+====
+.容量ベースのライセンス
+--
+[cols="h,d,d,d"]
 |===
-|  | フリーミアム | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL | 容量単位のライセンスです 
+|  | フリーミアム | 最適化 | 容量単位のライセンス（Essentials、Professional、Edge Cache） 
 
 
-| 最大システム容量（ディスク + オブジェクトストレージ） ^1 ^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 1 ライセンスあたり 368 TB | 2 PiB 
+| 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2 PiB | 2 PiB 
 
 
 | サポートされているマシンタイプ ^3  a| 
@@ -44,27 +50,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
  a| 
 * N2 - 標準 -4
-
- a| 
-* N1-standard-8
 * N2-standard-8
-
- a| 
-* N1-standard-32
-* N2-standard-16
-* N2-standard-32
-* N2-STANDARD-48
-* N2-STANDARD-64
-
- a| 
-* N1-standard-8
-* N1-standard-32
-* N2 - 標準 -4
-* N2-standard-8
-* N2-standard-16
-* N2-standard-32
-* N2-STANDARD-48
-* N2-STANDARD-64
 
  a| 
 * N1-standard-8
@@ -79,7 +65,7 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
 
 
-| サポートされているディスクタイプ 6+| バランスの取れた永続ディスク^4^、パフォーマンス（SSD）永続ディスク^4^、および標準（HDD）永続ディスク。 
+| サポートされているディスクタイプ 3+| バランスの取れた永続ディスク^4^、パフォーマンス（SSD）永続ディスク^4^、および標準（HDD）永続ディスク。 
 |===
 注：
 
@@ -94,8 +80,6 @@ link:reference-limits-gcp.html["Google Cloud のディスク制限について�
 
 . 高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。
 . BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
-. Google Cloud Platform リージョンのサポートについては、を参照してください https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
-. Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
 . Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
 +
 ** N2-standard-16
@@ -113,6 +97,78 @@ NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存�
 
 
 
+--
+.ノードベースのライセンス
+--
+[cols="h,d,d,d,d"]
+|===
+|  | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL 
+
+
+| 最大システム容量（ディスク + オブジェクトストレージ） | 2 TB ^2^ | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+
+
+| サポートされているマシンタイプ ^3  a| 
+* N2 - 標準 -4
+
+ a| 
+* N1-standard-8
+* N2-standard-8
+
+ a| 
+* N1-standard-32
+* N2-standard-16
+* N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
+
+ a| 
+* N1-standard-8
+* N1-standard-32
+* N2 - 標準 -4
+* N2-standard-8
+* N2-standard-16
+* N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
+
+
+
+
+| サポートされているディスクタイプ 4+| バランスの取れた永続ディスク^4^、パフォーマンス（SSD）永続ディスク^4^、および標準（HDD）永続ディスク。 
+|===
+注：
+
+. ディスク制限を使用すると、ディスクのみを使用することでシステムの最大容量に達することができません。を使用して容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。
++
+link:reference-limits-gcp.html["Google Cloud のディスク制限について詳しくは、こちらをご覧ください"]。
+
+. 従量課金制では、 Google Cloud Storage へのデータ階層化はサポートされません。
+. 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。
++
+このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
+
+. 高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。
+. BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
+. Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
++
+** N2-standard-16
+** N2-standard-32
+** N2-STANDARD-48
+** N2-STANDARD-64
++
+対象となるインスタンスタイプを導入する際に、_Flash Cache__、および高速の書き込み速度を有効にすることができます。より高い最大伝送単位（8、896バイト）をイネーブルにするには、導入環境でVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが大きいほど、ネットワークスループットが向上します。これらの配置のいずれかを起動する方法の詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Google CloudでのHAペアの起動"]。
+
++
+
+NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。
+
+
+
+
+
+--
+====
 
 
 == サポートされるディスクサイズ
@@ -128,3 +184,9 @@ Google Cloud では、アグリゲートに同じタイプとサイズのディ�
 * 16 TB
 * 64 TB
 
+
+
+
+== サポートされている地域
+
+Google Cloudリージョンのサポートについては、を参照してください。 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
