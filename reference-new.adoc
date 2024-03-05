@@ -20,6 +20,12 @@ Cloud Volumes ONTAP 9.14.1には、新しい機能拡張が含まれています
 
 
 
+== 9.14.1 GA（2024年3月5日）
+
+Cloud Volumes ONTAP 9.14.1 General Availabilityリリースが、AWS、Azure、Google Cloudで利用できるようになりました。
+
+
+
 == 9.14.1 RC1（2023年12月6日）
 
 Cloud Volumes ONTAP 9.14.1のRelease Candidate 1は、AWS、Azure、Google Cloudで利用できるようになりました。
