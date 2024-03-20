@@ -20,6 +20,34 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 
 
 
+== サポートされない ONTAP 機能です
+
+Cloud Volumes ONTAP では、次の機能はサポートされていません。
+
+* アグリゲートレベルのインライン重複排除
+* アグリゲートレベルのバックグラウンド重複排除
+* ディスクメンテナンスセンター
+* ディスク完全消去
+* FabricPool ミラーリング
+* Fibre Channel （ FC ；ファイバチャネル）
+* Flash Pool の機能です
+* Infinite Volume
+* インターフェイスグループ
+* ノード内の LIF のフェイルオーバー
+* MetroCluster
+* 管理者による検証が複数必要です
++
+Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
+
+* RAID 4 、 RAID-DP 、 RAID-TEC （ RAID 0 のサポート）
+* サービスプロセッサ
+* SnapLock のコンプライアンスモードとエンタープライズモード（クラウドの WORM のみサポート）
+* SnapMirror Synchronous
+* VLAN
+
+
+
+
 == 最大同時レプリケーション処理数
 
 Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。
@@ -37,7 +65,7 @@ NOTE: データの整合性は、 WAFL ファイルシステムの ONTAP 整合�
 
 
 
-== Cloud Volumes ONTAP は、予約済みおよびオンデマンドの VM インスタンスをサポートします
+== Cloud Volumes ONTAPはリザーブドVMインスタンスとオンデマンドVMインスタンスのみをサポート
 
 Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。それ以外のタイプの VM インスタンスはサポートされません。
 
@@ -73,28 +101,6 @@ SnapManager のサーバ単位のライセンスは、 Cloud Volumes ONTAP で�
 
 
 
-== サポートされない ONTAP 機能です
+== サードパーティエージェントおよび拡張機能の制限事項
 
-Cloud Volumes ONTAP では、次の機能はサポートされていません。
-
-* アグリゲートレベルのインライン重複排除
-* アグリゲートレベルのバックグラウンド重複排除
-* ディスクメンテナンスセンター
-* ディスク完全消去
-* FabricPool ミラーリング
-* Fibre Channel （ FC ；ファイバチャネル）
-* Flash Pool の機能です
-* Infinite Volume
-* インターフェイスグループ
-* ノード内の LIF のフェイルオーバー
-* MetroCluster
-* 管理者による検証が複数必要です
-+
-Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成がサポートされなくなります。
-
-* RAID 4 、 RAID-DP 、 RAID-TEC （ RAID 0 のサポート）
-* サービスプロセッサ
-* SnapLock のコンプライアンスモードとエンタープライズモード（クラウドの WORM のみサポート）
-* SnapMirror Synchronous
-* VLAN
-
+サードパーティのエージェントおよびVM拡張機能は、Cloud Volumes ONTAP仮想マシンインスタンスではサポートされていません。

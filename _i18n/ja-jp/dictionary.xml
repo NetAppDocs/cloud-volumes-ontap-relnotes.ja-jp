@@ -387,7 +387,6 @@
   <block id="6678cc30386be959db340cbdd54ecbda" category="section-title">クラウドプロバイダの Snapshot をバックアップとリカバリの計画に使用しないでください</block>
   <block id="f6fdc425c22fbe91b4cd43c5702c7923" category="paragraph">クラウドプロバイダのスナップショットは、 Cloud Volumes ONTAP データのバックアップとリカバリの計画には使用しないでください。Cloud Volumes ONTAP でホストされているデータのバックアップとリストアには、必ず ONTAP の Snapshot コピーや他社製のバックアップソリューションを使用してください。</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">データの整合性は、 WAFL ファイルシステムの ONTAP 整合ポイントによって決まります。WAFL ファイルシステムを休止して crash-consistent バックアップを実行できるのは、 ONTAP のみです。</block>
-  <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP は、予約済みおよびオンデマンドの VM インスタンスをサポートします</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。それ以外のタイプの VM インスタンスはサポートされません。</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。</block>
   <block id="cbc4bd981852b46f0fbf6e6a6d4ed5af" category="section-title">から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール</block>
@@ -718,4 +717,7 @@
   <block id="d1558822f85e59c70aa33c6ac2678132" category="section-title">9.14.1 GA（2024年3月5日）</block>
   <block id="10715dcbdc97f5e0e1debf8bac3a4ba4" category="paragraph">Cloud Volumes ONTAP 9.14.1 General Availabilityリリースが、AWS、Azure、Google Cloudで利用できるようになりました。</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_V5^3^</block>
+  <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAPはリザーブドVMインスタンスとオンデマンドVMインスタンスのみをサポート</block>
+  <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">サードパーティエージェントおよび拡張機能の制限事項</block>
+  <block id="605271a7347a8df6508582f58efcf1ef" category="paragraph">サードパーティのエージェントおよびVM拡張機能は、Cloud Volumes ONTAP仮想マシンインスタンスではサポートされていません。</block>
 </blocks>
