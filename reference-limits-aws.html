@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>AWS のストレージの制限 | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="AWS のストレージの制限 | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+	<meta property="og:description" content="信頼性の高い運用を実現するために、 Cloud Volumes ONTAP には AWS にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="信頼性の高い運用を実現するために、 Cloud Volumes ONTAP には AWS にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。">
+  <meta name="keywords" content=" limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/cloud-volumes-ontap-relnotes/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/ja-jp/cloud-volumes-ontap-relnotes/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/cloud-volumes-ontap-relnotes/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ja-jp/cloud-volumes-ontap-relnotes/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/cloud-volumes-ontap-relnotes/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloud-volumes-ontap-relnotes/reference-limits-aws.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/cloud-volumes-ontap-relnotes/js/na-search.js'></script><script src='/ja-jp/cloud-volumes-ontap-relnotes/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/jszip.min.js'></script><script src='/ja-jp/cloud-volumes-ontap-relnotes/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ja-jp/cloud-volumes-ontap-relnotes/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/ja/">
+                <image id="ie-header-logo" src="/ja-jp/cloud-volumes-ontap-relnotes/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/ja/support-and-training/documentation/">ドキュメント</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">日本語</span>
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/cloud-volumes-ontap-relnotes/reference-limits-aws.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">すべてのNetApp</span>
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/ja/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">サポート</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb-ja.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">ナレッジ ベース</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">トレーニング</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ja-jp/cloud-volumes-ontap-relnotes/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">すべてのドキュメント</a>
+    </li>
+    
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/cloud/">クラウド ドキュメント</a>
+    </li>
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/ja-jp/bluexp-family/">
+        BlueXP
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ja-jp/cloud-volumes-ontap-relnotes/">-->
+      Cloud Volumes ONTAP release notes
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 9.14.1">
+    <label>バージョン</label>
+    <span translate="no" class="notranslate">9.14.1</span>
+    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.14.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9140-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.14.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9131-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9130-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9121-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9120-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9111-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9110-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9101-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-9100-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-991-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.9.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-990-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.9.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-98-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.8</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-97-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.7</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-96-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.6</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-95-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.5</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-94-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.4</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-93-relnotes/reference-limits-aws.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.3</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ja-jp/cloud-volumes-ontap-relnotes/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ja-jp/cloud-volumes-ontap-relnotes/search.html" 
+        data-type="widget"
+        data-placeholder="ドキュメントを検索"
+        data-no-results-found="{query}に一致する結果は見つかりませんでした"
+        data-did-you-mean="{suggestion}で検索しています。"
+        data-no-results-found-did-you-mean="{query}に一致する結果は見つかりませんでした。{suggestion}で検索しますか？"
+        data-results-found="{hitCount}件の結果が見つかりました"
+        data-error-message="エラーが発生しました。もう一度お試しください。"
+        data-error-reset="検索をリセット"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リリースノートのホーム"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/index.html">
+        リリースノートのホーム
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新機能"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-new.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-new.html">
+        新機能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ライセンスの概要"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/concept-licensing.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/concept-licensing.html">
+        ライセンスの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="サポートされている構成"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> サポートされている構成</div>-->
+         サポートされている構成
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-configs-aws.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-configs-aws.html">
+        AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-configs-azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-configs-azure.html">
+        Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Google Cloud"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-configs-gcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-configs-gcp.html">
+        Google Cloud
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージの制限"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ストレージの制限</div>-->
+         ストレージの制限
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limits-aws.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html">
+        AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limits-azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-azure.html">
+        Azure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Google Cloud"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limits-gcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-gcp.html">
+        Google Cloud
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="既知の問題"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-issues.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-issues.html">
+        既知の問題
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="既知の制限"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/cloud-volumes-ontap-relnotes/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 既知の制限</div>-->
+         既知の制限
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="一般的な制限事項"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limitations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limitations.html">
+        一般的な制限事項
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="AWS の制限事項"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limitations-aws.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limitations-aws.html">
+        AWS の制限事項
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azure の制限事項"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limitations-azure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limitations-azure.html">
+        Azure の制限事項
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Google Cloud の制限事項"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-limitations-gcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-limitations-gcp.html">
+        Google Cloud の制限事項
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クラウドプロバイダの統合"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/reference-provider-integrations.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/reference-provider-integrations.html">
+        クラウドプロバイダの統合
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法的通知"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-limits-aws.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/cloud-volumes-ontap-relnotes/legal-notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ja-jp/cloud-volumes-ontap-relnotes"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ja-jp/cloud-volumes-ontap-relnotes"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">AWS のストレージの制限</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-01-19 15:02:35 +0000">01/19/2024</time>
+        
+    
+    
+        <span>共同作成者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ja-jp/cloud-volumes-ontap-relnotes/images/discuss-sm.svg" alt="" class="github-icon" />変更を提案</span>
+        <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/cloud-volumes-ontap-relnotes.ja-jp/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-aws.html&page-title=AWS のストレージの制限" class="page-nav-contribute-link" role="button">ドキュメントの変更をリクエスト</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/cloud-volumes-ontap-relnotes/blob/main/reference-limits-aws.adoc" class="page-nav-contribute-link" role="button">このページを編集</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >フィードバックを送るには</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ja-jp/cloud-volumes-ontap-relnotes/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ja-jp/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Cloud_Volumes_ONTAP_9_14_1リリースノート.pdf" >
+                    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-icon.png" alt="" width="16" height="16"/>このドキュメント ページのPDF</a>
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/cloud-volumes-ontap-relnotes/pdfs/sidebar/サポートされている構成.pdf" 
+            
+          >
+            <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-icon.png" alt="" width="16" height="16"/>
+            サポートされている構成
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/cloud-volumes-ontap-relnotes/pdfs/sidebar/ストレージの制限.pdf" 
+            
+          >
+            <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ストレージの制限
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/cloud-volumes-ontap-relnotes/pdfs/sidebar/既知の制限.pdf" 
+            
+          >
+            <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-icon.png" alt="" width="16" height="16"/>
+            既知の制限
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>PDF版ドキュメントのセット<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Cloud Volumes ONTAP には、安定した運用を実現するために、ストレージ構成の制限があります最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ライセンス別の最大システム容量">ライセンス別の最大システム容量</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。</p>
+</div>
+<div class="paragraph">
+<p>ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、「Action Required」メッセージが表示され、ディスクを追加できなくなります。</p>
+</div>
+<div class="paragraph">
+<p>一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"使用頻度の低いデータをオブジェクトストレージに階層化します"</a>。詳細については、以下の容量とディスクの制限を参照してください。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">使用許諾</th>
+<th class="tableblock halign-left valign-top">最大システム容量（ディスク + オブジェクトストレージ）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">フリーミアム</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500 GiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAYGO Explore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2TiB （ Explore ではデータ階層化はサポートされません）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAYGO Standard の略</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PAYGO Premium</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードベースのライセンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2PiB（複数のライセンスが必要）</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">容量単位のライセンスです</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">HA の場合、ライセンスの容量制限はノード単位か、 HA ペア全体に適用されるか</div>
+<p>容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TiB の容量を確保できます。</p>
+</div>
+<div class="paragraph">
+<div class="title">AWS の HA システムでは、ミラーリングされたデータは容量制限にカウントされますか。</div>
+<p>いいえ、できません。AWS HA ペアのデータは、障害発生時にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノードAで8TiBのディスクを購入した場合、ミラーリングされたデータに使用される8TiBのディスクがノードBにも割り当てられます。16TiB の容量がプロビジョニングされましたが、ライセンスの上限には 8TiB しかカウントされません。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="アグリゲートの制限">アグリゲートの制限</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、アグリゲートにグループ化します。アグリゲートは、ボリュームにストレージを提供します。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">パラメータ</th>
+<th class="tableblock halign-left valign-top">制限（ Limit ）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アグリゲートの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 つのノード：ディスクリミットの HA ペアと同じです：ノード ^1 の 18</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大アグリゲートサイズ<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>96TiB の物理容量</p>
+</li>
+<li>
+<p>Elastic Volumesの場合、128TiBの物理容量<sup>3</sup></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アグリゲートあたりのディスク数<sup>4</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>1 ～ 6</p>
+</li>
+<li>
+<p>1 ~ 8（Elastic Volumesを使用）<sup>3</sup></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">アグリゲートあたりの RAID グループの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>注：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>HA ペアの両方のノードに 18 個のアグリゲートを作成することはできません。これは、作成するとデータディスクの制限を超えてしまうためです。</p>
+</li>
+<li>
+<p>最大アグリゲートサイズは、アグリゲートを構成するディスクに基づいて決まります。データの階層化に使用されるオブジェクトストレージは制限に含まれません。</p>
+</li>
+<li>
+<p>Amazon EBS Elastic Volumes機能をサポートする構成の場合、アグリゲートには最大8本のディスクを格納でき、最大128TiBの容量を提供できます。Amazon EBS Elastic Cloud Volumes ONTAP 機能は、GP3またはio1ディスクを使用している場合、_new_GP9.11.0以降のシステムではデフォルトで有効になっています。 <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html" target="_blank" rel="noopener">"Elastic Volumesのサポートに関する詳細情報"</a></p>
+</li>
+<li>
+<p>アグリゲート内のディスクはすべて同じサイズである必要があります。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ディスクおよび階層化の制限は-ec2-インスタンスごとに適用されます">ディスクおよび階層化の制限は EC2 インスタンスごとに適用されます</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>容量制限は、使用するEC2インスタンスタイプファミリーと、シングルノードシステムとHAペアのどちらを使用しているかによって異なります。</p>
+</div>
+<div class="paragraph">
+<p>次のメモは、下の表に表示される数値の詳細を示しています。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ディスク制限はユーザデータが格納されたディスクに固有です。</p>
+<div class="paragraph">
+<p>この制限には、ブートディスクとルートディスクは含まれていません。</p>
+</div>
+</li>
+<li>
+<p>ディスクのみを使用する場合、およびディスクとオブジェクトストレージへのコールドデータ階層化を使用する場合は、最大システム容量が表示されます。</p>
+</li>
+<li>
+<p>Cloud Volumes ONTAP は EBS ボリュームをディスクとして使用し、最大ディスクサイズは 16TiB です。</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="容量ベースのライセンスの制限">容量ベースのライセンスの制限</h3>
+<div class="paragraph">
+<p>容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html" target="_blank" rel="noopener">"Cloud Volumes ONTAP のライセンスオプションについて説明します"</a></p>
+</div>
+<div class="sect3">
+<h4 id="シングルノード">シングルノード</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top">ディスクのみの場合の最大システム容量</th>
+<th class="tableblock halign-left valign-top">ディスクとデータ階層化による最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19^1 ^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ha-ペア">HA ペア</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top">ディスクのみの場合の最大システム容量</th>
+<th class="tableblock halign-left valign-top">ディスクとデータ階層化による最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16^1 ^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ノードベースのライセンスには制限があります">ノードベースのライセンスには制限があります</h3>
+<div class="paragraph">
+<p>次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。</p>
+</div>
+<div class="paragraph">
+<p>Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に複数のノードベースライセンスを購入して、368TiBを超える容量を割り当てることができます（テストおよびサポートされるシステム容量の上限である2PiBまで）。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"使用頻度の低いデータをオブジェクトストレージに階層化します"</a>。 <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">"Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"</a>。Cloud Volumes ONTAPでは、テストおよびサポートされる最大システム容量2PiBまでサポートされますが、2PiBの制限を超えると、サポートされないシステム構成になります。</p>
+</div>
+<div class="paragraph">
+<p>AWS Secret CloudリージョンとTop Secret Cloudリージョンでは、Cloud Volumes ONTAP 9.12.1以降で複数のノードベースライセンスの購入がサポートされます。</p>
+</div>
+<div class="sect3">
+<h4 id="paygo-premiumでは1つのノード">PAYGO Premiumでは1つのノード</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top">ディスクのみの場合の最大システム容量</th>
+<th class="tableblock halign-left valign-top">ディスクとデータ階層化による最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21^1 ^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cloud Volumes ONTAP の _NET_Deployments には、 21 本のデータディスクが制限されています。バージョン 9.7 以前で作成されたシステムをアップグレードしても、 22 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</p>
+</li>
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="byolによるシングルノード">BYOLによるシングルノード</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top" colspan="2">最大システム容量（ 1 ライセンス</th>
+<th class="tableblock halign-left valign-top" colspan="2">複数のライセンスを持つ最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスクのみ *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスク + データ階層化 *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスクのみ *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスク + データ階層化 *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21^1 ^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cloud Volumes ONTAP の _NET_Deployments には、 21 本のデータディスクが制限されています。バージョン 9.7 以前で作成されたシステムをアップグレードしても、 22 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</p>
+</li>
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="paygo-premiumでhaペアを構成">PAYGO PremiumでHAペアを構成</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top">ディスクのみの場合の最大システム容量</th>
+<th class="tableblock halign-left valign-top">ディスクとデータ階層化による最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18^1 ^ 1^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>18 本のデータディスクは、 Cloud Volumes ONTAP の _new_Deployments の制限です。バージョン 9.7 以前で作成されたシステムをアップグレードしても、システムでは 19 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</p>
+</li>
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="byolによるhaペア">BYOLによるHAペア</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">インスタンス</th>
+<th class="tableblock halign-left valign-top">ノードあたりの最大ディスク数</th>
+<th class="tableblock halign-left valign-top" colspan="2">最大システム容量（ 1 ライセンス</th>
+<th class="tableblock halign-left valign-top" colspan="2">複数のライセンスを持つ最大システム容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスクのみ *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスク + データ階層化 *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスクのみ *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ディスク + データ階層化 *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C5 、 m5 、および r5 インスタンス</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18^1 ^ 1^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>m5dn.24xlarge</p>
+</li>
+<li>
+<p>m6id.32xlarge（m6id.32xlarge）</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256TiB です</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>18 本のデータディスクは、 Cloud Volumes ONTAP の _new_Deployments の制限です。バージョン 9.7 以前で作成されたシステムをアップグレードしても、システムでは 19 本のディスクが引き続きサポートされます。9.8 リリース以降のコアディスクが追加されているため、これらのインスタンスタイプを使用する新しいシステムでは、サポートされるデータディスクは 1 本少なくなります。</p>
+</li>
+<li>
+<p>このインスタンスタイプのローカル NVMe ディスクの数は他のインスタンスタイプよりも多く、サポートされるデータディスクの数が少なくなります。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storage-vm-の制限">Storage VM の制限</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.html" target="_blank" rel="noopener">"Storage VM を追加で作成する方法について説明します"</a>。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ライセンスタイプ</th>
+<th class="tableblock halign-left valign-top">Storage VM の最大数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* Freemium *</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 容量ベースの PAYGO または BYOL * <sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ノードベースの PAYGO *</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>データ提供用の Storage VM × 1</p>
+</li>
+<li>
+<p>ディザスタリカバリ用の Storage VM × 1</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ノードベースの BYOL * <sup>4</sup></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>合計 24 個の Storage VM の合計 ^ 1 、 2 、 ^</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用する EC2 インスタンスタイプによっては、上限値がそれよりも低くなる可能性があります。インスタンスあたりの制限は、以下のセクションに記載されています。</p>
+</li>
+<li>
+<p>これらの 24 個の Storage VM からデータを提供することも、ディザスタリカバリ（ DR ）用に設定することもできます。</p>
+</li>
+<li>
+<p>容量ベースのライセンスの場合、追加の Storage VM には追加のライセンスコストは発生しませんが、 Storage VM 1 台あたり最低容量は 4TiB 課金されます。たとえば、 2 台の Storage VM を作成し、それぞれに 2TiB のプロビジョニング済み容量がある場合、合計で 8TiB の容量が請求されます。</p>
+</li>
+<li>
+<p>ノードベースの BYOL の場合、デフォルトでは、 Cloud Volumes ONTAP に付属する最初の Storage VM 以降の追加の DATA Serving_storage VM ごとにアドオンライセンスが必要です。アカウントチームに問い合わせて Storage VM アドオンライセンスを取得してください。</p>
+<div class="paragraph">
+<p>ディザスタリカバリ（ DR ）用に設定する Storage VM には追加ライセンスは必要ありませんが（無償）、 Storage VM の数は制限に含まれます。たとえば、ディザスタリカバリ用に設定されたデータ提供用の Storage VM が 12 台ある場合、上限に達し、それ以上 Storage VM を作成できません。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="ec2-インスタンスタイプごとに-storage-vm-の制限が設定されています">EC2 インスタンスタイプごとに Storage VM の制限が設定されています</h3>
+<div class="paragraph">
+<p>Storage VM を追加で作成する場合は、ポート e0a にプライベート IP アドレスを割り当てる必要があります。次の表に、インターフェイスごとのプライベート IP の最大数と、 Cloud Volumes ONTAP の導入後にポート e0a で使用可能な IP アドレスの数を示します。使用可能な IP アドレスの数は、その構成での Storage VM の最大数に直接影響します。</p>
+</div>
+<div class="paragraph">
+<p>次のインスタンスは、 C5 、 m5 、および r5 インスタンスファミリを対象としています。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">設定</th>
+<th class="tableblock halign-left valign-top">インスタンスタイプ</th>
+<th class="tableblock halign-left valign-top">インターフェイスあたりのプライベート IP の最大数</th>
+<th class="tableblock halign-left valign-top">展開後の IPS の残り時間 ^1</th>
+<th class="tableblock halign-left valign-top">管理 LIF がない Storage VM の最大数 ^2 、 3^</th>
+<th class="tableblock halign-left valign-top">管理 LIF を使用している Storage VM の最大数 ^2 、 3^</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="9"><p class="tableblock">* シングルノード *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.&lt; ：と入力します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 8xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 9xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 12xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.16 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 18 倍</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="9"><p class="tableblock">* 単一の AZ* で HA ペア</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.&lt; ：と入力します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 8xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 9xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 12xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.16 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 18 倍</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="9"><p class="tableblock">* 複数の AZ にまたがる HA ペア *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.2xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.&lt; ：と入力します</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 8xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 9xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 。 12xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*.16 x ラージ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 18 倍</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*. 24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>この数値は、 Cloud Volumes ONTAP の導入とセットアップ後にポート e0a で使用可能な残りのプライベート IP アドレスの数を示します。たとえば、 *.2xlarge システムでは、ネットワークインターフェイスごとに最大 15 の IP アドレスがサポートされます。単一の AZ に HA ペアを導入すると、 5 つのプライベート IP アドレスがポート e0a に割り当てられます。そのため、インスタンスタイプが *.2xlarge の HA ペアでは、追加の Storage VM 用にプライベート IP アドレスが 10 個残っています。</p>
+</li>
+<li>
+<p>これらの列に表示される数には、BlueXPでデフォルトで作成される初期Storage VMが含まれます。たとえば、この列に 24 個表示されている場合、合計 23 個の Storage VM を追加で作成でき、合計 24 個の VM が表示されます。</p>
+</li>
+<li>
+<p>Storage VM の管理 LIF はオプションです。管理 LIF は、 SnapCenter などの管理ツールへの接続を提供します。</p>
+<div class="paragraph">
+<p>プライベート IP アドレスが必要なため、追加で作成できる Storage VM の数が制限されます。ただし、複数の AZ にまたがる HA ペアは例外です。この場合、管理 LIF の IP アドレスは _floating_ip アドレスであるため、 _private_IP 制限にはカウントされません。</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ファイルとボリュームの制限">ファイルとボリュームの制限</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 22%;">
+<col style="width: 22%;">
+<col style="width: 56%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">論理ストレージ</th>
+<th class="tableblock halign-left valign-top">パラメータ</th>
+<th class="tableblock halign-left valign-top">制限（ Limit ）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">* ファイル *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大サイズ<sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128 TB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ボリュームあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ボリュームサイズは最大 20 億個です</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* FlexClone ボリューム *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">クローン階層の深さ <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">499</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">* FlexVol ボリューム *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最小サイズ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20 MB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大サイズ<sup>3</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* qtree *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexVol あたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4,995</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* Snapshot コピー *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FlexVol あたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1,023</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>クローン階層の深さは、 1 つの FlexVol から作成できる、ネストされた FlexClone ボリュームの最大階層です。</p>
+</li>
+<li>
+<p>ONTAP 9.12.1P2以降では、上限は128TBです。ONTAP 9.11.1以前のバージョンでは、最大16TBです。</p>
+</li>
+<li>
+<p>次のツールと最小バージョンを使用して、最大サイズ300TiBまでのFlexVolボリュームを作成できます。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>System ManagerとONTAP CLI（Cloud Volumes ONTAP 9.12.1 P2および9.13.0 P2以降）</p>
+</li>
+<li>
+<p>Cloud Volumes ONTAP 9.13.1以降のBlueXP</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="iscsi-ストレージの制限">iSCSI ストレージの制限</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">iSCSI ストレージ</th>
+<th class="tableblock halign-left valign-top">パラメータ</th>
+<th class="tableblock halign-left valign-top">制限（ Limit ）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">* LUN*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1,024</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LUN マップの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1,024</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">最大サイズ</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ボリュームあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">512</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* igroup 数 *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">* イニシエータ *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">512</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">igroup あたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* iSCSI セッション *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1,024</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">* LIF *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ポートあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ポートセットあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ポートセット *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ノードあたりの最大数</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ja-jp/cloud-volumes-ontap-relnotes/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ja-jp/cloud-volumes-ontap-relnotes/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">このページ</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">ご利用規約</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">このページに関するフィードバックをお寄せください</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/cloud-volumes-ontap-relnotes/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/cloud-volumes-ontap-relnotes/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/cloud-volumes-ontap-relnotes/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/ie-tabbed-blocks.js'></script>
+    <script src='/ja-jp/cloud-volumes-ontap-relnotes/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
