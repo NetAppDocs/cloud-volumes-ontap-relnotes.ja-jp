@@ -728,4 +728,8 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">ネットアップコミュニティ</block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXPブログ</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
+  <block id="aaab5cb712b0e4d29126565b92a93c7e" category="section-title">9.14.1 P1（2024年4月1日）</block>
+  <block id="569a9a2a6db2c8239fa51b37ad08f488" category="paragraph">すべてのクラウドプロバイダを対象に、Cloud Volumes ONTAPで9.14.1 P1パッチが提供されるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link">P1パッチで修正されたバグの一覧を表示する</block>
+  <block id="62715934d07ed630b9c606bc666abad5" category="paragraph"><block ref="ae4674889e9a15806f2ba04f7b499642" category="inline-link-rx"></block> （NetApp Support Siteへのログインが必要です）。</block>
 </blocks>
