@@ -88,6 +88,9 @@ Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している
 クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。BlueXPが作成および管理するCloud Volumes ONTAP リソースに変更を加えると、システムの安定性とシステム管理能力に影響を与える可能性があります。
 
 
+NOTE: 初期導入後は、Cloud Volumes ONTAPリソースに使用するAzureサブスクリプション名の変更がサポートされます。
+
+
 
 == ディスクとアグリゲートはBlueXPで管理する必要があります
 
