@@ -733,4 +733,8 @@
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link">P1パッチで修正されたバグの一覧を表示する</block>
   <block id="62715934d07ed630b9c606bc666abad5" category="paragraph"><block ref="ae4674889e9a15806f2ba04f7b499642" category="inline-link-rx"></block> （NetApp Support Siteへのログインが必要です）。</block>
   <block id="43556f17551d900e8a2cd6d933da722d" category="admonition">初期導入後は、Cloud Volumes ONTAPリソースに使用するAzureサブスクリプション名の変更がサポートされます。</block>
+  <block id="09c468ad8c70fae44d482bf0d2aa0f97" category="section-title">9.14.1 P2（2024年4月18日）</block>
+  <block id="595490a543bba780b40f8b48736870a0" category="paragraph">すべてのクラウドプロバイダを対象に、Cloud Volumes ONTAPで9.14.1 P2パッチが提供されるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">P2パッチで修正されたバグの一覧を表示する</block>
+  <block id="fe80ff34632bdc174d0d3a2e265b5e0c" category="paragraph"><block ref="25faf8057d466be20595f224ab406816" category="inline-link-rx"></block> （NetApp Support Siteへのログインが必要です）。</block>
 </blocks>
