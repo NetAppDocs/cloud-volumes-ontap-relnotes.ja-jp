@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: Cloud Volumes ONTAP 9.14.1リリースノート
-  summary: このリリースノートでは、Cloud Volumes ONTAP 9.14.1の新機能、制限事項、および既知の問題について説明します。
+  title: Cloud Volumes ONTAP 9.15.0リリースノート
+  summary: このリリースノートでは、Cloud Volumes ONTAP 9.15.0の新機能、制限事項、および既知の問題について説明します。
   keywords: RN, CVO, release notes Cloud Volumes ONTAP
-  lead: このリリースノートでは、Cloud Volumes ONTAP 9.14.1の新機能、制限事項、および既知の問題について説明します。
+  lead: このリリースノートでは、Cloud Volumes ONTAP 9.15.0の新機能、制限事項、および既知の問題について説明します。
   tiles:
   - title: はじめに
     links:

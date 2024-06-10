@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.14.1には、新しい機能強化が含まれています。 
+summary: Cloud Volumes ONTAP 9.15.0には、新しい機能拡張が含まれています。 
 ---
-= Cloud Volumes ONTAP 9.14.1の新機能
+= Cloud Volumes ONTAP 9.15.0の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,37 +14,33 @@ summary: Cloud Volumes ONTAP 9.14.1には、新しい機能強化が含まれて
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.14.1には、新しい機能拡張が含まれています。
+Cloud Volumes ONTAP 9.15.0には、新しい機能拡張が含まれています。
 
 その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
 
 
 
-== 9.14.1 P2（2024年4月18日）
+== 9.15.0 P1（2024年6月10日）
 
-すべてのクラウドプロバイダを対象に、Cloud Volumes ONTAPで9.14.1 P2パッチが提供されるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
+Cloud Volumes ONTAP 9.15.0 P1がAWS、Azure、Google Cloudで利用できるようになりました。P1バージョンは導入とアップグレードに使用できます。
 
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P2["P2パッチで修正されたバグの一覧を表示する"^] （NetApp Support Siteへのログインが必要です）。
-
-
-
-== 9.14.1 P1（2024年4月1日）
-
-すべてのクラウドプロバイダを対象に、Cloud Volumes ONTAPで9.14.1 P1パッチが提供されるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P1["P1パッチで修正されたバグの一覧を表示する"^] （NetApp Support Siteへのログインが必要です）。
+このリリースには、新機能と機能拡張が含まれています。
 
 
 
-== 9.14.1 GA（2024年3月5日）
+=== Azureでの画像検証
 
-Cloud Volumes ONTAP 9.14.1 General Availabilityリリースが、AWS、Azure、Google Cloudで利用できるようになりました。
+Azure経由でエクスポートされたCloud Volumes ONTAPイメージファイルの署名を検証するための強化されたセキュリティ機能が利用できるようになりました。
+
+詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-azure-image-verification.html["Azureイメージ検証の詳細"^]。
 
 
 
-== 9.14.1 RC1（2023年12月6日）
+=== ハイアベイラビリティペアの新規導入では、AzureページBLOBがサポートされなくなりました。
 
-Cloud Volumes ONTAP 9.14.1のRelease Candidate 1は、AWS、Azure、Google Cloudで利用できるようになりました。
+Cloud Volumes ONTAP 9.15.0 P1以降では、ハイアベイラビリティペアの新規導入でAzureページBLOBがサポートされなくなりました。既存のハイアベイラビリティペア環境でAzureページBLOBを使用している場合は、Edsv4シリーズVMおよびEdsv5シリーズVMの新しいVMインスタンスタイプに移行できます。
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Azureでサポートされる構成の詳細"^]。
 
 
 
@@ -64,16 +60,7 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === サポートされているアップグレードパス
 
-Cloud Volumes ONTAP 9.13.1および9.14.0リリースから9.14.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
-
-
-
-=== 必要なコネクタのバージョン
-
-新しいCloud Volumes ONTAP 9.14.1システムを導入し、既存のシステムを9.14.1にアップグレードするには、BlueXP Connectorのバージョン3.9.27以降が実行されている必要があります。
-
-
-TIP: コネクタの自動アップグレードはデフォルトで有効になっているため、最新バージョンを実行する必要があります。
+Cloud Volumes ONTAP 9.14.1リリースから9.15.0にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
 
 
 

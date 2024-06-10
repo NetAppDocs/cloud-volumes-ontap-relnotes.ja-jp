@@ -231,6 +231,9 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 ==== ページBLOBを使用したHAペア
 
+
+NOTE: Azureの既存のCloud Volumes ONTAP HAページBLOB環境では、次の構成を使用できます。ページブロブは、新しい展開ではサポートされていません。
+
 [role="tabbed-block"]
 ====
 .容量ベースのライセンス
