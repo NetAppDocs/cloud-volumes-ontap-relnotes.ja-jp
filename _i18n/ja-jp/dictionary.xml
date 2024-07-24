@@ -254,7 +254,6 @@
   <block id="a1834fbcd2847d469ef79f5526dcee65" category="inline-link">最新かつ完全な情報については、 AWS を参照してください EC2 インスタンスタイプの詳細です</block>
   <block id="98ade5346ada08656e0c7b517b695d0f" category="paragraph">各 Cloud Volumes ONTAP ライセンスでサポートされる EC2 インスタンスタイプは異なります。次の表に、サポートされる各インスタンスタイプの vCPU 、 RAM 、および帯域幅を示します。<block ref="7fe5ce03f92ccda8dcb0aa0fab836a1f" category="inline-link-rx"></block>。</block>
   <block id="c7d741925ef81824617c6a2975104e27" category="inline-link">NetApp テクニカルレポート 4383 ：アプリケーションワークロードを使用した Amazon Web Services における Cloud Volumes ONTAP のパフォーマンス特性</block>
-  <block id="5070622feb6e4e88eeee7983bad01de6" category="paragraph">次の表に示す帯域幅は、各インスタンスタイプごとにドキュメント化されている AWS の制限に一致しています。これらの制限は、 Cloud Volumes ONTAP が提供する機能と完全に一致しているわけではありません。想定されるパフォーマンスについては、を参照してください<block ref="21181a62240b2a52719451cc8d855312" category="inline-link-rx"></block>。</block>
   <block id="4a7243646d30fc1e81eca2df9826cc03" category="cell">サポートされるインスタンス</block>
   <block id="5d56dbd20d9ee1ab8a722ff12e331953" category="cell">vCPU</block>
   <block id="e53619c1fe611a51eeeb8d148ba6e532" category="cell">RAM</block>
@@ -752,4 +751,5 @@
   <block id="af9688d5cde98d7a041489576710fac7" category="paragraph">Cloud Volumes ONTAP 9.14.1リリースから9.15.0にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。</block>
   <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">このリリースノートでは、Cloud Volumes ONTAP 9.15.0の新機能、制限事項、および既知の問題について説明します。</block>
   <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Cloud Volumes ONTAP 9.15.0リリースノート</block>
+  <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">次の表に示す帯域幅は、各インスタンスタイプごとにドキュメント化されている AWS の制限に一致しています。これらの制限は、 Cloud Volumes ONTAP が提供する機能と完全に一致しているわけではありません。想定されるパフォーマンスについては、を参照してください<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>。</block>
 </blocks>
