@@ -568,7 +568,6 @@
   <block id="6367723c5abb9a6de038561ba69ed33f" category="example-title">BYOL：単一のアベイラビリティゾーンにページBLOBがあるHAペア</block>
   <block id="561a766e0af8bbc565f3cd929c900d16" category="example-title">BYOL：共有管理対象ディスクを使用する複数のアベイラビリティゾーン構成のHAペア</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">AWS の HA システムでは、ミラーリングされたデータは容量制限にカウントされますか。</block>
-  <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">一部のVMタイプにはローカルのNVMeストレージが含まれており、Cloud Volumes ONTAP では_Flash Cache _として使用されます。Flash Cache に関する次の制限事項に注意してください。</block>
   <block id="f59964eb1e1669da7d916b7e136c88bd" category="list-text">m6id.32xlarge（m6id.32xlarge）</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">アップグレードに関する注意事項</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">このリリースへのアップグレードの詳細については、以下のメモをお読みください。</block>
@@ -688,7 +687,6 @@
   <block id="ea724697af39ce2b490b5643777ed273" category="paragraph">Cloud Volumes ONTAPは、シングルノードシステムとして、またフォールトトレランスとノンストップオペレーションを実現するハイアベイラビリティ（HA）ペアとしてGoogle Cloudで利用できます。</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">容量ベースのライセンス</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">最適化</block>
-  <block id="82fc13b1b2688039a14feb2fc8785cad" category="cell">容量単位のライセンス（Essentials、Professional、Edge Cache）</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">ノードベースのライセンス</block>
   <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">Google Cloudリージョンのサポートについては、を参照してください。<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>。</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">Cloud Volumes ONTAPをAzureにシングルノードシステムとして導入する場合は、次の容量ベースまたはノードベースのライセンス構成から選択できます。</block>
@@ -756,4 +754,9 @@
   <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.0 P2パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">P2パッチで修正されたバグの一覧を表示する</block>
   <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
+  <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">容量ベースのライセンス（EssentialsおよびProfessional）</block>
+  <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョンが必要です。</block>
+  <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。</block>
+  <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてローカルのNVMeストレージが使用されます。この制限事項に注意してください。</block>
+  <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">リブート後のキャッシュの再ウォームアップはサポートされていません。</block>
 </blocks>

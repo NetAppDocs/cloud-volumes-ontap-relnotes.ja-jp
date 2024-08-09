@@ -32,7 +32,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 --
 [cols="h,d,d,d"]
 |===
-|  | フリーミアム | 最適化 | 容量単位のライセンス（Essentials、Professional、Edge Cache） 
+|  | フリーミアム | 最適化 | 容量ベースのライセンス（EssentialsおよびProfessional） 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2 PiB | 2 PiB 
@@ -80,7 +80,7 @@ link:reference-limits-gcp.html["Google Cloud のディスク制限について�
 
 . 高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。
 . BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
-. Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
+. Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
 +
 ** N2-standard-16
 ** N2-standard-32

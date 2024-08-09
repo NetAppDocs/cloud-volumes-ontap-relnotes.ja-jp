@@ -40,7 +40,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 --
 [cols="h,d,d,d"]
 |===
-|  | フリーミアム | 最適化 | 容量単位のライセンス（Essentials、Professional、Edge Cache） 
+|  | フリーミアム | 最適化 | 容量ベースのライセンス（EssentialsおよびProfessional） 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2 PiB | 2 PiB 
@@ -121,6 +121,9 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 . 従量課金制では、 Azure Blob ストレージへのデータ階層化はサポートされません。
 . この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
++
+AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョンが必要です。
+
 . これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
 +
 新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
@@ -240,7 +243,7 @@ NOTE: Azureの既存のCloud Volumes ONTAP HAページBLOB環境では、次の�
 --
 [cols="h,d,d,d"]
 |===
-|  | フリーミアム | 最適化 | 容量単位のライセンス（Essentials、Professional、Edge Cache） 
+|  | フリーミアム | 最適化 | 容量ベースのライセンス（EssentialsおよびProfessional） 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2 PiB | 2 PiB 
@@ -377,7 +380,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 --
 [cols="h,d,d,d"]
 |===
-|  | フリーミアム | 最適化 | 容量単位のライセンス（Essentials、Professional、Edge Cache） 
+|  | フリーミアム | 最適化 | 容量ベースのライセンス（EssentialsおよびProfessional） 
 
 
 | 最大システム容量（ディスク + オブジェクトストレージ） | 500 GiB | 2 PiB | 2 PiB 
