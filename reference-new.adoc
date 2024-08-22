@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.15.0には、新しい機能拡張が含まれています。 
+summary: Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています。 
 ---
-= Cloud Volumes ONTAP 9.15.0の新機能
+= Cloud Volumes ONTAP 9.15.1の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,41 +14,50 @@ summary: Cloud Volumes ONTAP 9.15.0には、新しい機能拡張が含まれて
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.15.0には、新しい機能拡張が含まれています。
+Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています。
 
 その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
 
 
 
-== 9.15.0 P2（2024年8月8日）
+== 9.15.1 GA（2024年8月22日）
 
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.0 P2パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.0P2["P2パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
+Cloud Volumes ONTAP 9.15.1のGA版提供が、AWS、Azure、Google Cloudで利用できるようになりました。GAバージョンは導入とアップグレードに使用できます。このリリースには、次の新機能と機能拡張が含まれています。
 
 
 
-== 9.15.0 P1（2024年6月10日）
+=== AzureでPremium SSD v2 Managed Disksをサポート
 
-Cloud Volumes ONTAP 9.15.0 P1がAWS、Azure、Google Cloudで利用できるようになりました。P1バージョンは導入とアップグレードに使用できます。
+Azure上のCloud Volumes ONTAPシステムでPremium SSD v2管理ディスクがサポートされるようになりました。このプレミアムディスクは、Premium SSD Managed Disksと比較して、シングルノードとハイアベイラビリティ（HA）ペアの両方で低コストで高いパフォーマンスと低レイテンシを提供します。他の管理対象ディスクと同様に、最大ディスクサイズは32TiBです。Premium SSD v2管理ディスクのパフォーマンス（容量、スループット、IOPS）は、変化するパフォーマンスニーズに対応しながら、ワークロードの対費用効果を高めることができます。
 
-このリリースには、新機能と機能拡張が含まれています。
-
-
-
-=== Azureでの画像検証
-
-Azure経由でエクスポートされたCloud Volumes ONTAPイメージファイルの署名を検証するための強化されたセキュリティ機能が利用できるようになりました。
-
-詳細については、を参照してください link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-azure-image-verification.html["Azureイメージ検証の詳細"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-storage.html#azure-storage["Azureストレージの詳細"]です。
 
 
 
-=== ハイアベイラビリティペアの新規導入では、AzureページBLOBがサポートされなくなりました。
+=== Azureの単一のアベイラビリティゾーンにHAペアを導入
 
-Cloud Volumes ONTAP 9.15.0 P1以降では、ハイアベイラビリティペアの新規導入でAzureページBLOBがサポートされなくなりました。既存のハイアベイラビリティペア環境でAzureページBLOBを使用している場合は、Edsv4シリーズVMおよびEdsv5シリーズVMの新しいVMインスタンスタイプに移行できます。
+Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）に仮想マシン（VM）インスタンスをHAモードで導入できます。以前の非ゾーン展開とは異なり、Cloud Volumes ONTAP 9.15.1では、柔軟なオーケストレーションモードのMicrosoft仮想マシンスケールセットを使用して、同じAZ内に個別のフォールトドメインを含むすべてのリソースを展開し、最適な可用性を保証します。
 
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Azureでサポートされる構成の詳細"^]。
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Azureのハイアベイラビリティペアの詳細"]です。
+
+
+
+=== すべてのAzure HAタイプを統合するための仮想マシンスケールセットのサポート
+
+Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。
+
+この導入モードでは、デフォルトでPremium SSD v2 Managed Disksが使用されます。次の条件が満たされている場合は、HAモード、Pageblob、Local-Redundant Storage（LRS）、Zone-Redundant Storage（ZRS）またはMulti-Zonal、LRS Zonal（シングルAZ）のすべての機能が対象となります。
+
+* Cloud Volumes ONTAPのバージョンは9.15.1以降です。
+* リージョンは、柔軟なオーケストレーションモードで仮想マシンスケールセットをサポートします。サポートされるリージョンの詳細については、を参照してください https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft AzureのWebサイト：「リージョン別の利用可能な製品」"^]。
+* リージョン内で選択したゾーンは、フレキシブルオーケストレーションモードの仮想マシンスケールセットをサポートしています。
+* サブスクリプションはMicrosoft `Microsoft.Compute/VMOrchestratorZonalMultiFD`機能に登録されています。
++
+詳細については https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["AzureでのCloud Volumes ONTAP HAペアの起動"^]、およびを参照して https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-saz-feature.html["単一のアベイラビリティゾーンに対してVMOrchestratorZonalMultiFDを有効にする"^]ください。
+
+
+
+これらの条件のいずれかが満たされていない場合は、以前のLRS非ゾーン展開が有効になります。
 
 
 
@@ -68,7 +77,7 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === サポートされているアップグレードパス
 
-Cloud Volumes ONTAP 9.14.1リリースから9.15.0にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
+Cloud Volumes ONTAP 9.15.0および9.14.1リリースから9.15.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
 
 
 

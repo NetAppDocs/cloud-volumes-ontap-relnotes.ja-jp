@@ -115,7 +115,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 
-| サポートされているディスクタイプ ^4^ 3+| 標準 HDD 管理ディスク、標準 SSD 管理ディスク、およびプレミアム SSD 管理ディスク 
+| サポートされているディスクタイプ ^4^ 3+| Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。 
 |===
 注：
 
@@ -126,7 +126,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 
 . これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
 +
-新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
+新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。同様に、新しいCloud Volumes ONTAPシステムを導入するときに、プレミアムSSD v2管理ディスクを_サポートしない_ VMタイプに変更することはできません。
 
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
@@ -421,6 +421,9 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 * L64s_v3^ 1、3、5^
 
 
+
+
+| サポートされているディスクタイプ 3+| Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。 
 |===
 注：
 
