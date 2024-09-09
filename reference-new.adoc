@@ -59,7 +59,7 @@ Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティ�
 
 === すべてのAzure HAタイプを統合するための仮想マシンスケールセットのサポート
 
-Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。HAモード、Pageblob、LRS、Zone-Redundant Storage（ZRS）またはMulti-Zonal、LRS Zonal（シングルAZ）のすべてのフレーバーに対応しています。
+Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。HAモード、ページブロブ、LRS、ゾーン冗長ストレージ（ZRS）またはマルチゾーン、LRSゾーン（単一AZ）のすべてのフレーバーをカバーします。
 
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azureのドキュメント：「Virtual Machine Scale Sets documentation」"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Azureのハイアベイラビリティペアの詳細"^]です。

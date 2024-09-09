@@ -733,10 +733,6 @@
   <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。</block>
   <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてローカルのNVMeストレージが使用されます。この制限事項に注意してください。</block>
   <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">リブート後のキャッシュの再ウォームアップはサポートされていません。</block>
-  <block id="957c86bd7e2943f4f2bea59ca801e935" category="inline-link-macro">AWSのCloud Volumes ONTAP 9.15.1メディエーターに関する注意事項</block>
-  <block id="ae067c922d91788650ee1d5ddf600801" category="list-text"><block ref="ae067c922d91788650ee1d5ddf600801" category="inline-link-macro-rx"></block></block>
-  <block id="c225bb599d95ae48865f5a5a99751d6d" category="inline-link-macro">Google CloudのCloud Volumes ONTAP 9.15.1メディエーターに関するお知らせ</block>
-  <block id="8d3eb6c7422d9d7fe8285d43bec57d37" category="list-text"><block ref="8d3eb6c7422d9d7fe8285d43bec57d37" category="inline-link-macro-rx"></block></block>
   <block id="3feaeead4352aa22a5e23895ca44ad6f" category="cell">Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。</block>
   <block id="fbd5af992908b9931b0ae311f285c7d5" category="summary">Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています。</block>
   <block id="83a60efee029f00eebfd929bdfd93b02" category="doc">Cloud Volumes ONTAP 9.15.1の新機能</block>
@@ -769,9 +765,11 @@
   <block id="ba9b674ef918293b2811c2896cb57927" category="inline-link">単一のアベイラビリティゾーンに対してVMOrchestratorZonalMultiFDを有効にする方法</block>
   <block id="ddcdfb16338cb24a868b379c7937a3f9" category="list-text">サブスクリプションはMicrosoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block>機能に登録されています。<block ref="37dbbe0007aba28a7312f0bdc995d21b" category="inline-link-rx"></block>です。</block>
   <block id="4c948eb331f4d29ab3fd543fd04028c3" category="paragraph">これらの条件のいずれかが満たされていない場合は、ローカル冗長ストレージ（LRS）の以前の非ゾーン展開モードが有効になります。</block>
-  <block id="569a86e1494e035e7de656acda258ef0" category="paragraph">Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。HAモード、Pageblob、LRS、Zone-Redundant Storage（ZRS）またはMulti-Zonal、LRS Zonal（シングルAZ）のすべてのフレーバーに対応しています。</block>
   <block id="fcb7516396bf1d9722f3e765d3004427" category="inline-link">Microsoft Azureのドキュメント：「Virtual Machine Scale Sets documentation」</block>
   <block id="b4273b358a9e522bb090b6bbb65e080f" category="list-text"><block ref="b4273b358a9e522bb090b6bbb65e080f" category="inline-link-rx"></block></block>
   <block id="0bd904c1b3763b65f2cc9d002f6a74e1" category="inline-link">Azureのハイアベイラビリティペアの詳細</block>
   <block id="0a60745fecbc79115b1e58a81d31e5cf" category="list-text"><block ref="80b3c96e29f809092ae7660c3123c5c7" category="inline-link-rx"></block>です。</block>
+  <block id="524d94964962cd77e130e880d66b6c97" category="inline-link-macro">Cloud Volumes ONTAP 9.15.1に関する注意事項</block>
+  <block id="69b9c8f99d9f922a1b39668eb1ca9f2d" category="list-text"><block ref="69b9c8f99d9f922a1b39668eb1ca9f2d" category="inline-link-macro-rx"></block></block>
+  <block id="2e87e8a578558ca3febcb42e546e1af4" category="paragraph">Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。HAモード、ページブロブ、LRS、ゾーン冗長ストレージ（ZRS）またはマルチゾーン、LRSゾーン（単一AZ）のすべてのフレーバーをカバーします。</block>
 </blocks>
