@@ -780,4 +780,8 @@
   <block id="6b145cfa91f7c68c4c0c6f2bf60bcf9d" category="paragraph">新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。</block>
   <block id="4a700ade71b64bf589360a1f52b0bdd0" category="paragraph">Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、8、896バイトのMaximum Transmission Unit（MTU；最大伝送ユニット）を使用できます。* n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64</block>
   <block id="1bb0d11a534c8ee967cd62e4d75e3da3" category="list-text">Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際に、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンタイプに切り替えることをお勧めします。ただし、n1シリーズマシンは、APIを介して実行される新しい導入に使用できます。</block>
+  <block id="7e2d62fe36583822ef49e7ee658d8b17" category="section-title">9.15.1 P3（2024年10月29日）</block>
+  <block id="c3e5d9aa8817ef74e74e8cd55f39570f" category="paragraph">すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P3パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">P3パッチで修正されたバグの一覧を表示する</block>
+  <block id="fae48ca93c7d21429a4d9efb8dbde929" category="paragraph"><block ref="03a97087fa51b558b394583b2ec67707" category="inline-link-macro-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
 </blocks>
