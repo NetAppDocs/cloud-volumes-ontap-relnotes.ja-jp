@@ -14,7 +14,7 @@ summary: Cloud Volumes ONTAP には、いくつかのライセンスオプショ
 
 
 [role="lead"]
-Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり、それぞれのニーズに合った消費モデルを選択できます。
+Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションで、ニーズに合った消費モデルを選択できます。
 
 新規のお客様は、次のライセンスオプションを利用できます。
 
@@ -24,6 +24,10 @@ Cloud Volumes ONTAP にはさまざまなライセンスオプションがあり
 容量ベースのライセンスは、 a_packag_ の形式で用意されています。Cloud Volumes ONTAP システムを導入する際には、ビジネスニーズに応じて、複数のライセンスパッケージから選択できます。
 
 --
+
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["パッケージ"^] https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing-charging.html["容量ベースライセンスの詳細"^]
+
 Keystone Flex サブスクリプション:: 成長に合わせて拡張できるサブスクリプションベースのサービス。運用コストの消費モデルを希望するお客様に、設備投資やリースを先行するお客様にシームレスなハイブリッドクラウドエクスペリエンスを提供します。
 +
 --

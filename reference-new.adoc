@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています
 
 
 
+== 9.15.1 P4（2024年11月25日）
+
+すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P4パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P4["P4パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
+
+
+
 == 9.15.1 P3（2024年10月29日）
 
 すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P3パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
@@ -80,6 +88,16 @@ Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーショ�
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azureのドキュメント：「Virtual Machine Scale Sets documentation」"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Azureのハイアベイラビリティペアの詳細"^]です。
 
+
+
+
+=== FlexCacheライトバックのサポート
+
+Cloud Volumes ONTAP 9.15.1以降では、キャッシュへの書き込み処理の代替モードとしてFlexCacheライトバックがサポートされています。
+
+この機能の詳細については、ONTAPのマニュアルを参照して https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-overview.html["FlexCacheライトバックの概要"^]ください。
+
+BlueXP  によるFlexCacheボリュームの管理方法については、を参照して https://docs.netapp.com/us-en/bluexp-volume-caching/index.html["BlueXP  ボリュームのキャッシュに関するドキュメント"^]ください。
 
 
 
