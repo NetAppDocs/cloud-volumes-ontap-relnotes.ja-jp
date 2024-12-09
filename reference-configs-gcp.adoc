@@ -39,8 +39,8 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 | サポートされているマシンタイプ ^1  a| 
-* N1-standard-8
-* N1-standard-32
+* N1-STANDARD-8^1^
+* N1-STANDARD-32^1^
 * N2 - 標準 -4
 * N2-standard-8
 * N2-standard-16
@@ -53,8 +53,8 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 * N2-standard-8
 
  a| 
-* N1-standard-8
-* N1-standard-32
+* N1-STANDARD-8^1^
+* N1-STANDARD-32^1^
 * N2 - 標準 -4
 * N2-standard-8
 * N2-standard-16
@@ -65,22 +65,28 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 
-| サポートされるディスクタイプ^2^ 3+| バランスの取れた永続ディスク^3^、パフォーマンス（SSD）永続ディスク^3^、および標準（HDD）永続ディスク。 
+| サポートされているディスクタイプ ^2^ 3+| バランスの取れた永続ディスク^3^、パフォーマンス（SSD）永続ディスク^3^、および標準（HDD）永続ディスク。 
 |===
 注：
 
-. Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際に、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンタイプに切り替えることをお勧めします。ただし、n1シリーズマシンは、APIを介して行われた新しい展開で使用できます。
+. ^1^Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入するときに、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンに切り替えることを推奨します。ただし、n1シリーズマシンは、APIを介して行われた新しい展開で使用できます。
 +
 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
 
-. ディスク制限を使用すると、ディスクのみを使用することでシステムの最大容量に達することができません。を使用して容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。
+. ^2^ディスク制限により、ディスクのみを使用してもシステム容量の上限に達することができない場合があります。容量制限には、で到達できます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。
 +
 link:reference-limits-gcp.html["Google Cloud のディスク制限について詳しくは、こちらをご覧ください"]。
 
-. 高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。
+. ^3^Balanced Persistent DiskおよびPerformance（SSD）Persistent Diskを使用すると、書き込みパフォーマンスの向上が有効になります。
 
 
-Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、8、896バイトのMaximum Transmission Unit（MTU；最大伝送ユニット）を使用できます。* n2-standard-16 * n2-standard-32 * n2-standard-48 * n2-standard-64
+Cloud Volumes ONTAP 9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
+
+* N2-standard-16
+* N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
+
 
 対象となるインスタンスタイプを導入する際に、_Flash Cache__、および高速の書き込み速度を有効にすることができます。より高い最大伝送単位（8、896バイト）をイネーブルにするには、導入環境でVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが大きいほど、ネットワークスループットが向上します。これらの配置のいずれかを起動する方法の詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Google CloudでのHAペアの起動"]。
 
@@ -102,19 +108,19 @@ NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存�
 * N2 - 標準 -4
 
  a| 
-* N1-standard-8
+* N1-STANDARD-8^3^
 * N2-standard-8
 
  a| 
-* N1-standard-32
+* N1-STANDARD-32^3^
 * N2-standard-16
 * N2-standard-32
 * N2-STANDARD-48
 * N2-STANDARD-64
 
  a| 
-* N1-standard-8
-* N1-standard-32
+* N1-STANDARD-8^3^
+* N1-STANDARD-32^3^
 * N2 - 標準 -4
 * N2-standard-8
 * N2-standard-16
@@ -129,33 +135,32 @@ NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存�
 |===
 注：
 
-. ディスク制限を使用すると、ディスクのみを使用することでシステムの最大容量に達することができません。を使用して容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。
+. ^1^ディスク制限により、ディスクのみを使用してもシステム容量の上限に達することができない場合があります。容量制限には、で到達できます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。
 +
 link:reference-limits-gcp.html["Google Cloud のディスク制限について詳しくは、こちらをご覧ください"]。
 
-. 従量課金制では、 Google Cloud Storage へのデータ階層化はサポートされません。
-. Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際に、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンタイプに切り替えることをお勧めします。ただし、n1シリーズマシンは、APIを介して実行される新しい導入に使用できます。
+. ^2^Google Cloud Storageへのデータ階層化はPAYGO Exploreではサポートされていません。
+. ^3^Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンに切り替えることを推奨します。ただし、n1シリーズマシンは、APIを介して実行される新しい導入に使用できます。
 +
 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
 
-. 高度な書き込みパフォーマンスは、Balanced Persistent DiskおよびPerformance（SSD）永続ディスクを使用する場合に有効になります。
-. BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
-. Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
-+
-** N2-standard-16
-** N2-standard-32
-** N2-STANDARD-48
-** N2-STANDARD-64
-+
+. ^4^Balanced Persistent DiskおよびPerformance（SSD）Persistent Diskを使用すると、書き込みパフォーマンスの向上が有効になります。
+
+
+BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
+
+Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
+
+* N2-standard-16
+* N2-standard-32
+* N2-STANDARD-48
+* N2-STANDARD-64
+
+
 対象となるインスタンスタイプを導入する際に、_Flash Cache__、および高速の書き込み速度を有効にすることができます。より高い最大伝送単位（8、896バイト）をイネーブルにするには、導入環境でVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが大きいほど、ネットワークスループットが向上します。これらの配置のいずれかを起動する方法の詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Google CloudでのHAペアの起動"]。
 
-+
 
 NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。
-
-
-
-
 
 --
 ====

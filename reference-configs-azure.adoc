@@ -47,16 +47,16 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 | サポートされる仮想マシンタイプ  a| 
-* DS4_v2
-* DS5_v2 の場合
-* DS13_v2 の場合
-* DS14_v2
-* DS15_v2 の場合
-* E4s_v3
-* E8s_v3
-* E32s_v3^3^
-* E48s_v3^3^
-* E64is_v3^3^
+* DS4_v2^1^
+* DS5_v2^1^
+* DS13_v2^1^
+* DS14_v2^1 ^
+* DS15_v2 ^1
+* E4s_v3^1^
+* E8s_v3^1^
+* E32s_v3^ 1、3^
+* E48s_v3^ 1、3^
+* E64is_v3^ 1、3^
 * E4ds_v4
 * E8ds_v4
 * E32ds_v4^3^
@@ -75,26 +75,26 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 * L64s_v3^2^
 
  a| 
-* DS4_v2
-* DS13_v2 の場合
-* E4s_v3
-* E8s_v3
+* DS4_v2^1^
+* DS13_v2^1^
+* E4s_v3^1^
+* E8s_v3^1^
 * E4ds_v4^3^
 * E8ds_v4^3^
 * E4ds_V5
 * E8ds_V5
 
  a| 
-* DS4_v2
-* DS5_v2 の場合
-* DS13_v2 の場合
-* DS14_v2
-* DS15_v2 の場合
-* E4s_v3
-* E8s_v3
-* E32s_v3^3^
-* E48s_v3^3^
-* E64is_v3^3^
+* DS4_v2^1^
+* DS5_v2^1^
+* DS13_v2^1^
+* DS14_v2^1 ^
+* DS15_v2 ^1
+* E4s_v3^1^
+* E8s_v3^1^
+* E32s_v3^ 1、3^
+* E48s_v3^ 1、3^
+* E64is_v3^ 1、3^
 * E4ds_v4^3^
 * E8ds_v4^3^
 * E32ds_v4^3^
@@ -119,20 +119,19 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 |===
 注：
 
-. 従量課金制では、 Azure Blob ストレージへのデータ階層化はサポートされません。
-. この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
+. ^1^AzureにCloud Volumes ONTAPの新しいインスタンスをデプロイする際、DS_v2およびES_v3マシンファミリーはBlueXP  で選択できなくなりました。これらのファミリーは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Azureでサポートされるのは9.12.1リリース以降のみです。ES_v4またはCloud Volumes ONTAP 9.12.1以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2およびES_v3シリーズマシンは、APIを使用した新しい展開で使用できます。
+. ^2^このVMタイプにはローカルNVMeストレージが含まれており、Cloud Volumes ONTAPはこのストレージを_Flash Cache_として使用します。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
 +
 AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョンが必要です。
 
-. これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
+. ^3^これらのVMタイプはVNVRAMにを使用する https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^]ため、書き込みパフォーマンスが向上します。
 +
 新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。同様に、新しいCloud Volumes ONTAPシステムを導入するときに、プレミアムSSD v2管理ディスクを_サポートしない_ VMタイプに変更することはできません。Premium SSD v2管理ディスクでサポートされる構成の詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["共有管理対象ディスクを使用するHAシングルアベイラビリティゾーン構成"^]。
 
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
-. シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
-. SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^4^シングルノードシステムを使用している場合、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
 
 
 --
@@ -143,29 +142,29 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 |  | PAYGO Explore | PAYGO Standard の略 | PAYGO Premium | ノードベースの BYOL 
 
 
-| 最大システム容量（ディスク + オブジェクトストレージ） | 2TiB ^1 | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB 
+| 最大システム容量（ディスク + オブジェクトストレージ） | 2TiB^5^ | 10TiB | 368TiB | 1 ライセンスあたり 368 TiB 
 
 
 | サポートされる仮想マシンタイプ  a| 
-* E4s_v3
+* E4s_v3^1^
 * E4ds_v4^3^
 * E4ds_V5
 
  a| 
-* DS4_v2
-* DS13_v2 の場合
-* E8s_v3
+* DS4_v2^1^
+* DS13_v2^1^
+* E8s_v3^1^
 * E8ds_v4^3^
 * E8ds_V5
 * L8s_v3^2^
 
  a| 
-* DS5_v2 の場合
-* DS14_v2
-* DS15_v2 の場合
-* E32s_v3^3^
-* E48s_v3^3^
-* E64is_v3^3^
+* DS5_v2^1^
+* DS14_v2^1 ^
+* DS15_v2 ^1
+* E32s_v3^ 1、3^
+* E48s_v3^ 1、3^
+* E64is_v3^ 1、3^
 * E32ds_v4^3^
 * E48ds_v4^3^
 * E80ids_v4^3^
@@ -175,16 +174,16 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 * E64ds_V5^3^
 
  a| 
-* DS4_v2
-* DS5_v2 の場合
-* DS13_v2 の場合
-* DS14_v2
-* DS15_v2 の場合
-* E4s_v3
-* E8s_v3
-* E32s_v3^3^
-* E48s_v3^3^
-* E64is_v3^3^
+* DS4_v2^1^
+* DS5_v2^1^
+* DS13_v2^1^
+* DS14_v2^1 ^
+* DS15_v2 ^1
+* E4s_v3^1^
+* E8s_v3^1^
+* E32s_v3^ 1、3^
+* E48s_v3^ 1、3^
+* E64is_v3^ 1、3^
 * E4ds_v4^3^
 * E8ds_v4^3^
 * E32ds_v4^3^
@@ -209,17 +208,17 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 |===
 注：
 
-. 従量課金制では、 Azure Blob ストレージへのデータ階層化はサポートされません。
-. この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
-. これらの VM タイプはを使用します https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^] VNVRAM の場合、書き込みパフォーマンスが向上します。
+. ^1^AzureにCloud Volumes ONTAPの新しいインスタンスをデプロイする際、DS_v2およびES_v3マシンファミリーはBlueXP  で選択できなくなりました。これらのファミリーは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Azureでサポートされるのは9.12.1リリース以降のみです。ES_v4またはCloud Volumes ONTAP 9.12.1以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2およびES_v3シリーズマシンは、APIを使用した新しい展開で使用できます。
+. ^2^このVMタイプにはローカルNVMeストレージが含まれており、Cloud Volumes ONTAPはこのストレージを_Flash Cache_として使用します。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
+. ^3^これらのVMタイプはVNVRAMにを使用する https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^]ため、書き込みパフォーマンスが向上します。
 +
 新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
 
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
-. シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]。
-. SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^4^シングルノードシステムを使用している場合、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^5^PAYGO ExploreではAzure BLOBストレージへのデータ階層化はサポートされていません。
 
 
 --
@@ -234,8 +233,10 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 ==== ページBLOBを使用したHAペア
 
+Azureの既存のCloud Volumes ONTAP HAページBLOB環境では、次の構成を使用できます。
 
-NOTE: Azureの既存のCloud Volumes ONTAP HAページBLOB環境では、次の構成を使用できます。ページブロブは、新しい展開ではサポートされていません。
+
+NOTE: AzureページBLOBは、新しい展開ではサポートされていません。
 
 [role="tabbed-block"]
 ====
