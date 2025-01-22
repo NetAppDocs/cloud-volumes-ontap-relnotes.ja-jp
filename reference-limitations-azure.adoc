@@ -18,6 +18,12 @@ summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONT
 
 
 
+== Azure VM拡張機能の使用に関する制限事項
+
+Cloud Volumes ONTAPでは、Azure Virtual Machine（VM）拡張機能と導入環境内のVMアプリケーションはサポートされません。AzureでVM拡張機能を使用してCloud Volumes ONTAPを使用すると、運用に遅延が発生するため、NetAppではそれらを回避することを推奨
+
+
+
 == Flash Cache の制限事項
 
 Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてローカルのNVMeストレージが使用されます。この制限事項に注意してください。
