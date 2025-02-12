@@ -37,4 +37,4 @@ Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてロー�
 
 一部のリージョンでは HA ペアがサポートされません。
 
-https://cloud.netapp.com/cloud-volumes-global-regions["サポートされている Azure リージョンのリストを表示します"^]。
+https://bluexp.netapp.com/cloud-volumes-global-regions["サポートされている Azure リージョンのリストを表示します"^]です。

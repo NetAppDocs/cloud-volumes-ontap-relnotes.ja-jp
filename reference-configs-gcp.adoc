@@ -184,4 +184,4 @@ Google Cloud では、アグリゲートに同じタイプとサイズのディ�
 
 == サポートされている地域
 
-Google Cloudリージョンのサポートについては、を参照してください。 https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
+Google Cloudリージョンのサポートについては、を参照してください https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
