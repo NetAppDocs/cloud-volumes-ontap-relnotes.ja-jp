@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています。 
+summary: Cloud Volumes ONTAP 9.16.1には、新しい機能拡張が含まれています。 
 ---
-= Cloud Volumes ONTAP 9.15.1の新機能
+= Cloud Volumes ONTAP 9.16.1の新機能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,106 +14,15 @@ summary: Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれて
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.15.1には、新しい機能拡張が含まれています。
+Cloud Volumes ONTAP 9.16.1には、新しい機能拡張が含まれています。
 
 その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPリリースノート"^] を参照してください。
 
 
 
-== 9.15.1 P6（2025年1月20日）
+== 9.16.1 GA（2025年3月6日）
 
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P6パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P6["P6パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 P5（2025年1月20日）
-
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P5パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P5["P5パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 P4（2024年11月25日）
-
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P4パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P4["P4パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 P3（2024年10月29日）
-
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P3パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P3["P3パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 P2（2024年10月14日）
-
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P2パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P2["P2パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 P1（2024年9月3日）
-
-すべてのクラウドプロバイダのCloud Volumes ONTAPで、9.15.1 P1パッチが利用できるようになりました。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
-
-link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P1["P1パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
-
-
-
-== 9.15.1 GA（2024年8月22日）
-
-Cloud Volumes ONTAP 9.15.1のGA版提供が、AWS、Azure、Google Cloudで利用できるようになりました。GAバージョンは導入とアップグレードに使用できます。
-
-このリリースには、Azureに関する次の機能と機能拡張が含まれています。これらの新機能をサポートする具体的な構成の詳細については、以降を参照してください。
-
-
-
-=== AzureでPremium SSD v2 Managed Disksをサポート
-
-Azure上のCloud Volumes ONTAPシステムでPremium SSD v2管理ディスクがサポートされるようになりました。このプレミアムディスクは、Premium SSD Managed Disksと比較して、シングルノードとハイアベイラビリティ（HA）ペアの両方で低コストで高いパフォーマンスと低レイテンシを提供します。他の管理対象ディスクと同様に、最大ディスクサイズは32TiBです。Premium SSD v2管理ディスクのパフォーマンス（容量、スループット、IOPS）は、変化するパフォーマンスニーズに対応しながら、ワークロードの対費用効果を高めることができます。
-
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-storage.html#azure-storage["Azureストレージの詳細"^]です。
-
-
-
-=== Azureの単一のアベイラビリティゾーンにHAペアを導入
-
-Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。以前の非ゾーン展開とは異なり、Cloud Volumes ONTAP 9.15.1では、柔軟なオーケストレーションモードのMicrosoft仮想マシンスケールセットを使用して、同じAZ内に個別のフォールトドメインを含むすべてのリソースを展開し、最適な可用性を保証します。この導入モードでは、次の条件を満たす場合、デフォルトでPremium SSD v2 Managed Disksが使用されます。
-
-* Cloud Volumes ONTAPのバージョンは9.15.1以降です。
-* 選択したリージョンとゾーンでは、Premium SSD v2管理ディスクがサポートされます。サポートされるリージョンの詳細については、を参照してください https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft AzureのWebサイト：「リージョン別の利用可能な製品」"^]。追加方法については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["AzureでのCloud Volumes ONTAP HAペアの起動"^]。
-* サブスクリプションはMicrosoft `Microsoft.Compute/VMOrchestratorZonalMultiFD`機能に登録されています。https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-saz-feature.html["単一のアベイラビリティゾーンに対してVMOrchestratorZonalMultiFDを有効にする方法"^]です。
-
-
-これらの条件のいずれかが満たされていない場合は、ローカル冗長ストレージ（LRS）の以前の非ゾーン展開モードが有効になります。
-
-
-
-=== すべてのAzure HAタイプを統合するための仮想マシンスケールセットのサポート
-
-Cloud Volumes ONTAP 9.15.1は、Azure上の柔軟なオーケストレーションモードの仮想マシンスケールセットを活用して、高可用性（HA）ペア用の単一のアベイラビリティゾーンに仮想マシン（VM）インスタンスを導入します。HAモード、ページブロブ、LRS、ゾーン冗長ストレージ（ZRS）またはマルチゾーン、LRSゾーン（単一AZ）のすべてのフレーバーをカバーします。
-
-* https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azureのドキュメント：「Virtual Machine Scale Sets documentation」"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Azureのハイアベイラビリティペアの詳細"^]です。
-
-
-
-
-=== FlexCacheライトバックのサポート
-
-Cloud Volumes ONTAP 9.15.1以降では、キャッシュへの書き込み処理の代替モードとしてFlexCacheライトバックがサポートされています。
-
-この機能の詳細については、ONTAPのマニュアルを参照して https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-overview.html["FlexCacheライトバックの概要"^]ください。
-
-BlueXP  によるFlexCacheボリュームの管理方法については、を参照して https://docs.netapp.com/us-en/bluexp-volume-caching/index.html["BlueXP  ボリュームのキャッシュに関するドキュメント"^]ください。
+Cloud Volumes ONTAP 9.16.1 General Availabilityリリースを使用して、AzureとGoogle Cloudでの導入とアップグレードが可能になりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。
 
 
 
@@ -133,14 +42,17 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === サポートされているアップグレードパス
 
-Cloud Volumes ONTAP 9.15.0および9.14.1リリースから9.15.1にアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
+AzureおよびGoogle Cloudでは、9.15.1リリースからCloud Volumes ONTAP 9.16.1 GAにアップグレードできます。BlueXPでは、対象となるCloud Volumes ONTAP システムをこのリリースにアップグレードするように求められます。
+
+
+NOTE: AWSの場合、このアップグレードのプロンプトは表示されません。Cloud Volumes ONTAP 9.16.1 GAへのアップグレードは、AWSではサポートされていません。
 
 
 
 === ダウンタイム
 
 * シングルノードシステムのアップグレードでは、 I/O が中断されるまで最大 25 分間システムがオフラインになります。
-* HA ペアのアップグレードは無停止で、 I/O が中断されません。無停止アップグレードでは、各ノードが連携してアップグレードされ、クライアントへの I/O の提供が継続されます。
+* HAペアのアップグレードは無停止で実行され、I/Oが中断されることはありません。この無停止アップグレードプロセスでは、クライアントへのI/O処理を継続するために、各ノードが同時にアップグレードされます。
 
 
 
