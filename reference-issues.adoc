@@ -4,7 +4,7 @@ permalink: reference-issues.html
 keywords: issues, bugs, known issues 
 summary: 既知の問題は、このリリースの製品を正常に使用できない可能性のある問題を特定します。 
 ---
-= 既知の問題
+= Cloud Volumes ONTAPの既知の問題
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

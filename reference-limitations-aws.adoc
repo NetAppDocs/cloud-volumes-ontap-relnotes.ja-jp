@@ -4,7 +4,7 @@ permalink: reference-limitations-aws.html
 keywords: limitations, aws, amazon web services, flashe cache, alarms, cloudwatch, giveback, govcloud, c2s, aws outpost, outposts 
 summary: これらの既知の制限は、 Amazon Web Services の Cloud Volumes ONTAP に固有のものです。 
 ---
-= AWS の既知の制限事項は以下のとおりです
+= AWSにおけるCloud Volumes ONTAPの既知の制限事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

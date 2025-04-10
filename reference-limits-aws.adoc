@@ -4,7 +4,7 @@ permalink: reference-limits-aws.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs 
 summary: 信頼性の高い運用を実現するために、 Cloud Volumes ONTAP には AWS にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。 
 ---
-= AWS のストレージの制限
+= AWS の Cloud Volumes ONTAP でのストレージの制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm 
 summary: 既知の制限事項は、このリリースの製品でサポートされていないプラットフォーム、デバイス、機能、または製品と正しく相互運用できない機能を特定します。これらの制限事項を慎重に確認してください 
 ---
-= すべてのクラウドプロバイダで制約があります
+= すべてのクラウドプロバイダにおけるCloud Volumes ONTAPの既知の制限事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

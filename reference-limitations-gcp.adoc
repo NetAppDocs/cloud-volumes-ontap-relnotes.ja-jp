@@ -4,7 +4,7 @@ permalink: reference-limitations-gcp.html
 keywords: limitations, google cloud platform, gcp, psc, private service connect 
 summary: 既知の制限事項は、このリリースの製品でサポートされていないプラットフォーム、デバイス、機能、または製品と正しく相互運用できない機能を特定します。これらの制限事項を慎重に確認してください 
 ---
-= Google Cloud の既知の制限事項
+= Google CloudのCloud Volumes ONTAPに関する既知の制限事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

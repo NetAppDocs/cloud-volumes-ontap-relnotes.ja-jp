@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="c28d38eab2723d5b03a4a9a583f5c81e" category="summary">これらの既知の制限は、 Amazon Web Services の Cloud Volumes ONTAP に固有のものです。</block>
-  <block id="65a320b4c12bea4be3d7391ed581adef" category="doc">AWS の既知の制限事項は以下のとおりです</block>
   <block id="a22f9146e3d3f141a5a11a5aadc4ace1" category="inline-link-macro">すべてのクラウドプロバイダでの Cloud Volumes ONTAP の制限</block>
   <block id="66c8008cfff39be32e25f6351f5b9375" category="paragraph">以下に記載する制限は、 Amazon Web Services の Cloud Volumes ONTAP に固有のものです。また、必ず確認してください <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>。</block>
   <block id="f29e4ae2503b27ece70880e681c97257" category="section-title">AWS Outpost の制限事項</block>
@@ -21,7 +20,6 @@
   <block id="d69dddad3d38a1500a52e7e599cb94df" category="paragraph">ノードがリブートしたら、ストレージを戻す前に、パートナーがデータを同期する必要があります。データの再同期にかかる時間は、ノードが停止している間にクライアントが書き込んだデータの量、およびギブバックの実行中のデータの書き込み速度によって異なります。</block>
   <block id="ac1c2f0887629ee768721c3b8cf91e3a" category="inline-link">Cloud Volumes ONTAP HA でのストレージの仕組みをご確認ください AWS で実行されているペア</block>
   <block id="00341a78c2eaf7d804cfe027a2f67870" category="summary">信頼性の高い運用を実現するために、 Cloud Volumes ONTAP には AWS にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
-  <block id="6870aed8e6dfc4f093d5b5c6f8a4d81c" category="doc">AWS のストレージの制限</block>
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">Cloud Volumes ONTAP には、安定した運用を実現するために、ストレージ構成の制限があります最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">ライセンス別の最大システム容量</block>
   <block id="6fa7d9268a4a052eee070e7e621245fe" category="paragraph">Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。</block>
@@ -176,7 +174,6 @@
   <block id="aa894911c7a20e27572cf7a8c1e15231" category="cell">ポートセットあたりの最大数</block>
   <block id="7c8102fb403c417ae4b6e28c0e3352ba" category="cell">* ポートセット *</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">既知の制限事項は、このリリースの製品でサポートされていないプラットフォーム、デバイス、機能、または製品と正しく相互運用できない機能を特定します。これらの制限事項を慎重に確認してください</block>
-  <block id="d634bf53c207457b9f979a3511629617" category="doc">Google Cloud の既知の制限事項</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">次の既知の制限事項は、 Google Cloud Platform の Cloud Volumes ONTAP に固有です。また、必ず確認してください <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>。</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">パケットミラーリングの制限</block>
   <block id="4d6aebef0af2c2c1118b467bdf0dadf0" category="inline-link">パケットミラーリング</block>
@@ -186,13 +183,11 @@
   <block id="9fb3c7aadbb59d428d3c01efb5689f4b" category="inline-link">Google Private Service Connect の略</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Cloud Volumes ONTAP から Google Cloud Storage バケットへのデータの階層化は、現在プライベートサービス接続ではサポートされていません。</block>
   <block id="7bb35241d1246d5dc87cb9e61c1efc05" category="summary">これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。</block>
-  <block id="2d9da48a9b4a4fd6966adc9c52393b79" category="doc">Azure の既知の制限事項</block>
   <block id="4e9780ecc95f5dbfb27e64e3ded5cd85" category="paragraph">以下に示す既知の制限事項は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。また、必ず確認してください <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>。</block>
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA の制限事項</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">一部のリージョンでは HA ペアがサポートされません。</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">サポートされている Azure リージョンのリストを表示します</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP には、信頼性の高い運用を実現するために、 Google Cloud にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
-  <block id="c73908091fadeb9dec16abab42821644" category="doc">Google Cloud のストレージ制限</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="cell">500 GB</block>
   <block id="5f807342ab46838a576d3111827add1c" category="cell">2TB （ Explore ではデータ階層化はサポートされません）</block>
   <block id="1191f788083da9194f8eef9400d10898" category="cell">10 TB</block>
@@ -217,7 +212,6 @@
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">論理ストレージの制限</block>
   <block id="324f218b8144e744b54eb58e0bf14eea" category="cell">16 TB</block>
   <block id="fa082ab1a05e05550971e6e5f583dcfe" category="summary">AWS では、いくつかの Cloud Volumes ONTAP 構成がサポートされます。</block>
-  <block id="8bb0da4c260f565e0c8162ea9c2b7caa" category="doc">AWS でサポートされる構成</block>
   <block id="7db0f9060b8b2def82346add7b8e89c0" category="section-title">サポートされるノード数</block>
   <block id="a0a1c13507a24083c5a835cbc79ea6c7" category="paragraph">Cloud Volumes ONTAP は、フォールトトレランスとノンストップオペレーションを実現するために、 AWS ではシングルノードシステムとして、ハイアベイラビリティ（ HA ）ペアのノードとして利用できます。</block>
   <block id="ffe182d798fac96ff130cb1500052036" category="paragraph">シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。</block>
@@ -330,7 +324,6 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="b889869e31827a33530d6fd02141fdb5" category="summary">Azure では、いくつかの Cloud Volumes ONTAP 構成がサポートされます。</block>
-  <block id="e4b60b51b40a0907e38b3293d36780e6" category="doc">Azure でサポートされる構成</block>
   <block id="c334038ed8a782403ae705a8de1f584b" category="section-title">ライセンスでサポートされている構成</block>
   <block id="9f1dc929787c1a2d05667987a87c083b" category="paragraph">Cloud Volumes ONTAP は、フォールトトレランスとノンストップオペレーションを実現するために、 Azure ではシングルノードシステムとして、ハイアベイラビリティ（ HA ）ペアのノードとして使用できます。</block>
   <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">シングルノードシステム</block>
@@ -362,7 +355,6 @@
   <block id="be08eab34bc0f034d51f82767686b3b7" category="cell">標準 SSD</block>
   <block id="ef80fe66906aa69c663bc559d808a821" category="cell">標準的な HDD</block>
   <block id="d556a98bff3e1e758e87dd72b174feca" category="list-text">32TiB</block>
-  <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="doc">すべてのクラウドプロバイダで制約があります</block>
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">すべてのクラウドプロバイダの Cloud Volumes ONTAP に、 AWS 、 Azure 、 Google Cloud の制限が適用されます。</block>
   <block id="4ab1be901507467113ec58325fc4e033" category="section-title">最大同時レプリケーション処理数</block>
   <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。</block>
@@ -397,7 +389,6 @@
   <block id="88a30f177822761a0b89ce7abd88a305" category="list-text">E32ds_v4</block>
   <block id="958e5e8b2dc959cc24ae1182052f1b03" category="list-text">E48ds_v4</block>
   <block id="9141535b8d150812f3cded29f090ad8c" category="summary">Google Cloud では、いくつかの Cloud Volumes ONTAP 構成がサポートされています。</block>
-  <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud でサポートされている構成</block>
   <block id="12fe559ef81ce645ef1aee77885e1827" category="paragraph">シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムと HA ペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。</block>
   <block id="8c0495bb0212f48146ab592de8a205d9" category="cell">2 TB ^2^</block>
   <block id="c217f1a10b2c84178d69b991f9ca2a8d" category="cell">サポートされているマシンタイプ ^3</block>
@@ -413,7 +404,6 @@
   <block id="dbf13ee746bf3321dc6f92ccf385fa75" category="list-text">4 TB</block>
   <block id="0706c165b0123479cffaac9b374484f0" category="list-text">8 TB</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP には、安定した運用を実現するために、 Azure にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
-  <block id="e622ddac1a96836929babb5b993749ba" category="doc">Azure のストレージ制限</block>
   <block id="e6607992aca7a2cd8b89f152b0cf553d" category="section-title">ディスクおよび階層化の制限を VM のサイズごとに設定します</block>
   <block id="50c51ed959c686d478aaf3f5e64ce255" category="cell">VM サイズ</block>
   <block id="1522e1d48d50a8b533ccfa8eeaad6405" category="cell">ノードあたりの MAX Data ディスク数</block>
@@ -438,7 +428,6 @@
   <block id="73cbcc5508ae5bff313fecfcc6e16834" category="paragraph">これらはテスト済みの制限です。理論的には追加の Storage VM を設定できますが、サポート対象外です。</block>
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">各 Storage VM に最大 3 つの LIF を設定できます。 2 つはデータ LIF 、 1 つは SVM 管理 LIF です。</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションを使用することで、ニーズに合わせた構成を選択できます。</block>
-  <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Cloud Volumes ONTAP のライセンス</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="section-title">ライセンスの概要</block>
   <block id="f008ecd5469e24eee31eb4e2e4a1e23f" category="paragraph">新規のお客様は、次のライセンスオプションを利用できます。</block>
   <block id="a47bcecd4f4a1f89ad4e82bca88975ab" category="list-text">Keystone Flex サブスクリプション</block>
@@ -693,7 +682,6 @@
   <block id="9df1366281b2311753bea9dc8a7cc627" category="list-text">複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1以降です。</block>
   <block id="6d8cc94524c51a3f77860bbede84b136" category="list-text">複数のアベイラビリティゾーンのサポートは、ONTAPバージョン9.14.1 RC1以降です。</block>
   <block id="219b3478863d340e2f74f743c7d41011" category="list-text">汎用SSD（GP3およびGP2）^3^、^5^</block>
-  <block id="1b711587bb6cb30c16a9cdb6e5216a57" category="list-text">AWSローカルゾーンでは、汎用SSD（GP2）ディスクタイプのみがサポートされます。</block>
   <block id="5f5ab830f312b366e90a01041e1aedca" category="cell">m5.xlarge ^6^</block>
   <block id="6bfe086862809cf64cd507fa55b90a47" category="cell">r5.xlarge ^6^</block>
   <block id="39bce1e4c62e073845823cfaa75353ee" category="cell">m5.2xlarge ^6^</block>
@@ -770,4 +758,19 @@
   <block id="2da6ea8a8da761338b986437b7c763e3" category="sidebar">このリリースノートでは、Cloud Volumes ONTAP 9.16.1の新機能、制限事項、および既知の問題について説明します。</block>
   <block id="5be79231089884d51ddb2bec45163e7f" category="sidebar">Cloud Volumes ONTAP 9.16.1リリースノート</block>
   <block id="adf61d35044cf1717f8515aac5ebf98f" category="sidebar">Cloud Volumes ONTAP 9.16.1リリースノート</block>
+  <block id="071315f659ff3eed03e994aa4f772449" category="doc">Cloud Volumes ONTAPのライセンスの概要</block>
+  <block id="d4f1750ecbae7aeb8e4608c6adadf1b3" category="doc">AWS の Cloud Volumes ONTAP でサポートされている構成</block>
+  <block id="906e9645769246d4a98e725adf188964" category="list-text">AWSローカルゾーンのCloud Volumes ONTAP構成では、汎用SSD（gp2）ディスクタイプのみがサポートされます。</block>
+  <block id="a09c3a7be8e7dc42776a7b03793d536c" category="doc">Azure で Cloud Volumes ONTAP がサポートされている構成</block>
+  <block id="8f4e28604a8893d6adb6f9b81569d19b" category="doc">Google CloudのCloud Volumes ONTAPでサポートされる構成</block>
+  <block id="581f6b5312764acdc88160c41a391898" category="doc">Cloud Volumes ONTAPの既知の問題</block>
+  <block id="00ff4cadb55371ba7e55c687cb31489c" category="doc">AWSにおけるCloud Volumes ONTAPの既知の制限事項</block>
+  <block id="96a0971c8081aee54952178a5d07dd66" category="doc">AzureのCloud Volumes ONTAPに関する既知の制限事項</block>
+  <block id="b2c659497c1ac3bfb0fc72c1bc792dd9" category="doc">Google CloudのCloud Volumes ONTAPに関する既知の制限事項</block>
+  <block id="d6460349654894b65a477d48e8f0870a" category="doc">すべてのクラウドプロバイダにおけるCloud Volumes ONTAPの既知の制限事項</block>
+  <block id="22cb0da70aef15be2f870ac70af6492c" category="doc">AWS の Cloud Volumes ONTAP でのストレージの制限</block>
+  <block id="9f8b4558b07e0b8fb83871b783e78430" category="doc">Azure での Cloud Volumes ONTAP のストレージの制限</block>
+  <block id="f2642484d82ac71ab617437045e56b35" category="doc">Google CloudでのCloud Volumes ONTAPのストレージ制限</block>
+  <block id="0d965f3057c75408feddc192acd12da8" category="doc">Cloud Volumes ONTAP向けクラウドプロバイダとのコラボレーション</block>
+  <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">NetAppがクラウドプロバイダと連携して潜在的な問題に対処する方法をご紹介します。</block>
 </blocks>
