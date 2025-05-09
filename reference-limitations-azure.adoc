@@ -33,8 +33,16 @@ Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてロー�
 
 
 
-== HA の制限事項
+== ハイアベイラビリティ構成の制限事項
 
-一部のリージョンでは HA ペアがサポートされません。
+ハイアベイラビリティ（HA）ペアは一部の地域ではサポートされません。
 
 https://bluexp.netapp.com/cloud-volumes-global-regions["サポートされている Azure リージョンのリストを表示します"^]です。
+
+
+
+== 単一のアベイラビリティゾーンにHAを配置する場合の制限事項
+
+Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。この機能をサポートする基準の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-on-azure["Azureの単一のアベイラビリティゾーンにHAペアを導入"^]。
+
+Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。

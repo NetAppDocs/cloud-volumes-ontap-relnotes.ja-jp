@@ -184,8 +184,6 @@
   <block id="406156e49006d700786c581646d94504" category="paragraph">Cloud Volumes ONTAP から Google Cloud Storage バケットへのデータの階層化は、現在プライベートサービス接続ではサポートされていません。</block>
   <block id="7bb35241d1246d5dc87cb9e61c1efc05" category="summary">これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。</block>
   <block id="4e9780ecc95f5dbfb27e64e3ded5cd85" category="paragraph">以下に示す既知の制限事項は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。また、必ず確認してください <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>。</block>
-  <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA の制限事項</block>
-  <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">一部のリージョンでは HA ペアがサポートされません。</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">サポートされている Azure リージョンのリストを表示します</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP には、信頼性の高い運用を実現するために、 Google Cloud にストレージ構成の制限があります。最大のパフォーマンスを得るためには、システムを最大値で構成しないでください。</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="cell">500 GB</block>
@@ -781,4 +779,10 @@
   <block id="3b3592b54b76bb5d60a585ffacea4e61" category="paragraph">AzureとGoogle Cloudで、9.16.1 P1パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">P1パッチで修正されたバグの一覧を表示する</block>
   <block id="664e6349e84880f6407173721fad810a" category="paragraph"><block ref="e1914bcb543b75972205a0cc76dbb433" category="inline-link-macro-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
+  <block id="77d9dd558dce394d624e008a5015c43e" category="section-title">ハイアベイラビリティ構成の制限事項</block>
+  <block id="47e6c824f3fe7a0a707fd6f94c2b0d5e" category="paragraph">ハイアベイラビリティ（HA）ペアは一部の地域ではサポートされません。</block>
+  <block id="e62fa1e447749b7b88523431cfe1cb23" category="section-title">単一のアベイラビリティゾーンにHAを配置する場合の制限事項</block>
+  <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">Azureの単一のアベイラビリティゾーンにHAペアを導入</block>
+  <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。この機能をサポートする基準の詳細については、を参照してください<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
+  <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。</block>
 </blocks>
