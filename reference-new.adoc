@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.16.1には、新しい機能拡張が含まれています
 
 
 
+== 9.16.1 P3（2025年5月29日）
+
+AzureとGoogle Cloudで、9.16.1 P3パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.16.1P3["P3パッチで修正されたバグの一覧を表示する"^] （NetAppサポートサイトへのログインが必要です）。
+
+
+
 == 9.16.1 P2（2025年4月17日）
 
 AzureとGoogle Cloudで、9.16.1 P2パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。

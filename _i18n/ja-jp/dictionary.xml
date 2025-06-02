@@ -785,4 +785,8 @@
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">Azureの単一のアベイラビリティゾーンにHAペアを導入</block>
   <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。この機能をサポートする基準の詳細については、を参照してください<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。</block>
+  <block id="2b0112a3fe8db72b28cea3e10ddba401" category="section-title">9.16.1 P3（2025年5月29日）</block>
+  <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">AzureとGoogle Cloudで、9.16.1 P3パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">P3パッチで修正されたバグの一覧を表示する</block>
+  <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
 </blocks>
