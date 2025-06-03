@@ -26,6 +26,8 @@ Cloud Volumes ONTAP は、フォールトトレランスとノンストップオ
 
 Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。
 
+サポートされているインスタンスの仕様については、  https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview["Microsoft Azureのドキュメント"^] 。
+
 
 
 === シングルノードシステム
@@ -131,7 +133,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
-. ^4^シングルノードシステムを使用している場合、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^4^ 単一ノード展開でサポートされているディスクの種類については、  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （シングルノード）"^] 。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
 
 
 --
@@ -424,7 +426,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 
 
-| サポートされているディスクタイプ 3+| Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。 
+| サポートされているディスクタイプ ^6^ 3+| Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。 
 |===
 注：
 
@@ -433,6 +435,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 . 複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1以降です。
 . 複数のアベイラビリティゾーンのサポートは、ONTAPバージョン9.14.1 RC1以降です。
 . この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]。
+. HA展開の単一および複数のアベイラビリティゾーンでサポートされているディスクタイプの詳細については、以下を参照してください。  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA ペア）"^] 。
 
 
 --

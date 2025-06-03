@@ -499,8 +499,6 @@
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP に関する注意</block>
   <block id="a65d010a2b24f9e4a0919b7faf52d022" category="list-text"><block ref="a65d010a2b24f9e4a0919b7faf52d022" category="inline-link-rx"></block></block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">ネットアップサポート</block>
-  <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">を参照してください <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> これらのインスタンスタイプの可用性とサポート終了の詳細については、を参照してください。</block>
   <block id="fd1f8e9df9f2971a09de148f57ee5ce0" category="section-title">ソフトウェアの更新はBlueXPが完了している必要があります</block>
   <block id="c6925d752394e325c0b435137fbe997c" category="paragraph">Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性</block>
   <block id="93931e849ddff0b1178bc9a719400883" category="paragraph">クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。BlueXPが作成および管理するCloud Volumes ONTAP リソースに変更を加えると、システムの安定性とシステム管理能力に影響を与える可能性があります。</block>
@@ -555,7 +553,6 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">これらのVMタイプは、共有管理対象ディスクで実行されている単一のアベイラビリティゾーン構成のHAペアでのみサポートされます。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">N2-STANDARD-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">N2-STANDARD-64</block>
-  <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">AWSでは、C4、M4、およびR4 EC2インスタンスタイプはCloud Volumes ONTAP でサポートされなくなりました。C4、M4、またはR4インスタンスタイプで実行されている既存のシステムがある場合は、C5、m5、またはr5インスタンスファミリーでインスタンスタイプに変更する必要があります。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Google CloudでのHAペアの起動</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。</block>
@@ -789,4 +786,25 @@
   <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">AzureとGoogle Cloudで、9.16.1 P3パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">P3パッチで修正されたバグの一覧を表示する</block>
   <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
+  <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWSローカルゾーンのCloud Volumes ONTAP構成では、汎用SSD（gp2）ディスクタイプのみがサポートされます。AWS ローカルゾーンの Cloud Volumes ONTAP では、他のディスクタイプはサポートされていません。</block>
+  <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAPは、AWSのc4、m4、r4 EC2インスタンスタイプのサポートを終了しました。システムがc4、m4、またはr4インスタンスで実行されている場合は、c5、m5、またはr5インスタンスに変更してください。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。</block>
+  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">詳細については、以下を参照してください。</block>
+  <block id="304f5226697d03123fa4611d02bf8546" category="inline-link">ナレッジベース (KB) 記事: AWS Xen CVO インスタンスを Nitro KVM に変換する</block>
+  <block id="0dc3c417fc362585e0e7b3798f00b8bb" category="list-text"><block ref="0dc3c417fc362585e0e7b3798f00b8bb" category="inline-link-rx"></block></block>
+  <block id="b5dc3ce37b75c52be2427ecee207d24f" category="inline-link">KB 記事: ディスク数エラーのためインスタンスタイプを r4 から r5 に変更できない</block>
+  <block id="9ed042e52baa279a92fcf5c7a432ecf5" category="list-text"><block ref="9ed042e52baa279a92fcf5c7a432ecf5" category="inline-link-rx"></block></block>
+  <block id="ee47ffaac80894c9307ca443c334cf79" category="inline-link-macro">これらのインスタンスタイプの提供終了とサポート終了について詳しくは、こちらをご覧ください。</block>
+  <block id="c0857a6c0ade184c3afe7f293fc01755" category="list-text"><block ref="c0857a6c0ade184c3afe7f293fc01755" category="inline-link-macro-rx"></block></block>
+  <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Microsoft Azureのドキュメント</block>
+  <block id="e2f4ab859b01d65da06c213f94a69131" category="paragraph">サポートされているインスタンスの仕様については、 <block ref="84495d3a9882d3bd6b6590d973db25e5" category="inline-link-rx"></block> 。</block>
+  <block id="5639612d2f12168c8a83a7d9f034340d" category="inline-link">Azure （シングルノード）</block>
+  <block id="88e2312354057a90322664c2df9708ae" category="list-text">^4^ 単一ノード展開でサポートされているディスクの種類については、 <block ref="5d976ccca41daf11d6b5e395edda488a" category="inline-link-rx"></block> 。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>です。SSD の使用時には書き込みパフォーマンスの向上が実現します。</block>
+  <block id="9116d248ecfb6241ae0ac82e933291a7" category="cell">サポートされているディスクタイプ ^6^</block>
+  <block id="70ed196a226ad517ee4fecdca325036d" category="inline-link">Azure （ HA ペア）</block>
+  <block id="129a14de9bbb8e2dc343a37a19f5ea3d" category="list-text">HA展開の単一および複数のアベイラビリティゾーンでサポートされているディスクタイプの詳細については、以下を参照してください。 <block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> 。</block>
+  <block id="7ec816bcf3858e037c57a46bfa8643ba" category="paragraph">特定のマシンタイプの詳細については、Google Cloud のドキュメントを参照してください。</block>
+  <block id="7f53645b2b3a6e77999ceeea01208792" category="inline-link">n1シリーズ汎用機</block>
+  <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
+  <block id="d59a55e5a766d0a45a73ef03504c6b5b" category="inline-link">N2シリーズ汎用機</block>
+  <block id="0ab6f9218085a410dabf81dbe7da1b1a" category="list-text"><block ref="0ab6f9218085a410dabf81dbe7da1b1a" category="inline-link-rx"></block></block>
 </blocks>

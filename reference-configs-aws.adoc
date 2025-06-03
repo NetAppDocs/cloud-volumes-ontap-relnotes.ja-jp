@@ -72,7 +72,7 @@ Cloud Volumes ONTAP では、データ階層化用に複数のタイプの EBS �
 . 一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。ディスクの制限については、を参照してください link:reference-limits-aws.html["ストレージの制限"]。
 . オールCloud Volumes ONTAP構成でSSDを使用する場合、書き込みパフォーマンスの向上が有効になります。
 . スループット最適化 HDD （ st1 ）を使用している場合、オブジェクトストレージへのデータの階層化は推奨されません。
-. AWSローカルゾーンのCloud Volumes ONTAP構成では、汎用SSD（gp2）ディスクタイプのみがサポートされます。
+. AWSローカルゾーンのCloud Volumes ONTAP構成では、汎用SSD（gp2）ディスクタイプのみがサポートされます。AWS ローカルゾーンの Cloud Volumes ONTAP では、他のディスクタイプはサポートされていません。
 
 
 --
@@ -250,6 +250,21 @@ Cloud Volumes ONTAP は、予約済みまたはオンデマンドの EC2 イン�
 +
 AWSローカルゾーンでは、これらのインスタンスタイプで高速の書き込み速度はサポートされていません。
 
+
+
+
+
+=== C4、M4、およびR4のインスタンスはサポートされなくなりました
+
+Cloud Volumes ONTAPは、AWSのc4、m4、r4 EC2インスタンスタイプのサポートを終了しました。システムがc4、m4、またはr4インスタンスで実行されている場合は、c5、m5、またはr5インスタンスに変更してください。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Cloud Volumes ONTAP のEC2インスタンスタイプを変更する方法について説明します"^]。
+
+詳細については、以下を参照してください。
+
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_KVM["ナレッジベース (KB) 記事: AWS Xen CVO インスタンスを Nitro KVM に変換する"^]
+* https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Unable_to_change_the_instance_type_from_r4_to_r5_with_disk_count_error["KB 記事: ディスク数エラーのためインスタンスタイプを r4 から r5 に変更できない"^]
+* link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["これらのインスタンスタイプの提供終了とサポート終了について詳しくは、こちらをご覧ください。"^]
 
 
 

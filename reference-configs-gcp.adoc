@@ -164,6 +164,12 @@ NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存�
 
 --
 ====
+特定のマシンタイプの詳細については、Google Cloud のドキュメントを参照してください。
+
+* https://cloud.google.com/compute/docs/general-purpose-machines#n1_machines["n1シリーズ汎用機"^]
+* https://cloud.google.com/compute/docs/general-purpose-machines#n2_series["N2シリーズ汎用機"^]
+
+
 
 
 == サポートされるディスクサイズ
