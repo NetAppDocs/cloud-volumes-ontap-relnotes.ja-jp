@@ -20,7 +20,9 @@ summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONT
 
 == Azure VM拡張機能の使用に関する制限事項
 
-Cloud Volumes ONTAPは、 Azure仮想マシン（VM）拡張機能をサポートしていません。これは、操作を遅延させるためです。CloudCloud Volumes ONTAPの導入後、 BlueXPは定期的にVM拡張機能を無効化します。これらの拡張機能を作業環境にインストールしている場合は、Microsoft Azureサポートに連絡して無効化または削除してください。
+Cloud Volumes ONTAPは、 BlueXPの管理操作に影響するため、Azure仮想マシン（VM）拡張機能をサポートしていません。BlueXPの導入時には、VMへの拡張機能のインストールがブロックされます。NetAppのCloud Volumes ONTAP VMに拡張機能が既にインストールされている場合は、Microsoft Azureサポートにご連絡の上、削除することを強くお勧めします。
+
+2025 年 7 月 14 日以降、 NetApp はCloud Volumes ONTAP VM で VM 拡張機能が検出されるとBlueXPで通知し、電子メールを送信します。
 
 
 
