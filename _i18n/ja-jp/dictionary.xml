@@ -346,7 +346,6 @@
   <block id="e7089e61c962cfdae0de5b1d0748b6f2" category="list-text">Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。他の種類の VM インスタンスを使用するソリューションはサポートされていません。</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="section-title">HA ペア</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次の構成から選択できます。</block>
-  <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">この VM は、 Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">Azure では、アグリゲートに同じタイプおよびサイズのディスクを 12 本まで含めることができます。</block>
   <block id="90d1dad6ac7388ba65631ec0b927dabc" category="paragraph">シングルノードシステムで Azure Managed Disks を使用している。次のディスクサイズがサポートされています。</block>
   <block id="fac18bfae2384f6eccc3a9779ce41d25" category="cell">Premium SSD の場合</block>
@@ -550,7 +549,6 @@
   <block id="fd5fff93ea6b0d7a9072274f514573ae" category="list-text">E32ds_v4^1,4^</block>
   <block id="6cddc6e542baa2aaad6e58fdc397ce90" category="list-text">E48ds_v4^1,4^</block>
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4^ 1、2、4^</block>
-  <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">これらのVMタイプは、共有管理対象ディスクで実行されている単一のアベイラビリティゾーン構成のHAペアでのみサポートされます。</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">N2-STANDARD-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">N2-STANDARD-64</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。</block>
@@ -584,8 +582,6 @@
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> を参照してください。</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
-  <block id="3959237302934c658e49cff52293a2a5" category="list-text">この VM タイプにはローカルの NVMe ストレージが含まれており、 Cloud Volumes ONTAP では _Flash Cache _ として使用されます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、 E メール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>。</block>
-  <block id="44ed637222e5d571deff68351343db0d" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>。</block>
   <block id="5f47eaf30741e1b189cb3927920a050e" category="list-text">L48s_v3^2^</block>
   <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3^2^</block>
   <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">バランスの取れた永続ディスク^4^、パフォーマンス（SSD）永続ディスク^4^、および標準（HDD）永続ディスク。</block>
@@ -614,8 +610,6 @@
   <block id="70f33ddea414a26001d98ec1ee7c49a4" category="list-text">E48ds_v4^ 1、3^</block>
   <block id="338b010678cca88a9e61c9a5b5db4e85" category="list-text">E80ids_v4^1、2、3^</block>
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">ページblobs</block>
-  <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Cloud Volumes ONTAP では、 HA ペアを使用する場合、これらの VM タイプで高速な書き込み速度がサポートされます。展開中または後であればいつでも、BlueXPから高速の書き込み速度を有効にできます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>。</block>
-  <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">これらのVMは、Cloud Volumes ONTAP 9.11.1以前の環境でのみサポートされます。これらのVMタイプを使用すると、既存のページBLOB環境をCloud Volumes ONTAP 9.11.1から9.12.1にアップグレードできます。Cloud Volumes ONTAP 9.12.1以降では、新しいページBLOB配置を実行できません。</block>
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3^ 1、4、5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3^ 1、4、5^</block>
   <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3^ 1、4、5^</block>
@@ -640,7 +634,6 @@
   <block id="e002cc59f5a826e5838dde797b6a9f2b" category="list-text">E32ds_v5^1^</block>
   <block id="c0147218881d0d0fb9dddce993d7c08c" category="list-text">E48ds_v5^1^</block>
   <block id="d071b0d9481cad34966de3c7caf72b29" category="list-text">E64ds_v5^1^</block>
-  <block id="c3e43237d47ac4f8f0c184c56276c958" category="list-text">これらのVMタイプは、シングルアベイラビリティゾーンのHAペアと、共有管理対象ディスクで実行されている複数のアベイラビリティゾーン構成でサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。EDS_V5 VMタイプの場合、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.14.1 RC1から開始されます。</block>
   <block id="6c390ecab52e3e5345764abdf66b4a13" category="list-text">E20ds_V5^1^</block>
   <block id="ea724697af39ce2b490b5643777ed273" category="paragraph">Cloud Volumes ONTAPは、シングルノードシステムとして、またフォールトトレランスとノンストップオペレーションを実現するハイアベイラビリティ（HA）ペアとしてGoogle Cloudで利用できます。</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">容量ベースのライセンス</block>
@@ -674,8 +667,6 @@
   <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3^ 1、3、5^</block>
   <block id="6074c6f3226593d830e2700ab7f3f365" category="list-text">L48s_v3^ 1、3、5^</block>
   <block id="1da7ab1581b8dde8d8bbb3d70c613cd5" category="list-text">L64s_v3^ 1、3、5^</block>
-  <block id="9df1366281b2311753bea9dc8a7cc627" category="list-text">複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1以降です。</block>
-  <block id="6d8cc94524c51a3f77860bbede84b136" category="list-text">複数のアベイラビリティゾーンのサポートは、ONTAPバージョン9.14.1 RC1以降です。</block>
   <block id="219b3478863d340e2f74f743c7d41011" category="list-text">汎用SSD（GP3およびGP2）^3^、^5^</block>
   <block id="5f5ab830f312b366e90a01041e1aedca" category="cell">m5.xlarge ^6^</block>
   <block id="6bfe086862809cf64cd507fa55b90a47" category="cell">r5.xlarge ^6^</block>
@@ -735,7 +726,6 @@
   <block id="9c6d70371c04fac1c5b3babc1c1a755e" category="list-text">^3^Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンに切り替えることを推奨します。ただし、n1シリーズマシンは、APIを介して実行される新しい導入に使用できます。</block>
   <block id="31269d00cd277adf90f42f882afbd293" category="list-text">^4^Balanced Persistent DiskおよびPerformance（SSD）Persistent Diskを使用すると、書き込みパフォーマンスの向上が有効になります。</block>
   <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Azure VM拡張機能の使用に関する制限事項</block>
-  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAPでは、Azure Virtual Machine（VM）拡張機能と導入環境内のVMアプリケーションはサポートされません。AzureでVM拡張機能を使用してCloud Volumes ONTAPを使用すると、運用に遅延が発生するため、NetAppではそれらを回避することを推奨</block>
   <block id="0890aa708cef7529c2bd35cb7d2895df" category="paragraph">AWSリージョンのサポートについては、を参照してください<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
   <block id="f0de068c81c765820aca0fa8fe017396" category="paragraph">Azureリージョンのサポートについては、を参照してください<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
   <block id="9b986795dc6a434c7339bfecbd5e5c8b" category="paragraph">Google Cloudリージョンのサポートについては、を参照してください<block ref="e55b14db85f4d4837890e415926626e0" category="inline-link-rx"></block>。</block>
@@ -801,7 +791,6 @@
   <block id="88e2312354057a90322664c2df9708ae" category="list-text">^4^ 単一ノード展開でサポートされているディスクの種類については、 <block ref="5d976ccca41daf11d6b5e395edda488a" category="inline-link-rx"></block> 。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>です。SSD の使用時には書き込みパフォーマンスの向上が実現します。</block>
   <block id="9116d248ecfb6241ae0ac82e933291a7" category="cell">サポートされているディスクタイプ ^6^</block>
   <block id="70ed196a226ad517ee4fecdca325036d" category="inline-link">Azure （ HA ペア）</block>
-  <block id="129a14de9bbb8e2dc343a37a19f5ea3d" category="list-text">HA展開の単一および複数のアベイラビリティゾーンでサポートされているディスクタイプの詳細については、以下を参照してください。 <block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> 。</block>
   <block id="7ec816bcf3858e037c57a46bfa8643ba" category="paragraph">特定のマシンタイプの詳細については、Google Cloud のドキュメントを参照してください。</block>
   <block id="7f53645b2b3a6e77999ceeea01208792" category="inline-link">n1シリーズ汎用機</block>
   <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
@@ -811,4 +800,20 @@
   <block id="c40872b813fc8acca04c5e909c600b0c" category="paragraph">AzureとGoogle Cloudで、9.16.1 P4パッチをCloud Volumes ONTAP向けに導入してアップグレードできるようになりました。ただし、このバージョンはAWSでの導入およびアップグレードには使用できません。BlueXPでは、既存のシステムをこのパッチリリースにアップグレードするように求められます。</block>
   <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link-macro">P4パッチで修正されたバグの一覧を表示する</block>
   <block id="0a8093de16aa3f6ac64c7b6c07e3a0e9" category="paragraph"><block ref="4287819b7b6c3d729049717a25b7809c" category="inline-link-macro-rx"></block> （NetAppサポートサイトへのログインが必要です）。</block>
+  <block id="313e5c6346ba30bdb749b42654c60b9e" category="list-text">^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>です。</block>
+  <block id="7a44fe38188ff958cad09ce844759662" category="list-text">^2^ この VM は、Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。</block>
+  <block id="7b78f11572d7f890feb55bd86cdbee51" category="list-text">^3^ これらの VM は、 Cloud Volumes ONTAP 9.11.1 以前のデプロイメントでのみサポートされます。これらのVMタイプを使用すると、既存のページBLOB環境をCloud Volumes ONTAP 9.11.1から9.12.1にアップグレードできます。Cloud Volumes ONTAP 9.12.1以降では、新しいページBLOB配置を実行できません。</block>
+  <block id="fd50247d3654244e2fa376c69aef2589" category="list-text">L8s_v3^ 1、3、5^</block>
+  <block id="c1e3164a5d2ff8f31e49973a181ebbee" category="list-text">^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>です。</block>
+  <block id="e8226b64239abaa5e0216217eaa35aae" category="list-text">^3^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.13.1 から開始されます。</block>
+  <block id="ada5a0f28401b1863a90b26fafa4c5ef" category="list-text">^4^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.14.1 RC1 から開始されます。</block>
+  <block id="3d286a847602807c5f94bcf6fdef60be" category="list-text">^5^ この VM タイプには、 Cloud Volumes ONTAP が_Flash Cache_ として使用するローカル NVMe ストレージが含まれます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>です。</block>
+  <block id="ee1f574bc95607cfdc97b1c953a104b2" category="list-text">^6^ HA展開の単一および複数のアベイラビリティゾーンでサポートされているディスクタイプの詳細については、 <block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> 。</block>
+  <block id="b0975698f88b92c8fbe80f0dbf6305ad" category="list-text">L8s_v3 ^4,5^</block>
+  <block id="c06088d15edfd911af2ec4c45b08e41b" category="list-text">^3^ これらの VM タイプは、共有管理ディスク上で実行されている単一の可用性ゾーン構成の HA ペアでのみサポートされます。</block>
+  <block id="549504876cb29a5866aca5cf3802fe6d" category="list-text">^4^ これらの VM タイプは、共有マネージド ディスク上で実行される単一の可用性ゾーンおよび複数の可用性ゾーン構成の HA ペアでサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。EDS_V5 VMタイプの場合、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.14.1 RC1から開始されます。</block>
+  <block id="4e2d7e12a50a6543c1e295c672343668" category="cell">最適化されました ^4^</block>
+  <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Cloud Volumes ONTAP の新機能</block>
+  <block id="6d0094db764c8adadbabb02e37cfc44d" category="admonition">_Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。^4^ 2025 年 7 月 1 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制（PAYGO）サブスクリプションの Google Cloud マーケットプレイスで購入または更新できなくなります。詳細については、を参照して<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block>ください。</block>
+  <block id="3cf421bc57be614ba02e4f59f34859a2" category="paragraph">Cloud Volumes ONTAPは、 Azure仮想マシン（VM）拡張機能をサポートしていません。これは、操作を遅延させるためです。CloudCloud Volumes ONTAPの導入後、 BlueXPは定期的にVM拡張機能を無効化します。これらの拡張機能を作業環境にインストールしている場合は、Microsoft Azureサポートに連絡して無効化または削除してください。</block>
 </blocks>
