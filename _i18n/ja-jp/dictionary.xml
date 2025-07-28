@@ -310,7 +310,6 @@
   <block id="eb43b40e67fff3351b74b6f875e497b9" category="paragraph">Microsoft では、 Cloud Volumes ONTAP VM に影響する可能性があるメンテナンスイベントのスケジュールを設定し、プログラムによって Azure Virtual Machine （ VM ； Azure 仮想マシン）インフラに対する通知を行います。これらのイベントは、メンテナンス時間の 15 分前に通知されます。</block>
   <block id="5e486cb2e38fc7f03f038af21eb3cdb9" category="paragraph">Cloud Volumes ONTAP のハイアベイラビリティ（ HA ）ペアでは、メンテナンスイベントの特別な処理がサポートされます。アプリケーションのヘルスを維持するために、予防的テイクオーバーを実行して安定性を優先させます。 15 秒を超える接続が失われるとフェイルオーバー機能は無効になります。</block>
   <block id="1222cf807490df82fd7e0146eb6798c1" category="paragraph">メンテナンス時間がアナウンスされると、対象のノードのパートナーノードがテイクオーバーを実行します。メンテナンスが完了すると、ギブバックが開始されます。ギブバックが完了すると、 HA ペアは正常な状態に戻ります。この問題が発生しない場合は、ネットアップサポートにお問い合わせください。メンテナンスイベントの対象は、 HA ペアの VM の 1 つです。通常、どちらのノードも比較的短時間です。</block>
-  <block id="1355c3042f61af06b4a61506de6e8ad1" category="paragraph">Cloud Volumes ONTAP 非継続的可用性を備えた CIFS 共有を使用する CIFS / SMB クライアントでは、テイクオーバーの発生時と、セッションで使用しているアグリゲートがアグリゲートのホームノードにギブバックされたときに、セッションが失われます。これは、 CIFS / SMB プロトコル自体の制限事項です。テイクオーバーやギブバックで発生する可能性のある問題を回避するために、サードパーティ製品の使用が必要になる場合があります。詳しくは、ネットアップサポートにお問い合わせください。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
@@ -817,4 +816,9 @@
   <block id="6d0094db764c8adadbabb02e37cfc44d" category="admonition">_Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。^4^ 2025 年 7 月 1 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制（PAYGO）サブスクリプションの Google Cloud マーケットプレイスで購入または更新できなくなります。詳細については、を参照して<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block>ください。</block>
   <block id="1eb96c178e7f735868c3e0db46da5177" category="paragraph">Cloud Volumes ONTAPは、 BlueXPの管理操作に影響するため、Azure仮想マシン（VM）拡張機能をサポートしていません。BlueXPの導入時には、VMへの拡張機能のインストールがブロックされます。NetAppのCloud Volumes ONTAP VMに拡張機能が既にインストールされている場合は、Microsoft Azureサポートにご連絡の上、削除することを強くお勧めします。</block>
   <block id="816bcc0866a6fd49370b7a416001b4e9" category="paragraph">2025 年 7 月 14 日以降、 NetApp はCloud Volumes ONTAP VM で VM 拡張機能が検出されるとBlueXPで通知し、電子メールを送信します。</block>
+  <block id="48a1881670db273e8743aa5bc3c47be1" category="list-text">SMB 継続的な可用性 (CA)</block>
+  <block id="66f1432987337e84ca83c5bdf6848b9e" category="inline-link">継続的可用性を備えたSMB共有</block>
+  <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>中断のない運用はサポートされていません。</block>
+  <block id="a658c03927efcbcb7170fb429c8a9408" category="paragraph">Cloud Volumes ONTAPの非継続的可用性CIFS共有を使用するCIFS/SMBクライアントは、テイクオーバーの発生時と、セッションで使用されているアグリゲートがアグリゲートのホームノードにギブバックされる際に、セッションが失われます。これはCIFS/SMBプロトコル自体によって課せられる制限です。テイクオーバーとギブバックに起因する問題を回避するには、承認済みのサードパーティ製品をご使用ください。ご不明な点がございましたら、 NetAppサポートまでお問い合わせください。</block>
+  <block id="c04ba4ba4463685b70d448688626a589" category="admonition"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>非中断運用はCloud Volumes ONTAPではサポートされていません。</block>
 </blocks>

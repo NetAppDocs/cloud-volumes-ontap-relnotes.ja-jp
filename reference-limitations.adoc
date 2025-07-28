@@ -44,6 +44,10 @@ Cloud Volumes ONTAP でマルチ管理者検証を有効にすると、構成が
 * SnapLock のコンプライアンスモードとエンタープライズモード（クラウドの WORM のみサポート）
 * SnapMirror Synchronous
 * VLAN
+* SMB 継続的な可用性 (CA)
++
+https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["継続的可用性を備えたSMB共有"^]中断のない運用はサポートされていません。
+
 
 
 

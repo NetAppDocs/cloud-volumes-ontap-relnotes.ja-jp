@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-provider-integrations.html 
-keywords: maintenance event, azure maintenance event, cloud provider, issues, support 
+keywords: maintenance event, azure maintenance event, cloud provider, issues, support, SMB CA in CVO 
 summary: このページでは、ネットアップとクラウドプロバイダが連携して発生する可能性のある問題を解決する方法について説明します。 
 ---
 = Cloud Volumes ONTAP向けクラウドプロバイダとのコラボレーション
@@ -34,4 +34,7 @@ Cloud Volumes ONTAP のハイアベイラビリティ（ HA ）ペアでは、�
 
 メンテナンス時間がアナウンスされると、対象のノードのパートナーノードがテイクオーバーを実行します。メンテナンスが完了すると、ギブバックが開始されます。ギブバックが完了すると、 HA ペアは正常な状態に戻ります。この問題が発生しない場合は、ネットアップサポートにお問い合わせください。メンテナンスイベントの対象は、 HA ペアの VM の 1 つです。通常、どちらのノードも比較的短時間です。
 
-Cloud Volumes ONTAP 非継続的可用性を備えた CIFS 共有を使用する CIFS / SMB クライアントでは、テイクオーバーの発生時と、セッションで使用しているアグリゲートがアグリゲートのホームノードにギブバックされたときに、セッションが失われます。これは、 CIFS / SMB プロトコル自体の制限事項です。テイクオーバーやギブバックで発生する可能性のある問題を回避するために、サードパーティ製品の使用が必要になる場合があります。詳しくは、ネットアップサポートにお問い合わせください。
+Cloud Volumes ONTAPの非継続的可用性CIFS共有を使用するCIFS/SMBクライアントは、テイクオーバーの発生時と、セッションで使用されているアグリゲートがアグリゲートのホームノードにギブバックされる際に、セッションが失われます。これはCIFS/SMBプロトコル自体によって課せられる制限です。テイクオーバーとギブバックに起因する問題を回避するには、承認済みのサードパーティ製品をご使用ください。ご不明な点がございましたら、 NetAppサポートまでお問い合わせください。
+
+
+NOTE: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["継続的可用性を備えたSMB共有"^]非中断運用はCloud Volumes ONTAPではサポートされていません。
