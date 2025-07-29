@@ -821,4 +821,8 @@
   <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>中断のない運用はサポートされていません。</block>
   <block id="a658c03927efcbcb7170fb429c8a9408" category="paragraph">Cloud Volumes ONTAPの非継続的可用性CIFS共有を使用するCIFS/SMBクライアントは、テイクオーバーの発生時と、セッションで使用されているアグリゲートがアグリゲートのホームノードにギブバックされる際に、セッションが失われます。これはCIFS/SMBプロトコル自体によって課せられる制限です。テイクオーバーとギブバックに起因する問題を回避するには、承認済みのサードパーティ製品をご使用ください。ご不明な点がございましたら、 NetAppサポートまでお問い合わせください。</block>
   <block id="c04ba4ba4463685b70d448688626a589" category="admonition"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>非中断運用はCloud Volumes ONTAPではサポートされていません。</block>
+  <block id="804568356abbd917c2b16399c1d74469" category="section-title">9.16.1 P5（2025年7月28日）</block>
+  <block id="b18cddec63bbac4d331412b33193f19d" category="paragraph">AzureおよびGoogle CloudのCloud Volumes ONTAPに9.16.1 P5パッチをデプロイおよびアップグレードできるようになりました。ただし、このバージョンはAWSではデプロイおよびアップグレードできません。BlueXPは、既存のシステムをこのパッチリリースにアップグレードするよう促すメッセージが表示されます。</block>
+  <block id="e890150484086859b9a5078abe9c6f20" category="inline-link-macro">P5パッチで修正されたバグのリストを見る</block>
+  <block id="594276b7568f8909a2e4145873978b46" category="paragraph"><block ref="be3338d2845a087c634560014a857fc0" category="inline-link-macro-rx"></block> (NetAppサポート サイトへのログインが必要です)。</block>
 </blocks>
