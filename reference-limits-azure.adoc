@@ -22,7 +22,13 @@ Cloud Volumes ONTAP には、安定した運用を実現するために、スト
 
 Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。
 
-ネットアップでは、システム容量の制限を超えた使用はサポートしていません。ライセンス容量の上限に達すると、「Action Required」メッセージが表示され、ディスクを追加できなくなります。
+NetApp はシステム容量制限の超過をサポートしていません。ライセンス容量制限に達した場合、 BlueXP はアクションが必要なメッセージを表示し、ディスクの追加をブロックします。
+
+.容量ベースのライセンスの容量制限
+容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["『FabricPoolのベストプラクティス』"^]階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照 https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["マネージド ディスクに関する Azure ドキュメント"^]そして https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["BLOB ストレージに関する Azure ドキュメント"^]。
+
+他のライセンスタイプの容量制限::
+
 
 [cols="25,75"]
 |===
@@ -42,9 +48,6 @@ Cloud Volumes ONTAP システムの最大システム容量はライセンスで
 
 
 | ノードベースのライセンス | 2PiB（複数のライセンスが必要） 
-
-
-| 容量単位のライセンスです | 2 PiB 
 |===
 .HA の場合、ライセンスの容量制限はノード単位か、 HA ペア全体に適用されるか
 容量制限は HA ペア全体の容量制限です。ノード単位ではありません。たとえば、 Premium ライセンスを使用する場合、両方のノード間で最大 368 TiB の容量を確保できます。
@@ -82,15 +85,15 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 == ディスクおよび階層化の制限を VM のサイズごとに設定します
 
-容量制限は、使用するVMのサイズ、およびシングルノードシステムとHAペアのどちらを使用しているかによって異なります。
+容量制限は、VM のサイズとシステム タイプ (単一ノードまたは HA ペア) によって異なります。
 
-以下のメモは、以下の表に表示される番号の詳細を示しています。
+以下の注記は、表内の数字について説明しています。
 
 * ディスク制限はユーザデータが格納されたディスクに固有です。
 +
 これらの制限には、ルートディスク、コアディスク、 VNVRAM は含まれません。
 
-* ディスクのみを使用する場合、およびディスクとオブジェクトストレージへのコールドデータ階層化を使用する場合は、最大システム容量が表示されます。
+* ディスクのみを使用する場合と、ディスクとコールド データ階層化をオブジェクト ストレージに使用した場合の最大システム容量を確認できます。
 * 管理対象ディスクを使用するシングルノードシステムおよびHAシステムの場合、ディスクあたりの最大容量は32TiBです。サポートされるディスクの数は VM のサイズによって異なります。
 * ページBLOBを使用するHAシステムでは、ページBLOBごとに最大8TiBが割り当てられます。サポートされるディスクの数は VM のサイズによって異なります。
 * 特定のVMサイズを使用するシングルノードシステムで表示される896TiBのディスクベースの制限は、_tested_limitです。
@@ -98,238 +101,241 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 
 
-=== 容量ベースのライセンスの制限
+=== 容量ベースのライセンスのさまざまな展開モードの制限
 
-容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
+容量ベースのライセンス パッケージを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^] 。
+
+
+NOTE: 単一ノード、ページブロブを含む単一アベイラビリティゾーン内のHAペア、および共有マネージドディスクを含む単一および複数のアベイラビリティゾーン内のHAペアの最大システム容量とデータ階層化容量制限については、以下を参照してください。<<cap-license-azure>> 。
 
 
 
 ==== シングルノード
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| VM サイズ | ノードあたりの MAX Data ディスク数 | ディスクのみの場合の最大システム容量 | ディスクとデータ階層化による最大システム容量 
+| VM サイズ | ノードあたりの MAX Data ディスク数 | ディスクのみの場合の最大システム容量 
 
 
-| DS4_v2 | 29 | 896TiB | 2 PiB 
+| DS4_v2 | 29 | 896TiB 
 
 
-| DS5_v2 の場合 | 61 | 896TiB | 2 PiB 
+| DS5_v2 の場合 | 61 | 896TiB 
 
 
-| DS13_v2 の場合 | 29 | 896TiB | 2 PiB 
+| DS13_v2 の場合 | 29 | 896TiB 
 
 
-| DS14_v2 | 61 | 896TiB | 2 PiB 
+| DS14_v2 | 61 | 896TiB 
 
 
-| DS15_v2 の場合 | 61 | 896TiB | 2 PiB 
+| DS15_v2 の場合 | 61 | 896TiB 
 
 
-| E4s_v3 | 5. | 160TiB | 2 PiB 
+| E4s_v3 | 5. | 160TiB 
 
 
-| E8s_v3 | 13 | 416TiB | 2 PiB 
+| E8s_v3 | 13 | 416TiB 
 
 
-| E32s_v3 | 29 | 896TiB | 2 PiB 
+| E32s_v3 | 29 | 896TiB 
 
 
-| E48s_v3 | 29 | 896TiB | 2 PiB 
+| E48s_v3 | 29 | 896TiB 
 
 
-| E64is_v3 | 29 | 896TiB | 2 PiB 
+| E64is_v3 | 29 | 896TiB 
 
 
-| E4ds_v4 | 5. | 160TiB | 2 PiB 
+| E4ds_v4 | 5. | 160TiB 
 
 
-| E8ds_v4 | 13 | 416TiB | 2 PiB 
+| E8ds_v4 | 13 | 416TiB 
 
 
-| E32ds_v4 | 29 | 896TiB | 2 PiB 
+| E32ds_v4 | 29 | 896TiB 
 
 
-| E48ds_v4 | 29 | 896TiB | 2 PiB 
+| E48ds_v4 | 29 | 896TiB 
 
 
-| E80ids_v4 | 61 | 896TiB | 2 PiB 
+| E80ids_v4 | 61 | 896TiB 
 
 
-| E4ds_V5 | 5. | 160TiB | 2 PiB 
+| E4ds_V5 | 5. | 160TiB 
 
 
-| E8ds_V5 | 13 | 416TiB | 2 PiB 
+| E8ds_V5 | 13 | 416TiB 
 
 
-| E20ds_V5 | 29 | 896TiB | 2 PiB 
+| E20ds_V5 | 29 | 896TiB 
 
 
-| E32ds_V5 | 29 | 896TiB | 2 PiB 
+| E32ds_V5 | 29 | 896TiB 
 
 
-| E48ds_V5 | 29 | 896TiB | 2 PiB 
+| E48ds_V5 | 29 | 896TiB 
 
 
-| E64ds_V5 | 29 | 896TiB | 2 PiB 
+| E64ds_V5 | 29 | 896TiB 
 
 
-| L8s_v3 | 12. | 384 TiB | 2 PiB 
+| L8s_v3 | 12. | 384 TiB 
 
 
-| L16s_v3 | 28 | 896TiB | 2 PiB 
+| L16s_v3 | 28 | 896TiB 
 
 
-| L32s_v3 | 28 | 896TiB | 2 PiB 
+| L32s_v3 | 28 | 896TiB 
 
 
-| L48s_v3 | 28 | 896TiB | 2 PiB 
+| L48s_v3 | 28 | 896TiB 
 
 
-| L64s_v3 | 28 | 896TiB | 2 PiB 
+| L64s_v3 | 28 | 896TiB 
 |===
 
 
 ==== ページBLOBを使用する単一のアベイラビリティゾーン内のHAペア
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 | ディスクとデータ階層化による最大システム容量 
+| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 
 
 
-| DS4_v2 | 29 | 232TiB | 2 PiB 
+| DS4_v2 | 29 | 232TiB 
 
 
-| DS5_v2 の場合 | 61 | 488 TiB | 2 PiB 
+| DS5_v2 の場合 | 61 | 488 TiB 
 
 
-| DS13_v2 の場合 | 29 | 232TiB | 2 PiB 
+| DS13_v2 の場合 | 29 | 232TiB 
 
 
-| DS14_v2 | 61 | 488 TiB | 2 PiB 
+| DS14_v2 | 61 | 488 TiB 
 
 
-| DS15_v2 の場合 | 61 | 488 TiB | 2 PiB 
+| DS15_v2 の場合 | 61 | 488 TiB 
 
 
-| E8s_v3 | 13 | 104TiB 未満 | 2 PiB 
+| E8s_v3 | 13 | 104TiB 未満 
 
 
-| E48s_v3 | 29 | 232TiB | 2 PiB 
+| E48s_v3 | 29 | 232TiB 
 
 
-| E8ds_v4 | 13 | 104TiB 未満 | 2 PiB 
+| E8ds_v4 | 13 | 104TiB 未満 
 
 
-| E32ds_v4 | 29 | 232TiB | 2 PiB 
+| E32ds_v4 | 29 | 232TiB 
 
 
-| E48ds_v4 | 29 | 232TiB | 2 PiB 
+| E48ds_v4 | 29 | 232TiB 
 
 
-| E80ids_v4 | 61 | 488 TiB | 2 PiB 
+| E80ids_v4 | 61 | 488 TiB 
 |===
 
 
 ==== 管理対象ディスクを共有する単一のアベイラビリティゾーンのHAペア
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 | ディスクとデータ階層化による最大システム容量 
+| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 
 
 
-| E8ds_v4 | 12. | 384 TiB | 2 PiB 
+| E8ds_v4 | 12. | 384 TiB 
 
 
-| E32ds_v4 | 28 | 896TiB | 2 PiB 
+| E32ds_v4 | 28 | 896TiB 
 
 
-| E48ds_v4 | 28 | 896TiB | 2 PiB 
+| E48ds_v4 | 28 | 896TiB 
 
 
-| E80ids_v4 | 28 | 896TiB | 2 PiB 
+| E80ids_v4 | 28 | 896TiB 
 
 
-| E8ds_V5 | 12. | 384 TiB | 2 PiB 
+| E8ds_V5 | 12. | 384 TiB 
 
 
-| E20ds_V5 | 28 | 896TiB | 2 PiB 
+| E20ds_V5 | 28 | 896TiB 
 
 
-| E32ds_V5 | 28 | 896TiB | 2 PiB 
+| E32ds_V5 | 28 | 896TiB 
 
 
-| E48ds_V5 | 28 | 896TiB | 2 PiB 
+| E48ds_V5 | 28 | 896TiB 
 
 
-| E64ds_V5 | 28 | 896TiB | 2 PiB 
+| E64ds_V5 | 28 | 896TiB 
 
 
-| L16s_v3 | 28 | 896TiB | 2 PiB 
+| L16s_v3 | 28 | 896TiB 
 
 
-| L32s_v3 | 28 | 896TiB | 2 PiB 
+| L32s_v3 | 28 | 896TiB 
 
 
-| L48s_v3 | 28 | 896TiB | 2 PiB 
+| L48s_v3 | 28 | 896TiB 
 
 
-| L64s_v3 | 28 | 896TiB | 2 PiB 
+| L64s_v3 | 28 | 896TiB 
 |===
 
 
 ==== 管理対象ディスクを共有した複数のアベイラビリティゾーンに含まれるHAペア
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 | ディスクとデータ階層化による最大システム容量 
+| VM サイズ | HA ペア用の MAX Data ディスク | ディスクのみの場合の最大システム容量 
 
 
-| E8ds_v4 | 12. | 384 TiB | 2 PiB 
+| E8ds_v4 | 12. | 384 TiB 
 
 
-| E32ds_v4 | 28 | 896TiB | 2 PiB 
+| E32ds_v4 | 28 | 896TiB 
 
 
-| E48ds_v4 | 28 | 896TiB | 2 PiB 
+| E48ds_v4 | 28 | 896TiB 
 
 
-| E80ids_v4 | 28 | 896TiB | 2 PiB 
+| E80ids_v4 | 28 | 896TiB 
 
 
-| E8ds_V5 | 12. | 384 TiB | 2 PiB 
+| E8ds_V5 | 12. | 384 TiB 
 
 
-| E20ds_V5 | 28 | 896TiB | 2 PiB 
+| E20ds_V5 | 28 | 896TiB 
 
 
-| E32ds_V5 | 28 | 896TiB | 2 PiB 
+| E32ds_V5 | 28 | 896TiB 
 
 
-| E48ds_V5 | 28 | 896TiB | 2 PiB 
+| E48ds_V5 | 28 | 896TiB 
 
 
-| E64ds_V5 | 28 | 896TiB | 2 PiB 
+| E64ds_V5 | 28 | 896TiB 
 
 
-| L16s_v3 | 28 | 896TiB | 2 PiB 
+| L16s_v3 | 28 | 896TiB 
 
 
-| L32s_v3 | 28 | 896TiB | 2 PiB 
+| L32s_v3 | 28 | 896TiB 
 
 
-| L48s_v3 | 28 | 896TiB | 2 PiB 
+| L48s_v3 | 28 | 896TiB 
 
 
-| L64s_v3 | 28 | 896TiB | 2 PiB 
+| L64s_v3 | 28 | 896TiB 
 |===
 
 
-=== ノードベースのライセンスには制限があります
+=== ノードベースライセンスのさまざまな展開モードの制限
 
-次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。
+ノードベースのライセンスを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。ノードベースのライセンスは、ノードごとにCloud Volumes ONTAP のライセンスを取得できる前世代のモデルです。ノードベースのライセンスは、既存のお客様にも引き続きご利用いただけます。
 
-Cloud Volumes ONTAP BYOLシングルノードまたはHAペアシステム用に複数のノードベースライセンスを購入して、368TiBを超える容量を割り当てることができます（テストおよびサポートされるシステム容量の上限である2PiBまで）。ディスク制限によって、ディスクだけを使用することで容量制限に達することがないことに注意してください。を使用すると、ディスク制限を超えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^]。Cloud Volumes ONTAPでは、テストおよびサポートされる最大システム容量2PiBまでサポートされますが、2PiBの制限を超えると、サポートされないシステム構成になります。
+Cloud Volumes ONTAP BYOL シングルノードまたは HA ペア システムの複数のノードベースのライセンスを購入して、テスト済みおよびサポートされている最大システム容量制限である 2 PiB まで、368 TiB を超える容量を割り当てることができます。ディスク制限により、ディスクのみを使用すると容量制限に到達できなくなる可能性があることに注意してください。ディスク制限を超えるには https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Cloud Volume にシステムライセンスを追加する方法について説明します ONTAP"^] 。  Cloud Volumes ONTAP は、テスト済みおよびサポート済みの最大システム容量である 2 PiB までをサポートしており、2 PiB の制限を超えると、サポートされていないシステム構成になります。
 
 
 
@@ -616,7 +622,7 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 
 一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。
 
-これらはテスト済みの制限です。理論的には追加の Storage VM を設定できますが、サポート対象外です。
+これらはテストされた制限です。追加のストレージ VM の設定はサポートされていません。
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Storage VM を追加で作成する方法について説明します"^]。
 
@@ -651,7 +657,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 . 容量ベースのライセンスの場合、追加の Storage VM には追加のライセンスコストは発生しませんが、 Storage VM 1 台あたり最低容量は 4TiB 課金されます。たとえば、 2 台の Storage VM を作成し、それぞれに 2TiB のプロビジョニング済み容量がある場合、合計で 8TiB の容量が請求されます。
 . ノードベースの BYOL の場合、デフォルトでは、 Cloud Volumes ONTAP に付属する最初の Storage VM 以降の追加の DATA Serving_storage VM ごとにアドオンライセンスが必要です。アカウントチームに問い合わせて Storage VM アドオンライセンスを取得してください。
 +
-ディザスタリカバリ（ DR ）用に設定する Storage VM には追加ライセンスは必要ありませんが（無償）、 Storage VM の数は制限に含まれます。たとえば、ディザスタリカバリ用に設定されたデータ提供用の Storage VM が 12 台ある場合、上限に達し、それ以上 Storage VM を作成できません。
+災害復旧 (DR) 用のストレージ VM にはアドオン ライセンスは必要ありませんが、ストレージ VM の制限にカウントされます。たとえば、データ サービス VM が 12 台、DR ストレージ VM が 12 台ある場合、制限に達しているため、これ以上作成することはできません。
 
 
 

@@ -78,7 +78,6 @@
   <block id="4ab1bc7e6fe6c19a70cc9470efcb6c1e" category="cell">アグリゲートあたりの RAID グループの最大数</block>
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1.</block>
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">注：</block>
-  <block id="fa1fa971d1018dcdfc6e158b981c33cb" category="list-text">HA ペアの両方のノードに 18 個のアグリゲートを作成することはできません。これは、作成するとデータディスクの制限を超えてしまうためです。</block>
   <block id="a870388a8127cdf99988ab2766dc4972" category="list-text">アグリゲートの容量の制限は、アグリゲートを構成するディスクに基づいています。データの階層化に使用されるオブジェクトストレージは制限に含まれません。</block>
   <block id="a40e4d3ab198f5d9c9e23e409e7abae3" category="list-text">アグリゲート内のディスクはすべて同じサイズである必要があります。</block>
   <block id="a95e3bd264855a83a2c90be11b509673" category="section-title">Storage VM の制限</block>
@@ -220,7 +219,6 @@
   <block id="7916f32f06eaabdf61df576419c0c138" category="cell">2TiB</block>
   <block id="705c8901d15869a7116491b156af6fbe" category="cell">368TiB ^2^</block>
   <block id="6e9a8a2df40afea5890a6ea81b2df2b2" category="cell">ライセンスあたり 368 TiB ^2^</block>
-  <block id="71235138fc0c3fda4c8fc946f34c4367" category="cell">2 PiB ^2^</block>
   <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">サポートされているディスクタイプ</block>
   <block id="6cd4ae2aba2a092cf2052266e4fcdc94" category="list-text">プロビジョニングされた IOPS SSD （ io1 ） ^3^</block>
   <block id="320a1bc96a642b93ac47eb0838fbf1ff" category="list-text">スループット最適化 HDD （ st1 ） ^4^</block>
@@ -421,7 +419,6 @@
   <block id="40b796d47ecd5587aabc0ea65d661911" category="cell">最大アグリゲートサイズ ^1 ^</block>
   <block id="fd09e7b7125ae29e623561a2b5d68449" category="cell">1-12^3^</block>
   <block id="e2f4de94176ab48a70e3d04c548660fd" category="list-text">ノードベースのライセンスを使用する場合、 384 TiB に到達するには 2 つの BYOL ライセンスが必要です。</block>
-  <block id="73cbcc5508ae5bff313fecfcc6e16834" category="paragraph">これらはテスト済みの制限です。理論的には追加の Storage VM を設定できますが、サポート対象外です。</block>
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">各 Storage VM に最大 3 つの LIF を設定できます。 2 つはデータ LIF 、 1 つは SVM 管理 LIF です。</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Cloud Volumes ONTAP には、いくつかのライセンスオプションがあります。それぞれのオプションを使用することで、ニーズに合わせた構成を選択できます。</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="section-title">ライセンスの概要</block>
@@ -465,7 +462,6 @@
   <block id="b7d71850fd138e6cd477a1887cc244f3" category="cell">アグリゲートあたりのディスク数^4^</block>
   <block id="449daf85c71a9f8eb7c666134b1d9b95" category="list-text">1 ～ 6</block>
   <block id="734bf70b1c522fd659b58c67d2c015e9" category="list-text">1 ~ 8（Elastic Volumesを使用）^3^</block>
-  <block id="4d7bfec0bd52de6919125094b75ca0d4" category="list-text">最大アグリゲートサイズは、アグリゲートを構成するディスクに基づいて決まります。データの階層化に使用されるオブジェクトストレージは制限に含まれません。</block>
   <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link">Elastic Volumesのサポートに関する詳細情報</block>
   <block id="dc2065e297a9790d182a555ba250dbda" category="cell">ノードベースの BYOL</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.mcip</block>
@@ -481,17 +477,13 @@
   <block id="e7caa46d6e70a5b96752b4644b9f1527" category="paragraph">この制限には、ブートディスクとルートディスクは含まれていません。</block>
   <block id="e8ea7579109541b8654ac77df6ec5b21" category="list-text">ディスクのみを使用する場合、およびディスクとオブジェクトストレージへのコールドデータ階層化を使用する場合は、最大システム容量が表示されます。</block>
   <block id="dd81441aed81dac4d773ef1291a64e00" category="list-text">Cloud Volumes ONTAP は EBS ボリュームをディスクとして使用し、最大ディスクサイズは 16TiB です。</block>
-  <block id="6f55661d86c0b385d8b362ed90701d0d" category="section-title">容量ベースのライセンスの制限</block>
   <block id="54fe37b73954e37cae21db9bbd66c952" category="inline-link">Cloud Volumes ONTAP のライセンスオプションについて説明します</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="section-title">シングルノード</block>
-  <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">ノードベースのライセンスには制限があります</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">PAYGO Premiumでは1つのノード</block>
   <block id="a9698a2172c5fcc72b7ecd7910403955" category="section-title">BYOLによるシングルノード</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">PAYGO PremiumでHAペアを構成</block>
   <block id="1bc398eeb632d3ea2f565d86881775d8" category="section-title">BYOLによるHAペア</block>
-  <block id="8839c374fd950d105b5836c5400c37e3" category="paragraph">容量制限は、使用するVMのサイズ、およびシングルノードシステムとHAペアのどちらを使用しているかによって異なります。</block>
-  <block id="10e6e33e8d7a64d70c731d40ea252ed8" category="paragraph">以下のメモは、以下の表に表示される番号の詳細を示しています。</block>
   <block id="bbeef84c33f1676ea87c5c7f476795e6" category="paragraph">これらの制限には、ルートディスク、コアディスク、 VNVRAM は含まれません。</block>
   <block id="0d5277886c056c697a81cb7ba46178fc" category="list-text">特定のVMサイズを使用するシングルノードシステムで表示される896TiBのディスクベースの制限は、_tested_limitです。</block>
   <block id="8a11b7df22322ab2814174e7745c863f" category="inline-link">ONTAP に関する注意</block>
@@ -509,7 +501,6 @@
   <block id="30749b02bc62d931d770e6c719254e7b" category="list-text">BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。</block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">BlueXPリリースノート</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP APIエンドポイント</block>
-  <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">いいえ、できません。HA ペアのデータは、 Google Cloud で障害が発生した場合にデータを利用できるように、ノード間で同期的にミラーされます。たとえば、ノードAで8 TBのディスクを購入した場合、BlueXPはノードBにも8 TBのディスクを割り当てます。このディスクはミラーリングされたデータに使用されます。16TB の容量がプロビジョニングされましたが、ライセンスの上限には 8TB しかカウントされません。</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">HA ペアの場合、ライセンスで許可されるノードあたりの容量制限はか、それとも HA ペア全体の容量制限ですか。</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">HA ペアの場合、ミラーリングされたデータはライセンスで許可されている容量の上限にカウントされますか。</block>
   <block id="9d123a356c832621891a3328c128b78b" category="list-text">L8s_v3^2^</block>
@@ -576,7 +567,6 @@
   <block id="81a074db33c6f62838933c92142f16d6" category="paragraph"><block ref="f969ecf664fae2f86e88c525c7dd7acf" category="inline-link-rx"></block>。</block>
   <block id="70a8e1fb7e815dcae7d43566ab0db1e7" category="paragraph"><block ref="45c029924054162202773bd86e09b271" category="inline-link-rx"></block>。</block>
   <block id="a990fdc46668be8e7f963c8df127bbe8" category="paragraph">一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。詳細については、以下の容量とディスクの制限を参照してください。</block>
-  <block id="100e0e5b58741c034dadba013998e8b8" category="list-text">Amazon EBS Elastic Volumes機能をサポートする構成の場合、アグリゲートには最大8本のディスクを格納でき、最大128TiBの容量を提供できます。Amazon EBS Elastic Cloud Volumes ONTAP 機能は、GP3またはio1ディスクを使用している場合、_new_GP9.11.0以降のシステムではデフォルトで有効になっています。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>。</block>
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">その他の機能と拡張機能も、最新バージョンのBlueXPで導入されました。を参照してください<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> を参照してください。</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>。</block>
@@ -812,8 +802,6 @@
   <block id="549504876cb29a5866aca5cf3802fe6d" category="list-text">^4^ これらの VM タイプは、共有マネージド ディスク上で実行される単一の可用性ゾーンおよび複数の可用性ゾーン構成の HA ペアでサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。EDS_V5 VMタイプの場合、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.14.1 RC1から開始されます。</block>
   <block id="4e2d7e12a50a6543c1e295c672343668" category="cell">最適化されました ^4^</block>
   <block id="dd47c5ffc608943bbe951c1bc249e4a3" category="inline-link">Cloud Volumes ONTAP の新機能</block>
-  <block id="1eb96c178e7f735868c3e0db46da5177" category="paragraph">Cloud Volumes ONTAPは、 BlueXPの管理操作に影響するため、Azure仮想マシン（VM）拡張機能をサポートしていません。BlueXPの導入時には、VMへの拡張機能のインストールがブロックされます。NetAppのCloud Volumes ONTAP VMに拡張機能が既にインストールされている場合は、Microsoft Azureサポートにご連絡の上、削除することを強くお勧めします。</block>
-  <block id="816bcc0866a6fd49370b7a416001b4e9" category="paragraph">2025 年 7 月 14 日以降、 NetApp はCloud Volumes ONTAP VM で VM 拡張機能が検出されるとBlueXPで通知し、電子メールを送信します。</block>
   <block id="48a1881670db273e8743aa5bc3c47be1" category="list-text">SMB 継続的な可用性 (CA)</block>
   <block id="66f1432987337e84ca83c5bdf6848b9e" category="inline-link">継続的可用性を備えたSMB共有</block>
   <block id="b469f24f7b40dd39d564f20b26834f51" category="paragraph"><block ref="8c32a537fad73fe139f927507d338c47" category="inline-link-rx"></block>中断のない運用はサポートされていません。</block>
@@ -830,4 +818,41 @@
   <block id="004557d03a688223801f3c9351c02ee9" category="cell">最適化されました ^7^</block>
   <block id="8642a53dd7d0662eb87089fce9268665" category="list-text">^7^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block> 。</block>
   <block id="a11297aa85d33243a4a5a316eb075590" category="list-text">^4^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Google Cloud マーケットプレイスで購入または更新できなくなります。詳細については、<block ref="1080c8772df7208f65fb600e0d40b155" category="inline-link-rx"></block> 。</block>
+  <block id="8d051a62e2d203f6829d7d7282bfaad2" category="inline-link">『FabricPoolのベストプラクティス』</block>
+  <block id="1fa61fc2f5b77b2d0fa94849b6af3dbb" category="paragraph">容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。</block>
+  <block id="847e3ee04fb8abbb4d0d1afa56101a04" category="cell">柔軟 ^2^</block>
+  <block id="fe70a2c1423d8dc6d93d9ed56139eace" category="inline-link">Azure VM Management Extensions を Cloud Volume ONTAPにインストールできますか?</block>
+  <block id="9afd5f64e8e4dee128f7ec6ba0028fe0" category="paragraph">Cloud Volumes ONTAP は、 BlueXP管理操作に影響するため、Azure 仮想マシン (VM) 拡張機能をサポートしていません。展開中に、 BlueXP はVM への拡張機能のインストールを防止します。既存のCloud Volumes ONTAP VM に拡張機能がすでにインストールされている場合は、Microsoft Azure サポートに連絡して削除してください。ガイダンスについては、ナレッジベース（KB）の記事を参照してください。<block ref="6d01312163294b91508e568dd491d345" category="inline-link-rx"></block></block>
+  <block id="18a9f864fef2d6af1e02766d38585370" category="paragraph">2025 年 7 月 14 日以降、 Cloud Volumes ONTAP VM で VM 拡張機能が検出されると、 NetApp電子メールが送信され、 BlueXPで通知されます。</block>
+  <block id="3c95fa05a59cc1bbea5cd04255c3878b" category="paragraph">最大システム容量には、ディスクベースのストレージと、データ階層化に使用されるオブジェクト ストレージが含まれます。</block>
+  <block id="11df62ebd9af6aec3766ffa2d277d960" category="paragraph-title">容量ベースのライセンスの容量制限</block>
+  <block id="df710f89ebb9e663bd3d66607a0bf413" category="inline-link">AWSのドキュメント</block>
+  <block id="42118bfa7201ec0bae6a7c55dc56387e" category="paragraph">容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照<block ref="699cd23bd03b9a62b6e7a9fe25109bb3" category="inline-link-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="e292aa024fbf164ca3da18861c8d1fed" category="list-text">他のライセンスタイプの容量制限</block>
+  <block id="22827129a19cf89772bdcf4690c2a33d" category="paragraph">容量制限は HA ペア全体に適用されます。ノードごとではありません。たとえば、プレミアム ライセンスでは、両方のノードで最大 368 TiB が許可されます。</block>
+  <block id="776260409d15e3bf4b8b6b05b0472c1c" category="list-text">データ ディスクの制限を超えてしまうため、HA ペアの両方のノードに 18 個のアグリゲートを作成することはできません。</block>
+  <block id="967a34cae0dcd075fa74b42dcc7efab4" category="list-text">最大集約サイズはディスクによって異なり、データ階層化に使用するオブジェクト ストレージは含まれません。</block>
+  <block id="7fa1f86184c7f330217fb3596f2aa10a" category="list-text">Amazon EBS Elastic Volumes 機能をサポートする構成の場合、アグリゲートには最大 8 個のディスクを含めることができ、最大 128 TiB の容量が提供されます。デフォルトでは、 Cloud Volumes ONTAP 9.11.0 以降のシステムでは、gp3 または io1 ディスクを使用する場合、Amazon EBS Elastic Volumes が有効になっています。<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
+  <block id="1c5d4d5b3df2ab67b0a0577f6853b0fe" category="section-title">容量ベースのライセンスのさまざまな展開モードの制限</block>
+  <block id="34076b805502c0cfbcd6caea2f061842" category="admonition">単一ノードおよびHA構成の最大システム容量とデータ階層化容量の制限については、以下を参照してください。<block ref="23480a14d285390e1b7e1d67acd7bce6" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="323a2487b0d5c474f2b87eb189cd77eb" category="section-title">ノードベースライセンスのさまざまな展開モードの制限</block>
+  <block id="b1b103b3711ab75fd78baf8544303a02" category="paragraph">NetApp はシステム容量制限の超過をサポートしていません。ライセンス容量制限に達した場合、 BlueXP はアクションが必要なメッセージを表示し、ディスクの追加をブロックします。</block>
+  <block id="6b209360b200c08a554735be2c77d1ca" category="inline-link">マネージド ディスクに関する Azure ドキュメント</block>
+  <block id="531b133840ee35cf5193230121ea7443" category="inline-link">BLOB ストレージに関する Azure ドキュメント</block>
+  <block id="0277f6faf50443f930d676caf5df530b" category="paragraph">容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照<block ref="c5c853b91015c45f4e626225eb89092f" category="inline-link-rx"></block>そして<block ref="6782e281e8536503245f524b6778618f" category="inline-link-rx"></block>。</block>
+  <block id="9e1048f957212fa3c5348c90108fadb2" category="paragraph">容量制限は、VM のサイズとシステム タイプ (単一ノードまたは HA ペア) によって異なります。</block>
+  <block id="27ec94bf72bfeade6e3be4da773bf774" category="paragraph">以下の注記は、表内の数字について説明しています。</block>
+  <block id="b0e0c6760d9a4298c0d0582142ffe301" category="list-text">ディスクのみを使用する場合と、ディスクとコールド データ階層化をオブジェクト ストレージに使用した場合の最大システム容量を確認できます。</block>
+  <block id="b4a5fb3f789f6d08047f81ea8e4e92e9" category="paragraph">容量ベースのライセンス パッケージを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block> 。</block>
+  <block id="d29b6be74fc4db7d655ea399e5f3cac6" category="admonition">単一ノード、ページブロブを含む単一アベイラビリティゾーン内のHAペア、および共有マネージドディスクを含む単一および複数のアベイラビリティゾーン内のHAペアの最大システム容量とデータ階層化容量制限については、以下を参照してください。<block ref="7184709fc91b33a5dc1db3aa29bb38fb" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="9cb96726e4839703596eada3cf290aef" category="paragraph">ノードベースのライセンスを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。ノードベースのライセンスは、ノードごとにCloud Volumes ONTAP のライセンスを取得できる前世代のモデルです。ノードベースのライセンスは、既存のお客様にも引き続きご利用いただけます。</block>
+  <block id="224fd3d6c6aee1a82004220bae5e00cd" category="paragraph">Cloud Volumes ONTAP BYOL シングルノードまたは HA ペア システムの複数のノードベースのライセンスを購入して、テスト済みおよびサポートされている最大システム容量制限である 2 PiB まで、368 TiB を超える容量を割り当てることができます。ディスク制限により、ディスクのみを使用すると容量制限に到達できなくなる可能性があることに注意してください。ディスク制限を超えるには<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block> 。  Cloud Volumes ONTAP は、テスト済みおよびサポート済みの最大システム容量である 2 PiB までをサポートしており、2 PiB の制限を超えると、サポートされていないシステム構成になります。</block>
+  <block id="ca27ff02499591810bfa3b09a74798e4" category="paragraph">これらはテストされた制限です。追加のストレージ VM の設定はサポートされていません。</block>
+  <block id="c2011c8b617d4ddd742579058df5db85" category="paragraph">災害復旧 (DR) 用のストレージ VM にはアドオン ライセンスは必要ありませんが、ストレージ VM の制限にカウントされます。たとえば、データ サービス VM が 12 台、DR ストレージ VM が 12 台ある場合、制限に達しているため、これ以上作成することはできません。</block>
+  <block id="b0cd7667098b2a3439c52ba1f9334faa" category="inline-link">Google Cloud ドキュメント</block>
+  <block id="414b69410d05f51016375822b14c44e4" category="paragraph">容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block>階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照<block ref="2e0002153e48bc718fd2af4b8dbc37d1" category="inline-link-rx"></block>詳細についてはこちらをご覧ください。</block>
+  <block id="39e993539dff7e47f9e560fd13c210ca" category="paragraph">いいえ、違います。 HA ペアのデータはノード間で同期的にミラーリングされるため、Google Cloud で障害が発生した場合でもデータを利用できます。たとえば、ノード A で 8 TB のディスクを購入した場合、 BlueXP はミラーリングされたデータに使用されるノード B にも 8 TB のディスクを割り当てます。  16 TB の容量が設定されていますが、ライセンス制限にカウントされるのは 8 TB のみです。</block>
+  <block id="8d9a423778ca04c9c66a4f1fa8312b7e" category="list-text">アグリゲートを構成するディスクによって、アグリゲートの容量制限が決まります。この制限には、データ階層化に使用されるオブジェクト ストレージは含まれません。</block>
+  <block id="821ffb366b34e93755978fef81bc940d" category="paragraph">これらはテストされた制限です。追加のストレージ VM の構成はサポートされていません。</block>
+  <block id="16283ebc943b0f7f5ee08013f7f4e52c" category="list-text">ノードベースの BYOL の場合、 Cloud Volumes ONTAPにデフォルトで付属する最初のストレージ VM を超える追加のデータ提供ストレージ VM ごとにアドオン ライセンスが必要です。ストレージ VM アドオン ライセンスを取得するには、アカウント チームにお問い合わせください。</block>
 </blocks>
