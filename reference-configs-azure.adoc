@@ -366,7 +366,7 @@ NOTE: AzureページBLOBは、新しい展開ではサポートされていま�
 
 
 
-| サポートされているディスクタイプ 3+| ページblobs 
+| サポートされているデータディスクの種類 3+| ページblobs 
 |===
 注：
 
@@ -436,7 +436,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 
 
 
-| サポートされているディスクタイプ ^6^ 3+| Standard HDD Managed Disks、Standard SSD Managed Disks、Premium SSD Managed Disks、およびPremium SSD v2 Managed Disks。 
+| サポートされているディスクタイプ ^6^ 3+| Premium SSD マネージド ディスクまたは Premium SSD v2 マネージド ディスク。 
 |===
 注：
 
@@ -445,8 +445,8 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 . ^3^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.13.1 から開始されます。
 . ^4^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.14.1 RC1 から開始されます。
 . ^5^ この VM タイプには、 Cloud Volumes ONTAP が_Flash Cache_ として使用するローカル NVMe ストレージが含まれます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
-. ^6^ HA展開の単一および複数のアベイラビリティゾーンでサポートされているディスクタイプの詳細については、  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA ペア）"^] 。
-. ^7^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP の新機能"^] 。
+. ^6^ HA展開の単一および複数のアベイラビリティゾーンのシステムデータ用の内部ディスクの詳細については、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA ペア）"^] 。
+. ^7^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["最適化ライセンスの提供終了"^] 。
 
 
 --
