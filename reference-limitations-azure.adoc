@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations-azure.html 
-keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache; limitations in HA deployment in MAZ, SAZ, multiple availability xone, single availability zone Azure CVO, PSSDv2, premium SSD v2 limitation in CVO, flash cache limitation in CVO 
 summary: これらの既知の制限は、 Microsoft Azure の Cloud Volumes ONTAP に固有のものです。 
 ---
 = AzureのCloud Volumes ONTAPに関する既知の制限事項
@@ -26,6 +26,34 @@ Cloud Volumes ONTAP は、 BlueXP管理操作に影響するため、Azure 仮�
 
 
 
+== HA 構成における Premium SSD v2 ディスクの制限
+
+Premium SSD v2 マネージド ディスクには、Azure での高可用性 (HA) 展開に関して次の制限があります。
+
+* 非ゾーン リージョンでの HA 展開ではサポートされません。
+* 複数の可用性ゾーンにわたる HA 展開ではサポートされません。
+* 単一の可用性ゾーン内にデプロイされた HA 構成でのみサポートされます。
+
+
+Cloud Volumes ONTAP HA 構成で Premium SSD v2 マネージド ディスクを使用するには、次の要件が満たされていることを確認してください。
+
+* Cloud Volumes ONTAPバージョンは 9.15.1 以降です。
+* HA 展開は、Azure の単一の可用性ゾーンにあります。
+* 選択したリージョンとゾーンでは、Premium SSD v2 マネージド ディスクがサポートされています。サポートされている地域については、 https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft Azure Web サイト: 地域別に利用可能な製品"^] 。
+
+
+ https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#support-for-premium-ssd-v2-managed-disks-in-azure["Azure での Premium SSD v2 マネージド ディスクのサポート"^] 。
+
+
+
+== 単一のアベイラビリティゾーンにHAを配置する場合の制限事項
+
+Cloud Volumes ONTAP 9.15.1 以降では、Azure の単一の可用性ゾーン (AZ) に HA モードで仮想マシン (VM) インスタンスをデプロイできます。この機能をサポートする基準については、以下を参照してください。 https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-in-azure["Azureの単一のアベイラビリティゾーンにHAペアを導入"^] 。
+
+Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。
+
+
+
 == Flash Cache の制限事項
 
 Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてローカルのNVMeストレージが使用されます。この制限事項に注意してください。
@@ -35,16 +63,8 @@ Cloud Volumes ONTAPでは、一部のVMタイプで_Flash Cache_としてロー�
 
 
 
-== ハイアベイラビリティ構成の制限事項
+== HA展開の制限
 
-ハイアベイラビリティ（HA）ペアは一部の地域ではサポートされません。
+一部のリージョンでは HA ペアはサポートされていません。
 
 https://bluexp.netapp.com/cloud-volumes-global-regions["サポートされている Azure リージョンのリストを表示します"^]です。
-
-
-
-== 単一のアベイラビリティゾーンにHAを配置する場合の制限事項
-
-Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。この機能をサポートする基準の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-on-azure["Azureの単一のアベイラビリティゾーンにHAペアを導入"^]。
-
-Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。

@@ -732,11 +732,8 @@
   <block id="f2642484d82ac71ab617437045e56b35" category="doc">Google CloudでのCloud Volumes ONTAPのストレージ制限</block>
   <block id="0d965f3057c75408feddc192acd12da8" category="doc">Cloud Volumes ONTAP向けクラウドプロバイダとのコラボレーション</block>
   <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">NetAppがクラウドプロバイダと連携して潜在的な問題に対処する方法をご紹介します。</block>
-  <block id="77d9dd558dce394d624e008a5015c43e" category="section-title">ハイアベイラビリティ構成の制限事項</block>
-  <block id="47e6c824f3fe7a0a707fd6f94c2b0d5e" category="paragraph">ハイアベイラビリティ（HA）ペアは一部の地域ではサポートされません。</block>
   <block id="e62fa1e447749b7b88523431cfe1cb23" category="section-title">単一のアベイラビリティゾーンにHAを配置する場合の制限事項</block>
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">Azureの単一のアベイラビリティゾーンにHAペアを導入</block>
-  <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">Cloud Volumes ONTAP 9.15.1以降では、Azureの単一アベイラビリティゾーン（AZ）にHAモードで仮想マシン（VM）インスタンスを導入できます。この機能をサポートする基準の詳細については、を参照してください<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>。</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">Cloud Volumes ONTAPのバージョンが9.15.1より前の場合、またはいずれかの条件が満たされていない場合は、可用性セットを利用する以前の導入モデルが有効になります。これはHA構成にのみ該当します。</block>
   <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">AWSローカルゾーンのCloud Volumes ONTAP構成では、汎用SSD（gp2）ディスクタイプのみがサポートされます。AWS ローカルゾーンの Cloud Volumes ONTAP では、他のディスクタイプはサポートされていません。</block>
   <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAPは、AWSのc4、m4、r4 EC2インスタンスタイプのサポートを終了しました。システムがc4、m4、またはr4インスタンスで実行されている場合は、c5、m5、またはr5インスタンスに変更してください。インスタンスタイプを変更するまで、このリリースにアップグレードすることはできません。</block>
@@ -835,4 +832,19 @@
   <block id="1be92e36c3e9ca47e988acc51bde4499" category="sidebar">これらのリリース ノートでは、Cloud Volumes ONTAP 9.17.1 の新機能、制限事項、および既知の問題について説明しています。</block>
   <block id="4cf5c8db7f505fa308225ecc9355e4d5" category="sidebar">Cloud Volumes ONTAP 9.17.1 リリースノート</block>
   <block id="003bdd8b041b75252a40e81df0fa7067" category="sidebar">Cloud Volumes ONTAP 9.17.1 リリースノート</block>
+  <block id="7662ffdf9f88ef8d3503c5a47332d185" category="section-title">HA 構成における Premium SSD v2 ディスクの制限</block>
+  <block id="628be05f52730d9bc1ff4a25a8803b9f" category="paragraph">Premium SSD v2 マネージド ディスクには、Azure での高可用性 (HA) 展開に関して次の制限があります。</block>
+  <block id="c393fdd1e5323cfc775d4d2f67c6ee3c" category="list-text">非ゾーン リージョンでの HA 展開ではサポートされません。</block>
+  <block id="a1a6ff52f4f044bbb48a8b6e32faefee" category="list-text">複数の可用性ゾーンにわたる HA 展開ではサポートされません。</block>
+  <block id="57deebd91c1b4f79fe1ace5075015908" category="list-text">単一の可用性ゾーン内にデプロイされた HA 構成でのみサポートされます。</block>
+  <block id="026daacd5fe0a67d4cbbccda5dc168d4" category="paragraph">Cloud Volumes ONTAP HA 構成で Premium SSD v2 マネージド ディスクを使用するには、次の要件が満たされていることを確認してください。</block>
+  <block id="6a1350d029dd7fa7f1741f50e36f86ab" category="list-text">Cloud Volumes ONTAPバージョンは 9.15.1 以降です。</block>
+  <block id="ceb986bf3d3490c0ed01497de9d5d2be" category="list-text">HA 展開は、Azure の単一の可用性ゾーンにあります。</block>
+  <block id="840f8de5c9f54f772062c77429778e38" category="inline-link">Microsoft Azure Web サイト: 地域別に利用可能な製品</block>
+  <block id="b6a84b78c406cfef42bd6862aa774c74" category="list-text">選択したリージョンとゾーンでは、Premium SSD v2 マネージド ディスクがサポートされています。サポートされている地域については、<block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block> 。</block>
+  <block id="0dc254fad1832eb1cdccc5261264b7ef" category="inline-link">Azure での Premium SSD v2 マネージド ディスクのサポート</block>
+  <block id="59e0d21b78c6b5234e43ce7e3f97f417" category="paragraph"><block ref="8eeec6c9a71de31b434ae927dfa55f28" category="inline-link-rx"></block> 。</block>
+  <block id="17f65eba8f584b7ce968f1741f49a63d" category="paragraph">Cloud Volumes ONTAP 9.15.1 以降では、Azure の単一の可用性ゾーン (AZ) に HA モードで仮想マシン (VM) インスタンスをデプロイできます。この機能をサポートする基準については、以下を参照してください。<block ref="49b9d02c37364ae9681ce7a59d4d9548" category="inline-link-rx"></block> 。</block>
+  <block id="ed5b1d9ebcc8b8d189007ac8c9494846" category="section-title">HA展開の制限</block>
+  <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">一部のリージョンでは HA ペアはサポートされていません。</block>
 </blocks>
