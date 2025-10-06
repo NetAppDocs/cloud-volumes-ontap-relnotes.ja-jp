@@ -123,7 +123,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 |===
 注：
 
-. ^1^AzureにCloud Volumes ONTAPの新しいインスタンスをデプロイする際、DS_v2およびES_v3マシンファミリーはBlueXP  で選択できなくなりました。これらのファミリーは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Azureでサポートされるのは9.12.1リリース以降のみです。ES_v4またはCloud Volumes ONTAP 9.12.1以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2およびES_v3シリーズマシンは、APIを使用した新しい展開で使用できます。
+. ^1^ Azure にCloud Volumes ONTAPの新しいインスタンスを展開するときに、DS_v2 および Es_v3 マシン ファミリは、 NetAppコンソールで選択できなくなりました。これらのファミリは、古い既存のシステムでのみ保持され、サポートされます。Cloud Volumes ONTAPの新しいデプロイメントは、9.12.1 リリース以降でのみ Azure でサポートされます。Es_v4 またはCloud Volumes ONTAP 9.12.1 以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2 および Es_v3 シリーズのマシンは、API を通じて行われる新しいデプロイメントでは利用できるようになります。
 . ^2^このVMタイプにはローカルNVMeストレージが含まれており、Cloud Volumes ONTAPはこのストレージを_Flash Cache_として使用します。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
 +
 AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョンが必要です。
@@ -135,7 +135,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
-. ^4^ 単一ノード展開でサポートされているディスクの種類については、  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （シングルノード）"^] 。シングルノードシステムを使用する場合、すべてのタイプのインスタンスで高速書き込みがサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^4^ 単一ノード展開でサポートされているディスクの種類については、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （シングルノード）"^] 。単一ノード システムを使用する場合、すべてのインスタンス タイプで高速書き込み速度がサポートされます。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。SSD を使用すると、書き込みパフォーマンスが向上します。
 . ^5^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["最適化ライセンスの提供終了"^] 。
 
 
@@ -213,7 +213,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 |===
 注：
 
-. ^1^AzureにCloud Volumes ONTAPの新しいインスタンスをデプロイする際、DS_v2およびES_v3マシンファミリーはBlueXP  で選択できなくなりました。これらのファミリーは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Azureでサポートされるのは9.12.1リリース以降のみです。ES_v4またはCloud Volumes ONTAP 9.12.1以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2およびES_v3シリーズマシンは、APIを使用した新しい展開で使用できます。
+. ^1^ Azure にCloud Volumes ONTAPの新しいインスタンスを展開するときに、DS_v2 および Es_v3 マシン ファミリはコンソールで選択できなくなりました。これらのファミリは、古い既存のシステムでのみ保持され、サポートされます。Cloud Volumes ONTAPの新しいデプロイメントは、9.12.1 リリース以降でのみ Azure でサポートされます。Es_v4 またはCloud Volumes ONTAP 9.12.1 以降と互換性のある他のシリーズに切り替えることをお勧めします。ただし、DS_v2 および Es_v3 シリーズのマシンは、API を通じて行われる新しいデプロイメントでは利用できるようになります。
 . ^2^このVMタイプにはローカルNVMeストレージが含まれており、Cloud Volumes ONTAPはこのストレージを_Flash Cache_として使用します。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
 . ^3^これらのVMタイプはVNVRAMにを使用する https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^]ため、書き込みパフォーマンスが向上します。
 +
@@ -222,7 +222,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 +
 逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
 
-. ^4^シングルノードシステムを使用している場合、すべてのインスタンスタイプで高速な書き込み速度がサポートされます。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。SSD の使用時には書き込みパフォーマンスの向上が実現します。
+. ^4^ 単一ノード システムを使用する場合、すべてのインスタンス タイプで高速書き込みがサポートされます。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。SSD を使用すると、書き込みパフォーマンスが向上します。
 . ^5^PAYGO ExploreではAzure BLOBストレージへのデータ階層化はサポートされていません。
 
 
@@ -307,7 +307,7 @@ NOTE: AzureページBLOBは、新しい展開ではサポートされていま�
 |===
 注：
 
-. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。
+. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。
 . ^2^ この VM は、Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . ^3^ これらの VM は、 Cloud Volumes ONTAP 9.11.1 以前のデプロイメントでのみサポートされます。これらのVMタイプを使用すると、既存のページBLOB環境をCloud Volumes ONTAP 9.11.1から9.12.1にアップグレードできます。Cloud Volumes ONTAP 9.12.1以降では、新しいページBLOB配置を実行できません。
 . ^4^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["最適化ライセンスの提供終了"^] 。
@@ -370,7 +370,7 @@ NOTE: AzureページBLOBは、新しい展開ではサポートされていま�
 |===
 注：
 
-. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。
+. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。
 . ^2^ この VM は、Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . ^3^ これらの VM は、 Cloud Volumes ONTAP 9.11.1 以前のデプロイメントでのみサポートされます。これらのVMタイプを使用すると、既存のページBLOB環境をCloud Volumes ONTAP 9.11.1から9.12.1にアップグレードできます。Cloud Volumes ONTAP 9.12.1以降では、新しいページBLOB配置を実行できません。
 
@@ -440,7 +440,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 |===
 注：
 
-. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。
+. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。
 . ^2^ この VM は、Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . ^3^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.13.1 から開始されます。
 . ^4^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.14.1 RC1 から開始されます。
@@ -501,7 +501,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 |===
 注：
 
-. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。導入時または導入後の任意の時点で、BlueXP  からの高速な書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^]です。
+. ^1^ Cloud Volumes ONTAP は、HA ペアを使用する場合、これらの VM タイプで高速書き込みをサポートします。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。
 . ^2^ この VM は、Azure メンテナンス制御が必要な場合にのみ推奨されます。価格が高いため、他のユースケースには推奨されません。
 . ^3^ これらの VM タイプは、共有管理ディスク上で実行されている単一の可用性ゾーン構成の HA ペアでのみサポートされます。
 . ^4^ これらの VM タイプは、共有マネージド ディスク上で実行される単一の可用性ゾーンおよび複数の可用性ゾーン構成の HA ペアでサポートされます。LS_v3のVMタイプでは、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.13.1から開始されます。EDS_V5 VMタイプの場合、複数のアベイラビリティゾーンのサポートはONTAPバージョン9.14.1 RC1から開始されます。

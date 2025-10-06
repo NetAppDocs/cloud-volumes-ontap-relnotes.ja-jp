@@ -71,7 +71,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 |===
 注：
 
-. ^1^Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入するときに、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンに切り替えることを推奨します。ただし、n1シリーズマシンは、APIを介して行われた新しい展開で使用できます。
+. ^1^ Google Cloud にCloud Volumes ONTAPの新しいインスタンスをデプロイするときに、n1 シリーズのマシンはNetAppコンソールで選択できなくなりました。n1 シリーズのマシンは、古い既存のシステムでのみ保持され、サポートされます。Cloud Volumes ONTAPの新しいデプロイメントは、Google Cloud 9.8 リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8 以降と互換性のある n2 シリーズ マシンに切り替えることをお勧めします。ただし、n1 シリーズのマシンは、API を通じて行われる新しい展開では利用できるようになります。
 +
 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
 
@@ -147,14 +147,14 @@ NOTE: _Flash Cache _、高書き込みモード、MTU 8、896は機能に依存�
 link:reference-limits-gcp.html["Google Cloud のディスク制限について詳しくは、こちらをご覧ください"]。
 
 . ^2^Google Cloud Storageへのデータ階層化はPAYGO Exploreではサポートされていません。
-. ^3^Google CloudにCloud Volumes ONTAPの新しいインスタンスを導入する際、BlueXP  でn1シリーズマシンを選択できなくなりました。n1シリーズのマシンは、既存の古いシステムでのみ保持およびサポートされます。Cloud Volumes ONTAPの新規導入は、Google Cloud 9.8リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8以降と互換性のあるn2シリーズマシンに切り替えることを推奨します。ただし、n1シリーズマシンは、APIを介して実行される新しい導入に使用できます。
+. ^3^ Google Cloud にCloud Volumes ONTAPの新しいインスタンスをデプロイするときに、n1 シリーズのマシンはコンソールで選択できなくなりました。n1 シリーズのマシンは、古い既存のシステムでのみ保持され、サポートされます。Cloud Volumes ONTAPの新しいデプロイメントは、Google Cloud 9.8 リリース以降でのみサポートされます。Cloud Volumes ONTAP 9.8 以降と互換性のある n2 シリーズ マシンに切り替えることをお勧めします。ただし、n1 シリーズのマシンは、API を通じて実行される新しいデプロイメントに使用できます。
 +
 新しい Cloud Volumes ONTAP システムでは、 custom-4-16384 マシンタイプはサポートされなくなりました。このタイプのマシンで既存のシステムを実行している場合は、引き続き使用できますが、 n2 標準 -4 マシンタイプに切り替えることをお勧めします。
 
 . ^4^Balanced Persistent DiskおよびPerformance（SSD）Persistent Diskを使用すると、書き込みパフォーマンスの向上が有効になります。
 
 
-BlueXPインターフェイスには、StandardおよびBYOLでサポートされる追加のマシンタイプが表示されます。n1-highmem-4ただし、このマシンタイプは本番環境用ではありません。特定のラボ環境でのみ使用できるようになりました。
+コンソールには、Standard および BYOL でサポートされている追加のマシン タイプ n1-highmem-4 が表示されます。ただし、このマシンタイプは実稼働環境向けではありません。特定のラボ環境でのみ利用できるようにしました。
 
 Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。
 

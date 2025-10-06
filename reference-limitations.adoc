@@ -62,7 +62,7 @@ Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapV
 
 クラウドプロバイダのスナップショットは、 Cloud Volumes ONTAP データのバックアップとリカバリの計画には使用しないでください。Cloud Volumes ONTAP でホストされているデータのバックアップとリストアには、必ず ONTAP の Snapshot コピーや他社製のバックアップソリューションを使用してください。
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["BlueXPのバックアップとリカバリを使用してONTAP データをバックアップおよびリストアする方法をご紹介します"^]。
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recoveryを使用してONTAPデータをバックアップおよび復元する方法を学びます"^] 。
 
 
 NOTE: データの整合性は、 WAFL ファイルシステムの ONTAP 整合ポイントによって決まります。WAFL ファイルシステムを休止して crash-consistent バックアップを実行できるのは、 ONTAP のみです。
@@ -81,24 +81,24 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 
-== ソフトウェアの更新はBlueXPが完了している必要があります
+== ソフトウェアアップデートはNetAppコンソールで完了する必要があります
 
-Cloud Volumes ONTAP のアップグレードは、BlueXPから完了している必要があります。System Manager または CLI を使用して Cloud Volumes ONTAP をアップグレードしないでください。これを行うと、システムの安定性に影響を与える可能性
+Cloud Volumes ONTAPのアップグレードは、 NetAppコンソールから完了する必要があります。System Manager または CLI を使用してCloud Volumes ONTAP をアップグレードしないでください。システムの安定性に影響を与える可能性があります。
 
 
 
 == から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール
 
-クラウドプロバイダのコンソールから Cloud Volumes ONTAP 構成を変更した場合、サポートされない構成になります。BlueXPが作成および管理するCloud Volumes ONTAP リソースに変更を加えると、システムの安定性とシステム管理能力に影響を与える可能性があります。
+クラウド プロバイダーのコンソールからCloud Volumes ONTAP構成を変更すると、サポートされていない構成になります。コンソールが作成および管理するCloud Volumes ONTAPリソースに変更を加えると、システムの安定性と、コンソールがシステムを管理する能力に影響する可能性があります。
 
 
 NOTE: 初期導入後は、Cloud Volumes ONTAPリソースに使用するAzureサブスクリプション名の変更がサポートされます。
 
 
 
-== ディスクとアグリゲートはBlueXPで管理する必要があります
+== ディスクとアグリゲートはコンソールから管理する必要がある
 
-すべてのディスクとアグリゲートは、BlueXPから直接作成および削除する必要があります。これらのアクションは、別の管理ツールから実行しないでください。これにより、システムの安定性が低下し、将来ディスクを追加できなくなる可能性があります。また、クラウドプロバイダの冗長料金が発生する可能性もあります。
+すべてのディスクとアグリゲートは、コンソールから直接作成および削除する必要があります。これらのアクションを別の管理ツールから実行しないでください。そうすると、システムの安定性に影響が及び、将来的にディスクを追加する能力が妨げられ、クラウド プロバイダーの料金が重複して発生する可能性があります。
 
 
 

@@ -22,7 +22,7 @@ Cloud Volumes ONTAP には、安定した運用を実現するために、スト
 
 Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。
 
-NetApp はシステム容量制限の超過をサポートしていません。ライセンス容量制限に達した場合、 BlueXP はアクションが必要なメッセージを表示し、ディスクの追加をブロックします。
+NetApp はシステム容量制限の超過をサポートしていません。ライセンス容量の制限に達した場合、 NetAppコンソールにアクションが必要なメッセージが表示され、ディスクの追加がブロックされます。
 
 .容量ベースのライセンスの容量制限
 容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["『FabricPoolのベストプラクティス』"^]階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照 https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["マネージド ディスクに関する Azure ドキュメント"^]そして https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["BLOB ストレージに関する Azure ドキュメント"^]。
@@ -697,8 +697,8 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 . ONTAP 9.12.1P2以降では、上限は128TBです。ONTAP 9.11.1以前のバージョンでは、最大16TBです。
 . 次のツールと最小バージョンを使用して、最大サイズ300TiBまでのFlexVolボリュームを作成できます。
 +
-** System ManagerとONTAP CLI（Cloud Volumes ONTAP 9.12.1 P2および9.13.0 P2以降）
-** Cloud Volumes ONTAP 9.13.1以降のBlueXP
+** Cloud Volumes ONTAP 9.12.1 P2 および 9.13.0 P2 以降の System Manager およびONTAP CLI
+** Cloud Volumes ONTAP 9.13.1から
 
 
 

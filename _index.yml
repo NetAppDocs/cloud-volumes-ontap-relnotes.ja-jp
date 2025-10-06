@@ -37,9 +37,9 @@ indexpage:
       url: reference-limitations-azure.html
   - title: ブログとコミュニティ
     links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
     - title: ネットアップコミュニティ
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: BlueXPブログ
-      url: https://bluexp.netapp.com/blog
-    - title: クラウドに関する Web セミナー
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/
