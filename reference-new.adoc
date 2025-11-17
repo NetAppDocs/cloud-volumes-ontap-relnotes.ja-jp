@@ -14,15 +14,15 @@ summary: Cloud Volumes ONTAP 9.17.1 には新しい機能強化が含まれて�
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.17.1 は、Azure および Google Cloud で展開およびアップグレードできます。
+Cloud Volumes ONTAP 9.17.1 には新しい機能強化が含まれています。
 
-NetApp Consoleの最新バージョンでは、追加の機能と拡張機能も導入されています。詳細については、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^] コンソールで管理されます。
+新しいCloud Volumes ONTAP機能も、 NetApp Consoleの最新バージョンに導入されています。詳細については、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^] コンソールで管理されます。
 
 
 
 == 9.17.1 P1（2025年11月4日）
 
-Cloud Volumes ONTAP 9.17.1 P1 パッチが、Azure および Google Cloud で展開およびアップグレードできるようになりました。ただし、このバージョンはAWSではデプロイおよびアップグレードできません。BlueXPコンソールは、既存のシステムをこのパッチ リリースにアップグレードするように要求します。
+Cloud Volumes ONTAP 9.17.1 P1 パッチが、AWS、Azure、Google Cloud で展開およびアップグレードできるようになりました。コンソールは、既存のシステムをこのパッチ リリースにアップグレードするように要求します。
 
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.17.1P1["P1パッチで修正されたバグのリストを見る"^](NetAppサポート サイトへのログインが必要です)。
 
@@ -30,7 +30,10 @@ link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/
 
 == 9.17.1 RC1（2025年9月4日）
 
-Cloud Volumes ONTAP 9.17.1 のリリース候補 1 を使用して、Azure および Google Cloud でデプロイおよびアップグレードできるようになりました。ただし、このバージョンはAWSではデプロイおよびアップグレードできません。BlueXP
+Cloud Volumes ONTAP 9.17.1 のリリース候補 1 を使用して、Azure および Google Cloud でデプロイおよびアップグレードできるようになりました。
+
+
+NOTE: このバージョンは AWS でのデプロイおよびアップグレードには使用できません。
 
 
 
@@ -42,7 +45,7 @@ Cloud Volumes ONTAP 9.17.1 のリリース候補 1 を使用して、Azure お�
 
 === アップグレード方法
 
-Cloud Volumes ONTAPのアップグレードは、 NetAppコンソールから完了する必要があります。System Manager または CLI を使用してCloud Volumes ONTAP をアップグレードしないでください。システムの安定性に影響を与える可能性があります。
+Cloud Volumes ONTAPのアップグレードはコンソールから完了する必要があります。System Manager または CLI を使用してCloud Volumes ONTAP をアップグレードしないでください。システムの安定性に影響を与える可能性があります。
 
 link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html["コンソールから通知があった場合にアップグレードする方法を学びます"^] 。
 
@@ -50,10 +53,7 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === サポートされているアップグレードパス
 
-Azure および Google Cloud の 9.16.1 リリースからCloud Volumes ONTAP 9.17.1 RC1 にアップグレードできます。コンソールでは、対象となるCloud Volumes ONTAPシステムをこのリリースにアップグレードするように求められます。
-
-
-NOTE: AWS の場合、このアップグレードを求めるプロンプトは表示されません。  Cloud Volumes ONTAP 9.17.1 RC1 へのアップグレードは AWS ではサポートされていません。
+AWS、Azure、Google Cloud の 9.16.1 リリースからCloud Volumes ONTAP 9.17.1 にアップグレードできます。 AWS の場合、 Cloud Volumes ONTAP 9.17.1 P1 以降にアップグレードできます。コンソールでは、対象となるCloud Volumes ONTAPシステムをこのリリースにアップグレードするように求められます。
 
 
 
