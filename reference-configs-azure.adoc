@@ -130,10 +130,10 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 
 . ^3^これらのVMタイプはVNVRAMにを使用する https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^]ため、書き込みパフォーマンスが向上します。
 +
-新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。同様に、新しいCloud Volumes ONTAPシステムを導入するときに、プレミアムSSD v2管理ディスクを_サポートしない_ VMタイプに変更することはできません。Premium SSD v2管理ディスクでサポートされる構成の詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["共有管理対象ディスクを使用するHAシングルアベイラビリティゾーン構成"^]。
+新しいCloud Volumes ONTAPシステムを展開するときにこれらの VM タイプのいずれかを選択した場合、VNVRAM に Ultra SSD を使用しない別の VM タイプに変更することはできません。たとえば、E8ds_v4 から E8s_v3 に変更することはできませんが、E8ds_v4 から E32ds_v4 に変更することはできます。これは、これらの VM タイプは両方とも Ultra SSD を使用しているためです。逆に、他の VM タイプを使用してCloud Volumes ONTAP を展開した場合、VNVRAM に Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、VNVRAM に Ultra SSD を使用しない E8s_v3 を、使用する E8ds_v4 に変更することはできません。
 
 +
-逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
+同様に、以下の要件を満たす環境にプレミアムSSDマネージドディスクを選択した場合、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["基準"^] Premium SSD v2 マネージド ディスクの場合、コンソールは Premium SSD v2 マネージド ディスクを自動的にデプロイします。Premium SSD v1 マネージド ディスクに切り替えることはできません。
 
 . ^4^ 単一ノード展開でサポートされているディスクの種類については、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure （シングルノード）"^] 。単一ノード システムを使用する場合、すべてのインスタンス タイプで高速書き込み速度がサポートされます。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。SSD を使用すると、書き込みパフォーマンスが向上します。
 . ^5^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["最適化ライセンスの提供終了"^] 。
@@ -217,10 +217,10 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 . ^2^このVMタイプにはローカルNVMeストレージが含まれており、Cloud Volumes ONTAPはこのストレージを_Flash Cache_として使用します。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
 . ^3^これらのVMタイプはVNVRAMにを使用する https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["ウルトラ SSD"^]ため、書き込みパフォーマンスが向上します。
 +
-新しい Cloud Volumes ONTAP システムの導入時にこれらの VM タイプのいずれかを選択した場合、 VNVRAM に _doesn't _ Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、 E8ds_v4 から E8s_v3 に変更することはできませんが、 E8ds_v4 から E32ds_v4 に変更することはできます。これは、どちらの VM タイプも Ultra SSD を使用するためです。
+新しいCloud Volumes ONTAPシステムを展開するときにこれらの VM タイプのいずれかを選択した場合、VNVRAM に Ultra SSD を使用しない別の VM タイプに変更することはできません。たとえば、E8ds_v4 から E8s_v3 に変更することはできませんが、E8ds_v4 から E32ds_v4 に変更することはできます。これは、これらの VM タイプは両方とも Ultra SSD を使用しているためです。逆に、他の VM タイプを使用してCloud Volumes ONTAP を展開した場合、VNVRAM に Ultra SSD を使用する別の VM タイプに変更することはできません。たとえば、VNVRAM に Ultra SSD を使用しない E8s_v3 を、使用する E8ds_v4 に変更することはできません。
 
 +
-逆に、他の種類の VM を使用して Cloud Volumes ONTAP を導入した場合、 VNVRAM に Ultra SSD を使用する VM の種類に変更することはできません。たとえば、 E8s_v3 から E8ds_v4 に変更することはできません。
+同様に、以下の要件を満たす環境にプレミアムSSDマネージドディスクを選択した場合、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["基準"^] Premium SSD v2 マネージド ディスクの場合、コンソールは Premium SSD v2 マネージド ディスクを自動的にデプロイします。Premium SSD v1 マネージド ディスクに切り替えることはできません。
 
 . ^4^ 単一ノード システムを使用する場合、すべてのインスタンス タイプで高速書き込みがサポートされます。デプロイメント中またはデプロイメント後のいつでも、コンソールから高速書き込み速度を有効にすることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["書き込み速度の選択方法の詳細については、こちらをご覧ください"^] 。SSD を使用すると、書き込みパフォーマンスが向上します。
 . ^5^PAYGO ExploreではAzure BLOBストレージへのデータ階層化はサポートされていません。
@@ -445,7 +445,7 @@ Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次�
 . ^3^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.13.1 から開始されます。
 . ^4^ 複数の可用性ゾーンのサポートは、 ONTAPバージョン 9.14.1 RC1 から開始されます。
 . ^5^ この VM タイプには、 Cloud Volumes ONTAP が_Flash Cache_ として使用するローカル NVMe ストレージが含まれます。Flash Cache は、最近読み取られたユーザデータとネットアップのメタデータをリアルタイムでインテリジェントにキャッシングすることで、データへのアクセスを高速化します。データベース、Eメール、ファイルサービスなど、ランダムリードが大量に発生するワークロードに効果的です。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["詳細はこちら。"^]です。
-. ^6^ HA展開の単一および複数のアベイラビリティゾーンのシステムデータ用の内部ディスクの詳細については、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA ペア）"^] 。
+. ^6^ プレミアムSSDマネージドディスクを、 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["基準"^] Premium SSD v2 マネージド ディスクの場合、コンソールは Premium SSD v2 マネージド ディスクを自動的にデプロイします。Premium SSD v1 マネージド ディスクに切り替えることはできません。HA展開の単一および複数のアベイラビリティゾーンのシステムデータ用の内部ディスクの詳細については、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure （ HA ペア）"^]。
 . ^7^ 2025 年 8 月 11 日以降、 Cloud Volumes ONTAP Optimized ライセンスは非推奨となり、従量課金制 (PAYGO) サブスクリプションの Azure マーケットプレースで購入または更新できなくなります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["最適化ライセンスの提供終了"^] 。
 
 
