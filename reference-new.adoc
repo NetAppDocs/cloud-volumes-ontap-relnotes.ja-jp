@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.17.1 には新しい機能強化が含まれています�
 
 
 
+== 9.17.1 P2（2025年12月4日）
+
+Cloud Volumes ONTAP 9.17.1 P2 パッチが、AWS、Azure、Google Cloud でアップグレードできるようになりました。コンソールは、既存のシステムをこのパッチ リリースにアップグレードするように要求します。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.17.1P2["P2パッチで修正されたバグのリストを見る"^](NetAppサポート サイトへのログインが必要です)。
+
+
+
 == 9.17.1 P1（2025年11月4日）
 
 Cloud Volumes ONTAP 9.17.1 P1 パッチが、AWS、Azure、Google Cloud で展開およびアップグレードできるようになりました。コンソールは、既存のシステムをこのパッチ リリースにアップグレードするように要求します。
