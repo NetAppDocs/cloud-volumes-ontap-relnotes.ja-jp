@@ -102,7 +102,7 @@ Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_.
 
 
 | 最大データディスク数  a| 
-* シングルノードシステムの場合は 124
+* 単一ノードシステムの場合は124
 * HA ペアの場合はノードあたり 123
 
 
