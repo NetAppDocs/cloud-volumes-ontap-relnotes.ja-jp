@@ -513,8 +513,6 @@
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4^ 1、2、4^</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">N2-STANDARD-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">N2-STANDARD-64</block>
-  <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">Cloud Volumes ONTAP ソフトウェアバージョン9.13.0以降では、次のHAペア導入インスタンスで_Flash Cache_、高速の書き込み速度、最大伝送ユニット（MTU）8、896バイトを使用できます。</block>
-  <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Google CloudでのHAペアの起動</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。</block>
   <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16TiB（管理対象ディスクのみ）</block>
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32TiB（管理対象ディスクのみ）</block>
@@ -530,7 +528,6 @@
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>。</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>。</block>
-  <block id="df25654d93147d2e6dc5b5b1fd1a4b82" category="paragraph">対象となるインスタンスタイプを導入する際に、_Flash Cache__、および高速の書き込み速度を有効にすることができます。より高い最大伝送単位（8、896バイト）をイネーブルにするには、導入環境でVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが大きいほど、ネットワークスループットが向上します。これらの配置のいずれかを起動する方法の詳細については、を参照してください<block ref="663913c4edf07faddf2fc43cb75f2fe2" category="inline-link-rx"></block>。</block>
   <block id="396e70da46ca6b8f2dd7d352ab5d7f16" category="paragraph">一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。を使用して容量の制限に達することができます<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>。詳細については、以下のディスク制限を参照してください。</block>
   <block id="769a653e8483d7efc5ec7ad2044e739c" category="paragraph"><block ref="b8246ed4559cd25bd4b019aae2787f00" category="inline-link-rx"></block>。</block>
   <block id="81a074db33c6f62838933c92142f16d6" category="paragraph"><block ref="f969ecf664fae2f86e88c525c7dd7acf" category="inline-link-rx"></block>。</block>
@@ -590,7 +587,6 @@
   <block id="d071b0d9481cad34966de3c7caf72b29" category="list-text">E64ds_v5^1^</block>
   <block id="6c390ecab52e3e5345764abdf66b4a13" category="list-text">E20ds_V5^1^</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">容量ベースのライセンス</block>
-  <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">ノードベースのライセンス</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">Cloud Volumes ONTAPをAzureにシングルノードシステムとして導入する場合は、次の容量ベースまたはノードベースのライセンス構成から選択できます。</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_V5^3^</block>
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAPはリザーブドVMインスタンスとオンデマンドVMインスタンスのみをサポート</block>
@@ -840,9 +836,6 @@
   <block id="c9cd8b532a08b529a0ff7a2fffea627b" category="paragraph">Cloud Volumes ONTAP 9.18.1への導入とアップグレードが可能になりました。このリリースの基本バージョンと、展開およびアップグレードに使用できる最新のパッチ バージョンをNetApp Consoleで確認できます。</block>
   <block id="08a0be2ea6fee1009726a83673928a21" category="paragraph">Cloud Volumes ONTAP の最新バージョンで導入された機能について知るには、NetApp Console の新機能をご覧ください<block ref="56e5ce972271b4b4616ecc1db39a9778" category="inline-link-rx"></block>。</block>
   <block id="5374a9a52531aed841e032cdf44811c1" category="section-title">9.18.1 GA（2026年2月10日）</block>
-  <block id="ab70c277ac78079e46a1214dd294b323" category="paragraph">Cloud Volumes ONTAP 9.18.1 General Availability リリースが、Amazon Web Services（AWS）および Microsoft Azure での展開およびアップグレードに利用できるようになりました。このバージョンは、Google Cloud でのデプロイおよびアップグレードには使用できません。</block>
-  <block id="a5fe82604076d645f09893cad1967294" category="paragraph">AWS および Azure の 9.17.1 P1 以降のパッチから Cloud Volumes ONTAP 9.18.1 にアップグレードできます。NetApp Console は、対象となる Cloud Volumes ONTAP システムをこのリリースにアップグレードするように促します。</block>
-  <block id="2e03bd3de874b4ffe3a85b7507d0a69e" category="admonition">Cloud Volumes ONTAP 9.18.1 は Google Cloud ではアップグレードできません。</block>
   <block id="7ee7c49a2608d3d31956026fdc3bf833" category="sidebar">このリリースノートでは、Cloud Volumes ONTAP 9.18.1の新機能、制限事項、既知の問題について説明します。</block>
   <block id="001b20e35d2188363ca847fd669007f8" category="sidebar">Cloud Volumes ONTAP 9.18.1 リリースノート</block>
   <block id="e0b3d5810800c1af83b5753f4a2a2f7e" category="sidebar">Cloud Volumes ONTAP 9.18.1 リリースノート</block>
@@ -880,4 +873,39 @@
   <block id="7996776cc07408b62e3e588c6e576723" category="list-text">単一ノードシステムの場合は124</block>
   <block id="777aa7f6fc6d119be846af0333b88f27" category="list-text">単一ノード システムをアップグレードすると、システムが最大 25 分間オフラインになり、その間 I/O が中断されます。</block>
   <block id="8cfc1cd76589ea7ff4c1934750bae7e9" category="paragraph">メンテナンスイベントの特別な処理は、Cloud Volumes ONTAP高可用性（HA）ペアでサポートされています。アプリケーションの健全性を維持するために、安定性を優先する予防的なテイクオーバーを実行します。15秒を超える接続の損失により、フェイルオーバー機能が無効になるためです。</block>
+  <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">シングルノードシステム</block>
+  <block id="b403fd06a9e67dac043a46c81f61b1d4" category="list-text">c3-standard-4、c3-standard-4-lssd ^5^</block>
+  <block id="62de73d8bad98dc6f3b2cf4c7f46de7e" category="list-text">c3-standard-8、c3-standard-8-lssd ^5^</block>
+  <block id="67e9e5ee963e483b54b24b9086423c04" category="list-text">c3-standard-22、c3-standard-22-lssd ^5^</block>
+  <block id="9920e588f0220960f4c06a722fcb4ff1" category="list-text">c3-standard-44、c3-standard-44-lssd ^5^</block>
+  <block id="71fb3d90d5bc2f0c21c4b59bfd197d67" category="list-text">c3-standard-88、c3-standard-88-lssd ^5^</block>
+  <block id="440594064d57a904b2c7fce0bdfa4a39" category="cell">バランス永続ディスク ^3^、パフォーマンス（SSD）永続ディスク ^3^、および標準（HDD）永続ディスク。C3 VM は、Hyperdisk Balanced ディスクのみをサポートします。</block>
+  <block id="d60c6adcad1706add7c779a42393ec88" category="inline-link-macro">Flash Cacheサポート</block>
+  <block id="60c0844205cf1310833606006fa8b6fa" category="list-text">^5^ 次世代C3ファミリーVMをCloud Volumes ONTAP 9.18.1以降に導入できます。c3-standard-44およびc3-standard-88マシンとそのLSSDバリアントは、デフォルトでGoogle Cloud ConsoleのTier-1帯域幅をサポートします。C3 VMタイプでは、既存のアグリゲートにディスクを追加したり、C3ファミリ内の別のバリアントに切り替えたりすることはできません。LSSDバリアントの詳細については、<block ref="a3ca704cc55629e0cfb930ef958889bb" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="c24cb0b82dac3c2a02963bf23b1d0650" category="cell">Balanced永続ディスク^4^、Performance（SSD）永続ディスク^4^、およびStandard（HDD）永続ディスク。C3 VMは、Hyperdisk Balancedディスクのみをサポートします。</block>
+  <block id="10c35d6a4a80bde624a9ba13f97ce24a" category="section-title">高可用性（HA）ペア</block>
+  <block id="fab4c4cf338a8dd4c15c662d65f36827" category="cell">ライセンスに基づく最大システム容量（ディスク+オブジェクトストレージ）</block>
+  <block id="254d5c87d5ab437395f866390ea49cd0" category="inline-link">Google CloudでCloud Volumes ONTAPを起動する</block>
+  <block id="80a9aa4591dfcec1028b269fd96084b5" category="paragraph">対象となるインスタンスタイプを導入する際に、Flash Cacheと高速書き込みを有効にできます。8,896バイトの高い最大伝送単位を有効にするには、導入時にVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが高いほど、ネットワークスループットが向上します。これらの導入の起動の詳細については、<block ref="958eb36238d0859ba89677740ca359aa" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="d076c2db8ac31c31f4b9d088a8b87a24" category="paragraph">Cloud Volumes ONTAP 9.18.1以降、C3 VMのローカルSSD（LSSD）バリアントを選択すると、Flash Cacheがデフォルトで有効になります。VMバリアントとそれによってサポートされるLSSDの最大数を確認するには、次の表を確認してください：</block>
+  <block id="d54092cc3c2c2778d416f1225b37f056" category="cell">VMタイプ</block>
+  <block id="7fbb74773227f16e493c8d262749ccfc" category="cell">接続されているLSSDディスクの数</block>
+  <block id="e16e833ea94b9887a3dc1398681e4002" category="cell">c3-standard-4-lssd</block>
+  <block id="90a40b291206cfc7708cb3bc5d350153" category="cell">c3-standard-8-lssd</block>
+  <block id="4a9afdd54dd6c0b33c4de4aa1a9d70b0" category="cell">c3-standard-22-lssd</block>
+  <block id="d6c145d4553197e1dff7b37e2e78e57f" category="cell">c3-standard-44-lssd</block>
+  <block id="c11765d8ed27e45d59d4e9a92f2affd7" category="cell">c3-standard-88-lssd</block>
+  <block id="f2b67364b67c3341da14d3dd6cc4e565" category="section-title">VM タイプに基づく最大システム容量</block>
+  <block id="bd99c8077f7f97c91591a847f840881b" category="cell">サポートされる最大データディスク数</block>
+  <block id="66c4d8e765ff8bcb8923251a797c3122" category="cell">最大容量（TiB単位）</block>
+  <block id="1adacbb72826f9b83c0140c9286c1820" category="cell">n2（すべてのバリアント）</block>
+  <block id="c8ffe9a587b126f152ed3d89a146b445" category="cell">124</block>
+  <block id="d96409bf894217686ba124d7356686c9" category="cell">257</block>
+  <block id="0de9961457d561d5ed62313c6161dce3" category="cell">c3-standard-4</block>
+  <block id="8f115072b5277605f7d237770a30ab04" category="cell">c3-standard-8</block>
+  <block id="3b7cc07efa81c4ceb17419c4584c144f" category="cell">c3-standard-22</block>
+  <block id="578ae146a454ae8eb958e84ae9263447" category="cell">c3-standard-44</block>
+  <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
+  <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">Cloud Volumes ONTAP 9.18.1 一般提供リリースが、Amazon Web Services（AWS）、Microsoft Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。</block>
+  <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">AWS、Azure、Google Cloud の 9.17.1 P1 以降のパッチから Cloud Volumes ONTAP 9.18.1 にアップグレードできます。コンソールは、対象となる Cloud Volumes ONTAP システムをこのリリースにアップグレードするように促します。</block>
 </blocks>
