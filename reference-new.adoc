@@ -20,6 +20,14 @@ Cloud Volumes ONTAP の最新バージョンで導入された機能について
 
 
 
+== 9.18.1 P1（2026年3月31日）
+
+Cloud Volumes ONTAP 9.18.1 P1 パッチが AWS、Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。コンソールは、既存のシステムをこのパッチリリースにアップグレードするように要求します。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.18.1P1["P1パッチで修正されたバグのリストを表示する"^]（NetApp Support Site へのログインが必要です）。
+
+
+
 == 9.18.1 GA（2026年2月10日）
 
 Cloud Volumes ONTAP 9.18.1 一般提供リリースが、Amazon Web Services（AWS）、Microsoft Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。
