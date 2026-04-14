@@ -513,7 +513,6 @@
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4^ 1、2、4^</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">N2-STANDARD-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">N2-STANDARD-64</block>
-  <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash Cache _、高書き込みモード、MTU 8、896は機能に依存し、設定されたインスタンス内で個別に無効にすることはできません。</block>
   <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16TiB（管理対象ディスクのみ）</block>
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32TiB（管理対象ディスクのみ）</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Google Cloudで実行されるCloud Volumes ONTAP HAペアのストレージの仕組みを説明します</block>
@@ -864,7 +863,6 @@
   <block id="a10a9e62fc438d5cda957750f5be82a2" category="list-text">E64bds_v5 ^9^</block>
   <block id="22526b360edd5e859e84ac73135c26a8" category="list-text">E104ids_v5 ^9^</block>
   <block id="b8a35e66cdb2aef61b6d6df1e379eb6d" category="list-text">^9^ Ebdsv5およびE104ids_v5 VMは、Cloud Volumes ONTAP 9.18.1以降の新規導入およびアップグレードに使用できます。既存のEdsv4、Edsv5、またはその他のEbdsv5 VMタイプをEbdsv5に変更またはアップグレードできます。Ebdsv5またはEidsv5 VMをE104ids_v5にアップグレードできます。</block>
-  <block id="2734a588d77e522c61fe0ebc740d82c8" category="list-text">^7^ Ebdsv5およびE104ids_v5 VMは、Cloud Volumes ONTAP 9.18.1以降の新規導入およびアップグレードに使用できます。既存のEdsv4、Edsv5、またはその他のEbdsv5 VMタイプをEbdsv5に変更またはアップグレードできます。Ebdsv5またはEidsv5 VMをE104ids_v5にアップグレードできます。</block>
   <block id="9c1e913676fba2b8aed76868b26dcc89" category="paragraph">単一ノード システムでは、Azure Managed Disks が使用されます。次のディスク サイズがサポートされています：</block>
   <block id="7da25d0bfd841afbb16233681b5b72ca" category="paragraph">Cloud Volumes ONTAP は Google Cloud では、単一ノード システムとして、またフォールト トレランスと無停止運用を実現する高可用性（HA）ノード ペアとして利用できます。</block>
   <block id="bd45cef377eedc42228cc5c125be0686" category="paragraph">単一ノード システムを HA ペアにアップグレードすることはサポートされていません。単一ノード システムと HA ペアを切り替える場合は、新しいシステムを展開し、既存のシステムから新しいシステムにデータを複製する必要があります。</block>
@@ -881,13 +879,11 @@
   <block id="71fb3d90d5bc2f0c21c4b59bfd197d67" category="list-text">c3-standard-88、c3-standard-88-lssd ^5^</block>
   <block id="440594064d57a904b2c7fce0bdfa4a39" category="cell">バランス永続ディスク ^3^、パフォーマンス（SSD）永続ディスク ^3^、および標準（HDD）永続ディスク。C3 VM は、Hyperdisk Balanced ディスクのみをサポートします。</block>
   <block id="d60c6adcad1706add7c779a42393ec88" category="inline-link-macro">Flash Cacheサポート</block>
-  <block id="60c0844205cf1310833606006fa8b6fa" category="list-text">^5^ 次世代C3ファミリーVMをCloud Volumes ONTAP 9.18.1以降に導入できます。c3-standard-44およびc3-standard-88マシンとそのLSSDバリアントは、デフォルトでGoogle Cloud ConsoleのTier-1帯域幅をサポートします。C3 VMタイプでは、既存のアグリゲートにディスクを追加したり、C3ファミリ内の別のバリアントに切り替えたりすることはできません。LSSDバリアントの詳細については、<block ref="a3ca704cc55629e0cfb930ef958889bb" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="c24cb0b82dac3c2a02963bf23b1d0650" category="cell">Balanced永続ディスク^4^、Performance（SSD）永続ディスク^4^、およびStandard（HDD）永続ディスク。C3 VMは、Hyperdisk Balancedディスクのみをサポートします。</block>
   <block id="10c35d6a4a80bde624a9ba13f97ce24a" category="section-title">高可用性（HA）ペア</block>
   <block id="fab4c4cf338a8dd4c15c662d65f36827" category="cell">ライセンスに基づく最大システム容量（ディスク+オブジェクトストレージ）</block>
   <block id="254d5c87d5ab437395f866390ea49cd0" category="inline-link">Google CloudでCloud Volumes ONTAPを起動する</block>
   <block id="80a9aa4591dfcec1028b269fd96084b5" category="paragraph">対象となるインスタンスタイプを導入する際に、Flash Cacheと高速書き込みを有効にできます。8,896バイトの高い最大伝送単位を有効にするには、導入時にVPC-1、VPC-2、またはVPC-3を選択する必要があります。MTUが高いほど、ネットワークスループットが向上します。これらの導入の起動の詳細については、<block ref="958eb36238d0859ba89677740ca359aa" category="inline-link-rx"></block>を参照してください。</block>
-  <block id="d076c2db8ac31c31f4b9d088a8b87a24" category="paragraph">Cloud Volumes ONTAP 9.18.1以降、C3 VMのローカルSSD（LSSD）バリアントを選択すると、Flash Cacheがデフォルトで有効になります。VMバリアントとそれによってサポートされるLSSDの最大数を確認するには、次の表を確認してください：</block>
   <block id="d54092cc3c2c2778d416f1225b37f056" category="cell">VMタイプ</block>
   <block id="7fbb74773227f16e493c8d262749ccfc" category="cell">接続されているLSSDディスクの数</block>
   <block id="e16e833ea94b9887a3dc1398681e4002" category="cell">c3-standard-4-lssd</block>
@@ -912,4 +908,18 @@
   <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1 パッチが AWS、Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。コンソールは、既存のシステムをこのパッチリリースにアップグレードするように要求します。</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">P1パッチで修正されたバグのリストを表示する</block>
   <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block>（NetApp Support Site へのログインが必要です）。</block>
+  <block id="180b53d09539df4cd298ca82cb98c8bb" category="example-title">DSv2シリーズ</block>
+  <block id="ffe4ca59df6616b254c0040e73c39f29" category="example-title">Ebdsv5シリーズ</block>
+  <block id="ad3e18365947f98cd146bb09d36a6798" category="example-title">Edsv4シリーズ</block>
+  <block id="01fccaba70ed8fb928632a75b5d1a213" category="example-title">Edsv5シリーズ</block>
+  <block id="e9608387c81779c09348e6e33faf76df" category="example-title">Edsv6シリーズ</block>
+  <block id="567c28529cbc2d54b6f507e897297508" category="example-title">Esv3シリーズ</block>
+  <block id="7c7463f1a66713791639f6ac5fd233c8" category="example-title">Lsv3シリーズ</block>
+  <block id="34e6880c88acc332512e9f643fb56b1f" category="example-title">Edsv5シリーズ</block>
+  <block id="96623089d34324947cb85e45a7aa6d71" category="example-title">Edsv6シリーズ</block>
+  <block id="74236a30875ab4ba4eba0b2066b112a0" category="example-title">Dsv2シリーズ</block>
+  <block id="83ec1da92379d4aa7444743f42a48c24" category="list-text">^5^ 次世代C3ファミリーVMをCloud Volumes ONTAP 9.18.1以降に導入できます。c3-standard-44およびc3-standard-88マシンとそのLSSDバリアントは、デフォルトでGoogle Cloud ConsoleのTier-1帯域幅をサポートします。LSSDバリアントの詳細については、<block ref="a3ca704cc55629e0cfb930ef958889bb" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="e4dc6128b719feb8c40c1a651d390050" category="admonition">_Flash Cache_、高書き込みモード、およびMTU 8,896は機能依存であり、構成済みインスタンス内で個別に無効にすることはできません。</block>
+  <block id="c538e24ff658f3f0f3239b6f8d51e48f" category="paragraph">シングルノード展開では、Cloud Volumes ONTAP 9.18.1 以降、C3 VM のローカル SSD （LSSD） バリアントを選択した場合、Flash Cache がデフォルトで有効になります。ターゲットバリアントが Flash Cache をサポートしている場合でも、Cloud Volumes ONTAP 導入環境で C3 LSSD VM バリアントを切り替えることはできません。</block>
+  <block id="bbbc2c55d76f069b82eb0de6bf28057d" category="paragraph">この表を確認して、VMバリアントとそれらがサポートするLSSDの数を理解してください：</block>
 </blocks>
