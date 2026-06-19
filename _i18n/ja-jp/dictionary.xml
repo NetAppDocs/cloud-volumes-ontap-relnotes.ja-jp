@@ -846,10 +846,8 @@
   <block id="3b7cc07efa81c4ceb17419c4584c144f" category="cell">c3-standard-22</block>
   <block id="578ae146a454ae8eb958e84ae9263447" category="cell">c3-standard-44</block>
   <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
-  <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">Cloud Volumes ONTAP 9.18.1 一般提供リリースが、Amazon Web Services（AWS）、Microsoft Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。</block>
   <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">AWS、Azure、Google Cloud の 9.17.1 P1 以降のパッチから Cloud Volumes ONTAP 9.18.1 にアップグレードできます。コンソールは、対象となる Cloud Volumes ONTAP システムをこのリリースにアップグレードするように促します。</block>
   <block id="e819c4410e5eb8f68db481717f672a21" category="section-title">9.18.1 P1（2026年3月31日）</block>
-  <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1 パッチが AWS、Azure、Google Cloud での展開およびアップグレードに利用できるようになりました。コンソールは、既存のシステムをこのパッチリリースにアップグレードするように要求します。</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">P1パッチで修正されたバグのリストを表示する</block>
   <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block>（NetApp Support Site へのログインが必要です）。</block>
   <block id="180b53d09539df4cd298ca82cb98c8bb" category="example-title">DSv2シリーズ</block>
@@ -959,4 +957,9 @@
   <block id="511ad3b8ad49da139e74e84deac5f108" category="inline-link">Amazon EC2 R5インスタンス</block>
   <block id="fc58e772b0e187c9acd0ead80273cfa3" category="list-text"><block ref="fc58e772b0e187c9acd0ead80273cfa3" category="inline-link-rx"></block></block>
   <block id="d725a8f993233f84880bb4bfdd79e966" category="list-text">^2^ Azure のメンテナンス制御が必要な場合にのみ、この VM を使用してください。価格が高いため、その他の用途にはお勧めできません。Azure のメンテナンス制御に Isolated インスタンスタイプを使用する場合は、HA ペア内の各 VM に、両方の VM が同時にオフラインにならないように、スケジュールをずらした独自の Maintenance Configuration が Azure に存在することを確認してください。</block>
+  <block id="e4050cfabb278e71586e11c10cffa6af" category="admonition">AWSの場合、Cloud Volumes ONTAP 9.18.1 P2は、導入およびアップグレードのための標準バージョンです。9.18.1より古いバージョンやパッチはサポートされていません。</block>
+  <block id="8f43580fc31dbb2410e11fce972a5f32" category="paragraph">Cloud Volumes ONTAP 9.18.1 P1パッチが、AzureおよびGoogle Cloudへのデプロイとアップグレードに利用可能になりました。コンソールに、既存のシステムをこのパッチリリースにアップグレードするよう促すメッセージが表示されます。</block>
+  <block id="548040f8ba001121a2a79ff7a79c6fec" category="admonition">このバージョンは、AWSへのデプロイおよびアップグレードには対応していません。</block>
+  <block id="4784f30782ad7a581149233cf75620d5" category="paragraph">Cloud Volumes ONTAP 9.18.1の一般提供版が、Microsoft AzureおよびGoogle Cloudでのデプロイとアップグレードに利用可能になりました。</block>
+  <block id="2744e632b0c00bba17d3f5ded4a007b0" category="admonition">このバージョンは、Amazon Web Services (AWS) へのデプロイおよびアップグレードには対応していません。</block>
 </blocks>
