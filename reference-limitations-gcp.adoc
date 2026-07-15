@@ -18,6 +18,7 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 
 
 
+[[limitation-with-packet-mirroring]]
 == パケットミラーリングの制限
 
 https://cloud.google.com/vpc/docs/packet-mirroring["パケットミラーリング"^] Cloud Volumes ONTAP を導入する Google Cloud VPC で無効にする必要があります。
@@ -26,6 +27,7 @@ https://cloud.google.com/vpc/docs/packet-mirroring["パケットミラーリン�
 
 
 
+[[google-private-service-connect-limitations]]
 == Google Private Service Connect の制限
 
 レバレッジをかけると https://cloud.google.com/vpc/docs/private-service-connect["Google Private Service Connect の略"^]Cloud Volumes ONTAPを導入するVPC内で、必要な宛先にトラフィックを転送するDNSレコードを実装する必要があります。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["APIエンドポイント"^] 。

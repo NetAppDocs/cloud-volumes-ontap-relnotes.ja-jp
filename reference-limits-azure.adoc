@@ -18,12 +18,14 @@ Cloud Volumes ONTAP には、安定した運用を実現するために、スト
 
 
 
+[[maximum-system-capacity-by-license]]
 == ライセンス別の最大システム容量
 
 Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。
 
 NetApp はシステム容量制限の超過をサポートしていません。ライセンス容量の制限に達した場合、 NetAppコンソールにアクションが必要なメッセージが表示され、ディスクの追加がブロックされます。
 
+[[cap-license-azure]]
 .容量ベースのライセンスの容量制限
 容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["『FabricPoolのベストプラクティス』"^]階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照 https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["マネージド ディスクに関する Azure ドキュメント"^]そして https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["BLOB ストレージに関する Azure ドキュメント"^]。
 
@@ -54,6 +56,7 @@ NetApp はシステム容量制限の超過をサポートしていません。�
 
 
 
+[[aggregate-limits]]
 == アグリゲートの制限
 
 Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し、これらを _Aggregate__ にグループ化します。アグリゲートは、ボリュームにストレージを提供します。
@@ -83,6 +86,7 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 
 
+[[disk-and-tiering-limits-by-vm-size]]
 == ディスクおよび階層化の制限を VM のサイズごとに設定します
 
 容量制限は、VM のサイズとシステム タイプ (単一ノードまたは HA ペア) によって異なります。
@@ -101,6 +105,7 @@ Cloud Volumes ONTAP は Azure ストレージをディスクとして使用し�
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === 容量ベースのライセンスのさまざまな展開モードの制限
 
 容量ベースのライセンス パッケージを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^] 。
@@ -331,6 +336,7 @@ NOTE: 単一ノード、ページブロブを含む単一アベイラビリテ�
 |===
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === ノードベースライセンスのさまざまな展開モードの制限
 
 ノードベースのライセンスを使用するCloud Volumes ONTAPシステムには、次のディスク制限が適用されます。ノードベースのライセンスは、ノードごとにCloud Volumes ONTAP のライセンスを取得できる前世代のモデルです。ノードベースのライセンスは、既存のお客様にも引き続きご利用いただけます。
@@ -618,6 +624,7 @@ HAペアには、ページBLOBと複数のアベイラビリティゾーンと�
 ====
 
 
+[[storage-vm-limits]]
 == Storage VM の制限
 
 一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。
@@ -663,6 +670,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 
 
 
+[[file-and-volume-limits]]
 == ファイルとボリュームの制限
 
 [cols="22,22,56"]
@@ -705,6 +713,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 
 
 
+[[iscsi-storage-limits]]
 == iSCSI ストレージの制限
 
 [cols="3*"]

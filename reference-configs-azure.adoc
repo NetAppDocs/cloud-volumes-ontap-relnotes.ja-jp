@@ -18,6 +18,7 @@ Azure では、いくつかの Cloud Volumes ONTAP 構成がサポートされ�
 
 
 
+[[supported-configurations-by-license]]
 == ライセンスでサポートされている構成
 
 Cloud Volumes ONTAP は、Azure では単一ノード システムとして、またフォールト トレランスと中断のない運用を実現する高可用性（HA）ノード ペアとして利用できます。
@@ -30,6 +31,7 @@ Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたは
 
 
 
+[[single-node-systems]]
 === シングルノードシステム
 
 Cloud Volumes ONTAPをAzureにシングルノードシステムとして導入する場合は、次の容量ベースまたはノードベースのライセンス構成から選択できます。
@@ -514,6 +516,7 @@ AzureでFlash Cacheを設定するには、9.13.1 GA以上のONTAPバージョ�
 ====
 
 
+[[ha-pairs]]
 === HA ペア
 
 Azure で Cloud Volumes ONTAP を HA ペアとして導入する場合は、次の構成から選択できます。
@@ -1110,12 +1113,14 @@ NOTE: AzureページBLOBは、新しい展開ではサポートされていま�
 ====
 
 
+[[supported-disk-sizes]]
 == サポートされるディスクサイズ
 
 Azure では、アグリゲートに同じタイプおよびサイズのディスクを 12 本まで含めることができます。
 
 
 
+[[single-node-systems]]
 === シングルノードシステム
 
 単一ノード システムでは、Azure Managed Disks が使用されます。次のディスク サイズがサポートされています：
@@ -1158,6 +1163,7 @@ Azure では、アグリゲートに同じタイプおよびサイズのディ�
 |===
 
 
+[[ha-pairs]]
 === HA ペア
 
 HAペアはAzureマネージドディスクを使用します。次のディスクタイプとサイズがサポートされています。
@@ -1177,6 +1183,7 @@ HAペアはAzureマネージドディスクを使用します。次のディス�
 
 
 
+[[supported-regions]]
 == サポートされている地域
 
 Azureリージョンのサポートについては、を参照してください https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。

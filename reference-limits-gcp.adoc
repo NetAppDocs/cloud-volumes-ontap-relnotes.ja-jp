@@ -18,6 +18,7 @@ Cloud Volumes ONTAP には、安定した運用を実現するために、スト
 
 
 
+[[maximum-system-capacity-by-license]]
 == ライセンス別の最大システム容量
 
 Cloud Volumes ONTAP システムの最大システム容量はライセンスで決まります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。
@@ -26,6 +27,7 @@ NetApp はシステム容量制限の超過をサポートしていません。�
 
 一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。を使用して容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下のディスク制限を参照してください。
 
+[[cap-license-gcp]]
 .容量ベースのライセンスの容量制限
 容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["『FabricPoolのベストプラクティス』"^]階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照 https://cloud.google.com/storage/docs/buckets["Google Cloud ドキュメント"^]詳細についてはこちらをご覧ください。
 
@@ -59,6 +61,7 @@ NetApp はシステム容量制限の超過をサポートしていません。�
 
 
 
+[[aggregate-limits]]
 == アグリゲートの制限
 
 Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_. にグループ化します。アグリゲートは、ボリュームにストレージを提供します。
@@ -92,6 +95,7 @@ Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_.
 
 
 
+[[disk-and-tiering-limits]]
 == ディスクと階層化の制限
 
 次の表に、ディスクのみの場合の最大システム容量と、オブジェクトストレージへのディスクおよびコールドデータの階層化を示します。ディスク制限はユーザデータが格納されたディスクに固有です。ブートディスク、ルートディスク、NVRAMは制限に含まれません。
@@ -120,6 +124,7 @@ Cloud Volumes ONTAP は、 Google Cloud Platform のディスクを _Aggregate_.
 
 
 
+[[storage-vm-limits]]
 == Storage VM の制限
 
 一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。
@@ -164,6 +169,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 
 
 
+[[logical-storage-limits]]
 == 論理ストレージの制限
 
 [cols="22,22,56"]
@@ -206,6 +212,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 
 
 
+[[iscsi-storage-limits]]
 == iSCSI ストレージの制限
 
 [cols="3*"]
@@ -247,6 +254,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 |===
 
 
+[[cloud-volumes-ontap-ha-pairs-do-not-support-immediate-storage-giveback]]
 == Cloud Volumes ONTAP HA ペアでは、ストレージの迅速な使用はサポートされません ギブバック
 
 ノードがリブートしたら、ストレージを戻す前に、パートナーがデータを同期する必要があります。データの再同期にかかる時間は、ノードが停止している間にクライアントが書き込んだデータの量、およびギブバックの実行中のデータの書き込み速度によって異なります。

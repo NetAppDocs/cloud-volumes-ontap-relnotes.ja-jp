@@ -20,6 +20,7 @@ summary: 既知の制限事項は、このリリースの製品でサポート�
 
 
 
+[[unsupported-ontap-features]]
 == サポートされない ONTAP 機能です
 
 一部の ONTAP 機能は Cloud Volumes ONTAP ではサポートされていません。以下はその例ですが、これらに限定されません：
@@ -53,12 +54,14 @@ https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Avail
 
 
 
+[[maximum-concurrent-replication-operations]]
 == 最大同時レプリケーション処理数
 
 Cloud Volumes ONTAP で同時に実行できる SnapMirror 転送または SnapVault 転送の最大数は、インスタンスのタイプやマシンのタイプに関係なく、ノードあたり 100 です。
 
 
 
+[[cloud-provider-snapshots-must-not-be-used-for-your-backup-and-recovery-plans]]
 == クラウドプロバイダの Snapshot をバックアップとリカバリの計画に使用しないでください
 
 クラウドプロバイダのスナップショットは、 Cloud Volumes ONTAP データのバックアップとリカバリの計画には使用しないでください。Cloud Volumes ONTAP でホストされているデータのバックアップとリストアには、必ず ONTAP の Snapshot コピーや他社製のバックアップソリューションを使用してください。
@@ -70,24 +73,28 @@ NOTE: データの整合性は、 WAFL ファイルシステムの ONTAP 整合�
 
 
 
+[[cloud-volumes-ontap-supports-only-reserved-and-on-demand-vm-instances]]
 == Cloud Volumes ONTAPはリザーブドVMインスタンスとオンデマンドVMインスタンスのみをサポート
 
 Cloud Volumes ONTAP は、クラウドプロバイダから予約済みまたはオンデマンドの VM インスタンスのいずれかで実行できます。それ以外のタイプの VM インスタンスはサポートされません。
 
 
 
+[[automatic-application-resource-management-solutions-shouldnt-be-used]]
 == 自動アプリケーションリソース管理ソリューションは使用しないでください
 
 アプリケーションリソースの自動管理ソリューションでは、 Cloud Volumes ONTAP システムを管理しないでください。サポートされていない構成に変更される可能性があります。たとえば、このソリューションでは、 Cloud Volumes ONTAP をサポート対象外の VM インスタンスタイプに変更する場合があります。
 
 
 
+[[software-updates-must-be-completed-by-netapp-console]]
 == ソフトウェアアップデートはNetAppコンソールで完了する必要があります
 
 Cloud Volumes ONTAPのアップグレードは、 NetAppコンソールから完了する必要があります。System Manager または CLI を使用してCloud Volumes ONTAP をアップグレードしないでください。システムの安定性に影響を与える可能性があります。
 
 
 
+[[cloud-volumes-ontap-deployment-must-not-be-modified-from-your-cloud-providers-console]]
 == から Cloud Volumes ONTAP 環境を変更することはできません クラウドプロバイダのコンソール
 
 クラウド プロバイダーのコンソールからCloud Volumes ONTAP構成を変更すると、サポートされていない構成になります。コンソールが作成および管理するCloud Volumes ONTAPリソースに変更を加えると、システムの安定性と、コンソールがシステムを管理する能力に影響する可能性があります。
@@ -97,18 +104,21 @@ NOTE: 初期導入後は、Cloud Volumes ONTAPリソースに使用するAzure�
 
 
 
+[[disks-and-aggregates-must-be-managed-from-the-console]]
 == ディスクとアグリゲートはコンソールから管理する必要がある
 
 すべてのディスクとアグリゲートは、コンソールから直接作成および削除する必要があります。これらのアクションを別の管理ツールから実行しないでください。そうすると、システムの安定性に影響が及び、将来的にディスクを追加する能力が妨げられ、クラウド プロバイダーの料金が重複して発生する可能性があります。
 
 
 
+[[snapmanager-licensing-limitation]]
 == SnapManager のライセンスに関する制限
 
 SnapManager のサーバ単位のライセンスは、 Cloud Volumes ONTAP でサポートされます。ストレージシステム（ SnapManager スイート）単位のライセンスはサポートされません。
 
 
 
+[[limitations-with-third-party-agents-and-extensions]]
 == サードパーティエージェントおよび拡張機能の制限事項
 
 サードパーティのエージェントおよびVM拡張機能は、Cloud Volumes ONTAP仮想マシンインスタンスではサポートされていません。

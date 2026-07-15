@@ -18,6 +18,7 @@ summary: これらの既知の制限は、 Amazon Web Services の Cloud Volumes
 
 
 
+[[aws-outpost-limitations]]
 == AWS Outpost の制限事項
 
 AWS Outpost がある場合は、デプロイ中に Outpost VPC を選択することで、その Outpost にCloud Volumes ONTAP をデプロイできます。エクスペリエンスは、AWS にある他の VPC と同じです。最初に AWS Outpost にコンソールエージェントをデプロイする必要があることに注意してください。
@@ -31,6 +32,7 @@ AWS Outpost がある場合は、デプロイ中に Outpost VPC を選択する�
 
 
 
+[[flash-cache-limitations]]
 == Flash Cache の制限事項
 
 C5D および R5D インスタンスタイプには、 Cloud Volumes ONTAP が _Flash Cache _ として使用するローカル NVMe ストレージが含まれます。次の制限事項に注意してください。
@@ -44,12 +46,14 @@ NetAppコンソールからボリュームを作成するときにストレー�
 
 
 
+[[false-alarms-reported-by-amazon-cloudwatch]]
 == Amazon CloudWatch から誤ったアラームが報告されます
 
 Cloud Volumes ONTAP はアイドル時に CPU を解放しません https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] では、使用率が 100% になっていることが検出されたため、 EC2 インスタンスについて CPU 使用率の上昇を警告できます。このアラームは無視してかまいません。ONTAP statistics コマンドを実行すると、 CPU の実際の使用状況が表示されます。
 
 
 
+[[cloud-volumes-ontap-ha-pairs-do-not-support-immediate-storage-giveback]]
 == Cloud Volumes ONTAP HA ペアでは、ストレージの迅速な使用はサポートされません ギブバック
 
 ノードがリブートしたら、ストレージを戻す前に、パートナーがデータを同期する必要があります。データの再同期にかかる時間は、ノードが停止している間にクライアントが書き込んだデータの量、およびギブバックの実行中のデータの書き込み速度によって異なります。

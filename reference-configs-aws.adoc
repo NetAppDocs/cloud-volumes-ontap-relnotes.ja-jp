@@ -18,6 +18,7 @@ AWS では、いくつかの Cloud Volumes ONTAP 構成がサポートされま�
 
 
 
+[[supported-number-of-nodes]]
 == サポートされるノード数
 
 Cloud Volumes ONTAP は、AWS では単一ノード システムとして、また、フォールト トレランスと中断のない運用を実現する高可用性（HA）ノード ペアとして利用できます。
@@ -26,12 +27,14 @@ Cloud Volumes ONTAP は、AWS では単一ノード システムとして、ま�
 
 
 
+[[supported-storage]]
 == サポートされるストレージ
 
 Cloud Volumes ONTAP では、データ階層化用に複数のタイプの EBS ディスクと S3 オブジェクトストレージがサポートされています。最大ストレージ容量は、選択したライセンスによって決まります。
 
 
 
+[[storage-support-by-license]]
 === ライセンス別のストレージサポート
 
 各ライセンスでサポートされる最大システム容量は異なります。最大システム容量には、ディスクベースのストレージに加えて、データの階層化に使用されるオブジェクトストレージが含まれます。ネットアップでは、この制限を超えることはサポートしていません
@@ -532,6 +535,7 @@ AWSローカルゾーンでは、これらのインスタンスタイプで高�
 ====
 
 
+[[support-for-flash-cache-and-high-write-speed]]
 === Flash Cache と高速書き込み速度に対応
 
 次の表は、Flash Cacheとハイパフォーマンスの書き込み速度をサポートする、サポート対象のEC2インスタンスタイプを示しています。
@@ -662,6 +666,7 @@ pass:[*] Flash Cacheは、m6id.xlarge、m6id.2xlarge、m6idn.xlarge、およびm
 
 
 
+[[supported-disk-sizes]]
 === サポートされるディスクサイズ
 
 AWS では、アグリゲートに同じサイズのディスクを最大 6 本含めることができます。ただし、Amazon EBS Elastic Volumes機能をサポートする構成では、アグリゲートに最大8本のディスクを含めることができます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Elastic Volumesのサポートに関する詳細情報"^]
@@ -704,6 +709,7 @@ AWS では、アグリゲートに同じサイズのディスクを最大 6 本�
 |===
 
 
+[[c4-m4-and-r4-instances-no-longer-supported]]
 === C4、M4、およびR4のインスタンスはサポートされなくなりました
 
 Cloud Volumes ONTAP は AWS の c4、m4、r4 EC2 インスタンス タイプはサポートされなくなりました。
@@ -721,12 +727,14 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-in
 
 
 
+[[supported-regions]]
 == サポートされている地域
 
 AWSリージョンのサポートについては、を参照してください https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volume グローバルリージョン"^]。
 
 
 
+[[related-information]]
 == 関連情報
 
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html["Amazon EC2 インスタンスタイプ"^]

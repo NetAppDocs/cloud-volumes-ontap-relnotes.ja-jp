@@ -18,6 +18,7 @@ Cloud Volumes ONTAP には、安定した運用を実現するために、スト
 
 
 
+[[maximum-system-capacity-by-license]]
 == ライセンス別の最大システム容量
 
 最大システム容量には、ディスクベースのストレージと、データ階層化に使用されるオブジェクト ストレージが含まれます。
@@ -26,6 +27,7 @@ NetApp はシステム容量制限の超過をサポートしていません。�
 
 一部の構成では、ディスク制限により、ディスクのみを使用して容量制限に達することができません。その場合、で容量の制限に達することができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["使用頻度の低いデータをオブジェクトストレージに階層化します"^]。詳細については、以下の容量とディスクの制限を参照してください。
 
+[[cap-license-aws]]
 .容量ベースのライセンスの容量制限
 容量ベースのライセンスにより、各Cloud Volumes ONTAPシステムはオブジェクト ストレージへの階層化をサポートします。階層化された合計容量は、クラウド プロバイダーのバケット制限まで拡張できます。ライセンスには容量制限はありませんが、 https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["『FabricPoolのベストプラクティス』"^]階層化を構成および管理する際に最適なパフォーマンス、信頼性、コスト効率を確保します。参照 https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["AWSのドキュメント"^]詳細についてはこちらをご覧ください。
 
@@ -59,6 +61,7 @@ NetApp はシステム容量制限の超過をサポートしていません。�
 
 
 
+[[aggregate-limits]]
 == アグリゲートの制限
 
 Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、アグリゲートにグループ化します。アグリゲートは、ボリュームにストレージを提供します。
@@ -97,6 +100,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 
 
+[[disk-and-tiering-limits-by-ec2-instance]]
 == ディスクおよび階層化の制限は EC2 インスタンスごとに適用されます
 
 容量制限は、使用する EC2 インスタンスタイプファミリーと、単一ノードシステムを使用しているか HA ペアを使用しているかによって異なります。
@@ -113,6 +117,7 @@ Cloud Volumes ONTAP はEBSボリュームをディスクとして使用し、ア
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === 容量ベースのライセンスのさまざまな展開モードの制限
 
 容量ベースのライセンスパッケージを使用するCloud Volumes ONTAP システムには、次のディスク制限が適用されます。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Cloud Volumes ONTAP のライセンスオプションについて説明します"^]
@@ -168,6 +173,7 @@ NOTE: 単一ノードおよびHA構成の最大システム容量とデータ階
 
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === ノードベースライセンスのさまざまな展開モードの制限
 
 次のディスク制限は、ノード単位のライセンスをCloud Volumes ONTAP に付与することが可能な旧世代のライセンスモデルであるノードベースのライセンスを使用するCloud Volumes ONTAP システムに適用されます。既存のお客様は、ノードベースのライセンスを引き続き利用できます。
@@ -272,6 +278,7 @@ AWS Secret CloudリージョンとTop Secret Cloudリージョンでは、Cloud 
 
 
 
+[[storage-vm-limits]]
 == Storage VM の制限
 
 一部の構成では、 Cloud Volumes ONTAP 用に Storage VM （ SVM ）を追加で作成することができます。
@@ -316,6 +323,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.
 
 
 
+[[storage-vm-limit-by-ec2-instance-type]]
 === EC2 インスタンスタイプごとに Storage VM の制限が設定されています
 
 Storage VM を追加で作成する場合は、ポート e0a にプライベート IP アドレスを割り当てる必要があります。次の表に、インターフェイスごとのプライベート IP の最大数と、 Cloud Volumes ONTAP の導入後にポート e0a で使用可能な IP アドレスの数を示します。使用可能な IP アドレスの数は、その構成での Storage VM の最大数に直接影響します。
@@ -417,6 +425,7 @@ Storage VM を追加で作成する場合は、ポート e0a にプライベー�
 
 
 
+[[file-and-volume-limits]]
 == ファイルとボリュームの制限
 
 [cols="22,22,56"]
@@ -459,6 +468,7 @@ Storage VM を追加で作成する場合は、ポート e0a にプライベー�
 
 
 
+[[iscsi-storage-limits]]
 == iSCSI ストレージの制限
 
 [cols="3*"]
