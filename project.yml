@@ -62,38 +62,6 @@ sidebar:
     url: "/index.html"
   - title: 新機能
     url: "/reference-new.html"
-  - title: ライセンスの概要
-    url: "/concept-licensing.html"
-  - title: サポートされている構成
-    entries:
-    - title: AWS
-      url: "/reference-configs-aws.html"
-    - title: Azure
-      url: "/reference-configs-azure.html"
-    - title: Google Cloud
-      url: "/reference-configs-gcp.html"
-  - title: ストレージの制限
-    entries:
-    - title: AWS
-      url: "/reference-limits-aws.html"
-    - title: Azure
-      url: "/reference-limits-azure.html"
-    - title: Google Cloud
-      url: "/reference-limits-gcp.html"
-  - title: 既知の問題
-    url: "/reference-issues.html"
-  - title: 既知の制限
-    entries:
-    - title: 一般的な制限事項
-      url: "/reference-limitations.html"
-    - title: AWS の制限事項
-      url: "/reference-limitations-aws.html"
-    - title: Azure の制限事項
-      url: "/reference-limitations-azure.html"
-    - title: Google Cloud の制限事項
-      url: "/reference-limitations-gcp.html"
-  - title: クラウドプロバイダの統合
-    url: "/reference-provider-integrations.html"
   - title: 法的通知
     url: "/legal-notices.html"
 product-family:

@@ -16,7 +16,7 @@ summary: Cloud Volumes ONTAP 9.19.1 には新しい機能強化が含まれて�
 [role="lead"]
 Cloud Volumes ONTAP 9.19.1への導入とアップグレードが可能になりました。このリリースの基本バージョンと、展開およびアップグレードに使用できる最新のパッチ バージョンをNetApp Consoleで確認できます。
 
-Cloud Volumes ONTAP の最新バージョンで導入された機能について知るには、NetApp Console の新機能をご覧ください https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP"^]。
+Cloud Volumes ONTAP の機能、サポートされる構成、制限などの詳細については、 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAPのドキュメント"^]を参照してください。
 
 
 
