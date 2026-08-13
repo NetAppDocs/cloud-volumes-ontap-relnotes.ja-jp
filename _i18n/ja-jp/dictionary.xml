@@ -74,4 +74,5 @@
   <block id="779179d87fedb0f1d19bc08238c479a7" category="paragraph"><block ref="675aaf3b5e84a93fbce00d949a5f961a" category="inline-link-rx"></block>.</block>
   <block id="1ba2a5867ae8351321f6970817584236" category="paragraph">AWS および Google Cloud において、Cloud Volumes ONTAP 9.18.1 から 9.19.1 にアップグレードできます。コンソールは、このリリースへのアップグレード対象となる Cloud Volumes ONTAP システムにアップグレードを促します。</block>
   <block id="2962b8222cacec8cb18f5c8cdf1f04eb" category="admonition">Azure では、このバージョンはこのクラウド プロバイダでのデプロイおよびアップグレードに利用できないため、9.19.1 へのアップグレードを促すメッセージは表示されません。</block>
+  <block id="6b9b9e55102bb13f1ca535f28c0d3a98" category="doc">Cloud Volumes ONTAP の法的通知</block>
 </blocks>
