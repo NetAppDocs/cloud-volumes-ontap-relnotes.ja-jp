@@ -63,16 +63,15 @@
   <block id="777aa7f6fc6d119be846af0333b88f27" category="list-text">単一ノード システムをアップグレードすると、システムが最大 25 分間オフラインになり、その間 I/O が中断されます。</block>
   <block id="b0f94eabc09f0c220518c1307ae04061" category="summary">Cloud Volumes ONTAP 9.19.1 には新しい機能強化が含まれています。</block>
   <block id="75772205d115792b7e022b200e4e6a95" category="doc">Cloud Volumes ONTAP 9.19.1 の新機能</block>
-  <block id="98236d20e4670591965cd4dfd21922a9" category="paragraph">Cloud Volumes ONTAP 9.19.1への導入とアップグレードが可能になりました。このリリースの基本バージョンと、展開およびアップグレードに使用できる最新のパッチ バージョンをNetApp Consoleで確認できます。</block>
   <block id="047a301669757aed8837c50560f7106c" category="sidebar">このリリースノートでは、Cloud Volumes ONTAP 9.19.1の新機能、制限事項、既知の問題について説明します。</block>
   <block id="acfc3dd2bf5b3c0cdaff3742dc4e677d" category="sidebar">Cloud Volumes ONTAP 9.19.1 リリースノート</block>
   <block id="baa4551a28b9b9b693078dff3d23a9c8" category="sidebar">Cloud Volumes ONTAP 9.19.1 リリースノート</block>
   <block id="1a523ba4ece9125275b92ebb41e3cf23" category="inline-link">Cloud Volumes ONTAPのドキュメント</block>
-  <block id="beecc6122c1c255f72dcdc6b55547dd4" category="paragraph">Cloud Volumes ONTAP の機能、サポートされる構成、制限などの詳細については、<block ref="ea5552b8f9c3766b3dbd6170754013e4" category="inline-link-rx"></block>を参照してください。</block>
-  <block id="e5db128c051c458ffd6845d0676ec51e" category="section-title">9.19.1（2026年8月10日）</block>
-  <block id="11a01aa0f08b855e4b36226d278e2f8b" category="paragraph">Cloud Volumes ONTAP 9.19.1の一般提供（GA）版が、Amazon Web Services（AWS）およびGoogle Cloudでのみ、デプロイおよびアップグレード可能になりました。このバージョンは、Microsoft Azure（Azure）へのデプロイおよびアップグレードには対応していません。</block>
   <block id="779179d87fedb0f1d19bc08238c479a7" category="paragraph"><block ref="675aaf3b5e84a93fbce00d949a5f961a" category="inline-link-rx"></block>.</block>
-  <block id="1ba2a5867ae8351321f6970817584236" category="paragraph">AWS および Google Cloud において、Cloud Volumes ONTAP 9.18.1 から 9.19.1 にアップグレードできます。コンソールは、このリリースへのアップグレード対象となる Cloud Volumes ONTAP システムにアップグレードを促します。</block>
-  <block id="2962b8222cacec8cb18f5c8cdf1f04eb" category="admonition">Azure では、このバージョンはこのクラウド プロバイダでのデプロイおよびアップグレードに利用できないため、9.19.1 へのアップグレードを促すメッセージは表示されません。</block>
   <block id="6b9b9e55102bb13f1ca535f28c0d3a98" category="doc">Cloud Volumes ONTAP の法的通知</block>
+  <block id="6f82beee1a412af19544afdfeffbfe31" category="paragraph">Cloud Volumes ONTAP 9.19.1の導入およびアップグレードが可能になりました。このリリースのベースバージョンと、導入およびアップグレードに利用可能な最新のパッチバージョンは、NetApp Consoleで確認できます。</block>
+  <block id="0aaa2e001314b768511bce26fe0c1776" category="paragraph">Cloud Volumes ONTAP の機能、サポートされる構成、制限などの詳細については、<block ref="6e7acef710daada33b416be137136a2e" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="00305f14a5070c1c507692101e1b5f2a" category="section-title">9.19.1 GA</block>
+  <block id="5feeec301b3ad963361e2c7b26b8036f" category="paragraph">Cloud Volumes ONTAP 9.19.1一般提供（GA）版が、Amazon Web Services（AWS）、Microsoft Azure（Azure）、およびGoogle Cloudで展開およびアップグレードできるようになりました。</block>
+  <block id="83b5c85b7b7c82ae7b0883b1a1e83be7" category="paragraph">AWS、Azure、およびGoogle Cloudで、Cloud Volumes ONTAP 9.18.1から9.19.1にアップグレードできます。コンソールは、対象となるCloud Volumes ONTAPシステムをこのリリースにアップグレードするようにプロンプトを表示します。</block>
 </blocks>
