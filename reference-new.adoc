@@ -20,6 +20,15 @@ Cloud Volumes ONTAP の機能、サポートされる構成、制限などの詳
 
 
 
+[[9-19-1-p4-12-november-2026]]
+== 9.19.1 P4（12 November 2026）
+
+Cloud Volumes ONTAP 9.19.1 P4 パッチが、Amazon Web Services（AWS）、Microsoft Azure（Azure）、および Google Cloud での展開とアップグレードに利用可能になりました。Console は、既存のシステムをこのパッチリリースにアップグレードするよう促します。
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.19.1P4["P4パッチで修正されたバグのリストを表示する"^]（NetApp Support Site へのログインが必要です）。
+
+
+
 [[9-19-1-ga]]
 == 9.19.1 GA
 
